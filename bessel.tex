@@ -1,0 +1,42 @@
+% !TEX TS-program = pdflatex
+% !TEX encoding = UTF-8 Unicode
+
+\documentclass[12pt]{article}
+
+\usepackage[utf8]{inputenc} 
+
+\usepackage{geometry}
+\geometry{a4paper} 
+\geometry{margin=0.25in} 
+\geometry{portrait}
+
+\usepackage{amsmath}
+\usepackage{physics}
+\usepackage{tikz} 
+
+\title{Bessel function}
+\author{vijayabhaskar badireddi}
+%\date{} 
+
+\begin{document}
+\maketitle
+
+\section*{solution}
+The given differential equation is \[x^2\dv[2]{x}\qty(I_0(x))+x\dv{x}\qty(I_0(x))-x^2I_0(x)=0\]
+Assume a series solution of the form \[I_0(x)\sim\frac{e^x}{\sqrt{2\pi{x}}}\bqty{1+b_1x^{-1}+b_2x^{-2}+\ldots}\]
+First derivative is \[\dv{I_0(x)}{x}=\frac{e^x}{\sqrt{2\pi{x}}}\bqty{-b_1x^{-2}-2b_2x^{-3}+\ldots}+\frac{e^x}{\sqrt{2\pi{x}}}\qty(1-\frac{1}{2x})\bqty{1+b_1x^{-1}+b_2x^{-2}+\ldots}\]
+Second derivative is \[\dv[2]{I_0(x)}{x}=\frac{e^x}{\sqrt{2\pi{x}}}\bqty{2b_1x^{-3}+6b_2x^{-4}+\ldots}+2\frac{e^x}{\sqrt{2\pi{x}}}\qty(1-\frac{1}{2x})\bqty{-b_1x^{-2}-2b_2x^{-3}+\ldots}\]
+\[+\frac{e^x}{\sqrt{2\pi{x}}}\qty(1-\frac{1}{x})^2\bqty{1+b_1x^{-1}+b_2x^{-2}+\ldots+}+\frac{e^x}{\sqrt{2\pi{x}}}\qty(\frac{1}{2x^2})\bqty{1+b_1x^{-1}+b_2x^{-2}+\ldots}\]
+\[x^2\dv[2]{I_0(x)}{x}=\quad\frac{e^x}{\sqrt{2\pi{x}}}\bqty{2b_1x^{-1}+6b_2x^{-2}+\ldots}+2\frac{e^x}{\sqrt{2\pi{x}}}\qty(1-\frac{1}{2x})\bqty{-b_1-2b_2x^{-1}+\ldots}\]
+\[+\frac{e^x}{\sqrt{2\pi{x}}}\qty(1-\frac{1}{x})^2\bqty{x^2+b_1x+b_2+\ldots+}+\frac{e^x}{\sqrt{2\pi{x}}}\qty(\frac{1}{2x^2})\bqty{x^2+b_1x+b_2+\ldots}\]
+\[x\dv{I_0(x)}{x}=\quad\frac{e^x}{\sqrt{2\pi{x}}}\bqty{-b_1x^{-1}-2b_2x^{-2}+\ldots}+\frac{e^x}{\sqrt{2\pi{x}}}\qty(1-\frac{1}{2x})\bqty{x+b_1+b_2x^{-1}+\ldots}\]
+\[-x^2I_0(x)=-\frac{e^x}{\sqrt{2\pi{x}}}\bqty{x^2+b_1x+b_2+\ldots}\]
+Adding the above terms and collecting powers of $ x^2$,$ x$,$ x^0$,$ x^{-1}$,$ x^{-2}\quad$etc\\
+For $x^2(1-1)=0$.\\
+For $ x(b_1-1+1-b_1)=0$.\\
+For $ x^0 (-b_1-b_1+b_2+\frac{1}{4}-b_1+\frac{1}{2}+b_1-\frac{1}{2}-b_2)=0$.\\
+$-2b_1+\frac{1}{4}=0\implies b_1=\frac{1}{8}$.\\
+For $x^{-1}(2b_1+\frac{b_1}{2}-2b_2+\frac{b_1}{2}-2b_2+\frac{b_1}{4}-b_2+\frac{b_1}{2}-b_1+b_2-\frac{b_1}{2})=0$\\
+$b_2=\frac{9b_1}{16}=\frac{9}{128}$.
+\[\boxed{b_1=\frac{1}{8}\quad b_2=\frac{9}{128}}\]
+\end{document}

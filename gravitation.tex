@@ -1,0 +1,47 @@
+% !TEX TS-program = pdflatex
+% !TEX encoding = UTF-8 Unicode
+
+\documentclass[12pt]{article}
+
+\usepackage[utf8]{inputenc} 
+
+\usepackage{geometry}
+\geometry{a4paper} 
+\geometry{margin=0.25in} 
+\geometry{portrait}
+
+\usepackage{amsmath}
+\usepackage{physics}
+\usepackage{tikz} 
+
+\title{gravitation}
+\author{vijayabhaskar badireddi}
+%\date{} 
+
+\begin{document}
+%\maketitle
+\section*{solution}
+Two point masses $m_1$ and $m_2$ are located at position vectors $\vb{r}_1$ and $\vb{r}_2$.\\ The center of mass of the system is located at 
+\[\vb{r}_c=\frac{m_1\vb{r}_1+m_2\vb{r}_2}{m_1+m_2}\]
+Position vector of $m_1$ with respect to center of mass is $\vb{r}_{1c}=\vb{r}_1-\vb{r}_c$.
+\[\vb{r}_{1c}=\vb{r}_1-\vb{r}_c=\vb{r}_1-\frac{m_1\vb{r}_1+m_2\vb{r}_2}{m_1+m_2}=\frac{m_2(\vb{r}_1-\vb{r}_2)}{m_1+m_2}\]
+Position vector of $m_2$ with respect to center of mass is $\vb{r}_{2c}=\vb{r}_2-\vb{r}_c$.
+\[\vb{r}_{2c}=\vb{r}_2-\vb{r}_c=\vb{r}_2-\frac{m_1\vb{r}_1+m_2\vb{r}_2}{m_1+m_2}=\frac{m_2(\vb{r}_2-\vb{r}_1)}{m_1+m_2}\]
+Gravitational force on $m_1$ due to $m_2$ is given by 
+\[\vb{F}_{12}=-\frac{Gm_1m_2(\vb{r}_1-\vb{r}_2)}{\vqty{\vb{r}_1-\vb{r}_2}^3}\]
+Substitute for $\vb{r}_1-\vb{r}_2$ using the equation \[\vb{r}_{1c}=\frac{m_2(\vb{r}_1-\vb{r}_2)}{m_1+m_2}\implies(\vb{r}_1-\vb{r}_2)=\frac{m_1+m_2}{m_2}\vb{r}_{1c}\]
+\[\vb{F}_{12}=-\frac{Gm_1m_2(\vb{r}_1-\vb{r}_2)}{\vqty{\vb{r}_1-\vb{r}_2}^3}=-\frac{Gm_1m_2(\frac{m_1+m_2}{m_2}\vb{r}_{1c})}{\vqty{\frac{m_1+m_2}{m_2}\vb{r}_{1c}}^3}=-\frac{Gm_1m_2(\vb{r}_{1c})}{\qty(\frac{m_1+m_2}{m_2})^2\vqty{\vb{r}_{1c}}^3}=-\frac{Gm_1m_2^3(\vb{r}_{1c})}{(m_1+m_2)^2\vqty{\vb{r}_{1c}}^3}\]
+Gravitational force on $m_2$ due to $m_1$ is given by 
+\[\vb{F}_{21}=-\frac{Gm_2m_1(\vb{r}_2-\vb{r}_1)}{\vqty{\vb{r}_2-\vb{r}_1}^3}\]
+Substitute for $\vb{r}_2-\vb{r}_1$ using the equation \[\vb{r}_{2c}=\frac{m_1(\vb{r}_2-\vb{r}_1)}{m_1+m_2}\implies(\vb{r}_2-\vb{r}_1)=\frac{m_1+m_2}{m_2}\vb{r}_{2c}\]
+\[\vb{F}_{21}=-\frac{Gm_2m_1(\vb{r}_2-\vb{r}_1)}{\vqty{\vb{r}_2-\vb{r}_1}^3}=-\frac{Gm_2m_1(\frac{m_1+m_2}{m_1}\vb{r}_{2c})}{\vqty{\frac{m_1+m_2}{m_1}\vb{r}_{2c}}^3}=-\frac{Gm_2m_1(\vb{r}_{2c})}{\qty(\frac{m_1+m_2}{m_1})^2\vqty{\vb{r}_{2c}}^3}=-\frac{Gm_2m_1^3(\vb{r}_{2c})}{(m_1+m_2)^2\vqty{\vb{r}_{2c}}^3}\]
+Equation of motion of $m_1$ is \[m_1\dv[2]{\vb{r}_1}{t}=\vb{F}_{12}\]
+Since $\vb{r}_1=\vb{r}_c+\vb{r}_{1c}$,
+\[\dv[2]{\vb{r}_1}{t}=\dv[2]{\vb{r}_c}{t}+\dv[2]{\vb{r}_{1c}}{t}=0+\dv[2]{\vb{r}_{1c}}{t}\]
+Since net external force on the system is zero, center of mass does not move.Hence $\vb{r}_c$ is constant and $\dv[2]{\vb{r}_c}{t}=0$.\\
+Equation of motion of $m_1$ is \[m_1\dv[2]{\vb{r}_1}{t}=m_1\dv[2]{\vb{r}_{1c}}{t}=\vb{F}_{12}=-\frac{Gm_1m_2^3(\vb{r}_{1c})}{(m_1+m_2)^2\vqty{\vb{r}_{1c}}^3}\]
+Similarly equation of motion of $m_2$ is \[m_2\dv[2]{\vb{r}_2}{t}=m_2\dv[2]{\vb{r}_{2c}}{t}=\vb{F}_{21}=-\frac{Gm_2m_1^3(\vb{r}_{2c})}{(m_1+m_2)^2\vqty{\vb{r}_{2c}}^3}\]
+\[\boxed{m_1\dv[2]{\vb{r}_{1c}}{t}=-\frac{Gm_1m_2^3(\vb{r}_{1c})}{(m_1+m_2)^2\vqty{\vb{r}_{1c}}^3}}\]
+\[\boxed{m_2\dv[2]{\vb{r}_{2c}}{t}=-\frac{Gm_2m_1^3(\vb{r}_{2c})}{(m_1+m_2)^2\vqty{\vb{r}_{2c}}^3}}\]
+
+\end{document}

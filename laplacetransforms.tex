@@ -1,0 +1,30 @@
+% !TEX TS-program = pdflatex
+% !TEX encoding = UTF-8 Unicode
+
+\documentclass[12pt]{article}
+
+\usepackage[utf8]{inputenc} 
+
+\usepackage{geometry}
+\geometry{a4paper} 
+\geometry{margin=0.25in} 
+\geometry{portrait}
+
+\usepackage{amsmath}
+\usepackage{physics}
+\usepackage{tikz} 
+
+\title{Laplace transforms}
+\author{vijayabhaskar badireddi}
+%\date{} 
+
+\begin{document}
+%\maketitle
+
+\section*{solution}
+\[\mathcal{L}(f(t))=F(s)=\int_{0}^{\infty}e^{-st}f(t)\dd{t}\]
+If $f(t)=e^{-at}$,
+\[\mathcal{L}(f(t))=F(s)=\int_{0}^{\infty}e^{-st}e^{-at}\dd{t}=\int_{0}^{\infty}e^{-(s+a)t}\dd{t}\]
+\[\mathcal{L}(f(t))=F(s)=\int_{0}^{\infty}e^{-(s+a)t}\dd{t}=\eval{\frac{e^{-(s+a)t}}{-(s+a)}}_{0}^{\infty}=-\frac{1}{s+a}\qty(e^{-(s+a)\infty}-e^{-(s+a)0})=\frac{1}{s+a}\]
+
+\end{document}
