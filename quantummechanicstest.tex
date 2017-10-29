@@ -1,0 +1,63 @@
+\documentclass[12pt]{article} 
+
+\usepackage[utf8]{inputenc} 
+\usepackage{geometry} 
+\geometry{a4paper} 
+\geometry{margin=0.25in} 
+\geometry{portrait} 
+
+\usepackage{tikz} 
+\usepackage{amsmath}
+\usepackage{physics}
+
+\title{quantum mechanics}
+\author{vijayabhaskar badireddi} 
+\date{} 
+
+\begin{document}
+%%\maketitle 
+
+\section*{Introduction}
+\[r\sin\theta\boldsymbol{\hat{\phi}}+r\sin\phi\vu{r}+\vu{\phi}\]
+\section*{Foundations}
+State space, Observable, Dual space, Inner product,
+\[\braket{\phi}{\psi}=\braket{\psi}{\phi}^*\]
+\[\braket{\psi}{\lambda_1\phi_1+\lambda_2\phi_2}=\lambda_1\braket{\psi}{\phi_1}+\lambda_2\braket{\psi}{\phi_2}\]
+\[\braket{\lambda_1\phi_1+\lambda_2\phi_2}{\psi}=\lambda_1^*\braket{\phi_1}{\psi}+\lambda_2^*\braket{\phi_2}{\psi}\]
+\[\braket{\psi}{\psi}= 0 \quad \iff \ket{\psi}=0 \]
+\[\norm{\psi}=0\]
+\[\hat{\ev{H}}=\mel{\psi}{\hat{H}}{\psi}=\ev{H}\]
+\section*{Harmonic oscillator}
+\[\hat{H}=\frac{\hat{p}^2}{2m}+\frac{m\omega^2\hat{x}^2}{2}\]
+\[-\frac{\hbar^2}{2m}\dv[2]{\psi}{x}+\frac{m\omega^2\hat{x}^2\psi}{2}=E\psi\]
+\section*{Spin}
+\[\vu{S}=\frac{\hbar}{2}\boldsymbol{\sigma}\]
+\[\comm{\hat{S}_i}{\hat{S}_j}=i\epsilon_{ijk}\hat{S}_k\]
+\[\hat{S}^2\ket{sm_s}=s(s+1)\hbar^2\ket{sm_s}\]
+\[\hat{S}_z\ket{sm_s}=m_s\hbar\ket{sm_s}\]
+\[\hat{S}_{\pm}\ket{sm_s}=(\hat{S}_{x}\pm i\hat{S}_y)\ket{sm_s}=\hbar\sqrt{s(s+1)-m_s(m_s\pm1)}\ket{sm_s\pm1}\]
+\section*{Angular momentum}
+\[\hat{\vb{L}}\cp\hat{\vb{L}}=i\hbar\hat{\vb{L}}\]
+\[\hat{L}_z\ket{lm}=m\hbar\ket{lm}\]
+
+\section*{Hydrogen atom}
+\section*{Particles in EM field}
+\section*{Perturbation methods}
+\section*{Identical particles}
+\section*{Addition of angular momenta}
+\section*{Scattering theory}
+\section*{Mathematical methods}
+\[\int_{-\infty}^{+\infty}f(x)\delta(x-x_0)\dd{x}=f(x_0)\]
+\[\delta(x)=\delta(-x)\]
+\[\delta(cx)=\frac{1}{|c|}\delta(x)\]
+\[x\delta(x-x_0)=x_0\delta(x-x_0)\]
+\[f(x)\delta(x-x_0)=f(x_0)\delta(x-x_0)\]
+\[\delta(f(x))=\sum_{i}\frac{1}{f'(x_i)}\delta(x-x_i)\quad f(x_i)=0\quad\forall{x_i}\]
+\[\int f(\vb{r})\delta(\vb{r}-\vb{r}_0)\dd^3{r}=f(\vb{r}_0)\]
+\[\delta(\vb{r}-\vb{r}_0)=\delta(x-x_0)\delta(y-y_0)\delta(z-z_0)\]
+\[\laplacian(\frac{1}{r})=-4\pi\delta^3(\vb{r})\]
+\[H_n(x)=(-1)^ne^{x^2}\dv[n]{x}\qty(e^{-x^2})\quad n=0,1,2,3\ldots\]
+\[\dv[2]{H_n(x)}{x}-2x\dv{H_n(x)}{x}+2nH_n(x)=0\]
+\[\int_{-\infty}^{+\infty}e^{-x^2}H_m(x)H_n(x)\dd{x}=\sqrt{\pi}2^nn!\delta_{mn}\]
+\[\dv{H_n(x)}{x}=2nH_{n-1}(x)\quad H_{n+1}(x)=2xH_n(x)-2nH_{n-1}(x)\]
+\end{document}
