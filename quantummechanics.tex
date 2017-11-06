@@ -28,4 +28,30 @@ Angular momentum operator is defined by $\vb{\vu{L}}=\vb{\vu{r}}\cp\vb{\vu{p}}$.
 \[\comm{\hat{L}^2}{\vb{\vu{L}}}=0\quad\comm{\hat{L}_i}{\hat{p}^2}=0\quad\comm{\hat{L}_i}{\hat{r}^2}=0\quad\comm{\hat{L}_i}{\vb{\vu{r}}\vdot\vb{\vu{p}}}=0\]
 \[\comm{\hat{L}_i}{\hat{r}_j}=i\hbar\sum_{i}\epsilon_{ijk}\hat{L}_k\]
 \[\comm{\hat{L}_i}{\hat{p}_j}=i\hbar\sum_{i}\epsilon_{ijk}\hat{p}_k\]
+
+\section{Spin}
+\[\hat{S}^{2}\ket{\alpha}=s(s+1)\hbar^2\ket{\alpha}\]
+\[\comm{\hat{S}_{x}}{\hat{S}_{y}}=i\hbar\hat{S}_{z}\]
+\[\comm{\hat{S}_{y}}{\hat{S}_{z}}=i\hbar\hat{S}_{x}\]
+\[\comm{\hat{S}_{z}}{\hat{S}_{x}}=i\hbar\hat{S}_{y}\]
+\[\comm{\hat{S}_{i}}{\hat{S}_{j}}=i\hbar\epsilon_{ijk}\hat{S}_{k}\]
+\[\vb{S}=\frac{\hbar}{2}\vb{\sigma}\]
+\[\hat{S}_{z}\ket{\alpha}=m_{s}\hbar\ket{\alpha}\]
+$\ket{+}$ and $\ket{-}$ are the eigen vectors of $\hat{{S}}_z$ operator.
+\[\hat{{S}}_z\ket{+}=\frac{\hbar}{2}\ket{+}\quad\hat{{S}}_z\ket{-}=-\frac{\hbar}{2}\ket{-}\]
+\section{lho}
+
+\[\hat{H}\psi=E\psi\]
+\[-\frac{\hbar^2}{2m}\dv[2]{\psi}{x}+V(x)\psi=E\psi\]
+Since the potential is $V(s)=\frac{1}{2}kx^2=\frac{1}{2}m\omega^2x^2$
+\[-\frac{\hbar^2}{2m}\dv[2]{\psi}{x}+\frac{1}{2}m\omega^2x^2\psi=E\psi\]
+\[\dv[2]{\psi}{x}-\frac{m^2\omega^2}{\hbar^2}x^2\psi=-\frac{2Em}{\hbar^2}\psi\]
+Redefine $\zeta=\sqrt{\frac{m\omega}{\hbar}}x$.
+\[\dv[2]{\psi}{x}=\frac{m\omega}{\hbar}\dv[2]{\psi}{\zeta}\]
+\[\frac{m\omega}{\hbar}\dv[2]{\psi}{\zeta}-\frac{m\omega}{\hbar}\zeta^2\psi=-\frac{2Em}{\hbar^2}\psi\]
+\[\dv[2]{\psi}{\zeta}-\zeta^2\psi=-\frac{\hbar}{m\omega}\frac{2Em}{\hbar^2}\psi=-\frac{2E}{\hbar\omega}\psi\]
+\[\dv[2]{\psi}{\zeta}+\qty(\frac{2E}{\hbar\omega}-\zeta^2)\psi=0\]
+Substitute $\psi=H(\zeta)e^{-\zeta^2/2}$
+
+
 \end{document}
