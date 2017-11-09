@@ -83,11 +83,11 @@ In a volume surrounded by conductors and containing a specified charge density, 
 \subsection*{displacement}
 
 \subsection*{misc}
-\section*{Coulomb's law}
+\subsection*{Coulomb's law}
 \[\vb{E}=\frac{1}{4\pi\epsilon_0}\frac{q_1q_2(\vb{r}_1-\vb{r}_2)}{|\vb{r}_1-\vb{r}_2|^3}\]
 \[V(\vb{r})=-\int_\infty^{\vb{r}}\vb{E}\cdot\dd\vb{r}\]
 \[\vb{E}=-\grad{V}\]
-\section*{Gauss' law}
+\subsection*{Gauss' law}
 \[\oint_S{\vb{E}\cdot\dd{\vb{a}}}=\frac{Q_{enc}}{\epsilon_0}\]
 \[\laplacian{V}=-\frac{\rho}{\epsilon_0}\]
 \[\pdv[2]{V}{x}+\pdv[2]{V}{y}+\pdv[2]{V}{z}=0\]
@@ -98,5 +98,30 @@ In a volume surrounded by conductors and containing a specified charge density, 
 \[\grad{(\vb{a}\cdot\vb{b})}=\vb{a}\times(\curl{\vb{b}})+\vb{b}\times(\curl{\vb{a}})+(\vb{a}\cdot\nabla)\vb{b}+(\vb{b}\cdot\nabla)\vb{a}\]
 \[\div{(f\vb{a})}=\vb{a}\cdot\grad{f}+f\div{\vb{a}}\]
 \[\div{(\vb{a}\times\vb{b})}=\vb{b}\cdot(\curl{\vb{a}})-\vb{a}\cdot(\curl{\vb{b}})\]
+\section{Magnetostatics}
+\[\qq{Lorenz force law}\vb{F}=q(\vb{E}+\vb{v}\cp\vb{B})\]
+\[\qq{Lorenz force law}\vb{F}=\int I(\dd\vb{l}\cp\vb{B})\]
+\[\vb{F}=\int (\vb{K}\cp\vb{B})\dd{a}=\int (\sigma\vb{v}\cp\vb{B})\dd{a}\]
+\[\vb{F}=\int (\vb{J}\cp\vb{B})\dd{v}=\int (\rho\vb{v}\cp\vb{B})\dd{v}\]
+\[\vb{B}(\vb{r})=\frac{\mu_0}{4\pi}\int\frac{\vb{I}\cp(\vb{r}-\vb{r}')}{|\vb{r}-\vb{r}'|^2}\dd{l'}=\frac{\mu_0I}{4\pi}\int\frac{\dd\vb{l'}\cp(\vb{r}-\vb{r}')}{|\vb{r}-\vb{r}'|^2}\]
+\section{Conservation Laws}
+\[\qq{Equation of continuity} \pdv{\rho}{t}=-\div{\vb{J}}\]
+\[\dv{W}{t}=\int_{v}(\vb{E}\vdot{\vb{J}})\dd{\tau}=-\dv{t}\int_{v}\frac{1}{2}\qty(\epsilon_0E^2+\frac{1}{\mu_0}B^2)\dd{\tau}-\frac{1}{\mu_0}\oint(\vb{E}\cp\vb{B})\vdot\dd{\vb{a}}\]
+\[\qq{Poynting vector}\vb{S}=\frac{1}{\mu_0}(\vb{E}\cp\vb{B})\]
+\[\qq{Maxwell's stress tensor} T_{ij}=\epsilon_0\qty(E_iE_j-\frac{1}{2}\delta_{ij}E^2)+\frac{1}{\mu_0}\qty(B_iB_j-\frac{1}{2}\delta_{ij}B^2)\]
+\[\qq{force per unit volume} \vb{f}=\div{\vb{T}}-\epsilon_0\mu_0\pdv{\vb{S}}{t}\]
+\[\vb{F}=\oint_s\vb{T}\vdot\dd{\vb{a}}-\epsilon_0\mu_0\dv{t}\int_v\vb{S}\dd{\tau}\]
+\[\vb{p}_{em}=\mu_0\epsilon_0\int_v\vb{S}\dd{\tau}\]
+\[\mathcal{P}=\mu_0\epsilon_0\vb{S}\]
+\[\pdv{t}(\mathcal{P}_{mech}+\mathcal{P}_{em})=\div{\vb{T}}\]
+\section{Electrodynamics}
+\[\qq{Ohm's law} \vb{J}=\sigma\vb{E}\]
+\[\mathcal{E}=-\dv{\Phi}{t}\]
+\[\curl{\vb{E}}=-\pdv{\vb{B}}{t}\]
+\[\Phi_2=\int\vb{B}_1\vdot\dd{\vb{a}_2}\]
+\[M_{21}=M_{21}=\frac{\mu_0I_1I_2}{4\pi}\oint\oint\frac{\dd{\vb{l}_1}\vdot\dd{\vb{l}_2}}{|\vb{r}-\vb{r}' |}\]
+\[W=\frac{1}{2}LI^2=\frac{1}{2}\int B^2\dd{\tau}\]
+\section{Electrodynamics and Relativity}
+\[\qq{time dilation} \Delta{\bar{t}}=\frac{\Delta{t}}{\gamma}=\Delta{t}\sqrt{1-\frac{v^2}{c^2}}\]
 
 \end{document}
