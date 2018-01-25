@@ -1,0 +1,44 @@
+% !TEX TS-program = pdflatex
+% !TEX encoding = UTF-8 Unicode
+
+\documentclass[12pt]{article}
+
+\usepackage[utf8]{inputenc} 
+
+\usepackage{geometry}
+\geometry{a4paper} 
+\geometry{margin=0.25in} 
+\geometry{portrait}
+
+\usepackage{amsmath}
+\usepackage{physics}
+\usepackage{tikz} 
+
+\title{orbital motion}
+\author{vijayabhaskar badireddi}
+%\date{} 
+
+\begin{document}
+%\maketitle
+
+\section*{central forces}
+The central force problem
+Using plane polar coordinates, position vector of a particle of mass $m$ moving in the force field of a very large mass is $\vb{r}=r\vu{r}$. The large mass is applying a force $\vb{F}(\vb{r})=-\frac{k}{r^2}\vu{r}$ on the particle.\\
+Velocity of the particle is $\vb{v}=\dot{r}\vu{r}+r\dot{\theta}\vu{\theta}$.\\
+Acceleration of particle is $\vb{a}=(\ddot{r}-r\dot{\theta}^2)\vu{r}+(2\dot{r}\dot{\theta}+r\ddot{\theta})\vu{\theta}$.
+\[\vb{F}(\vb{r})=-\frac{k}{r^2}\vu{r}=m\vb{a}=m(\ddot{r}-r\dot{\theta}^2)\vu{r}+(2\dot{r}\dot{\theta}+r\ddot{\theta})\vu{\theta}\]
+\[m(\ddot{r}-r\dot{\theta}^2)\vu{r}+\frac{k}{r^2}\vu{r}+(2\dot{r}\dot{\theta}+r\ddot{\theta})\vu{\theta}=0\]
+\[\qq{The $r$ equation is} \ddot{r}-r\dot{\theta}^2+\frac{k}{mr^2} =0\]
+\[\qq{The $\theta$ equation is} 2\dot{r}\dot{\theta}+r\ddot{\theta}=0\]
+The $\theta$ equation implies that \[\dv{t}(r^2\dot{\theta})=0\]
+That is angular momentum $l=mr^2\dot{\theta}$ is conserved (or is constant).
+The $r$ equation can be written as \[\ddot{r}-r\dot{\theta}^2+\frac{k}{mr^2}=\ddot{r}-r\qty(\frac{l}{mr^2})^2+\frac{k}{mr^2}=0\]
+Substitute $r=\frac{1}{u}$.
+\[\dot{r}=-\frac{1}{u^2}\dv{u}{t}=-\frac{1}{u^2}\dv{u}{\theta}\dv{\theta}{t}=-\frac{\dot{\theta}}{u^2}\dv{u}{\theta}=-r^2\dot{\theta}\dv{u}{\theta}=-\frac{l}{m}\dv{u}{\theta}\].
+\[\ddot{r}=-\frac{l}{m}\dv{t}\qty(\dv{u}{\theta})=-\frac{l}{m}\dv{\theta}\qty(\dv{u}{\theta})\dv{\theta}{t}=-\frac{l\dot{\theta}}{m}\dv[2]{u}{\theta}=-\frac{l^2}{m^2r^2}\dv[2]{u}{\theta}=-\frac{l^2u^2}{m^2}\dv[2]{u}{\theta}\]
+Substitute this in $r$ equation of motion.
+\[\ddot{r}-\frac{l^2}{m^2r^3}+\frac{k}{mr^2}=-\frac{l^2u^2}{m^2}\dv[2]{u}{\theta}-\frac{l^2u^3}{m^2}+\frac{ku^2}{m}=0\]
+\[\boxed{\dv[2]{u}{\theta}+u=\frac{km}{l^2}}\]
+
+
+\end{document}
