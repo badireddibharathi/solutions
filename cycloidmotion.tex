@@ -1,0 +1,42 @@
+% !TEX TS-program = pdflatex
+% !TEX encoding = UTF-8 Unicode
+
+\documentclass[12pt]{article}
+
+\usepackage[utf8]{inputenc} 
+
+\usepackage{geometry}
+\geometry{a4paper} 
+\geometry{margin=0.25in} 
+\geometry{portrait}
+
+\usepackage{amsmath}
+\usepackage{physics}
+\usepackage{tikz} 
+
+\title{cycloid}
+\author{vijayabhaskar badireddi}
+%\date{} 
+
+\begin{document}
+%\maketitle
+
+\section*{time of flight on a cycloid}
+Equation of cycloid is given by $x=a(\theta-\sin\theta)$ and $y=a(1-\cos\theta)$. \\
+Due to acceleration of gravity $g$, the speed of a particle varies as $v=\sqrt{2gh}$ where $h$ is the vertical height through which the particle has fallen.\\
+Let $ds$ be the infinitesimal part of arc of cycloid where $\dd{s}=\sqrt{\dd{x}^2+\dd{y}^2}$.\\
+Time taken to cross this element is $\dd{t}=\frac{\dd{s}}{v}$.\\
+The particle starts at point $P_0$ where the coordinates are $x_0=a(\theta_0-\sin\theta_0)$ and $y_0=a(1-\cos\theta_0)$.\\
+At time $t$ the particle is at point $(x,y)$ where $y=a(1-\cos\theta)$.
+\[h=y-y_0=a(cos\theta_0-\cos\theta)\]
+\[v=\sqrt{2ag(cos\theta_0-\cos\theta)}\]
+\[\dd{x}=a\dd\theta(1-\cos\theta)\quad\dd{y}=a\sin\theta\dd{\theta}\]
+\[\dd{s}=\sqrt{\dd{x}^2+\dd{y}^2}=\dd{\theta}\qty[a^2\sin^2\theta+a^2+a^2\cos^2\theta-2a^2\cos\theta]^{1/2}\]
+\[\dd{s}=a\sqrt{2}\dd{\theta}(1-\cos\theta)^{1/2}\]
+\[t=\int\dd{t}=\int\frac{\dd{s}}{v}=\int_{\theta_0}^{\pi}\frac{\sqrt{2}a}{\sqrt{2ag}}\frac{(1-\cos\theta)^{1/2}}{\sqrt{\cos\theta_0-\cos\theta}}\dd\theta\]
+\[t=\sqrt{\frac{a}{g}}\int_{\theta_0}^{\pi}\sqrt{\frac{1-\cos\theta}{\cos\theta_0-\cos\theta}}\dd{\theta}\]
+If the particle starts from point $O$, that is if $\theta_0=0$ integral is \[t=\sqrt{\frac{a}{g}}\int_{0}^{\pi}\sqrt{\frac{1-\cos\theta}{1-\cos\theta}}\dd{\theta}=\sqrt{\frac{a}{g}}\int_{0}^{\pi}\dd{\theta}=\pi\sqrt{\frac{a}{g}}\]
+Substitute \[\theta=\pi-2\alpha\quad\dd\theta=-2\dd\alpha\]
+\[1-\cos\theta=1-\cos(\pi-2\alpha)=1+\cos{2\alpha}\]
+\[t=(-2)\sqrt{\frac{a}{g}}\int_{\theta_0}^{\pi}\sqrt{\frac{1-\cos\theta}{\cos\theta_0-\cos\theta}}\dd{\theta}\]
+\end{document}
