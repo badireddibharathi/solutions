@@ -1,0 +1,55 @@
+% !TEX TS-program = pdflatex
+% !TEX encoding = UTF-8 Unicode
+\documentclass[12pt]{article} 
+
+\usepackage[utf8]{inputenc} 
+\usepackage{geometry} 
+\geometry{a4paper} 
+\geometry{margin=0.25in} 
+\geometry{portrait} 
+
+\usepackage{tikz} 
+
+\usepackage{amsmath} 
+\usepackage{physics} 
+\title{cycloid time}
+\author{vijayabhaskar badireddi} 
+\date{} 
+
+\begin{document}
+%\maketitle 
+
+\section{Solution}
+
+Consider a single loop of the cycloid with a fixed value of a, as shown. A cart is released from rest at a point$ P_0$ anywhere on the track between O and the lowest point P (that is, $P_0$ has parameter
+\( 0 < \theta_0 < \pi \). Show that the time for the cart to roll from  $P_0$ to P is given by the integral
+
+\[ time(P_0 \to P) = \sqrt{\frac{a}{g}} \int_{\theta_0}^{\pi} \sqrt{\frac{1- \cos{\theta}}{\cos{\theta_0}-\cos{\theta}}}d\theta\]
+
+and prove that this time is equal to $\pi \sqrt{\frac{a}{g}}$. Since this is independent of the position of $P_0$, the cart takes the same time to roll from  $P_0$ to  $P$,whether $P_0$ is at O, or anywhere between O and P, even infinitesimally close to P. Explain qualitatively how this surprising result can possibly be true. [Hint: To do the mathematics, you have to make some cunning changes of variables. One route is this: Write $ \theta = \pi - 2\alpha$ and then use the relevant trig identities to replace the cosines of $\theta$ by sines of $\alpha$. Now substitute $\sin{\alpha} = u $anddo the remaining integral.]
+
+ \[dt= \frac{ds}{v}\] 
+\[ v= \sqrt{2gh} \] 
+Since \[ x= a(\theta - \sin{\theta}), y=a(1-\cos{\theta})\]
+\[ds = \sqrt{(dx)^2+(dy)^2} = a \sqrt{2} \sqrt{1-\cos\theta} d\theta\]
+ \[h = y - y_0 = a (\cos\theta_0 - \cos\theta)\] 
+
+Therefore we get,
+\[ t = \sqrt{\frac{a}{g}} \int_{\theta_0}^{\pi}\sqrt{\frac{1-\cos\theta}{\cos\theta_0 - \cos\theta}} d\theta \]
+
+Let \( \theta = \pi - 2\alpha\)
+We have,
+\[ t = \sqrt{\frac{a}{g}} \int_{\theta_0}^{\pi}\sqrt{\frac{1+\cos{2\alpha}}{\cos\theta_0 + \cos{2\alpha}}} d\theta \]
+
+\[ t = (-2) \sqrt{\frac{a}{g}} \int_{\theta_0}^{\pi} \sqrt{2} \cos{\alpha} \sqrt{\frac{1}{\cos\theta_0 + \cos{2\alpha}}} d\alpha \]
+
+\[ t = (-2) \sqrt{\frac{a}{g}} \int_{\theta_0}^{\pi} \sqrt{2}  \sqrt{\frac{1}{\cos\theta_0 + \cos{2\alpha}}} d\sin\alpha \]
+
+
+\[ t = (-2) \sqrt{\frac{a}{g}} \int_{\theta_0}^{\pi} \sqrt{2}  \sqrt{\frac{1}{\cos\theta_0 + 1 - 2\sin^2{\alpha}}} d\sin\alpha \]
+
+ \[t = 2 \sqrt{\frac{a}{g}} \arcsin{\frac{\sin{(\frac{\pi}{2}-\frac{\theta_0}{2})}}{\cos{\frac{\theta_0}{2}}}} \]
+
+\[t = \pi \sqrt{\frac{a}{g}} \]
+
+\end{document}

@@ -1,0 +1,52 @@
+% !TEX TS-program = pdflatex
+% !TEX encoding = UTF-8 Unicode
+\documentclass[12pt]{article} 
+
+\usepackage[utf8]{inputenc} 
+\usepackage{geometry} 
+\geometry{a4paper} 
+\geometry{margin=0.25in} 
+\geometry{portrait} 
+
+\usepackage{tikz} 
+
+\usepackage{amsmath} 
+\usepackage{physics} 
+\title{Lagrangian for a charged particle in a magnetic field}
+\author{vijayabhaskar badireddi} 
+\date{} 
+
+\begin{document}
+%\maketitle 
+
+\section*{Solution}
+Magnetic field $\vb{B}$ and vector potential $\vb{A}$ are related as \(\vb{B}=\curl{\vb{A}}\).\\ If the magnetic field $\vb{B}$ is uniform, then the vector potential can be represented as $\vb{A}=\frac{1}{2}\vb{B}\cp\vb{r}$.
+\subsection*{verification of \(\vb{B}=\curl{\vb{A}}\)}
+Consider the vector identity \[\curl{(\vb{A}\cp\vb{B})}=(\vb{B}\cdot\grad)\vb{A}-(\vb{A}\cdot\grad)\vb{B}+\vb{A}(\div{\vb{B}})-\vb{B}(\div{\vb{A}})\]
+\[\curl{(\frac{1}{2}\vb{B}\cp\vb{r})}=\frac{1}{2}\qty[(\vb{r}\cdot\grad)\vb{B}-(\vb{B}\cdot\grad)\vb{r}+\vb{B}(\div{\vb{r}})-\vb{r}(\div{\vb{B}})]\]
+Since $\vb{B}$ is uniform, $\div{\vb{B}}=0$.
+\[\div{\vb{r}}=\pdv{x}{x}+\pdv{y}{y}+\pdv{z}{z}=3\]
+Since $\vb{B}=B_x\vu{i}+B_y\vu{j}+B_z\vu{k}$ is constant,$B_x$,$B_y$ and $B_z$ are constant.  \[(\vb{r}\cdot\grad)\vb{B}=\qty(x\pdv{x}+y\pdv{y}+z\pdv{z})\qty(B_x\vu{i}+B_y\vu{j}+B_z\vu{k})=0\]
+\[(\vb{B}\cdot\grad)\vb{r}=\qty(B_x\pdv{x}+B_y\pdv{y}+B_z\pdv{z})\qty(x\vu{i}+y\vu{j}+z\vu{k})=B_x\vu{i}+B_y\vu{j}+B_z\vu{k}=\vb{B}\]
+\[\curl{(\frac{1}{2}\vb{B}\cp\vb{r})}=\frac{1}{2}\qty[0-\vb{B}+3\vb{B}-0]=\vb{B}\]
+Hence \(\vb{B}=\curl{\vb{A}}\).
+\subsection*{Lagrangian}
+\[L=\frac{1}{2}mv^2+e\vb{v}\cdot\vb{A}=\frac{1}{2}m\qty(\dot{x}^2+\dot{y}^2+\dot{z}^2)+e\vb{v}\cdot\qty(\frac{1}{2}\vb{B}\cp\vb{r})\]
+\[\frac{1}{2}\vb{v}\cdot\qty(\vb{B}\cp\vb{r})=\frac{1}{2}\vb{r}\cdot\qty(\vb{v}\cp\vb{B})=-\frac{1}{2}\vb{r}\cdot\qty(\vb{B}\cp\vb{v})\]
+\[L=\frac{1}{2}m\qty(\dot{x}^2+\dot{y}^2+\dot{z}^2)+e\qty(v_xA_x+v_yA_y+v_zA_z)=\frac{1}{2}m\qty(\dot{x}^2+\dot{y}^2+\dot{z}^2)+e\qty(\dot{x}A_x+\dot{y}A_y+\dot{z}A_z)\]
+Lagrange's equations of motion are 
+\begin{align*}
+\dv{t}\qty(\pdv{L}{\dot{x}})-\pdv{L}{x}=0\\
+\dv{t}\qty(\pdv{L}{\dot{y}})-\pdv{L}{y}=0\\
+\dv{t}\qty(\pdv{L}{\dot{z}})-\pdv{L}{z}=0
+\end{align*}
+\[\pdv{L}{\dot{x}}=\pdv{\dot{x}}\qty(\frac{1}{2}m\qty(\dot{x}^2+\dot{y}^2+\dot{z}^2)+e\qty(\dot{x}A_x+\dot{y}A_y+\dot{z}A_z))=m\dot{x}+eA_x\]
+\[\pdv{L}{\dot{y}}=\pdv{\dot{x}}\qty(\frac{1}{2}m\qty(\dot{x}^2+\dot{y}^2+\dot{z}^2)+e\qty(\dot{x}A_x+\dot{y}A_y+\dot{z}A_z))=m\dot{y}+eA_y\]\
+\[\pdv{L}{\dot{z}}=\pdv{\dot{x}}\qty(\frac{1}{2}m\qty(\dot{x}^2+\dot{y}^2+\dot{z}^2)+e\qty(\dot{x}A_x+\dot{y}A_y+\dot{z}A_z))=m\dot{z}+eA_z\]
+
+\[\dv{t}\qty(\pdv{L}{\dot{x}})=m\ddot{x}+e\dv{A_x}{t}\]
+\[\dv{t}\qty(\pdv{L}{\dot{y}})=m\ddot{y}+e\dv{A_y}{t}\]
+\[\dv{t}\qty(\pdv{L}{\dot{z}})=m\ddot{z}+e\dv{A_z}{t}\]
+
+\[\pdv{L}{x}=\pdv{x}\qty()\]
+\end{document}
