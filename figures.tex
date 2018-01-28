@@ -1,0 +1,38 @@
+% !TEX TS-program = pdflatex
+% !TEX encoding = UTF-8 Unicode
+
+\documentclass[12pt]{article}
+
+\usepackage[utf8]{inputenc} 
+
+\usepackage{geometry}
+\geometry{a4paper} 
+\geometry{margin=0.25in} 
+\geometry{portrait}
+
+\usepackage{amsmath}
+\usepackage{physics}
+\usepackage{tikz} 
+
+\title{tikz figures}
+\author{vijayabhaskar badireddi}
+%\date{} 
+
+\begin{document}
+
+\begin{center}
+\begin{tikzpicture}
+
+\begin{scope} [rotate=30]
+\draw (3,0) rectangle (5,2);
+\draw (0,0) to (8,0);
+\draw (8,0) circle [radius=1.0cm];
+\end{scope}
+\draw (0,0) to (7,0);
+
+\draw (1,0) arc [start angle=0,end angle=30,radius=1.0cm];
+
+\end{tikzpicture}
+\end{center}
+
+\end{document}
