@@ -1,0 +1,39 @@
+% !TEX TS-program = pdflatex
+% !TEX encoding = UTF-8 Unicode
+
+\documentclass[12pt]{article}
+
+\usepackage[utf8]{inputenc} 
+
+\usepackage{geometry}
+\geometry{a4paper} 
+\geometry{margin=0.25in} 
+\geometry{portrait}
+
+\usepackage{amsmath}
+\usepackage{physics}
+\usepackage{tikz} 
+
+\title{polarized sphere}
+\author{vijayabhaskar badireddi}
+%\date{} 
+
+\begin{document}
+%\maketitle
+\section*{polarized sphere}
+Consider a sphere of radius $R$, with uniform polarization $\vb{P}$.\\Volume bound charge density $\rho_b=-\div{\vb{P}}=0$ as $\vb{P}$ is uniform.\\ Surface bound charge density $\sigma_b=\vb{P}\cdot\vu{n}$. Let $\vb{P}$ be in the direction of $-z$ axis. $\vb{P}=-P\vu{z}$. $\vu{n}$ is outward unit vector normal to the surface. That is $\vu{n}=\vu{r}$ where $\vu{r}$ is unit vector along $r$ for spherical coordinates. $\sigma_b=\vu{n}\cdot\vu{r}=-P\vu{z}\cdot\vu{r}$.\[\vu{r}=\sin\theta\cos\varphi\vu{\theta}+\sin\theta\sin\varphi\vu{\varphi}+\cos\theta\vu{z}\]
+\[\sigma_b=\vu{n}\cdot\vu{r}=-P\vu{z}\cdot\vu{r}=-P\cos\theta\]
+Comparing this with the given charge density $\sigma=\sigma_0\cos\theta$, $\sigma_0=-P$ and $\sigma=-P\cos\theta$.\\
+Since the charge densities are identical, electric fields inside and outside the sphere are also identical in both cases.\\
+\subsection*{Electric field inside and outside the sphere}
+Due to spherical symmetry of the problem, the potential $V(r,\theta)$ due to sphere inside and outside can be expressed in terms of Legendre polynomials.
+
+\[V(r,\theta)=\sum_{l=1}^{\infty}A_lr^lP_l(\cos\theta)\quad(r\leq R)\]
+\[V(r,\theta)=\sum_{l=1}^{\infty}B_lr^{-(l+1)}P_l(\cos\theta)\quad(r\geq R)\]
+Since the potential is continuous at $r=R$, equating the above expressions $B_l=A_lR^{2l+1}$.\\
+Normal derivative of $V(r,\theta)$ at $r=R$ has a discontinuity.
+\[\qty(\pdv{V}{n})_{above}-\qty(\pdv{V}{n})_{below}=-\frac{\sigma}{\epsilon_0}\]
+\[-\sum_{l=1}^{\infty}(l+1)B_lr^{-(l+2)}P_l(\cos\theta)-\sum_{l=1}^{\infty}lA_lr^{l-1}P_l(\cos\theta)=-\frac{\sigma_0\cos\theta}{\epsilon_0}\]
+\[A_l=\frac{1}{2\epsilon_0R^{l-1}}\int_0^{\pi}(\sigma_0\cos\theta)P_l(\cos\theta)\sin\theta\dd\theta\]
+All the $A_l$ are zero except for $l=1$. $P_l(\cos\theta)=\cos\theta$.
+\end{document}

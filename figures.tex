@@ -25,11 +25,12 @@
 
 \begin{scope} [rotate=30]
 \draw (3,0) rectangle (5,2);
+\draw[thick] (5,1) to (8,1);
 \draw (0,0) to (8,0);
 \draw (8,0) circle [radius=1.0cm];
 \end{scope}
-\draw (0,0) to (7,0);
-
+\draw (0,0) to (5,0);
+\draw[thick,->] (7.93,4) to (7.93,2);
 \draw (1,0) arc [start angle=0,end angle=30,radius=1.0cm];
 
 \end{tikzpicture}
