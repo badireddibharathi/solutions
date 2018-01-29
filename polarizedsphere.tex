@@ -36,4 +36,17 @@ Normal derivative of $V(r,\theta)$ at $r=R$ has a discontinuity.
 \[-\sum_{l=1}^{\infty}(l+1)B_lr^{-(l+2)}P_l(\cos\theta)-\sum_{l=1}^{\infty}lA_lr^{l-1}P_l(\cos\theta)=-\frac{\sigma_0\cos\theta}{\epsilon_0}\]
 \[A_l=\frac{1}{2\epsilon_0R^{l-1}}\int_0^{\pi}(\sigma_0\cos\theta)P_l(\cos\theta)\sin\theta\dd\theta\]
 All the $A_l$ are zero except for $l=1$. $P_l(\cos\theta)=\cos\theta$.
+\[A_1=\frac{\sigma_0}{2\epsilon_0}\int_0^{\pi}\cos^2\theta\sin\theta\dd\theta=\frac{\sigma_0}{3\epsilon_0}\]
+Hence potential inside the sphere is \[V(r,\theta)=\frac{\sigma_0}{3\epsilon_0}r\cos\theta\quad(r\leq R)\]
+\[V(r,\theta)=\frac{\sigma_0R^3}{3\epsilon_0}\frac{\cos\theta}{r^2}\quad(r\geq R)\]
+Electric field inside the sphere is \[\vb{E}=-\grad{V}=\frac{\sigma_0}{3\epsilon_0}\qty[\pdv{r}(r\cos\theta)\vu{r}+\pdv{\theta}(r\cos\theta)\vu{\theta}+\frac{1}{r\cos\theta}\pdv{\varphi}(r\cos\theta)\vu{\varphi}]\]
+\[=-\frac{\sigma_0}{3\epsilon_0}\qty[\cos\theta\vu{r}-\sin\theta\vu{\theta}]=-\frac{\sigma_0}{3\epsilon_0}\vu{z}\]
+ \[\qq{Since $\sigma_0=-P$,}\vb{E}=\frac{P}{3\epsilon_0}\vu{z}=-\frac{\vb{P}}{3\epsilon_0}\]
+ Electric field outside the sphere is \[\vb{E}=-\grad{V}=-\frac{\sigma_0R^3}{3\epsilon_0}\qty[\pdv{r}\qty(\frac{\cos\theta}{r^2})\vu{r}+\frac{1}{r}\pdv{\theta}\qty(\frac{\cos\theta}{r^2})\vu{\theta}+\frac{1}{r\sin\theta}\pdv{\varphi}\qty(\frac{\cos\theta}{r^2})\vu{\varphi}]\]
+\[=-\frac{\sigma_0R^3}{3\epsilon_0}\qty[-\frac{2\cos\theta}{r^3}\vu{r}-\frac{\sin\theta}{r^3}\vu{\theta}]\]
+Potential outside the sphere is that of a point electric dipole at the origin with dipole moment \[\vb{p}=\frac{4\pi R^3}{3}\vb{P}=-\frac{4\pi R^3P}{3}\vb{z}=\frac{4\pi R^3\sigma_0}{3}\vb{z}\]
+\[V(r,\theta)=\frac{1}{4\pi\epsilon_0}\frac{\vb{p}\cdot\vu{r}}{r^2}=\frac{1}{4\pi\epsilon_0}\qty(\frac{\sigma_0\vu{z}\cdot\vu{r}}{r^2})\qty(\frac{4\pi R^3}{3})=\frac{\sigma_0R^3}{3\epsilon_0}\frac{\cos\theta}{r^2}\]
+Hence electric field outside the sphere si also that of a point dipole located at origin, with dipole moment $\vb{p}=\frac{4\pi R^3}{\epsilon_0}\vb{P}$.
+\[\vb{E}=\frac{\sigma_0 R^3}{3\epsilon_0}\qty[\frac{2\cos\theta}{r^3}\vu{r}+\frac{\sin\theta}{r^3}\vu{\theta}]\]
+
 \end{document}
