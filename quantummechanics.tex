@@ -24,25 +24,6 @@
 \section{Schrodinger Equation}
 \section{Foundations}
 \section{Harmonic oscillator}
-\section{Angular Momentum}
-Angular momentum operator is defined by $\vb{\vu{L}}=\vb{\vu{r}}\cp\vb{\vu{p}}$.
-\[\hat{L}_x=\hat{y}\hat{p}_z-\hat{z}\hat{p}_y\quad\hat{L}_y=\hat{z}\hat{p}_x-\hat{x}\hat{p}_z\quad\hat{L}_z=\hat{x}\hat{p}_y-\hat{y}\hat{p}_x\]
-\[\comm{\hat{L}_i}{\hat{L}_j}=i\hbar\epsilon_{ijk}\hat{L}_k\]
-\[\comm{\hat{L}^2}{\vb{\vu{L}}}=0\quad\comm{\hat{L}_i}{\hat{p}^2}=0\quad\comm{\hat{L}_i}{\hat{r}^2}=0\quad\comm{\hat{L}_i}{\vb{\vu{r}}\vdot\vb{\vu{p}}}=0\]
-\[\comm{\hat{L}_i}{\hat{r}_j}=i\hbar\sum_{i}\epsilon_{ijk}\hat{L}_k\]
-\[\comm{\hat{L}_i}{\hat{p}_j}=i\hbar\sum_{i}\epsilon_{ijk}\hat{p}_k\]
-\section{Spin}
-\[\hat{S}^{2}\ket{\alpha}=s(s+1)\hbar^2\ket{\alpha}\]
-\[\comm{\hat{S}_{x}}{\hat{S}_{y}}=i\hbar\hat{S}_{z}\]
-\[\comm{\hat{S}_{y}}{\hat{S}_{z}}=i\hbar\hat{S}_{x}\]
-\[\comm{\hat{S}_{z}}{\hat{S}_{x}}=i\hbar\hat{S}_{y}\]
-\[\comm{\hat{S}_{i}}{\hat{S}_{j}}=i\hbar\epsilon_{ijk}\hat{S}_{k}\]
-\[\vb{S}=\frac{\hbar}{2}\vb{\sigma}\]
-\[\hat{S}_{z}\ket{\alpha}=m_{s}\hbar\ket{\alpha}\]
-$\ket{+}$ and $\ket{-}$ are the eigen vectors of $\hat{{S}}_z$ operator.
-\[\hat{{S}}_z\ket{+}=\frac{\hbar}{2}\ket{+}\quad\hat{{S}}_z\ket{-}=-\frac{\hbar}{2}\ket{-}\]
-\section{lho}
-
 \[\hat{H}\psi=E\psi\]
 \[-\frac{\hbar^2}{2m}\dv[2]{\psi}{x}+V(x)\psi=E\psi\]
 Since the potential is $V(s)=\frac{1}{2}kx^2=\frac{1}{2}m\omega^2x^2$
@@ -54,5 +35,56 @@ Redefine $\zeta=\sqrt{\frac{m\omega}{\hbar}}x$.
 \[\dv[2]{\psi}{\zeta}-\zeta^2\psi=-\frac{\hbar}{m\omega}\frac{2Em}{\hbar^2}\psi=-\frac{2E}{\hbar\omega}\psi\]
 \[\dv[2]{\psi}{\zeta}+\qty(\frac{2E}{\hbar\omega}-\zeta^2)\psi=0\]
 Substitute $\psi=H(\zeta)e^{-\zeta^2/2}$	
+\section{Angular Momentum}
+Angular momentum operator is defined by $\vb{\vu{L}}=\vb{\vu{r}}\cp\vb{\vu{p}}$.
+\[\hat{L}_x=\hat{y}\hat{p}_z-\hat{z}\hat{p}_y\quad\hat{L}_y=\hat{z}\hat{p}_x-\hat{x}\hat{p}_z\quad\hat{L}_z=\hat{x}\hat{p}_y-\hat{y}\hat{p}_x\]
+\[\comm{\hat{L}_i}{\hat{L}_j}=i\hbar\epsilon_{ijk}\hat{L}_k\]
+\[\comm{\hat{L}^2}{\vb{\vu{L}}}=0\quad\comm{\hat{L}_i}{\hat{p}^2}=0\quad\comm{\hat{L}_i}{\hat{r}^2}=0\quad\comm{\hat{L}_i}{\vb{\vu{r}}\vdot\vb{\vu{p}}}=0\]
+\[\comm{\hat{L}_i}{\hat{r}_j}=i\hbar\sum_{i}\epsilon_{ijk}\hat{L}_k\]
+\[\comm{\hat{L}_i}{\hat{p}_j}=i\hbar\sum_{i}\epsilon_{ijk}\hat{p}_k\]
+\[\qq{The lowering and raising operators are } \hat{L}_{+}=\hat{L}_x+i\hat{L}_y \qq{and} \hat{L}_{-}=\hat{L}_x-i\hat{L}_y\]
+\[\hat{L}_x=\frac{\hat{L}_++\hat{L}_-}{2} \qq{and} \hat{L}_y=\frac{\hat{L}_+-\hat{L}_-}{2i}\]
+\[\hat{L}_+=\hat{L}_-^{\dag}\]
+\[\hat{L}^2=\hat{L}_z^2+\frac{1}{2}\qty(\hat{L}_+\hat{L}_-+\hat{L}_-\hat{L}_+)\]
+\[\hat{L}_+\hat{L}_-=\hat{L}^2-\hat{L}_z^2+\hbar\hat{L}_z\]
+\[\hat{L}_-\hat{L}_+=\hat{L}^2-\hat{L}_z^2\pm\hbar\hat{L}_z\]
+\[\comm{\hat{L}^2}{\hat{L}_{\pm}}=0\]
+\[\comm{\hat{L}_z}{\hat{L}_{\pm}}=\pm\hbar\hat{L}_{\pm}\]
+\[\comm{\hat{L}_+}{\hat{L}_-}=2\hbar\hat{L}_z\]
+\[\hat{L}^2\ket{lm}=l(l+1)\hbar^2\ket{lm}\]
+\[\hat{L}_z\ket{lm}=m\hbar\ket{lm}\]
+\[\hat{L}_{\pm}\ket{lm}=\sqrt{l(l+1)-m(m\pm1)}\hbar\ket{lm\pm1}=\sqrt{(l\mp m)(l\pm m+1)}\hbar\ket{lm\pm1}\]
+\[m=-l,-l+1,\ldots,0,\ldots,l-1,l\]
+\[\braket{l_1m_1}{l_2m_2}=\delta_{l_1l_2}\delta_{m_1m_2}\]
+\[\sum_{l=0}^{\infty}\sum_{m=-l}^{+l}=1\]
+\section{Spin}
+\[\hat{S}^{2}\ket{\alpha}=s(s+1)\hbar^2\ket{\alpha}\]
+\[\comm{\hat{S}_{x}}{\hat{S}_{y}}=i\hbar\hat{S}_{z}\]
+\[\comm{\hat{S}_{y}}{\hat{S}_{z}}=i\hbar\hat{S}_{x}\]
+\[\comm{\hat{S}_{z}}{\hat{S}_{x}}=i\hbar\hat{S}_{y}\]
+\[\comm{\hat{S}_{i}}{\hat{S}_{j}}=i\hbar\epsilon_{ijk}\hat{S}_{k}\]
+\[\vb{S}=\frac{\hbar}{2}\vb{\sigma}\]
+\[\hat{S}_{z}\ket{\alpha}=m_{s}\hbar\ket{\alpha}\]
+$\ket{+}$ and $\ket{-}$ are the eigen vectors of $\hat{{S}}_z$ operator.
+\[\hat{{S}}_z\ket{+}=\frac{\hbar}{2}\ket{+}\quad\hat{{S}}_z\ket{-}=-\frac{\hbar}{2}\ket{-}\]
+\section{Hydrogen atom}
+When a particle of mass $m$ is placed in a central potential $V(r)$ the Hamiltonian of the particle is \[\hat{H}=\frac{\hat{p}^2}{2m}+V(r)=-\frac{\hbar^2}{2m}\nabla^2+V(r)\] 
+In spherical coordinates the Laplacian $\nabla^2$ is \[\nabla^2f=\frac{1}{r^2}\pdv{r}\qty(r^2\pdv{f}{r})+\frac{1}{r^2\sin\theta}\pdv{\theta}\qty(\sin\theta\pdv{f}{\theta})+\frac{1}{r^2\sin^2\theta}\pdv[2]{f}{\varphi}\] 
+Angular momentum operator \[\hat{L}=\hat{r}\cp\hat{p}=i\hbar(\hat{r}\cp\nabla)\]
+Hence Hamiltonian is \[\hat{H}=-\frac{\hbar^2}{2m}\frac{1}{r^2}\pdv{r}\qty(r^2\pdv{r})+\frac{\hat{L}^2}{2mr^2}+V(r)\]
+The three components of angular momentum $\hat{L}\quad$$\hat{L}_x$,$\hat{L}_y$,$\hat{L}_z$ commute with Hamiltonian $\hat{H}$.
+The three eigen value equations are 
+\[\hat{H}\psi(r,\theta,\varphi)=E\psi(r,\theta,\varphi)\]
+\[\hat{L}^2\psi(r,\theta,\varphi)=l(l+1)\hbar^2\psi(r,\theta,\varphi)\]
+\[\hat{L}_z\psi(r,\theta,\varphi)=m\hbar\psi(r,\theta,\varphi)\]
 
+Using separation of variables $\psi(r,\theta,\varphi)=R_{nl}\psi(r)Y^m_l\psi(\theta,\varphi)$.
+The spherical harmonics are normalized according to the relation \[\int_{0}^{2\pi}\int_{0}^{\pi}Y^{m'}_{l}Y^{m'}_{l}\sin\theta\dd\theta\dd\varphi=\delta_{ll'}\delta_{mm'}\]
+For radial functions, $\int_{0}^{\infty}r^2|R_{nl}^2(r)|\dd{r}=1$
+\[\qty[-\frac{\hbar^2}{2m}\frac{1}{r^2}\pdv{r}\qty(r^2\pdv{r})+\frac{l(l+1)\hbar^2}{2mr^2}+V(r)]R_{nl}(r)=ER_{nl}(r)\]
+Making the substitution $R_{nl}(r)=\frac{1}{r}U_{nl}(r)$, effective potential is $V_{eff}(r)=V(r)+\frac{l(l+1)\hbar^2}{2mr^2}$
+\\
+For the angular part, \[-i\hbar\pdv{\varphi}Y^m_l(\theta,\varphi)=m\hbar Y^m_l(\theta,\varphi)\]
+\[\qty[\frac{1}{sin\theta}\pdv{\theta}\qty(\sin\theta\pdv{\theta})+\frac{1}{sin^2\theta}\pdv[2]{\varphi}]Y^m_l(\theta,\varphi)=l(l+1)\hbar^2 Y^m_l(\theta,\varphi)\]
+\section{EM field}
 \end{document}
