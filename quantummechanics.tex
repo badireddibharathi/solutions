@@ -22,9 +22,23 @@
 %\maketitle
 \section{Mathematics}
 \section{Schrodinger Equation}
+<<<<<<< HEAD
 \subsection*{Ehrenfest's theorem}
 Wave function $\Psi(x,t)$ is normalizable. Expectation value of $\hat{x}$ is \[\expval{\hat{x}}=\int_{-\infty}^{+\infty}\Psi(x,t)\hat{x}\Psi(x,t)\dd{x}=\int_{-\infty}^{+\infty}\Psi(x,t)x\Psi(x,t)\dd{x}\]
 
+=======
+\subsection{Ehrenfest's theorem}
+\[\qq{relation 1}\dv{\expval{\hat{x}}}{t}=\frac{\expval{\hat{p}}}{m}\]
+\[\qq{relation 2}\dv{\expval{p}}{t}=\expval{-\dv{V}{x}}\]
+\[\qq{Time-independent Schrodinger equation}i\hbar\pdv{\Psi(x,t)}{t}=-\frac{\hbar^2}{2m}\dv[2]{\Psi(x,t)}{x}+V(x)\Psi(x,t)\]
+\[\qq{Time-independent Schrodinger equation}-i\hbar\pdv{\Psi^*(x,t)}{t}=-\frac{\hbar^2}{2m}\dv[2]{\Psi^*(x,t)}{x}+V(x)\Psi^*(x,t)\]
+What is the meaning of square integrable ?
+\[\int_{-\infty}^{+\infty}\Psi^*(x,t)\Psi(x,t)\dd{x}=\text{finite}\]
+Hence \[\lim_{x\to\infty}|\Psi(x,t)|^2=\lim_{x\to -\infty}|\Psi(x,t)|^2=0\]
+The expectation value of $\hat{x}$ is \[\expval{\hat{x}}=\int_{-\infty}^{+\infty}\Psi^*(x,t)\hat{x}\Psi(x,t)\dd{x}=\int_{-\infty}^{+\infty}\Psi^*(x,t)x\Psi(x,t)\dd{x}\]
+Differentiate the above expression with respect to time.
+\[\dv{\expval{\hat{x}}}{t}=\int_{-\infty}^{+\infty}\pdv{\Psi^*(x,t)}{t}x\Psi(x,t)\dd{x}+\int_{-\infty}^{+\infty}\Psi^*(x,t)x\pdv{\Psi(x,t)}{t}\dd{x}\]
+>>>>>>> de3b972feb613c0c609d571f9ec4c1c6a40d5ebf
 \section{Foundations}
 \section{Harmonic oscillator}
 \[\hat{H}\psi=E\psi\]
