@@ -22,6 +22,20 @@
 %\maketitle
 \section{Mathematics}
 \section{Schrodinger Equation}
+Probability that a particle is in a volume $\dd[3]{r}\dd{x}\dd{y}\dd{z}$ is $\dd{P}=\Psi^*(r,t)\Psi(r,t)\dd[3]{r}$.
+\[\int\dd{P}=\int\Psi^*(r,t)\Psi(r,t)\dd[3]{r}=1\] 
+The wave function msut be square-integrable, that is \[\int\Psi^*(r,t)\Psi(r,t)\dd[3]{r}<0\]
+The time-dependent Schroedinger equation \[i\hbar\pdv{\Psi(\vb{r},t)}{t}=-\frac{\hbar^2}{2m}\laplacian{\Psi(\vb{r},t)}+V(\vb{r},t)\Psi(\vb{r},t)\]
+Linearity of Schroedinger equation.
+The time-independent Schroedinger equation \[i\hbar\pdv{\psi(\vb{r})}{t}=-\frac{\hbar^2}{2m}\laplacian{\psi(\vb{r})}+V(\vb{r})\psi(\vb{r})\]
+\[\Psi(\vb{r},t)=\psi(r)e^{-iEt/\hbar}\]
+wave packet or a superposition of plane waves.
+Inner product or scalar product\[(\phi,\psi)=\int\phi^*(\vb{r})\psi(\vb{r})\dd[3]{r}\]
+\[\expval{\hat{A}}=\int\phi^*(\vb{r})\hat{A}\psi(\vb{r})\dd[3]{r}\]
+\[\Delta{\hat{A}}=\sqrt{\expval{\hat{A}^2}-\expval{\hat{A}}^2}\]
+\[\qq{Hamiltonian operator}i\hbar\pdv{\Psi(\vb{r},t)}{t}=\hat{H}\Psi(\vb{r},t)=-\frac{\hbar^2}{2m}\laplacian{\Psi(\vb{r},t)}+V(\vb{r},t)\Psi(\vb{r},t)\]
+\[\qq{equation of continuity}\pdv{\rho(\vb{r},t)}{t}+\div{\vb{J}(\vb{r},t)}=0\]
+\[\qq{probability current density}\vb{J}(\vb{r},t)=\frac{\hbar}{2mi}\qty[\Psi^*(\grad\Psi)-\Psi(\grad\Psi^*)]\]
 \subsection{Ehrenfest's theorem}
 \[\qq{relation 1}\dv{\expval{\hat{x}}}{t}=\frac{\expval{\hat{p}}}{m}\]
 \[\qq{relation 2}\dv{\expval{p}}{t}=\expval{-\dv{V}{x}}\]
