@@ -36,6 +36,27 @@ Inner product or scalar product\[(\phi,\psi)=\int\phi^*(\vb{r})\psi(\vb{r})\dd[3
 \[\qq{Hamiltonian operator}i\hbar\pdv{\Psi(\vb{r},t)}{t}=\hat{H}\Psi(\vb{r},t)=-\frac{\hbar^2}{2m}\laplacian{\Psi(\vb{r},t)}+V(\vb{r},t)\Psi(\vb{r},t)\]
 \[\qq{equation of continuity}\pdv{\rho(\vb{r},t)}{t}+\div{\vb{J}(\vb{r},t)}=0\]
 \[\qq{probability current density}\vb{J}(\vb{r},t)=\frac{\hbar}{2mi}\qty[\Psi^*(\grad\Psi)-\Psi(\grad\Psi^*)]\]
+\subsection*{Particle in a one-dimensional infinite well}
+Potential is defined as \[V(x)=0\qq{if} 0<x<a V(x)=\infty \qq{if}x>a \qq{or if }x<0\]
+Where $V(x)=\infty$ the wave function $\psi(x) =0$. \\Applying Schroedinger's equation in the region of well \[-\frac{\hbar^2}{2m}\dv[2]{\psi}{x}+V(x)\psi=E\psi\]
+\[-\frac{\hbar^2}{2m}\dv[2]{\psi}{x}=E\psi\qq{since} V(x)=0\]
+\[\qq{Rewrite as}\dv[2]{\psi}{x}+\frac{2mE}{\hbar^2}\psi=0\]
+\[\dv[2]{\psi}{x}+k^2\psi=0\qq{where} k^2=\frac{2mE}{\hbar^2}\]
+\[\qq{General solution is}\psi(x)=A\sin{kx}+B\cos{kx}\]
+Using the boundary condition $\psi(x)=0$ if $x=0$, we obtain $B=0$
+ or $\psi(x)=A\sin{kx}$ \\
+Using the boundary condition $\psi(x)=0$ if $x=a$, we obtain $\sin{ka}=0$ or $ka=n\pi$ where $n=1,2,3\ldots$\\
+Hence the General solution can be written as $\displaystyle\psi(x)=A\sin{\left(\frac{n\pi x}{a}\right)}$.\\
+Using the normalization condition $\displaystyle\int_{-\infty}^{+\infty}\psi^*(x)\psi(x)\dd{x}=1$,\\
+\[\displaystyle\int_{0}^{a}A^2\sin^2{\left(\frac{n\pi x}{a}\right)}\dd{x}=1\]
+\[\displaystyle A^2\int_{0}^{a}\frac{1-\cos{\left(\frac{2n\pi x}{a}\right)}}{2}\dd{x}=1\]
+\[\displaystyle \frac{A^2}{2}\qty[\int_{0}^{a}1\dd{x}-\int_{0}^{a}\cos{\left(\frac{2n\pi x}{a}\right)}\dd{x}]=1\]
+\[\displaystyle \frac{A^2}{2}\qty[a-\frac{a}{2n\pi}\sin{\left(\frac{2n\pi x}{a}\right)}\eval_{0}^{a}]=1\]
+Hence $\displaystyle A^2=\frac{2}{a}$ or $A=\sqrt{\frac{2}{a}}$\\
+\[\qq{Hence general solution is}\psi(x)=\sqrt{\frac{2}{a}}\sin{\left(	\frac{n\pi x}{a}\right)}\]
+\[k^2=\frac{n^2\pi^2}{a^2}=\frac{2mE_n}{\hbar^2}\]
+Energy levels are given by \[E_n=\frac{n^2\hbar^2\pi^2}{2ma^2}\]
+
 \subsection{Ehrenfest's theorem}
 \[\qq{relation 1}\dv{\expval{\hat{x}}}{t}=\frac{\expval{\hat{p}}}{m}\]
 \[\qq{relation 2}\dv{\expval{p}}{t}=\expval{-\dv{V}{x}}\]
