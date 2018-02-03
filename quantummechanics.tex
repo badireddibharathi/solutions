@@ -70,6 +70,20 @@ Differentiate the above expression with respect to time.
 \[\dv{\expval{\hat{x}}}{t}=\int_{-\infty}^{+\infty}\pdv{\Psi^*(x,t)}{t}x\Psi(x,t)\dd{x}+\int_{-\infty}^{+\infty}\Psi^*(x,t)x\pdv{\Psi(x,t)}{t}\dd{x}\]
 
 \section{Foundations}
+The state of a quantum mechanical system by an element of an abstract vector space called the state space. These elements are called kets.\\
+An observable is a Hermitian operator for which there is an orthonormal basis of the state space that consists of eigen vectors of this operator. 
+The dual space consists of all linear functionals acting on the state space. Elements of this dual space are called bras.
+There is a scalar product, which has the following properties.
+\begin{align*}
+\braket{\phi}{\psi}=\braket{\psi}{\phi}^*\\
+\braket{\psi}{\lambda_1\phi_1+\lambda_2\phi_2}=\lambda_1\braket{\psi}{\phi_1}+\lambda_2\braket{\psi}{\phi_2}\\
+\braket{\lambda_1\phi_1+\lambda_2\phi_2}{\psi}=\lambda_1^*\braket{\phi_1}{\psi}+\lambda_2^*\braket{\phi_2}{\psi}\\
+\braket{\psi}{\psi}=|\braket{\psi}{\psi}|=\geq 0
+\end{align*}
+\subsection*{Postulates of quantum mechanics}
+The state of a physical system at time $t=t_0$ is defined by specifying a ket $\ket{\psi(t_0)}$ belonging to the state space.
+A measurable physical quantity $A$ is described by an observable $\hat{A}$ acting on kets of a state space.Possible results of measurement of a physical quantity $A$ are the eigen values of the corresponding observable $\hat{A}$.
+Let $A$ be a physical quantity with a corresponding observable $\hat{A}$.Suppose the system is in a normalized 
 \section{Harmonic oscillator}
 \[\hat{H}\psi=E\psi\]
 \[-\frac{\hbar^2}{2m}\dv[2]{\psi}{x}+V(x)\psi=E\psi\]
