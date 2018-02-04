@@ -1,0 +1,67 @@
+% !TEX TS-program = pdflatex
+% !TEX encoding = UTF-8 Unicode
+
+\documentclass[12pt]{article}
+
+\usepackage[utf8]{inputenc} 
+
+\usepackage{geometry}
+\geometry{a4paper} 
+\geometry{margin=0.25in} 
+\geometry{portrait}
+
+\usepackage{amsmath}
+\usepackage{physics}
+\usepackage{tikz} 
+
+\title{Brief Article}
+\author{vijayabhaskar badireddi}
+%\date{} 
+
+\begin{document}
+Radius of spherical shell is $R$.\\
+Charge density is uniform  and $\sigma(\vec{r})=\sigma\,\delta\left(R-\sqrt{x^2+y^2+z^2}\right)$.\\
+Electric field is to be calculated at location $\vec{r}=z\hat{z}$.
+\subsection*{Case $(z>R)$} 
+The location of point is outside the sphere.
+To parametrize the shell, consider a radius vector making an angle $\theta$ with $z$ axis. All the points that satisfy this condition are on a circle of radius $R\sin{\theta}$. Consider another radius vector making an angle $\theta+d\theta$ with $z$ axis. All the points that satisfy this condition are on a circle of radius $R\sin{(\theta+d\theta)}$. The element is the area of sphere between these circles.The width of the element is $Rd\theta$. Area of the element is $2\pi(R\sin{\theta})(Rd\theta)=2\pi\,R^2\sin{\theta}\,d\theta$
+Charge on the element is $dQ=2\pi\sigma\,R^2\sin{\theta}\,d\theta$.
+Electric field due to a charge $Q$ spread uniformly on a ring of radius $R$ at a distance $z$ along the axis of the ring is $\vec{E}(z)=\frac{1}{4\pi\epsilon_0}\frac{Qz}{(R^2+z^2)^{3/2}}\hat{z}$
+Using the above result,
+Electric field due to the above element is $$d\vec{E}(z)=\frac{1}{4\pi\epsilon_0}\frac{(2\pi\sigma\,R^2\sin{\theta}\,d\theta)(z-R\cos{\theta})}{((R\sin{\theta})^2+(z-R\cos{\theta})^2)^{3/2}}\hat{z}$$
+Integrating over the above result from $\theta=0$ to $\theta=\pi$
+$$\vec{E}(z)=\int\,d\vec{E}(z)=\int_{0}^{\pi}\frac{1}{4\pi\epsilon_0}\frac{(2\pi\sigma\,R^2\sin{\theta}\,d\theta)(z-R\cos{\theta})}{((R\sin{\theta})^2+(z-R\cos{\theta})^2)^{3/2}}\hat{z}$$
+$$\vec{E}(z)=\frac{1}{4\pi\epsilon_0}\int_{0}^{\pi}\frac{(2\pi\sigma\,R^2\sin{\theta}\,d\theta)(z-R\cos{\theta})}{((R\sin{\theta})^2+(z-R\cos{\theta})^2)^{3/2}}\hat{z}$$
+$$u=((R\sin{\theta})^2+(z-R\cos{\theta})^2)^{-1/2}=(R^2+z^2-2zR\cos{\theta})^{-1/2}$$
+$$du=-\frac{1}{2}\frac{2zR\sin{\theta}d{\theta}}{((R\sin{\theta})^2+(z-R\cos{\theta})^2)^{3/2}}$$
+Limits of integration are $u=\frac{1}{z-R}$ when $\theta=0$ and $u=\frac{1}{z+R}$ when $\theta=\pi$
+$$\vec{E}(z)=\frac{2\pi\sigma\,R}{4\pi\epsilon_0}\int_{0}^{\pi}\frac{(R\sin{\theta}\,d\theta)(z-R\cos{\theta})}{((R\sin{\theta})^2+(z-R\cos{\theta})^2)^{3/2}}\hat{z}=
+$$
+$$\vec{E}(z)=-\frac{2\pi\sigma\,R}{4\pi\epsilon_0\,z}\int_{\frac{1}{z-R}}^{\frac{1}{z+R}}(z-R\cos{\theta})du\,\hat{z}$$
+Since $$z-R\cos{\theta}=z-R\left(\frac{R^2+z^2-\frac{1}{u^2}}{2zR} \right )=\left(\frac{2z^2-R^2-z^2+\frac{1}{u^2}}{2z} \right )z-R\cos{\theta}=\frac{z^2-R^2+\frac{1}{u^2}}{2z}$$
+$$\vec{E}(z)=-\frac{2\pi\sigma\,R}{4\pi\epsilon_0\,z}\int_{\frac{1}{z-R}}^{\frac{1}{z+R}}\left(\frac{z^2-R^2+\frac{1}{u^2}}{2z} \right )du\,\hat{z}$$
+$$\vec{E}(z)=-\frac{2\pi\sigma\,R}{4\pi\epsilon_0\,z}\left[\int_{\frac{1}{z-R}}^{\frac{1}{z+R}}\left(\frac{z^2-R^2}{2z} \right )du+\int_{\frac{1}{z-R}}^{\frac{1}{z+R}}\left(\frac{1}{2u^2z} \right )du\right ]\,\hat{z}
+$$
+$$\vec{E}(z)=-\frac{2\pi\sigma\,R}{4\pi\epsilon_0\,z}\left[\left(\frac{z^2-R^2}{2z} \right )\left(\frac{1}{z+R}-\frac{1}{z-R} \right )+\frac{1}{2z}\left.\left(-\frac{1}{u} \right )\right|_{\frac{1}{z-R}}^{\frac{1}{z+R}}\right ]\,\hat{z}$$
+$$\vec{E}(z)=\left[\frac{4\pi{R^2}\sigma}{4\pi\epsilon_0\,z^2} \right ]\,\hat{z}$$
+\subsection*{case( $z<R$)}
+The location of point is inside the sphere.
+To parametrize the shell, consider a radius vector making an angle $\theta$ with $Z$ axis. All the points that satisfy this condition are on a circle of radius $R\sin{\theta}$. Consider another radius vector making an angle $\theta+d\theta$ with $Z$ axis. All the points that satisfy this condition are on a circle of radius $R\sin{(\theta+d\theta)} $. The element is the area of sphere between these circles.The width of the element is $Rd\theta$. Area of the element is $2\pi(R\sin{\theta})(Rd\theta)=2\pi\,R^2\sin{\theta}\,d\theta$. Charge on the element is $dQ=2\pi\sigma\,R^2\sin{\theta}\,d\theta$
+Electric field due to the charge $Q$ spread uniformly on a ring of radius $R$ at a distance $z$ along the axis of the ring is $\vec{E}(z)=\frac{1}{4\pi\epsilon_0}\frac{Qz}{(R^2+z^2)^{3/2}}\hat{z}$.
+Using the above result,
+Electric field due to the above element is $$d\vec{E}(z)=\frac{1}{4\pi\epsilon_0}\frac{(2\pi\sigma\,R^2\sin{\theta}\,d\theta)(z-R\cos{\theta})}{((R\sin{\theta})^2+(z-R\cos{\theta})^2)^{3/2}}\hat{z}$$
+Integrating over the above result from $\theta=0$ to $\theta=\pi$
+$$\vec{E}(z)=\int\,d\vec{E}(z)=\int_{0}^{\pi}\frac{1}{4\pi\epsilon_0}\frac{(2\pi\sigma\,R^2\sin{\theta}\,d\theta)(z-R\cos{\theta})}{((R\sin{\theta})^2+(z-R\cos{\theta})^2)^{3/2}}\hat{z}$$
+$$\vec{E}(z)=\frac{1}{4\pi\epsilon_0}\int_{0}^{\pi}\frac{(2\pi\sigma\,R^2\sin{\theta}\,d\theta)(z-R\cos{\theta})}{((R\sin{\theta})^2+(z-R\cos{\theta})^2)^{3/2}}\hat{z}$$
+$$u=((R\sin{\theta})^2+(z-R\cos{\theta})^2)^{-1/2}=(R^2+z^2-2zR\cos{\theta})^{-1/2}$$
+$$du=-\frac{1}{2}\frac{2zR\sin{\theta}d{\theta}}{((R\sin{\theta})^2+(z-R\cos{\theta})^2)^{3/2}}$$
+Limits of integration are $u=\frac{1}{R-z}$ when $\theta=0$ and $u=\frac{1}{R+z}$ when $\theta=\pi$.
+$$\vec{E}(z)=\frac{2\pi\sigma\,R}{4\pi\epsilon_0}\int_{0}^{\pi}\frac{(R\sin{\theta}\,d\theta)(z-R\cos{\theta})}{((R\sin{\theta})^2+(z-R\cos{\theta})^2)^{3/2}}\hat{z}=-\frac{2\pi\sigma\,R}{4\pi\epsilon_0\,z}\int_{\frac{1}{R-z}}^{\frac{1}{R+z}}(z-R\cos{\theta})du\,\hat{z}$$
+Since $$z-R\cos{\theta}=z-R\left(\frac{R^2+z^2-\frac{1}{u^2}}{2zR} \right )=\left(\frac{2z^2-R^2-z^2+\frac{1}{u^2}}{2z} \right )z-R\cos{\theta}=\frac{z^2-R^2+\frac{1}{u^2}}{2z}$$
+$$\vec{E}(z)=-\frac{2\pi\sigma\,R}{4\pi\epsilon_0\,z}\int_{\frac{1}{R-z}}^{\frac{1}{R+z}}\left(\frac{z^2-R^2+\frac{1}{u^2}}{2z} \right )du\,\hat{z}$$
+$$\vec{E}(z)=-\frac{2\pi\sigma\,R}{4\pi\epsilon_0\,z}\left[\int_{\frac{1}{R-z}}^{\frac{1}{R+z}}\left(\frac{z^2-R^2}{2z} \right )du+\int_{\frac{1}{R-z}}^{\frac{1}{R+z}}\left(\frac{1}{2u^2z} \right )du\right ]\,\hat{z}$$
+$$\vec{E}(z)=-\frac{2\pi\sigma\,R}{4\pi\epsilon_0\,z}\left[\left(\frac{z^2-R^2}{2z} \right )\left(\frac{1}{R+z}-\frac{1}{R-z} \right )+\frac{1}{2z}\left.\left(-\frac{1}{u} \right )\right|_{\frac{1}{R-z}}^{\frac{1}{R+z}}\right ]\,\hat{z}$$
+$$\vec{E}(z)=0$$
+
+
+\end{document}
