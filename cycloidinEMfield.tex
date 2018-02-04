@@ -1,0 +1,85 @@
+% !TEX TS-program = pdflatex
+% !TEX encoding = UTF-8 Unicode
+
+\documentclass[12pt]{article}
+
+\usepackage[utf8]{inputenc} 
+
+\usepackage{geometry}
+\geometry{a4paper} 
+\geometry{margin=0.25in} 
+\geometry{portrait}
+
+\usepackage{amsmath}
+\usepackage{physics}
+\usepackage{tikz} 
+
+\title{Brief Article}
+\author{vijayabhaskar badireddi}
+%\date{} 
+
+\begin{document}
+
+Consider the starting point of electron as the origin. $x$ axis is to the right and $y$ axis is vertically upwards.
+Electric field is $\vec{E}=-E\hat{j}$. Magnetic field is $\vec{B}=-B\hat{k}$.
+Charge on electron is $-e$ and mass of electron is $m$.
+Initial velocity of electron is zero. $v_x=0$ and $v_y=0$ at $x=0$ and $y=0$.
+\subsection*{(i)}
+Let the velocity be $\vec{v}=v_x\,\hat{i}+v_y\,\hat{j}+v_z\,\hat{k}$ at an arbitrary point $(x,y,z)$.
+Net force on a charge in electric and magnetic field is $\vec{F}=q(\vec{E}+\vec{v}\times\vec{B})$.\\
+Force on electron is $$\vec{F}=(-e)(-E\,\hat{j}+(v_x\,\hat{i}+v_y\,\hat{j}+v_z\,\hat{k})\times(-B\,\hat{k}))=eE\,\hat{j}-ev_xB\,\hat{j}+ev_yB\,\hat{i}$$
+$$m\left(\frac{dv_x}{dt}\hat{i}+\frac{dv_y}{dt}\hat{j}+\frac{dv_z}{dt}\hat{k} \right )=ev_yB\,\hat{i}+e(E-v_xB)\hat{j}$$
+Component wise differential equations are 
+\[m\frac{dv_z}{dt}=0\]
+\[\boxed{m\frac{dv_x}{dt}=ev_yB}\]
+\[\boxed{m\frac{dv_y}{dt}=e(E-v_xB)}\]
+\subsection*{(ii)}
+Substitute $\omega=\frac{eB}{m}$ and $v_0=\frac{E}{B}$.
+Differential equations are 
+\begin{align}
+\frac{dv_x}{dt}=\omega\,v_y\\
+\frac{dv_y}{dt}=\omega(v_0-v_x)\\
+\frac{dv_z}{dt}=0
+\end{align}
+From equation (3),  $v_z$ is a constant. Since initial value of $v_z$ is zero, $v_z=0$ always.
+$z=0$ always.
+The electron moves only in $xy$ plane.\\
+Differentiate equation (2) and substitute equation (1).
+$$\frac{d^2v_y}{dt^2}=-\omega\frac{dv_x}{dt}=-\omega^2\,v_y$$
+$$\frac{d^2v_y}{dt^2}=-\omega^2\,v_y$$\\
+Comparing the above equation with standard equation for simple harmonic motion, $v_y=A\sin{\omega{t}}$.\\
+Hence $$\frac{dv_y}{dt}=A\omega\cos{\omega{t}}$$.
+$$\frac{dv_y}{dt}=A\omega\cos{\omega{t}}=\omega(v_0-v_x)$$
+$$v_x=v_0-A\cos{\omega{t}}$$.
+At time t=0, force on electron is only due to electric field. $\vec{v}\times\vec{B}=0 since \vec{v}=0.$
+$$\vec{F}=m\left(\frac{dv_x}{dt}\hat{i}+\frac{dv_y}{dt}\hat{j}+\frac{dv_z}{dt}\hat{k} \right )=
+(-e)(-E\,\hat{j})=eE\,\hat{j}$$
+$$m\frac{dv_y}{dt}\hat{j}=eE\,\hat{j}$$
+$$m\frac{dv_y}{dt}=mA\omega\cos{\omega{t}}=mA\omega=eE$$
+$$mA\omega=mA\frac{eB}{m}=eE$$
+$$A=\frac{E}{B}=v_0$$
+Hence solutions for differential equations are $$v_y=A\sin{\omega{t}}=\frac{E}{B}\sin{\omega{t}}=v_0\sin{\omega{t}}$$ and $$v_x=v_0-v_0\cos{\omega{t}}=v_0(1-\cos{\omega{t}})=\frac{E}{B}(1-\cos{\omega{t}})$$.
+$$v_y=\frac{dy}{dt}=\frac{E}{B}\sin{\omega{t}}=v_0\sin{\omega{t}}$$
+$$v_x=\frac{dx}{dt}=v_0(1-\cos{\omega{t}})=\frac{E}{B}(1-\cos{\omega{t}})$$
+Integrating the above equations
+$$\int_{0}^{y}dy=\int_{0}^{t}\frac{E}{B}\sin{\omega{t}}\,dt$$
+$$y=\frac{E}{\omega{B}}(1-\cos{\omega{t}})$$
+$$\int_{0}^{x}dx=\frac{E}{B}\int_{0}^{t}(1-\cos{\omega{t}})dt$$
+$$x=\frac{E}{B}\left(t-\frac{\sin{\omega{t}}}{\omega}\right)=\frac{E}{\omega{B}}\left(\omega{t}-\sin{\omega{t}}\right)$$
+Hence solutions are $$\boxed{x(t)=\frac{mE}{eB^2}\left(\omega{t}-\sin{\omega{t}}\right)}$$ and 
+\[\boxed{y(t)=\frac{mE}{eB^2}(1-\cos{\omega{t}})}\]
+ where $\omega=\frac{eB}{m}$
+\subsection*{(iii)}
+\[y(t)=\frac{mE}{eB^2}(1-\cos{\omega{t}})\]
+Maximum value of $y(t)$ will occur when $\cos{\omega{t}}=-1$, that is when $\omega{t}=\pi$ or $t=\frac{\pi}{\omega}=\frac{\pi{m}}{eB}$.
+\[\boxed{y_{max}=\frac{2mE}{eB^2}}\]
+\subsection*{(iv)}
+$a$ is the distance between two points on the $x$ axis where the electron comes to momentary rest on $x$ axis.
+\[x(t)=\frac{mE}{eB^2}\left(\omega{t}-\sin{\omega{t}}\right)\]
+\[v_x=\frac{E}{B}(1-\cos{\omega{t}})\]
+\[v_y=\frac{E}{B}\sin{\omega{t}}\]
+Velocity components are zero at time $t=0$ and when $\omega{t}=2\pi$.
+$x=0$ at time $t=0$ and $$x=\frac{mE}{eB^2}\left(2\pi-\sin{(2\pi)}\right)=\frac{2\pi{m}E}{eB^2}$$ at  $t=\frac{2\pi}{\omega}$.
+Hence $a=\frac{2\pi{m}E}{eB^2}-0=\frac{2\pi{m}E}{eB^2}$.
+\[\boxed{a=\frac{2\pi{m}E}{eB^2}}\]
+\end{document}
