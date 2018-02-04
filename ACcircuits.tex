@@ -1,0 +1,73 @@
+% !TEX TS-program = pdflatex
+% !TEX encoding = UTF-8 Unicode
+
+\documentclass[12pt]{article}
+
+\usepackage[utf8]{inputenc} 
+
+\usepackage{geometry}
+\geometry{a4paper} 
+\geometry{margin=0.25in} 
+\geometry{portrait}
+
+\usepackage{amsmath}
+\usepackage{physics}
+\usepackage{tikz} 
+
+\title{AC solution}
+\author{vijayabhaskar badireddi}
+%\date{} 
+
+
+\begin{document}
+\section*{(a)}
+
+EMF is \(E=E_0\sin{(\omega{t})}\).\\
+Current through the resistance \(I_1=\frac{E}{R_1}=\frac{E_0}{R_1}\sin{(\omega{t})}\).\\
+Current through the capacitance is \(I_2=\frac{E}{X_C}=E_0\omega{C}\sin{\left(\omega{t}+\frac{\pi}{2}\right)}=E_0\omega{C}\cos{\left(\omega{t}\right)}
+\).\\
+Current through the source is \(I=I_1+I_2=\frac{E_0}{R}\sin{\left(\omega{t}\right)}+E_0\omega{C}\cos{\left(\omega{t}\right)}
+\).\\
+\(I=E_0\sqrt{\frac{1}{R^2}+(\omega{C})^2}\,\sin{\left(\omega{t}+\phi\right)}\) where 
+\(\cos{\phi}=\frac{\frac{1}{R}}{\sqrt{\frac{1}{R^2}+(\omega{C})^2}} \)and \(\sin{\phi}=\frac{\omega{C}}{\sqrt{\frac{1}{R^2}+(\omega{C})^2}}
+\)\\
+
+\section*{(b)}
+
+Since resistance and capacitance are in series, Impedance is 
+\(Z=\sqrt{R^2+\frac{1}{(\omega{C})^2}}. \)\\
+Current through the source is same as current through the resistance and current through the capacitance.\\
+\(I=I_1=I_2=\frac{E_0}{Z}\sin{\left(\omega{t}+\phi \right )}=\frac{E_0}{\sqrt{R^2+\frac{1}{(\omega{C})^2}}}\sin{\left(\omega{t}+\phi \right )}.\)\\
+where \(\cos{\phi}=\frac{R}{\sqrt{R^2+\frac{1}{(\omega{C})^2}}}\) and \(\sin{\phi}=\frac{\frac{1}{\omega{C}}}{\sqrt{R^2+\frac{1}{(\omega{C})^2}}}\)\\
+Voltage across the resistance is \(V_{R}=IR=\frac{E_0R}{\sqrt{R^2+\frac{1}{(\omega{C})^2}}}\sin{\left(\omega{t}+\phi \right )}.\)\\
+Voltage across the capacitance is \(V_{C}=\frac{E_0}{(\omega{C})\sqrt{R^2+\frac{1}{(\omega{C})^2}}}\sin{\left(\omega{t}+\phi -\frac{\pi}{2}\right )}.\)\\
+
+\section*{(c)}
+
+EMF is \(E=E_0\sin{(\omega{t})}.\)\\
+Current through the resistance \(I_1=\frac{E}{R_1}=\frac{E_0}{R_1}\sin{(\omega{t})}.\)\\
+Current through the inductance is \(I_2=\frac{E}{X_L}=\frac{E_0}{\omega{L}}\sin{\left(\omega{t}-\frac{\pi}{2}\right)}=-\frac{E_0}{\omega{L}}\cos{\left(\omega{t}\right)}.\)\\
+Current through the source is \(I=I_1+I_2=\frac{E_0}{R}\sin{\left(\omega{t}\right)}-\frac{E_0}{\omega{L}}\cos{\left(\omega{t}\right)}.\)\\
+\(I=E_0\sqrt{\frac{1}{R^2}+\frac{1}{(\omega{L})^2}}\,\sin{\left(\omega{t}-\phi\right)} where \cos{\phi}=\frac{\frac{1}{R}}{\sqrt{\frac{1}{R^2}+\frac{1}{(\omega{L})^2}}} and \sin{\phi}=\frac{\frac{1}{\omega{L}}}{\sqrt{\frac{1}{R^2}+\frac{1}{(\omega{L})^2}}}.\)\\
+\section*{(d)}
+Since resistance and inductance are in series, Impedance is \(Z=\sqrt{R^2+(\omega{L})^2}\).\\
+Current through the source is same as current through the resistance and current through the inductance.\\
+\[I=I_1=I_2=\frac{E_0}{Z}\sin{\left(\omega{t}-\phi \right )}=\frac{E_0}{\sqrt{R^2+(\omega{L})^2}}\sin{\left(\omega{t}-\phi \right )}.\]
+where \(\cos{\phi}=\frac{R}{\sqrt{R^2+(\omega{L})^2}}\) and \(\sin{\phi}=\frac{\omega{L}}{\sqrt{R^2+(\omega{L})^2}}.\)\\
+Voltage across the resistance is \[V_{R}=IR=\frac{E_0R}{\sqrt{R^2+(\omega{L})^2}}\sin{\left(\omega{t}-\phi \right )}.\]
+Voltage across the inductance is \[V_{L}=I\omega{L}=\frac{E_0\omega{L}}{\sqrt{R^2+(\omega{L})^2}}\sin{\left(\omega{t}-\phi +\frac{\pi}{2}\right )}.\]
+\section*{(e)}
+EMF is \(E_0\sin{(\omega{t})}.\) Current through the capacitance 
+\[I_1=\frac{E}{X_C}=\frac{E}{\frac{1}{\omega{C}}}=E_0\omega{C}\sin{\left(\omega{t}+\frac{\pi}{2}\right)}=E_0\omega{C}\cos{\left(\omega{t}\right)}.\]
+Current through the inductance is \[I_2=\frac{E}{X_L}=\frac{E_0}{\omega{L}}\sin{\left(\omega{t}-\frac{\pi}{2}\right)}=-\frac{E_0}{\omega{L}}\cos{\left(\omega{t}\right)}.\]
+Current through the source is 
+\[I=I_1+I_2=E_0\omega{C}\cos{\left(\omega{t}\right)}-\frac{E_0}{\omega{L}}\cos{\left(\omega{t}\right)}\]
+\[I=E_0\left(\omega{C}-\frac{1}{\omega{L}} \right )\sin{\left(\omega{t}+\frac{\pi}{2}\right)}. \]
+\section*{(f)}
+Since capacitance and inductance are in series, Impedance is \(\omega{L}-\frac{1}{\omega{C}}. \)
+Current through the source is same as current through the capacitance and current through the inductance.
+\[I_1=I_2=\frac{E_0}{Z}\sin{\left(\omega{t}-\frac{\pi}{2} \right )}=\frac{E_0}{\omega{L}-\frac{1}{\omega{C}}}\sin{\left(\omega{t}-\frac{\pi}{2} \right )}.\]
+Voltage across the inductance is \[V_L=\frac{E_0\omega{L}}{\omega{L}-\frac{1}{\omega{C}}}\sin{\left(\omega{t}-\frac{\pi}{2}+\frac{\pi}{2} \right )}=\frac{E_0\omega{L}}{\omega{L}-\frac{1}{\omega{C}}}\sin{\left(\omega{t}\right )}\]
+Voltage across the capacitance is \[V_C=\frac{E_0}{\omega{C}\left(\omega{L}-\frac{1}{\omega{C}} \right )}\sin{\left(\omega{t}-\frac{\pi}{2}-\frac{\pi}{2} \right )}=-\frac{E_0}{\omega{C}\left(\omega{L}-\frac{1}{\omega{C}} \right )}\sin{\left(\omega{t}\right )}\]
+
+\end{document}
