@@ -21,7 +21,9 @@
 \begin{document}
 %\maketitle
 
-\section*{mathematics}
+\section*{Vectors}
+\[\dd{T}=\pdv{T}{x}\dd{x}+\pdv{T}{y}\dd{y}+\pdv{T}{z}\dd{z}=\grad{T}\vdot\dd{\vb{l}}\]
+The gradient $\grad{T}$ points in the direction of  maximum increase in the function $T$. The magnitude $|\grad{T}|$ gives the slope along the maximal direction.
 \subsection*{Cartesian}
 \[\dd{\vb{l}}=\dd{x}\vu{\vb{x}}+\dd{y}\vu{\vb{y}}+\dd{z}\vu{\vb{z}}\quad\dd{\tau}=\dd{x}\dd{y}\dd{z}\]
 \[\qq{Gradient}\quad\grad{f}=\pdv{f}{x}\vu{\vb{x}}+\pdv{f}{y}\vu{\vb{y}}+\pdv{f}{z}\vu{\vb{z}}\]
@@ -29,12 +31,22 @@
 \[\qq{Curl}\quad\curl{\vb{V}}=\qty(\pdv{V_z}{y}-\pdv{V_y}{z})\vu{\vb{x}}+\qty(\pdv{V_x}{z}-\pdv{V_z}{x})\vu{\vb{y}}+\qty(\pdv{V_y}{x}-\pdv{V_x}{y})\vu{\vb{z}}\]
 \[\qq{Laplacian}\quad\laplacian{f}=\pdv[2]{f}{x}+\pdv[2]{f}{y}+\pdv[2]{f}{z}\]
 \subsection*{Spherical}
+\begin{align*}
+\vu{r}&=\sin\theta\cos\phi\vu{x}+\sin\theta\cos\phi\vu{y}+\cos\theta\vu{z}\\
+\vu{\theta}&=\cos\theta\cos\phi\vu{x}+\cos\theta\sin\phi\vu{y}-\sin\theta\vu{z}\\
+\vu{\phi}&=-\sin\phi\vu{x}+\cos\phi\vu{y}
+\end{align*}
 \[\dd{\vb{l}}=\dd{r}\vu{\vb{r}}+r\dd{\theta}\vu{\vb{\theta}}+r\sin\phi\dd{\phi}\vu{\vb{\phi}}\quad\dd{\tau}=r^2\sin\theta\dd{r}\dd{\theta}\dd{\phi}\]
 \[\qq{Gradient}\quad\grad{f}=\pdv{f}{r}\vu{\vb{r}}+\frac{1}{r}\pdv{f}{\theta}\vu{\vb{\theta}}+\frac{1}{r\sin\theta}\pdv{f}{\phi}\vu{\vb{\phi}}\]
 \[\qq{Divergence}\quad\div{\vb{V}}=\frac{1}{r^2}\pdv{r}\qty(r^2V_r)+\frac{1}{r\sin\theta}\pdv{\theta}\qty(\sin{\theta}V_{\theta})+\frac{1}{r\sin\theta}\pdv{V_{\phi}}{\phi}\]
 \[\qq{Curl}\quad\curl{\vb{V}}=\frac{1}{r\sin\theta}\bqty{\pdv{\theta}\qty(\sin{\theta}V_{\phi})-\pdv{V_{\theta}}{\phi}}\vu{\vb{r}}+\frac{1}{r}\bqty{\frac{1}{\sin\theta}\pdv{V_r}{\phi}-\pdv{r}\qty(rV_{\phi})}\vu{\vb{\theta}}+\frac{1}{r}\bqty{\pdv{r}\qty(rV_{\theta})-\pdv{V_r}{\theta}}\vu{\vb{\phi}}\]
 \[\qq{Laplacian}\quad\laplacian{f}=\frac{1}{r^2}\pdv{r}\qty(r^2\pdv{f}{r})+\frac{1}{r^2\sin\theta}\pdv{\theta}\qty(\sin{\theta}\pdv{f}{\theta})+\frac{1}{r^2\sin^2{\theta}}\pdv[2]{f}{\phi}\]
 \subsection*{Cylindrical}
+\begin{align*}
+\vu{s}&=\cos\phi\vu{x}+\sin\phi\vu{y}\\
+\vu{\phi}&=-\sin\phi\vu{x}+\cos\phi\vu{y}\\
+\vu{z}&=\vu{z}
+\end{align*}
 \[\dd{\vb{l}}=\dd{s}\vu{\vb{s}}+s\dd{\phi}\vu{\vb{\phi}}+\dd{z}\vu{\vb{z}}\quad\dd{\tau}=s\dd{s}\dd{\phi}\dd{z}\]
 \[\qq{Gradient}\quad\grad{f}=\pdv{f}{s}\vu{\vb{s}}+\frac{1}{s}\pdv{f}{\phi}\vu{\vb{\phi}}+\pdv{f}{z}\vu{\vb{z}}\]
 \[\qq{Divergence}\quad\div{\vb{V}}=\frac{1}{s}\pdv{s}\qty(sV_s)+\frac{1}{s}\pdv{V_{\phi}}{\phi}+\pdv{V_z}{z}\]
@@ -81,7 +93,6 @@ In a volume surrounded by conductors and containing a specified charge density, 
 \subsection*{polarization}
 \[\sigma_b=\vb{P}\vdot\vu{n}\quad\rho_b=-\div{\vb{P}}\]
 \subsection*{displacement}
-
 \subsection*{misc}
 \subsection*{Coulomb's law}
 \[\vb{E}=\frac{1}{4\pi\epsilon_0}\frac{q_1q_2(\vb{r}_1-\vb{r}_2)}{|\vb{r}_1-\vb{r}_2|^3}\]
