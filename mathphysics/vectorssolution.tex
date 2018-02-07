@@ -29,7 +29,7 @@ On top \[d{\mathbf{a}}=da\,\hat{z}, \mathbf{v}\cdot\,d{\mathbf{a}}=(s\sin{\varph
 \[\int_{top}\vb{v}\cdot\dd\vb{a}=\int_{top}zs\dd{s}\dd{\varphi}=\int_{0}^{R}\int_{0}^{2\pi}Hs\dd s\dd{\varphi}=\pi{R^2H}\]
 
 On bottom \[\dd\vb{a}=-\dd{a}\hat{z}, \vb{v}\cdot\,d{\mathbf{a}}=-(s\sin{\varphi}\hat{s}+s\cos{\varphi}\hat{\varphi}+z\hat{z})\cdot\,da\,\hat{z}=-zda\]
-\[\int_{bottom}{\mathbf{v}\cdot\,d{\mathbf{a}}}=-\int_{bottom}{zda}=\int_{bottom}{(0)da}=0\]
+\[\int_{bottom}\vb{v}\cdot\dd\vb{a}=-\int_{bottom}{z\dd a}=\int_{bottom}{(0)\dd a}=0\]
 On sides \(d{\vb{a}}=\dd a\hat{s}\), \[\vb{v}\cdot\dd{\vb{a}}=(s\sin{\varphi}\vb{s}+s\cos{\varphi}\vu{\varphi}+z\vu{z})\cdot\dd a\,\vu{s}=s\sin{\varphi}\dd a=s^2\sin{\varphi}\dd{\varphi}\dd z\]
 \[\int_{sides}\vb{v}\cdot\dd{\vb{a}=\int_{sides}s^2\sin{\varphi}\dd{\varphi}\dd{z}=\int_{0}^{H}\int_{0}^{2\pi}R^2\sin{\varphi}\dd{\varphi}\dd{z}=0\]
 \[\oint_{S}{\mathbf{v}\cdot\,d{\mathbf{a}}}=\pi{R^2H}+0+0=\pi{R^2H}\]
@@ -38,7 +38,7 @@ Hence \[\int_{V}(\div{\vb{v}})\dd\tau=\pi{R^2H} and \oint_{S}\vb{v}\cdot\dd\vb{a
 Hence divergence theorem is verified.
 \subsection*{(c)}
 Curl of a vector function 
-\[\vb{v}=v_s\vu{s}+v_{\varphi}\vu{\varphi}+v_z\vu{z}\]  in cylindrical coordinates is \[\div{\vb{v}}=\left(\frac{1}{s}\frac{\partial{v_z}}{\partial{\varphi}}-\frac{\partial{v_{\varphi}}}{\partial{z}} \right )\hat{s}+\left(\frac{\partial{v_s}}{\partial{z}}-\frac{\partial{v_{z}}}{\partial{s}} \right )\hat{\varphi}+\frac{1}{s}\left[ \frac{\partial}{\partial{s}}(s{v_{\varphi}})-\frac{\partial{v_s}}{\partial{\varphi}}\right ]\hat{z}\]
+\[\vb{v}=v_s\vu{s}+v_{\varphi}\vu{\varphi}+v_z\vu{z}\]  in cylindrical coordinates is \[\div{\vb{v}}=\left(\frac{1}{s}\pdv{v_z}{\varphi}-\pdv{v_{\varphi}}{z} \right )\vu{s}+\left(\pdv{v_s}{z}-\pdv{v_{z}}{s} \right )\vu{\varphi}+\frac{1}{s}\left[ \pdv{s}(s{v_{\varphi}})-\frac{\partial{v_s}}{\partial{\varphi}}\right ]\hat{z}\]
 \[\div{\vb{v}}=\left(\frac{1}{s}\frac{\partial{z}}{\partial{\varphi}}-\frac{\partial{(s\cos{\varphi})}}{\partial{z}} \right )\vu{s}+\left(\frac{\partial{(s\sin{\varphi})}}{\partial{z}}-\frac{\partial{z}}{\partial{s}} \right )\vu{\varphi}+\frac{1}{s}\left[ \frac{\partial}{\partial{s}}(s^2\cos{\varphi})-\frac{\partial{(s\sin{\varphi})}}{\partial{\varphi}}\right ]\vu{z}\]
 \[\div{\vb{v}}=(0-0)\vu{s}+(0-0)\vu{\varphi}+\frac{1}{s}[ 2s\cos{\varphi}-s\cos{\varphi} ]\vu{z}\]
 \[\div{\vb{v}}=\cos{\varphi}\vu{z}\]
