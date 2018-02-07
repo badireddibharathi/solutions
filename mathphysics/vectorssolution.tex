@@ -26,15 +26,15 @@ $s$ integral gives \(\frac{R^2}{2}\)
 \oint_{S}\vb{v}\cdot\dd{\vb{a}}=\int_{top}\vb{v}\cdot\dd\vb{a}+\int_{bottom}{\vb{v}\cdot\dd\vb{a}}+\int_{sides}{\vb{v}\cdot\dd\vb{a}}\]
 
 On top \[d{\mathbf{a}}=da\,\hat{z}, \mathbf{v}\cdot\,d{\mathbf{a}}=(s\sin{\varphi}\hat{s}+s\cos{\varphi}\hat{\varphi}+z\hat{z})\cdot\,da\,\hat{z}=zs\,ds\,d{\varphi}\]
-\[\int_{top}{\mathbf{v}\cdot\,d{\mathbf{a}}}=\int_{top}{zs\,ds\,d{\varphi}}=\int_{0}^{R}\int_{0}^{2\pi}{Hs\,ds\,d{\varphi}}=\pi{R^2H}\]
+\[\int_{top}\vb{v}\cdot\dd\vb{a}=\int_{top}zs\dd{s}\dd{\varphi}=\int_{0}^{R}\int_{0}^{2\pi}Hs\dd s\dd{\varphi}=\pi{R^2H}\]
 
 On bottom \[\dd\vb{a}=-\dd{a}\hat{z}, \vb{v}\cdot\,d{\mathbf{a}}=-(s\sin{\varphi}\hat{s}+s\cos{\varphi}\hat{\varphi}+z\hat{z})\cdot\,da\,\hat{z}=-zda\]
 \[\int_{bottom}{\mathbf{v}\cdot\,d{\mathbf{a}}}=-\int_{bottom}{zda}=\int_{bottom}{(0)da}=0\]
-On sides \(d{\mathbf{a}}=da\,\hat{s}\), \[\mathbf{v}\cdot\,d{\mathbf{a}}=(s\sin{\varphi}\hat{s}+s\cos{\varphi}\hat{\varphi}+z\hat{z})\cdot\,da\,\hat{s}=s\sin{\varphi}\,da=s^2\sin{\varphi}\,d{\varphi}\,dz\]
-\[\int_{sides}{\mathbf{v}\cdot\,d{\mathbf{a}}}=\int_{sides}{s^2\sin{\varphi}\,d{\varphi}\,dz}=\int_{0}^{H}\int_{0}^{2\pi}{R^2\sin{\varphi}\,d{\varphi}\,dz}=0\]
+On sides \(d{\vb{a}}=\dd a\hat{s}\), \[\vb{v}\cdot\dd{\vb{a}}=(s\sin{\varphi}\vb{s}+s\cos{\varphi}\vu{\varphi}+z\vu{z})\cdot\dd a\,\vu{s}=s\sin{\varphi}\dd a=s^2\sin{\varphi}\dd{\varphi}\dd z\]
+\[\int_{sides}\vb{v}\cdot\dd{\vb{a}=\int_{sides}s^2\sin{\varphi}\dd{\varphi}\dd{z}=\int_{0}^{H}\int_{0}^{2\pi}R^2\sin{\varphi}\dd{\varphi}\dd{z}=0\]
 \[\oint_{S}{\mathbf{v}\cdot\,d{\mathbf{a}}}=\pi{R^2H}+0+0=\pi{R^2H}\]
-Hence \[\int_{V}{(\nabla\cdot{\mathbf{v}})d\tau}=\pi{R^2H} and \oint_{S}{\mathbf{v}\cdot\,d{\mathbf{a}}}=\pi{R^2H}\]
-\[\int_{V}{(\nabla\cdot{\mathbf{v}})d\tau}=\pi{R^2H}=\oint_{S}{\mathbf{v}\cdot\,d{\mathbf{a}}}\]
+Hence \[\int_{V}(\div{\vb{v}})\dd\tau=\pi{R^2H} and \oint_{S}\vb{v}\cdot\dd\vb{a}=\pi{R^2H}\]
+\[\int_{V}(\div{\vb{v}})\dd\tau=\pi{R^2H}=\oint_{S}\vb{v}\cdot\dd{\vb{a}}\]
 Hence divergence theorem is verified.
 \subsection*{(c)}
 Curl of a vector function 
