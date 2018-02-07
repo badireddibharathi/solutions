@@ -1,0 +1,47 @@
+% !TEX TS-program = pdflatex
+% !TEX encoding = UTF-8 Unicode
+
+\documentclass[12pt]{article}
+
+\usepackage[utf8]{inputenc} 
+
+\usepackage{geometry}
+\geometry{a4paper} 
+\geometry{margin=0.25in} 
+\geometry{portrait}
+
+\usepackage{amsmath}
+\usepackage{physics}
+\usepackage{tikz} 
+
+\title{dipole moment}
+\author{vijayabhaskar badireddi}
+%\date{} 
+
+\begin{document}
+\section*{dipole moment}
+An electric charge $q_1$ islocated at point $\vb{r}_1$. Electric field at point $\vb{r}$ due to this charge $\displaystyle \vb{E}=\frac{q_1}{4\pi\epsilon_0}\frac{(\vb{r}-\vb{r}_1)}{|\vb{r}-\vb{r}_1|^3}$.\\
+Here charges and their locations are $q_1=+q$ at $\left(0,0,\frac{l}{2}\right)$ and $q_2=-q$ at $\left(0,0,\frac{l}{2}\right)$.That is $\vb{r}_1=\frac{l}{2}\vu{z}\quad\vec{r}_2=-\frac{l}{2}\vu{z}$.\\
+Electric field is to be calculated at $\vb{r}=x\vu{x}+y\vu{y}+z\vu{z}$.
+\[\vb{E}=\frac{q}{4\pi\epsilon_0}\frac{(\vb{r}-\vb{r}_1)}{|\vb{r}-\vb{r}_1|^3}-\frac{q}{4\pi\epsilon_0}\frac{(\vb{r}-\vb{r}_2)}{|\vb{r}-\vb{r}_2|^3}\]
+\[\vb{E}=\frac{q}{4\pi\epsilon_0}\left[\frac{(x\vu{x}+y\vu{y}+z\vu{z}-\frac{l}{2}\vu{z})}{|x\vu{x}+y\vu{y}+z\vu{z}-\frac{l}{2}\vu{z}|^3}-\frac{(x\vu{x}+y\vu{y}+z\vu{z}+\frac{l}{2}\vu{z})}{|x\vu{x}+y\vu{y}+z\vu{z}+\frac{l}{2}\vu{z}|^3}\right]\]
+\[\vb{E}=\frac{q}{4\pi\epsilon_0}\left[\frac{(x\vu{x}+y\vu{y}+z\vu{z}-\frac{l}{2}\vu{z})}{\left(x^2+y^2+\left(z-\frac{l}{2}\right)^2\right)^{3/2}}-\frac{(x\vu{x}+y\vu{y}+z\vu{z}+\frac{l}{2}\vu{z})}{\left(x^2+y^2+\left(z+\frac{l}{2}\right)^2\right)^{3/2}}\right]\]
+Since $r\gg l$, $(x^2+y^2+z^2)^{1/2}\gg l$\\
+\[\left(x^2+y^2+\left(z-\frac{l}{2}\right)^2\right)^{3/2}=\left(x^2+y^2+z^2-zl+\frac{l^2}{4}\right)^{3/2}\approx\left(x^2+y^2+z^2-zl\right)\]
+\[\left(x^2+y^2+z^2-zl\right)^{3/2}=(x^2+y^2+z^2)^{3/2}\left(1-\frac{zl}{x^2+y^2+z^2}\right)^{3/2}=(r^3)\left(1-\frac{zl}{r^2}\right)^{3/2}\]
+\[\left(x^2+y^2+\left(z+\frac{l}{2}\right)^2\right)^{3/2}=\left(x^2+y^2+z^2+zl+\frac{l^2}{4}\right)^{3/2}\approx\left(x^2+y^2+z^2+zl\right)\]
+\[\left(x^2+y^2+z^2+zl\right)^{3/2}=(x^2+y^2+z^2)^{3/2}\left(1+\frac{zl}{x^2+y^2+z^2}\right)^{3/2}=(r^3)\left(1+\frac{zl}{r^2}\right)^{3/2}\]
+Using binomial approximation,$(1+x)^n\approx1+nx$, \[(r^3)\left(1-\frac{zl}{r^2}\right)^{3/2}\approx(r^3)\left(1-\frac{3zl}{2r^2}\right)\quad(r^3)\left(1+\frac{zl}{r^2}\right)^{3/2}\approx(r^3)\left(1+\frac{3zl}{2r^2}\right)\]
+Substituting these expressions, electric field can be written as
+\[\vb{E}=\frac{q}{4\pi\epsilon_0}\left[\frac{(\vb{r}-\frac{l}{2}\vu{z})}{(r^3)\left(1-\frac{3zl}{2r^2}\right)}-\frac{(\vb{r}+\frac{l}{2}\vu{z})}{(r^3)\left(1+\frac{3zl}{2r^2}\right)}\right]\]
+\[\vb{E}=\frac{q}{4\pi\epsilon_0(r^3)}\left[(\vb{r}-\frac{l}{2}\vu{z})\left(1+\frac{3zl}{2r^2}\right)-(\vb{r}+\frac{l}{2}\vu{z})\left(1-\frac{3zl}{2r^2}\right)\right]\]
+
+\[\vb{E}=\frac{q}{4\pi\epsilon_0(r^3)}\left[(\vb{r})\left(1+\frac{3zl}{2r^2}\right)-(\vb{r})\left(1-\frac{3zl}{2r^2}\right)+(-\frac{l}{2}\vu{z})\left(1+\frac{3zl}{2r^2}\right)-(\frac{l}{2}\vu{z})\left(1-\frac{3zl}{2r^2}\right)\right]\]
+
+\[\vb{E}=\frac{q}{4\pi\epsilon_0(r^3)}\left[(\vb{r})\left(\frac{3zl}{r^2}\right)-(l\vu{z})\right]\]
+Using the definition $\vb{p}=ql\vu{z}$, $\vb{p}\vdot\vb{r}=qzl$.
+\[\vb{E}=\frac{1}{4\pi\epsilon_0(r^3)}\left[(\vb{r})\left(\frac{3\vb{p}\vdot\vb{r}}{r^2}\right)-\vb{p}\right]\]
+Since $\vb{r}=r\vu{r}$,
+\[\boxed{\vb{E}=\frac{1}{4\pi\epsilon_0}\left[\frac{3(\vb{p}\vdot\vu{r})(\vu{r})-\vb{p}}{r^3}\right]}\]
+
+\end{document}
