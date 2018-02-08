@@ -1,0 +1,50 @@
+% !TEX TS-program = pdflatex
+% !TEX encoding = UTF-8 Unicode
+\documentclass[12pt]{article} 
+
+\usepackage[utf8]{inputenc} 
+\usepackage{geometry} 
+\geometry{a4paper} 
+\geometry{margin=0.25in} 
+\geometry{portrait} 
+
+\usepackage{tikz} 
+
+\usepackage{amsmath} 
+\usepackage{physics} 
+\title{Fresnel}
+\author{vijayabhaskar badireddi} 
+\date{} 
+
+\begin{document}
+\section*{Fresnel's equations}
+In  the region where there is no charge and current, maxwell's equations are 
+\begin{align}
+\div{\vb{E}}&=0\\
+\div{\vb{B}}&=0\\
+\curl{\vb{E}}&=-\pdv{\vb{B}}{t}\\
+\curl{\vb{B}}&=\mu_0\epsilon_0\pdv{\vb{E}}{t}
+\end{align}
+Applying curl to $(3)$ and $(4)$ 
+\[\curl{\qty(\curl{\vb{E}})}=\grad{\qty(\div{\vb{E}})}-\laplacian{\vb{E}}=\curl{\qty(-\pdv{\vb{B}}{t})}=-\pdv{t}\qty(\curl{\vb{B}})=-\mu_)\epsilon_0\pdv[2]{\vb{E}}{t}\]
+
+\[\curl{\qty(\curl{\vb{B}})}=\grad{\qty(\div{\vb{B}})}-\laplacian{\vb{B}}=\curl{\qty(\mu_0\epsilon_0\pdv{\vb{E}}{t})}=\mu_0\epsilon_0\pdv{t}\qty(\curl{\vb{E}})=-\mu_0\epsilon_0\pdv[2]{\vb{B}}{t}\]
+Using $(1)$ and $(2)$ \\
+\[\boxed{\laplacian{\vb{E}}=\mu_0\epsilon_0\pdv[2]{\vb{E}}{t}\quad\laplacian{\vb{B}}=\mu_0\epsilon_0\pdv[2]{\vb{B}}{t}}\]
+If the propagation vector is $\vb{k}$, direction of propagation is in the same direction.
+The electric and magnetic fields are given by
+\[\boxed{\tilde{\vb{E}}(\vb{r},t)=\tilde{E}_0e^{i(\vb{k}\cdot\vb{r}-\omega t)}\vu{n}}\]
+\[\boxed{\tilde{\vb{B}}(\vb{r},t)=\frac{1}{c}\tilde{E}_0e^{i(\vb{k}\cdot\vb{r}-\omega t)}(\vu{k}\cp\vu{n})=\frac{1}{c}\vu{k}\cp\tilde{\vb{E}}}\]
+Let the $xy$ plane be the boundary between two linear media. A plane wave of frequency $\omega$ is travelling in the $z$ direction and polarized in the $x$ direction.\\
+Incident waves are \[\tilde{\vb{E}}_I(z,t)=\tilde{E}_{0I}e^{i(k_1z-\omega t)}\vu{x}\]
+\[\tilde{\vb{B}}_I(z,t)=\frac{1}{v_1}\tilde{E}_{0I}e^{i(k_1z-\omega t)}\vu{y}\]
+The reflected waves are  \[\tilde{\vb{E}}_R(z,t)=\tilde{E}_{0R}e^{i(-k_1z-\omega t)}\vu{x}\]
+\[\tilde{\vb{B}}_R(z,t)=-\frac{1}{v_1}\tilde{E}_{0I}e^{i(-k_1z-\omega t)}\vu{y}\]
+The transmitted waves are  \[\tilde{\vb{E}}_T(z,t)=\tilde{E}_{0T}e^{i(k_2z-\omega t)}\vu{x}\]
+\[\tilde{\vb{B}}_T(z,t)=\frac{1}{v_2}\tilde{E}_{0T}e^{i(k_2z-\omega t)}\vu{y}\]
+Using boundary conditions,\\
+\[\tilde{E}_{0I}+\tilde{E}_{0R}=\tilde{E}_{0T}\]
+\[\frac{1}{\mu_1}\qty(\frac{1}{v_1}\tilde{E}_{0I}-\frac{1}{v_1}\tilde{E}_{0R})=\frac{1}{\mu_2}\qty(\frac{1}{v_2}\tilde{E}_{0T})\]
+\[\tilde{E}_{0I}-\tilde{E}_{0R}=\beta\tilde{E}_{0T}\qq{ where }\beta=\frac{\mu_1v_1}{\mu_2v_2}\]
+\[\tilde{E}_{0R}=\qty(\frac{1-\beta}{1+\beta})\tilde{E}_{0I}\quad\tilde{E}_{0T}=\qty(\frac{2}{1+\beta})\tilde{E}_{0I}\]
+\end{document}
