@@ -1,0 +1,30 @@
+% !TEX TS-program = pdflatex
+% !TEX encoding = UTF-8 Unicode
+\documentclass[12pt]{article} 
+
+\usepackage[utf8]{inputenc} 
+\usepackage{geometry} 
+\geometry{a4paper} 
+\geometry{margin=0.25in} 
+\geometry{portrait} 
+
+\usepackage{tikz} 
+
+\usepackage{amsmath} 
+\usepackage{physics} 
+\title{thermodynamics}
+\author{vijayabhaskar badireddi} 
+\date{} 
+
+\begin{document}
+\[\qq{show that}C_p-C_v=\left[p+\qty(\pdv{E}{V})_T\right]\qty(\pdv{V}{T})_p\]
+\[\qq{First law of thermofynamics}\dd{E}=T\dd{S}-p\dd{V}\]
+At constant volume, $\dd{V}=0$, hence $\dd{E}=T\dd{S}$.
+\[C_v=\qty(\pdv{E}{T})_V=T\qty(\pdv{S}{T})_V\tag{1}\]
+Entropy is a function of volume $V$ and temperature $T$. Hence $S=S(T,V)$.
+\[\dd{S}=\qty(\pdv{S}{V})_T\dd{V}+\qty(\pdv{S}{T})_V\dd{T}\tag{2}\]
+\[C_p=\qty(\pdv{H}{T})_p=T\qty(\pdv{S}{T})_p\tag{3}\]
+Differentiating entropy with respect to $T$ at constant $P$,
+\[\qty(\pdv{S}{T})_p=\qty(\pdv{S}{T})_V\qty(\pdv{T}{T})_p+\qty(\pdv{S}{V})_T\qty(\pdv{V}{T})_p\]
+\[\qty(\pdv{S}{T})_p=\qty(\pdv{S}{T})_V+\qty(\pdv{S}{V})_T\qty(\pdv{V}{T})_p\]
+\end{document}

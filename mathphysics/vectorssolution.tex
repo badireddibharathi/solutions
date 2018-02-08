@@ -12,26 +12,26 @@ Height of cylinder H=10.\\
 Radius of cylinder R=2.\\
 Axis of cylinder is along Z axis with base of cylinder on XY plane.
 Divergence theorem \[\int_{V}(\div{\vb{v}})\dd\tau=\oint_{S}{\vb{v}\cdot\dd{\vb{a}}}\]
-Divergence of given vector function \[\vb{v}=s\sin{\varphi}\hat{s}+s\cos{\varphi}\hat{\varphi}+z\hat{z}\] is  \(\nabla\cdot\vb{v}=\sin{\varphi}+1\).
-\[\int_{V}{(\nabla\cdot{\mathbf{v}})d\tau}=\int_{0}^{R}\int_{0}^{2\pi}\int_{0}^{H}{(1+\cos{\varphi})sds\,d{\varphi}\,dz}
+Divergence of given vector function \[\vb{v}=s\sin{\varphi}\vu{s}+s\cos{\varphi}\vu{\varphi}+z\vu{z}\] is  \(\div{\vb{v}}=\sin{\varphi}+1\).
+\[\int_{V}(\div{\vb{v}})\dd\tau=\int_{0}^{R}\int_{0}^{2\pi}\int_{0}^{H}(1+\cos{\varphi})s\dd s\dd{\varphi}\dd z
 \]
 $z$ integral gives H
-\[\int_{V}{(\div{\vb{v}})\dd\tau}=H\int_{0}^{R}\int_{0}^{2\pi}{(1+\cos{\varphi})s\dd{s}\,\dd{\varphi}}
+\[\int_{V}{(\div{\vb{v}})\dd\tau}=H\int_{0}^{R}\int_{0}^{2\pi}{(1+\cos{\varphi})s\dd{s}\dd{\varphi}}
 \]
 $s$ integral gives \(\frac{R^2}{2}\)
-\[\int_{V}{(\div{\vb{v}})\dd\tau}=\frac{R^2H}{2}\int_{0}^{2\pi}{(1+\cos{\varphi})\dd{\varphi}}\]
+\[\int_{V}(\div{\vb{v}})\dd\tau=\frac{R^2H}{2}\int_{0}^{2\pi}{(1+\cos{\varphi})\dd{\varphi}}\]
 \(\varphi\) integral gives \(2\pi\)
 \[\int_{V}{(\div{\vb{v}})\dd\tau}=\pi{R^2H}\]
 \[
-\oint_{S}\vb{v}\cdot\dd{\vb{a}}=\int_{top}\vb{v}\cdot\dd\vb{a}+\int_{bottom}{\vb{v}\cdot\dd\vb{a}}+\int_{sides}{\vb{v}\cdot\dd\vb{a}}\]
+\oint_{S}\vb{v}\cdot\dd{\vb{a}}=\int_{top}\vb{v}\cdot\dd\vb{a}+\int_{bottom}\vb{v}\cdot\dd\vb{a}+\int_{sides}\vb{v}\cdot\dd\vb{a}\]
 
-On top \[d{\mathbf{a}}=da\,\hat{z}, \mathbf{v}\cdot\,d{\mathbf{a}}=(s\sin{\varphi}\hat{s}+s\cos{\varphi}\hat{\varphi}+z\hat{z})\cdot\,da\,\hat{z}=zs\,ds\,d{\varphi}\]
+On top \[\dd\vb{a}=\dd a\vu{z}, \vb{v}\cdot\dd\vb{a}=(s\sin{\varphi}\vu{s}+s\cos{\varphi}\vu{\varphi}+z\vu{z})\cdot\dd a\vu{z}=zs\dd s\dd{\varphi}\]
 \[\int_{top}\vb{v}\cdot\dd\vb{a}=\int_{top}zs\dd{s}\dd{\varphi}=\int_{0}^{R}\int_{0}^{2\pi}Hs\dd s\dd{\varphi}=\pi{R^2H}\]
 
-On bottom \[\dd\vb{a}=-\dd{a}\hat{z}, \vb{v}\cdot\,d{\mathbf{a}}=-(s\sin{\varphi}\hat{s}+s\cos{\varphi}\hat{\varphi}+z\hat{z})\cdot\,da\,\hat{z}=-zda\]
+On bottom \[\dd\vb{a}=-\dd{a}\hat{z}, \vb{v}\cdot\dd\mathbf{a}=-(s\sin{\varphi}\vu{s}+s\cos{\varphi}\vu{\varphi}+z\vu{z})\cdot\dd a\vu{z}=-z \dd a\]
 \[\int_{bottom}\vb{v}\cdot\dd\vb{a}=-\int_{bottom}{z\dd a}=\int_{bottom}{(0)\dd a}=0\]
-On sides \(d{\vb{a}}=\dd a\hat{s}\), \[\vb{v}\cdot\dd{\vb{a}}=(s\sin{\varphi}\vb{s}+s\cos{\varphi}\vu{\varphi}+z\vu{z})\cdot\dd a\,\vu{s}=s\sin{\varphi}\dd a=s^2\sin{\varphi}\dd{\varphi}\dd z\]
-\[\int_{sides}\vb{v}\cdot\dd{\vb{a}=\int_{sides}s^2\sin{\varphi}\dd{\varphi}\dd{z}=\int_{0}^{H}\int_{0}^{2\pi}R^2\sin{\varphi}\dd{\varphi}\dd{z}=0\]
+On sides \(\dd{\vb{a}}=\dd a\vu{s}\), \[\vb{v}\cdot\dd{\vb{a}}=(s\sin{\varphi}\vb{s}+s\cos{\varphi}\vu{\varphi}+z\vu{z})\cdot\dd a\,\vu{s}=s\sin{\varphi}\dd a=s^2\sin{\varphi}\dd{\varphi}\dd z\]
+\[\int_{sides}\vb{v}\cdot\dd\vb{a}=\int_{sides}s^2\sin{\varphi}\dd{\varphi}\dd{z}=\int_{0}^{H}\int_{0}^{2\pi}R^2\sin{\varphi}\dd{\varphi}\dd{z}=0\]
 \[\oint_{S}{\mathbf{v}\cdot\,d{\mathbf{a}}}=\pi{R^2H}+0+0=\pi{R^2H}\]
 Hence \[\int_{V}(\div{\vb{v}})\dd\tau=\pi{R^2H} and \oint_{S}\vb{v}\cdot\dd\vb{a}=\pi{R^2H}\]
 \[\int_{V}(\div{\vb{v}})\dd\tau=\pi{R^2H}=\oint_{S}\vb{v}\cdot\dd{\vb{a}}\]
