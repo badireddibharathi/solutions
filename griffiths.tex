@@ -21,7 +21,7 @@
 \begin{document}
 %\maketitle
 
-\section*{Vectors}
+\section{Vector Analysis}
 \[\dd{T}=\pdv{T}{x}\dd{x}+\pdv{T}{y}\dd{y}+\pdv{T}{z}\dd{z}=\grad{T}\vdot\dd{\vb{l}}\]
 The gradient $\grad{T}$ points in the direction of  maximum increase in the function $T$. The magnitude $|\grad{T}|$ gives the slope along the maximal direction.
 \subsection*{Cartesian}
@@ -65,7 +65,7 @@ The gradient $\grad{T}$ points in the direction of  maximum increase in the func
 \[\qq{gradient theorem}\quad \int_{\vb{a}}^{\vb{b}}\qty(\grad{f})\vdot\dd{\vb{l}}=f(\vb{b})-f(\vb{a})\]
 \[\qq{divergence theorem} \int\qty(\div{\vb{A}})\dd{\tau}=\oint\vb{A}\vdot\dd{\vb{a}}\]
 \[\qq{curl theorem} \int\qty(\curl{\vb{A}})\vdot\dd{\vb{a}}=\oint\vb{A}\vdot\dd{\vb{l}}\]
-\section{Vector Analysis}
+
 \subsection*{Dirac delta function}
 \[\div{\qty(\frac{\vb{r}}{r^2})}=4\pi\delta^3(\vb{r})\]
 \[\laplacian{\qty(\frac{1}{r})}=-4\pi\delta^3(\vb{r})\]
@@ -128,16 +128,8 @@ In a volume surrounded by conductors and containing a specified charge density, 
 \[\vb{B}_{above}-\vb{B}_{below}=\mu_0(\vb{K}\cp\vu{n})\]
 \[\vb{A}_{above}-\vb{A}_{below}=0\]
 \[\pdv{\vb{A}_{above}}{n}-\pdv{\vb{A}_{below}}{n}=-\mu_0\vb{K}\]
-\section{Conservation Laws}
-\[\qq{Equation of continuity} \pdv{\rho}{t}=-\div{\vb{J}}\]
-\[\dv{W}{t}=\int_{v}(\vb{E}\vdot{\vb{J}})\dd{\tau}=-\dv{t}\int_{v}\frac{1}{2}\qty(\epsilon_0E^2+\frac{1}{\mu_0}B^2)\dd{\tau}-\frac{1}{\mu_0}\oint(\vb{E}\cp\vb{B})\vdot\dd{\vb{a}}\]
-\[\qq{Poynting vector}\vb{S}=\frac{1}{\mu_0}(\vb{E}\cp\vb{B})\]
-\[\qq{Maxwell's stress tensor} T_{ij}=\epsilon_0\qty(E_iE_j-\frac{1}{2}\delta_{ij}E^2)+\frac{1}{\mu_0}\qty(B_iB_j-\frac{1}{2}\delta_{ij}B^2)\]
-\[\qq{force per unit volume} \vb{f}=\div{\vb{T}}-\epsilon_0\mu_0\pdv{\vb{S}}{t}\]
-\[\vb{F}=\oint_s\vb{T}\vdot\dd{\vb{a}}-\epsilon_0\mu_0\dv{t}\int_v\vb{S}\dd{\tau}\]
-\[\vb{p}_{em}=\mu_0\epsilon_0\int_v\vb{S}\dd{\tau}\]
-\[\mathcal{P}=\mu_0\epsilon_0\vb{S}\]
-\[\pdv{t}(\mathcal{P}_{mech}+\mathcal{P}_{em})=\div{\vb{T}}\]
+multipole expansion of vector potential\[\vb{A(\vb{r})}=\frac{\mu_0I}{4\pi}\int\frac{\dd{\vb{l}'}}{|\vb{r}-\vb{r'}|}=\frac{\mu_0I}{4\pi}\sum_{n=0}^{\infty}\frac{1}{r^{n+1}}\oint(r')^nP_n(\cos\theta')\dd{\vb{l'}}\]
+\section{Magnetic fields in matter}
 \section{Electrodynamics}
 \[\qq{Ohm's law} \vb{J}=\sigma\vb{E}\]
 \[\mathcal{E}=-\dv{\Phi}{t}\]
@@ -150,6 +142,23 @@ In a volume surrounded by conductors and containing a specified charge density, 
 \[\qq{no magnetic monopoles}\oint_{S}\vb{B}\vdot\dd{\vb{a}}=0\]
 \[\oint\vb{E}\vdot\dd{\vb{l}}=-\dv{t}\int\vb{B}\vdot\dd{\vb{a}}\]
 \[\oint\vb{H}\vdot\dd{\vb{l}}=I_{free,enc}+\dv{t}\int\vb{D}\vdot\dd{\vb{a}}\]
+
+\section{Conservation Laws}
+\[\qq{Equation of continuity} \pdv{\rho}{t}=-\div{\vb{J}}\]
+\[\dv{W}{t}=\int_{v}(\vb{E}\vdot{\vb{J}})\dd{\tau}=-\dv{t}\int_{v}\frac{1}{2}\qty(\epsilon_0E^2+\frac{1}{\mu_0}B^2)\dd{\tau}-\frac{1}{\mu_0}\oint(\vb{E}\cp\vb{B})\vdot\dd{\vb{a}}\]
+\[\qq{Poynting vector}\vb{S}=\frac{1}{\mu_0}(\vb{E}\cp\vb{B})\]
+\[\qq{Maxwell's stress tensor} T_{ij}=\epsilon_0\qty(E_iE_j-\frac{1}{2}\delta_{ij}E^2)+\frac{1}{\mu_0}\qty(B_iB_j-\frac{1}{2}\delta_{ij}B^2)\]
+\[\qq{force per unit volume} \vb{f}=\div{\vb{T}}-\epsilon_0\mu_0\pdv{\vb{S}}{t}\]
+\[\vb{F}=\oint_s\vb{T}\vdot\dd{\vb{a}}-\epsilon_0\mu_0\dv{t}\int_v\vb{S}\dd{\tau}\]
+\[\vb{p}_{em}=\mu_0\epsilon_0\int_v\vb{S}\dd{\tau}\]
+\[\mathcal{P}=\mu_0\epsilon_0\vb{S}\]
+\[\pdv{t}(\mathcal{P}_{mech}+\mathcal{P}_{em})=\div{\vb{T}}\]
+\section{Electromagnetic waves}
+
+\section{Potentials and fields}
+
+\section{Radiation}
+
 \section{Relativity}
 \[\qq{time dilation} \Delta{\bar{t}}=\frac{\Delta{t}}{\gamma}=\Delta{t}\sqrt{1-\frac{v^2}{c^2}}\]
 
