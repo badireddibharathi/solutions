@@ -186,14 +186,15 @@ Current density of bound current $\vb{J}_b=\curl{\vb{M}}$.Surface density of bou
 
 \section{Conservation Laws}
 \[\qq{Equation of continuity} \pdv{\rho}{t}=-\div{\vb{J}}\]
-\[\dv{W}{t}=\int_{v}(\vb{E}\vdot{\vb{J}})\dd{\tau}=-\dv{t}\int_{v}\frac{1}{2}\qty(\epsilon_0E^2+\frac{1}{\mu_0}B^2)\dd{\tau}-\frac{1}{\mu_0}\oint(\vb{E}\cp\vb{B})\vdot\dd{\vb{a}}\]
+Poynting's theorem
+\[\dv{W}{t}=\int_{\mathcal{V}}(\vb{E}\vdot{\vb{J}})\dd{\tau}=-\dv{t}\int_{\mathcal{V}}\frac{1}{2}\qty(\epsilon_0E^2+\frac{1}{\mu_0}B^2)\dd{\tau}-\frac{1}{\mu_0}\oint(\vb{E}\cp\vb{B})\vdot\dd{\vb{a}}\]
 \[\qq{Poynting vector}\vb{S}=\frac{1}{\mu_0}(\vb{E}\cp\vb{B})\]
 \[\qq{Maxwell's stress tensor} T_{ij}=\epsilon_0\qty(E_iE_j-\frac{1}{2}\delta_{ij}E^2)+\frac{1}{\mu_0}\qty(B_iB_j-\frac{1}{2}\delta_{ij}B^2)\]
-\[\qq{force per unit volume} \vb{f}=\div{\vb{T}}-\epsilon_0\mu_0\pdv{\vb{S}}{t}\]
-\[\vb{F}=\oint_s\vb{T}\vdot\dd{\vb{a}}-\epsilon_0\mu_0\dv{t}\int_v\vb{S}\dd{\tau}\]
-\[\vb{p}_{em}=\mu_0\epsilon_0\int_v\vb{S}\dd{\tau}\]
-\[\mathcal{P}=\mu_0\epsilon_0\vb{S}\]
-\[\pdv{t}(\mathcal{P}_{mech}+\mathcal{P}_{em})=\div{\vb{T}}\]
+\[\qq{force per unit volume} \vb{f}=\rho\vb{E}+\vb{J}\cp\vb{B}=\div{\overleftrightarrow{\vb{T}}}-\epsilon_0\mu_0\pdv{\vb{S}}{t}\]
+\[\vb{F}=\oint_{\mathcal{S}}\overleftrightarrow{\vb{T}}\vdot\dd{\vb{a}}-\epsilon_0\mu_0\dv{t}\int_{\mathcal{V}}\vb{S}\dd{\tau}\]
+\[\vb{p}_{em}=\mu_0\epsilon_0\int_{\mathcal{V}}\vb{S}\dd{\tau}\]
+\[\qq{density of electromagnetic field momentum}\mathcal{P}_{em}=\mu_0\epsilon_0\vb{S}\]
+\[\pdv{t}(\mathcal{P}_{mech}+\mathcal{P}_{em})=\div{\overleftrightarrow{\vb{T}}}\]
 \section{Electromagnetic waves}
 
 \section{Potentials and fields}
