@@ -116,7 +116,18 @@ In a volume surrounded by conductors and containing a specified charge density, 
 \[\vb{F}=\int (\vb{J}\cp\vb{B})\dd{v}=\int (\rho\vb{v}\cp\vb{B})\dd{v}\]
 \[\vb{B}(\vb{r})=\frac{\mu_0}{4\pi}\int\frac{\vb{I}\cp(\vb{r}-\vb{r}')}{|\vb{r}-\vb{r}'|^2}\dd{l'}=\frac{\mu_0I}{4\pi}\int\frac{\dd\vb{l'}\cp(\vb{r}-\vb{r}')}{|\vb{r}-\vb{r}'|^2}\]
 \[\curl{\vb{B}}=\mu_0\vb{J}\]
+\[\oint\vb{B}\vdot\dd{\vb{l}}=\mu_0I_{enc}\]
 \[\div{\vb{B}}=0\]
+\[\vb{B}=\curl{\vb{A}}\]
+\[\curl{\vb{A}}=0\]
+\[\laplacian{\vb{A}}=-\mu_0\vb{J}\]
+\[\vb{A(\vb{r})}=\frac{\mu_0}{4\pi}\int\frac{\vb{J(\vb{r'})}}{|\vb{r}-\vb{r'}|}\dd{\tau'}=\frac{\mu_0I}{4\pi}\int\frac{\dd{\vb{l}'}}{|\vb{r}-\vb{r'}|}=\frac{\mu_0}{4\pi}\int\frac{\vb{K}}{|\vb{r}-\vb{r'}|}\dd{a'}\]
+\subsection*{boundary conditions}
+\[B^{\perp}_{above}-B^{\perp}_{below}=0\]
+\[B^{\parallel}_{above}-B^{\parallel}_{below}=\mu_oK\]
+\[\vb{B}_{above}-\vb{B}_{below}=\mu_0(\vb{K}\cp\vu{n})\]
+\[\vb{A}_{above}-\vb{A}_{below}=0\]
+\[\pdv{\vb{A}_{above}}{n}-\pdv{\vb{A}_{below}}{n}=-\mu_0\vb{K}\]
 \section{Conservation Laws}
 \[\qq{Equation of continuity} \pdv{\rho}{t}=-\div{\vb{J}}\]
 \[\dv{W}{t}=\int_{v}(\vb{E}\vdot{\vb{J}})\dd{\tau}=-\dv{t}\int_{v}\frac{1}{2}\qty(\epsilon_0E^2+\frac{1}{\mu_0}B^2)\dd{\tau}-\frac{1}{\mu_0}\oint(\vb{E}\cp\vb{B})\vdot\dd{\vb{a}}\]
