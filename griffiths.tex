@@ -22,14 +22,17 @@
 %\maketitle
 
 \section{Vector Analysis}
+
 \[\dd{T}=\pdv{T}{x}\dd{x}+\pdv{T}{y}\dd{y}+\pdv{T}{z}\dd{z}=\grad{T}\vdot\dd{\vb{l}}\]
 The gradient $\grad{T}$ points in the direction of  maximum increase in the function $T$. The magnitude $|\grad{T}|$ gives the slope along the maximal direction.
+
 \subsection*{Cartesian}
 \[\dd{\vb{l}}=\dd{x}\vu{\vb{x}}+\dd{y}\vu{\vb{y}}+\dd{z}\vu{\vb{z}}\quad\dd{\tau}=\dd{x}\dd{y}\dd{z}\]
 \[\qq{Gradient}\quad\grad{f}=\pdv{f}{x}\vu{\vb{x}}+\pdv{f}{y}\vu{\vb{y}}+\pdv{f}{z}\vu{\vb{z}}\]
 \[\qq{Divergence}\quad\div{\vb{V}}=\pdv{V_x}{x}+\pdv{V_y}{y}+\pdv{V_z}{z}\]
 \[\qq{Curl}\quad\curl{\vb{V}}=\qty(\pdv{V_z}{y}-\pdv{V_y}{z})\vu{\vb{x}}+\qty(\pdv{V_x}{z}-\pdv{V_z}{x})\vu{\vb{y}}+\qty(\pdv{V_y}{x}-\pdv{V_x}{y})\vu{\vb{z}}\]
 \[\qq{Laplacian}\quad\laplacian{f}=\pdv[2]{f}{x}+\pdv[2]{f}{y}+\pdv[2]{f}{z}\]
+
 \subsection*{Spherical coordinates}
 \begin{align*}
 \vu{r}&=\sin\theta\cos\phi\vu{x}+\sin\theta\cos\phi\vu{y}+\cos\theta\vu{z}\\
@@ -41,6 +44,7 @@ The gradient $\grad{T}$ points in the direction of  maximum increase in the func
 \[\qq{Divergence}\quad\div{\vb{V}}=\frac{1}{r^2}\pdv{r}\qty(r^2V_r)+\frac{1}{r\sin\theta}\pdv{\theta}\qty(\sin{\theta}V_{\theta})+\frac{1}{r\sin\theta}\pdv{V_{\phi}}{\phi}\]
 \[\qq{Curl}\quad\curl{\vb{V}}=\frac{1}{r\sin\theta}\bqty{\pdv{\theta}\qty(\sin{\theta}V_{\phi})-\pdv{V_{\theta}}{\phi}}\vu{\vb{r}}+\frac{1}{r}\bqty{\frac{1}{\sin\theta}\pdv{V_r}{\phi}-\pdv{r}\qty(rV_{\phi})}\vu{\vb{\theta}}+\frac{1}{r}\bqty{\pdv{r}\qty(rV_{\theta})-\pdv{V_r}{\theta}}\vu{\vb{\phi}}\]
 \[\qq{Laplacian}\quad\laplacian{f}=\frac{1}{r^2}\pdv{r}\qty(r^2\pdv{f}{r})+\frac{1}{r^2\sin\theta}\pdv{\theta}\qty(\sin{\theta}\pdv{f}{\theta})+\frac{1}{r^2\sin^2{\theta}}\pdv[2]{f}{\phi}\]
+
 \subsection*{Cylindrical coordinates}
 \begin{align*}
 \vu{s}&=\cos\phi\vu{x}+\sin\phi\vu{y}\\
@@ -80,24 +84,31 @@ The gradient $\grad{T}$ points in the direction of  maximum increase in the func
 \[\qq{Laplace's equation} \quad\laplacian{V}=0\]
 \[\qq{boundary conditions} \vb{E}^{\parallel}_{above}=\vb{E}^{\parallel}_{below}\quad \vb{E}_{above}-\vb{E}_{below}=\frac{\sigma}{\epsilon_0}\vu{n} \]
 \[W=\frac{1}{2}\int\rho{V}\dd{\tau}=\frac{\epsilon_0}{2}\int{E^2}\dd\tau\]
+
 \section{Special techniques}
 \[\qq{First uniqueness theorem}\]
 The solution to Laplace's equation in some volume is uniquely determined by specifying potential on the boundary surface.
 \[\qq{Second uniqueness theorem}\]
 In a volume surrounded by conductors and containing a specified charge density, the electric field is uniquely determined if the total charge on each conductor is given.
+
 \subsection*{method of images}
+
 \subsection*{separation of variables}
+
 \subsection*{multipole expansion}
+
 \section{Electric fields in matter}
 \[\vb{N}=\vb{p}\cp\vb{E}\quad\vb{F}=\qty(\vb{p}\vdot\nabla)\vb{E}\quad U=-\vb{p}\vdot\vb{E}\]
 \subsection*{polarization}
 \[\sigma_b=\vb{P}\vdot\vu{n}\quad\rho_b=-\div{\vb{P}}\]
 \subsection*{displacement}
 \subsection*{misc}
+
 \subsection*{Coulomb's law}
 \[\vb{E}=\frac{1}{4\pi\epsilon_0}\frac{q_1q_2(\vb{r}_1-\vb{r}_2)}{|\vb{r}_1-\vb{r}_2|^3}\]
 \[V(\vb{r})=-\int_\infty^{\vb{r}}\vb{E}\cdot\dd\vb{r}\]
 \[\vb{E}=-\grad{V}\]
+
 \subsection*{Gauss' law}
 \[\oint_S{\vb{E}\cdot\dd{\vb{a}}}=\frac{Q_{enc}}{\epsilon_0}\]
 \[\laplacian{V}=-\frac{\rho}{\epsilon_0}\]
@@ -109,6 +120,7 @@ In a volume surrounded by conductors and containing a specified charge density, 
 \[\grad{(\vb{a}\cdot\vb{b})}=\vb{a}\times(\curl{\vb{b}})+\vb{b}\times(\curl{\vb{a}})+(\vb{a}\cdot\nabla)\vb{b}+(\vb{b}\cdot\nabla)\vb{a}\]
 \[\div{(f\vb{a})}=\vb{a}\cdot\grad{f}+f\div{\vb{a}}\]
 \[\div{(\vb{a}\times\vb{b})}=\vb{b}\cdot(\curl{\vb{a}})-\vb{a}\cdot(\curl{\vb{b}})\]
+
 \section{Magnetostatics}
 \[\qq{Lorenz force law}\vb{F}=q(\vb{E}+\vb{v}\cp\vb{B})\]
 \[\qq{Lorenz force law}\vb{F}=\int I(\dd\vb{l}\cp\vb{B})\]
@@ -129,6 +141,7 @@ In a volume surrounded by conductors and containing a specified charge density, 
 \[\vb{A}_{above}-\vb{A}_{below}=0\]
 \[\pdv{\vb{A}_{above}}{n}-\pdv{\vb{A}_{below}}{n}=-\mu_0\vb{K}\]
 multipole expansion of vector potential\[\vb{A(\vb{r})}=\frac{\mu_0I}{4\pi}\int\frac{\dd{\vb{l}'}}{|\vb{r}-\vb{r'}|}=\frac{\mu_0I}{4\pi}\sum_{n=0}^{\infty}\frac{1}{r^{n+1}}\oint(r')^nP_n(\cos\theta')\dd{\vb{l'}}\]
+
 \section{Magnetic fields in matter}
 Torque on a magnetic dipole $\vb{N}=\vb{m}\cp\vb{B}$.\\
 Force on a magnetic dipole $\vb{F}=\grad(\vb{m}\vdot\vb{B})$.\\
@@ -188,6 +201,32 @@ Current density of bound current $\vb{J}_b=\curl{\vb{M}}$.Surface density of bou
 \section{Radiation}
 
 \section{Relativity}
+postulates
+Simulataneous events.
 \[\qq{time dilation} \Delta{\bar{t}}=\frac{\Delta{t}}{\gamma}=\Delta{t}\sqrt{1-\frac{v^2}{c^2}}\]
-
+Lorenzcontraction
+\[\qq{length contraction} \Delta{\bar{x}}=\gamma\Delta{x}=\frac{\Delta{x}}{\sqrt{1-\frac{v^2}{c^2}}}\]
+Lorenz transformations 
+\begin{align*}
+x_2&=\gamma(x_1-vt_1)\\y_2&=y_1\\z_2&=z_1\\t_2&=\gamma\qty(t_1-\frac{\gamma}{c^2}x_1)
+\end{align*}
+\begin{align*}
+x_1&=\gamma(x_2+vt_2)\\y_1&=y_2\\z_1&=z_2\\t_1&=\gamma\qty(t_2+\frac{\gamma}{c^2}x_2)
+\end{align*}
+\[v_{AB}=\frac{v_{AC}+v_{CB}}{1+\frac{v_{AC}v_{CB}}{c^2}}\]
+\[
+\begin{pmatrix}
+\bar{x}^0\\ \bar{x}^1\\ \bar{x}^2\\ \bar{x}^3
+\end{pmatrix}
+=
+\begin{pmatrix}
+\gamma& -\gamma\beta& 0& 0\\
+-\gamma\beta& -\gamma& 0& 0\\
+0& 0& 1& 0\\
+0& 0& 0& 1
+\end{pmatrix}
+\begin{pmatrix}
+\bar{x}^0\\ \bar{x}^1\\ \bar{x}^2\\ \bar{x}^3
+\end{pmatrix}
+\]
 \end{document}
