@@ -23,7 +23,19 @@
 
 \section*{Introduction}
 
-\section*{Lagrangian approach}
+\section*{Lagrangian mechanics}
+\subsection*{calculus of variations}
+\[I=\int f(y,\dot{y},x)\dd{x}\]
+The path for which $I$ is an extremum,$\delta{I}=0$ is given by \[\pdv{f}{y}-\dv{t}\qty(\pdv{f}{\dot{y}})=0\]
+\subsection*{Hamilton's variational principle}
+The motion of a dynamical system from time $t_1$ to $t_2$ is such that the intergral $\int_{t_1}^{t_2}(T(q_i,\dot{q}_i)-V(q_i))\dd{t}$ is an extremum.\\
+Denoting $L=T-V$, \[\dv{t}\qty(\pdv{L}{\dot{q}_i})-\pdv{L}{q_i}=0\]
+\subsection*{D'alembert's principle}
+\[\dv{t}\qty(\pdv{T}{\dot{q}_i})-\pdv{T}{q_i}=Q_i\]
+\subsection*{Non-Holonomic systems}
+If Non-Holonomic constraints are expressed as $\sum_ka_{lk}\dd{q_k}+a_{lt}\dd{t}=0\qq{where}l=1,2,\ldots,m$ use Lagrange's method of undetermined multipliers.
+\[\pdv{L}{q_k}-\dv{t}\qty(\pdv{L}{\dot{q}_k})+\sum_l\lambda_la_{lk}=0\]
+
 \section*{Hamiltonian mechanics}
 Generalized momentum $p_i=\pdv{L}{q_i}$, Phase space\\
 Hamiltonian $H=\sum_ip_i\dot{q}_i-L$\\
@@ -68,18 +80,13 @@ Poisson brackets are invariant under a canonical transformation.\\
 If $X$ and $Y$ are constants of motion, then their Poisson bracket $\pb{X}{Y}$ is also a constant of motion.
 \[\pb{X}{H}=0\qq{and}\pb{Y}{H}=0\implies\pb{\pb{X}{Y}}{H}=0\]
 \section*{Central forces}
+Two body problem can be reduced to a one body problem. Two particles of masses $m_1$ and $m_2$ are located at $\vb{r}_1$ and $\vb{r}_2$ respectively. Their centre of mass is located at $\vb{r}_c=\frac{m_1\vb{r}_1+m_2\vb{r}_2}{m_1+m_2}$. Their difference vector is $\vb{r}=\vb{r}_1-\vb{r}_2$. Their position vectors relative to centre of mass are \[\vb{r}_{1c}=\vb{r}_{1}-\vb{r}_{c}=\vb{r}_{1}-\frac{m_1\vb{r}_1+m_2\vb{r}_2}{m_1+m_2}=\frac{m_2(\vb{r}_1-\vb{r}_2)}{m_1+m_2}=\frac{m_2}{m_1+m_2}\vb{r}\] and 
+\[\vb{r}_{2c}=\vb{r}_{2}-\vb{r}_{c}=\vb{r}_{2}-\frac{m_1\vb{r}_1+m_2\vb{r}_2}{m_1+m_2}=\frac{m_1(\vb{r}_2-\vb{r}_1)}{m_1+m_2}=-\frac{m_1}{m_1+m_2}\vb{r}\]
+
 \section*{Relative coordinates}
 \section*{Rigid body motion}
 \section*{Relativity}
 \section*{Small oscilltions}
 stable and unstable equilibrium
-
-
-
-
-
-
-
-
 
 \end{document}
