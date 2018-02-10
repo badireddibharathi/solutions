@@ -19,11 +19,42 @@
 %\date{} 
 
 \begin{document}
-\maketitle
+%\maketitle
 
 \section*{Introduction}
+
 \section*{Lagrangian approach}
-\section*{Hamiltonian approach}
+\section*{Hamiltonian mechanics}
+Generalized momentum $p_i=\pdv{L}{q_i}$, Phase space\\
+Hamiltonian $H=\sum_ip_i\dot{q}_i-L$\\
+Hamilton's canonical equations of motion
+\begin{align*}
+\dot{q}_i&=\pdv{H}{p_i}\\
+\dot{p}_i&=-\pdv{H}{q_i}\\
+-\pdv{L}{t}&=\pdv{H}{t}
+\end{align*}
+When is Hamiltonian a constant of motion ? When is Hamiltonian equal to energy ?\\
+Hamilton's equations of motion from Variational principle.
+\[\delta{I}=\delta\int_{t_1}^{t_2}L\dd{t}=0\]
+Since $H=\sum_ip_i\dot{q}_i-L$,
+\[\delta{I}=\delta\int_{t_1}^{t_2}\left[\sum_ip_i\dot{q}_i-H\right]\dd{t}=\delta\sum_i\int_{t_1}^{t_2}p_i\dd{q}_i-\delta\int_{t_1}^{t_2}H\dd{t}=0\]
+\[\delta{I}=\dd{\alpha}\vdot\pdv{I}{\alpha}=\dd{\alpha}\vdot\pdv{\alpha}\int_{t_1}^{t_2}\left[\sum_ip_i\dot{q}_i-H\right]\dd{t}=\]
+\[\delta{I}=\dd{\alpha}\int_{t_1}^{t_2}\sum_i\left(\pdv{p_i}{\alpha}\dot{q}_i+p_i\pdv{\dot{q}_i}{\alpha}-\pdv{H}{q_i}\pdv{q_i}{\alpha}-\pdv{H}{p_i}\pdv{p_i}{\alpha}-\pdv{H}{t}\pdv{t}{\alpha}\right)\dd{t}=0\]
+Since $\pdv{t}{\alpha}=0$
+\[\delta{I}=\dd{\alpha}\int_{t_1}^{t_2}\sum_i\left(\pdv{p_i}{\alpha}\dot{q}_i+p_i\pdv{\dot{q}_i}{\alpha}-\pdv{H}{q_i}\pdv{q_i}{\alpha}-\pdv{H}{p_i}\pdv{p_i}{\alpha}\right)\dd{t}=0\]
+\[\qq{since}\int_{t_1}^{t_2}p_i\pdv{\dot{q}_i}{\alpha}\dd{t}=-\int_{t_1}^{t_2}p_i\pdv{q_i}{\alpha}\dd{t}\]
+\[\delta{I}=\dd{\alpha}\int_{t_1}^{t_2}\sum_i\left(\pdv{p_i}{\alpha}\dot{q}_i-p_i\pdv{q_i}{\alpha}-\pdv{H}{q_i}\pdv{q_i}{\alpha}-\pdv{H}{p_i}\pdv{p_i}{\alpha}\right)\dd{t}=0\]
+
+\[\delta{I}=\int_{t_1}^{t_2}\sum_i\left(\delta{p_i}\dot{q}_i-p_i\delta{q_i}-\pdv{H}{q_i}\delta{q_i}-\pdv{H}{p_i}\delta{p_i}\right)\dd{t}=0\]
+
+\[\delta{I}=\int_{t_1}^{t_2}\sum_i\left(\delta{p_i}\left(\dot{q}_i-\pdv{H}{p_i}\right)-\delta{q_i}\left(p_i+\pdv{H}{q_i}\right)\right)\dd{t}=0\]
+Hence
+\[\dot{q}_i=\pdv{H}{p_i}\]
+\[\dot{p}_i=-\pdv{H}{q_i}\] 
+Principle of least action.
+\[\qq{action} A=\int_{t_1}^{t_2}\sum_{i}p_i\dot{q}_i\dd{t}\]
+\[\Delta\int_{t_1}^{t_2}\sum_{i}p_i\dot{q}_i\dd{t}=0\]
+\[\Delta{f}=\delta{f}+\pdv{f}{t}\Delta{t}\]
 \section*{Central forces}
 \section*{Relative coordinates}
 \section*{Rigid body motion}
