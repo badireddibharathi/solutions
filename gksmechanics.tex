@@ -55,6 +55,18 @@ Principle of least action.
 \[\qq{action} A=\int_{t_1}^{t_2}\sum_{i}p_i\dot{q}_i\dd{t}\]
 \[\Delta\int_{t_1}^{t_2}\sum_{i}p_i\dot{q}_i\dd{t}=0\]
 \[\Delta{f}=\delta{f}+\pdv{f}{t}\Delta{t}\]
+\subsection*{Poisson brackets}
+\[\dv{F}{t}=\pdv{F}{t}+\sum_{i}\qty(\pdv{F}{q_i}\pdv{H}{p_i}-\pdv{F}{p_i}\pdv{H}{q_i})=\pdv{F}{t}+\pb{F}{H}\]
+\[\pb{X}{Y}=-\pb{Y}{X}\]
+\[\pb{X}{X}=0\]
+\[\pb{X}{Y+Z}=\pb{X}{Y}+\pb{X}{Z}\]
+\[\pb{X}{YZ}=Y\pb{X}{Z}+\pb{X}{Y}Z\]
+\[\pb{q_i}{p_j}=\delta_{ij}\]
+Poisson brackets are invariant under a canonical transformation.\\
+\[\dot{q}_i=\pb{q_i}{H}\quad\dot{p}_i=-\pb{p_i}{H}\]
+\[\qq{Jacobi's identity}\pb{X}{\pb{Y}{Z}}+\pb{Z}{\pb{X}{Y}}+\pb{Y}{\pb{Z}{X}}=0\]
+If $X$ and $Y$ are constants of motion, then their Poisson bracket $\pb{X}{Y}$ is also a constant of motion.
+\[\pb{X}{H}=0\qq{and}\pb{Y}{H}=0\implies\pb{\pb{X}{Y}}{H}=0\]
 \section*{Central forces}
 \section*{Relative coordinates}
 \section*{Rigid body motion}
