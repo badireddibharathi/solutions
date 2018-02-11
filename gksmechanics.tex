@@ -13,6 +13,8 @@
 \usepackage{amsmath}
 \usepackage{physics}
 \usepackage{tikz} 
+\usepackage{bm}
+
 
 \title{gksmechanics}
 \author{vijayabhaskar badireddi}
@@ -93,13 +95,112 @@ Since the gravitational force \[\vb{F}=-\frac{Gm_1m_2\vb{r}}{|\vb{r}|^3}\]
 satisfies \[\curl{\vb{F}}=0\]
 it is conservative and energy is conserved.
 Since \[\vb{N}=\dv{\vb{L}}{t}=\vb{r}\cp\vb{F}=\vb{r}\cp-\frac{Gm_1m_2\vb{r}}{|\vb{r}|^3}=0\]
-angular momentum of the system $\vb{L}$ is conserved.\\
+angular momentum of the system $\vb{l}$ is conserved.\\
 Lagrangian is \[L=\frac{1}{2}m(\dot{r}^2+r^2\dot{\theta}^2)-V(r)\]
 Lagrangian equation for $\theta$ is \[\dv{t}\qty(\pdv{L}{\dot{\theta}})-\pdv{L}{\theta}=0\]
 \[\dv{t}\qty(mr^2\dot{\theta})=0\]
 \section*{Relative coordinates}
+
+\[\qty(\dv{\vb{r}}{t})_{un primed}=\qty(\dv{\vb{r}}{t})_{primed}+\bm{\omega}\cp\vb{r}\]
+\[\dv{\vb{r}}{t}=\dv{'\vb{r}}{t}+\bm{\omega}\cp\vb{r}\]
+\[\dv{t}\qty(\dv{\vb{r}}{t})=\qty(\dv{'}{t}+\bm{\omega}\cp)\qty(\dv{'\vb{r}}{t}+\bm{\omega}\cp\vb{r})\]
+\[\dv[2]{\vb{r}}{t}=\dv[2]{\vb{r}}{t}+2\bm{\omega}\cp\dv{'\vb{r}}{t}+\bm{\omega}\cp(\bm{\omega}\cp\vb{r})+\dv{'\bm{\omega}}{t}\cp\vb{r}\]
+
 \section*{Rigid body motion}
+\subsection*{Euler angles}
+The space set of axes are $(x,y,z)$ with unit vectors $(\vu{x},\vu{y},\vu{z})$. The body set of axes are $(x',y',z')$ with unit vectors $(\vu{x}',\vu{y}',\vu{z}')$.\\
+First rotation is about the space $z$ axis through an angle $\phi$.
+\[
+\begin{pmatrix}
+\vu{x}_1\\ \vu{y}_1\\ \vu{z}_1
+\end{pmatrix}
+=
+\begin{pmatrix}
+\cos\phi& \sin\phi& 0\\
+-\sin\phi& \cos\phi& 0\\
+0& 0& 1
+\end{pmatrix}
+\begin{pmatrix}
+\vu{x}\\ \vu{y}\\ \vu{z}
+\end{pmatrix}
+\]
+The second rotation is about $x_1$ axis through an angle $\theta$ till $z_1$ axis coincides with $z'$ axis.
+\[
+\begin{pmatrix}
+\vu{x}_2\\ \vu{y}_2\\ \vu{z}'
+\end{pmatrix}
+=
+\begin{pmatrix}
+1& 0& 0 \\
+0& \cos\theta& \sin\theta\\
+0& -\sin\theta& \cos\theta
+\end{pmatrix}
+\begin{pmatrix}
+\vu{x}_1\\ \vu{y}_1\\ \vu{z}_1
+\end{pmatrix}
+\]
+The third rotation is about $z'$ axis through an angle $\psi$ till $x_2$ axis coincides with $x'$ axis and $y_2$ axis coincides with $y'$ axis.
+\[
+\begin{pmatrix}
+\vu{x}'\\ \vu{y}'\\ \vu{z}'
+\end{pmatrix}
+=
+\begin{pmatrix}
+\cos\psi& \sin\psi& 0 \\
+-\sin\psi& \cos\psi& 0 \\
+0& 0& 1
+\end{pmatrix}
+\begin{pmatrix}
+\vu{x}_2\\ \vu{y}_2\\ \vu{z}'
+\end{pmatrix}
+\]
+
+\[
+\begin{pmatrix}
+\vu{x}'\\ \vu{y}'\\ \vu{z}'
+\end{pmatrix}
+=
+\begin{pmatrix}
+\cos\psi& \sin\psi& 0 \\
+-\sin\psi& \cos\psi& 0 \\
+0& 0& 1
+\end{pmatrix}
+\begin{pmatrix}
+1& 0& 0 \\
+0& \cos\theta& \sin\theta\\
+0& -\sin\theta& \cos\theta
+\end{pmatrix}
+\begin{pmatrix}
+\cos\phi& \sin\phi& 0\\
+-\sin\phi& \cos\phi& 0\\
+0& 0& 1
+\end{pmatrix}
+\begin{pmatrix}
+\vu{x}\\ \vu{y}\\ \vu{z}
+\end{pmatrix}
+\]
+\[\qty(\dv{\vb{A}}{t})_{space}=\qty(\dv{\vb{A}}{t})_{body}+\bm{\omega}\cp\vb{A}\]
+
+
 \section*{Relativity}
+
+\[x^2-c^2t^2=x'^2-c^2t'^2\]
+Lorenz transformations are orthogonal transformations in four dimensional space.
+\[a_{\mu\nu}a_{\lambda\nu}=\delta_{\mu\lambda}\]
+
+\[
+\begin{pmatrix}
+x_1'\\ x_2'\\ x_3'\\ x_4'
+\end{pmatrix}
+=
+\begin{pmatrix}
+1& 0& 0& 0\\ 0& 1& 0& 0\\ 0& 0& \gamma& i\gamma\beta\\ 0& 0& -i\gamma\beta& \gamma
+\end{pmatrix}
+\begin{pmatrix}
+x_1\\ x_2\\ x_3\\ x_4
+\end{pmatrix}
+\]
+
 \section*{Small oscilltions}
 stable and unstable equilibrium
 
