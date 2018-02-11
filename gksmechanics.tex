@@ -82,7 +82,13 @@ If $X$ and $Y$ are constants of motion, then their Poisson bracket $\pb{X}{Y}$ i
 \section*{Central forces}
 Two body problem can be reduced to a one body problem. Two particles of masses $m_1$ and $m_2$ are located at $\vb{r}_1$ and $\vb{r}_2$ respectively. Their centre of mass is located at $\vb{r}_c=\frac{m_1\vb{r}_1+m_2\vb{r}_2}{m_1+m_2}$. Their difference vector is $\vb{r}=\vb{r}_1-\vb{r}_2$. Their position vectors relative to centre of mass are \[\vb{r}_{1c}=\vb{r}_{1}-\vb{r}_{c}=\vb{r}_{1}-\frac{m_1\vb{r}_1+m_2\vb{r}_2}{m_1+m_2}=\frac{m_2(\vb{r}_1-\vb{r}_2)}{m_1+m_2}=\frac{m_2}{m_1+m_2}\vb{r}\] and 
 \[\vb{r}_{2c}=\vb{r}_{2}-\vb{r}_{c}=\vb{r}_{2}-\frac{m_1\vb{r}_1+m_2\vb{r}_2}{m_1+m_2}=\frac{m_1(\vb{r}_2-\vb{r}_1)}{m_1+m_2}=-\frac{m_1}{m_1+m_2}\vb{r}\]
-
+The kinetic energy \[\frac{1}{2}m_1\dot{\vb{r}}_1^2+\frac{1}{2}m_2\dot{\vb{r}}_2^2=\frac{1}{2}m_1\qty(\dot{\vb{r}}_{c}+\frac{m_2}{m_1+m_2}\dot{\vb{r}})^2+\frac{1}{2}m_2\qty(\dot{\vb{r}}_{c}-\frac{m_1}{m_1+m_2}\dot{\vb{r}})^2\]
+\[=\frac{1}{2}(m_1+m_2)\dot{\vb{r}}_{c}^2+\frac{1}{2}\qty(\frac{m_1m_2}{m_1+m_2})\dot{\vb{r}}^2=\frac{1}{2}M\dot{\vb{r}}_{c}^2+\frac{1}{2}\mu\dot{\vb{r}}^2\]
+The potential energy \[V=-\frac{Gm_1m_2}{|\vb{r}_1-\vb{r}_2|}=-\frac{Gm_1m_2}{|\vb{r}|}\]
+Hence Lagrangian of the system is \[L=T-V=\frac{1}{2}M\dot{r}_c^2+\frac{1}{2}\mu \dot{r}^2+\frac{Gm_1m_2}{r}\]
+Equation of motion for $\vb{r}_c$ is \[\dv{t}\qty(\pdv{L}{\dot{r}_c})-\pdv{L}{r_c}=M\ddot{r}_c=0\]
+Equation of motion for $\vb{r}$ is \[\dv{t}\qty(\pdv{L}{\dot{r}})-\pdv{L}{r}=\mu\ddot{r}+\frac{Gm_1m_2}{r^2}=\mu\ddot{r}+\frac{G(m_1+m_2)\mu}{r^2}=0\]
+\[\ddot{r}+\frac{GM}{r^2}=0\]
 \section*{Relative coordinates}
 \section*{Rigid body motion}
 \section*{Relativity}
