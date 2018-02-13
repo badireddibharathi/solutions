@@ -249,7 +249,34 @@ $\dot{\phi}=\omega_{\phi}$,$\dot{\theta}=\omega_{\theta}$ and $\dot{\psi}=\omega
 0\\0\\\dot{\phi}
 \end{pmatrix}
 \]
+Angular momentum of a particle $\vb{l}_i=m_i\vb{r}_i\cp\vb{v}_i=m_i[\vb{r}_i\cp\qty(\bm{\omega}\cp\vb{r}_i)]$
+Angular momentum of a system of particles \[\vb{L}=\sum_i\vb{l}_i=\sum_im_i[\vb{r}_i\cp\qty(\bm{\omega}\cp\vb{r}_i)]==\sum_im_i[\bm{\omega}\qty(\vb{r}_i\vdot\vb{r}_i)-\qty(\vb{r}_i\vdot\bm{\omega})\vb{r}_i]\]
+\[\vb{L}=\overleftrightarrow{I}\bm{\omega}\]
+\[
+\begin{pmatrix}
+L_x\\L_y\\L_z
+\end{pmatrix}
+=
+\begin{pmatrix}
+I_{xx}& I_{xy}& I_{xz}\\
+I_{yx}& I_{yy}& I_{yz}\\
+I_{zx}& I_{zy}& I_{zz}
+\end{pmatrix}
+\begin{pmatrix}
+\omega_x\\ \omega_y\\ \omega_z
+\end{pmatrix}
+\]
 
+Rotational kinetic energy of a rigid body $T=\frac{1}{2}\bm{\omega}'\overleftrightarrow{I}\bm{\omega}$
+\subsection*{Euler's equations}
+\[\dv{\vb{L}}{t}=\vb{N}\]
+
+\[\qty(\dv{\vb{L}}{t})_{space}=\qty(\dv{\vb{L}}{t})_{body}+\bm{\omega}\cp\vb{L}\]
+\begin{align*}
+N_x=I_1\dot{\omega}_x-(I_2-I_3){\omega}_y{\omega}_z\\
+N_y=I_2\dot{\omega}_y-(I_3-I_1){\omega}_z{\omega}_x\\
+N_z=I_3\dot{\omega}_z-(I_1-I_2){\omega}_x{\omega}_y
+\end{align*}
 \section*{Relativity}
 
 \[x^2-c^2t^2=x'^2-c^2t'^2\]
