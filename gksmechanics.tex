@@ -124,6 +124,7 @@ First rotation is about the space $z$ axis through an angle $\phi$.
 \vu{x}\\ \vu{y}\\ \vu{z}
 \end{pmatrix}
 \]
+\[\mathcal{D}\]
 The second rotation is about $x_1$ axis through an angle $\theta$ till $z_1$ axis coincides with $z'$ axis.
 \[
 \begin{pmatrix}
@@ -139,6 +140,7 @@ The second rotation is about $x_1$ axis through an angle $\theta$ till $z_1$ axi
 \vu{x}_1\\ \vu{y}_1\\ \vu{z}_1
 \end{pmatrix}
 \]
+\[\mathcal{C}\]
 The third rotation is about $z'$ axis through an angle $\psi$ till $x_2$ axis coincides with $x'$ axis and $y_2$ axis coincides with $y'$ axis.
 \[
 \begin{pmatrix}
@@ -154,7 +156,7 @@ The third rotation is about $z'$ axis through an angle $\psi$ till $x_2$ axis co
 \vu{x}_2\\ \vu{y}_2\\ \vu{z}'
 \end{pmatrix}
 \]
-
+\[\mathcal{B}\]
 \[
 \begin{pmatrix}
 \vu{x}'\\ \vu{y}'\\ \vu{z}'
@@ -180,7 +182,73 @@ The third rotation is about $z'$ axis through an angle $\psi$ till $x_2$ axis co
 \end{pmatrix}
 \]
 \[\qty(\dv{\vb{A}}{t})_{space}=\qty(\dv{\vb{A}}{t})_{body}+\bm{\omega}\cp\vb{A}\]
-
+$\dot{\phi}=\omega_{\phi}$,$\dot{\theta}=\omega_{\theta}$ and $\dot{\psi}=\omega_{\psi}$ are the components of angular velocity about space $z$-axis, line of nodes, body $z'$-axis.
+\[
+\begin{pmatrix}
+\dot{\phi}_{x'}\\
+\dot{\phi}_{y'}\\
+\dot{\phi}_{z'}
+\end{pmatrix}
+=\mathcal{A}
+\begin{pmatrix}
+0\\0\\\dot{\phi}
+\end{pmatrix}
+\]
+\[
+\begin{pmatrix}
+\dot{\theta}_{x'}\\
+\dot{\theta}_{y'}\\
+\dot{\theta}_{z'}
+\end{pmatrix}
+=\mathcal{B}
+\begin{pmatrix}
+\dot{\theta}\\0\\0
+\end{pmatrix}
+\]
+\[
+\begin{pmatrix}
+\dot{\psi}_{x'}\\
+\dot{\psi}_{y'}\\
+\dot{\psi}_{z'}
+\end{pmatrix}
+=\mathcal{I}
+\begin{pmatrix}
+0\\0\\\dot{\psi}
+\end{pmatrix}
+\]
+\[
+\begin{pmatrix}
+\dot{\psi}_{x}\\
+\dot{\psi}_{y}\\
+\dot{\psi}_{z}
+\end{pmatrix}
+=\mathcal{A}^{-1}
+\begin{pmatrix}
+0\\0\\\dot{\psi}
+\end{pmatrix}
+\]
+\[
+\begin{pmatrix}
+\dot{\theta}_{x}\\
+\dot{\theta}_{y}\\
+\dot{\theta}_{z}
+\end{pmatrix}
+=\mathcal{D}^{-1}
+\begin{pmatrix}
+\dot{\theta}\\0\\0
+\end{pmatrix}
+\]
+\[
+\begin{pmatrix}
+\dot{\phi}_{x}\\
+\dot{\phi}_{y}\\
+\dot{\phi}_{z}
+\end{pmatrix}
+=\mathcal{I}
+\begin{pmatrix}
+0\\0\\\dot{\phi}
+\end{pmatrix}
+\]
 
 \section*{Relativity}
 
