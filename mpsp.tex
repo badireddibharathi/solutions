@@ -1,0 +1,50 @@
+% !TEX TS-program = pdflatex
+% !TEX encoding = UTF-8 Unicode
+\documentclass[12pt]{article} 
+
+\usepackage[utf8]{inputenc} 
+\usepackage{geometry} 
+\geometry{a4paper} 
+\geometry{margin=0.25in} 
+\geometry{portrait} 
+
+\usepackage{tikz} 
+
+\usepackage{amsmath}
+\usepackage{bm} 
+\usepackage{physics} 
+\title{mpsp}
+\author{vijayabhaskar badireddi} 
+\date{} 
+
+\begin{document}
+\section{Vectors}
+\section{Matrices}
+\section{Tensors}
+\section{BetaGamma}
+\section{Complex variables}
+\section{Special functions}
+\section{Fourier series}
+\section{Pdes}
+\section{Transforms}
+\section{Delta and Green}
+\subsection*{Dirac delta function}
+\[\delta(x)=0\qq{at}x\neq0\]
+\[\int_{-\infty}^{+\infty}\delta(x)\dd{x}=1\]
+\[\int_{-\infty}^{+\infty}f(x)\delta(x)\dd{x}=f(0)\]
+\[\delta(x)=\lim_{a\to0}\frac{1}{\sqrt{\pi a}}e^{-\frac{x^2}{a}}\]
+\[\delta(x)=\lim_{a\to0}\frac{a}{\pi(a^2+x^2)}\]
+\[\delta(x)=\lim_{a\to0}\frac{\sin{ax}}{\pi x}\]
+\[\delta(x)=\lim_{a\to\infty}\frac{1}{2\pi}\int_{-\infty}^{+\infty}e^{ixt}\dd{t}\]
+\[\int_{-\infty}^{+\infty}f(x)\delta(x-x')\dd{x}=f(x')\]
+\[\int_{-\infty}^{+\infty}f(x)\delta'(x)\dd{x}=-f'(0)\]
+\[\delta(\vb{r})=\delta(x)\delta(y)\delta(z)\]
+\[\int f(\vb{r})\delta(\vb{r})\dd{\tau}=f(0)\]
+\[\int_{0}^{\infty}\int_{0}^{2\pi}\int_{0}^{\pi}\delta(\vb{r})r^2\sin\theta\dd{r}\dd{\theta}\dd{\phi}=1\]
+\subsection*{Green's functions}
+Consider a non-homogeneous differential equation, $L(y(x))=f(x)$, with non-homogeneous boundary conditions specified at $x=a$ and at $x=b$. Consider a Green's function $G(x,x')$ such that $L(G(x,x'))=\delta(x-x')$ 
+
+\section{Group theory}
+
+
+\end{document}
