@@ -1,0 +1,41 @@
+% !TEX TS-program = pdflatex
+% !TEX encoding = UTF-8 Unicode
+
+\documentclass[12pt]{article}
+%\documentclass[preview,12pt]{standalone}
+\usepackage[utf8]{inputenc} 
+
+\usepackage{geometry}
+\geometry{a4paper} 
+\geometry{margin=0.25in} 
+\geometry{portrait}
+
+\usepackage{amsmath}
+\usepackage{siunitx}
+\usepackage{tensor}
+\usepackage{physics}
+\usepackage{tikz} 
+
+\title{spin solution}
+\author{vijayabhaskar badireddi}
+%\date{} 
+
+\begin{document}
+Most general spn state can be expressed as $\ket{\psi}=a\ket{+}+be^{i\theta}\ket{-}$ where $\ket{+}$ and $\ket{-}$ are eigen states of $\hat{S}_z$ operator.
+\[\hat{S}_z\ket{+}=\frac{\hbar}{2}\ket{+}\qq{and}\hat{S}_z\ket{-}=-\frac{\hbar}{2}\ket{-}\]
+\[\braket{+}{+}=\braket{-}{-}=1\qq{and}\braket{+}{-}=\braket{-}{+}=0\]
+Probability of obtaining $\frac{\hbar}{2}$ when $\hat{S}_z$ is measured, \[p_z\qty(+\frac{\hbar}{2})=\abs{\braket{+}{\psi}}^2=\abs{\bra{+}(a\ket{+}+be^{i\theta}\ket{-})}^2=\abs{a\braket{+}{+}+be^{i\theta}\braket{+}{-}}^2=a^2=0.36\]
+\[\qq{Hence}a=0.6\]
+Probability of obtaining $-\frac{\hbar}{2}$ when $\hat{S}_z$ is measured, \[p_z\qty(-\frac{\hbar}{2})=\abs{\braket{-}{\psi}}^2=\abs{\bra{-}(a\ket{+}+be^{i\theta}\ket{-})}^2=\abs{a\braket{-}{+}+be^{i\theta}\braket{-}{-}}^2=b^2e^{i\theta}e^{-i\theta}=0.64\]
+\[\qq{Hence}b=0.8\]
+Eigen state of $\hat{S}_x$ with eigen value $\frac{\hbar}{2}$ is \[\ket{+}_x=\frac{1}{\sqrt{2}}\qty(\ket{+}+\ket{-})\]
+Probability of obtaining $+\frac{\hbar}{2}$ when $\hat{S}_x$ is measured, \[p_x\qty(+\frac{\hbar}{2})=\abs{\tensor*[_x]{\braket{+}{\psi}}{}}^2=\abs{\tensor[_x]{\bra{+}}{}(a\ket{+}+be^{i\theta}\ket{-})}^2\]
+\[=\abs{\frac{a}{\sqrt{2}}\qty(\bra{+}+\bra{-})\ket{+}+\frac{b}{\sqrt{2}}e^{i\theta}\qty(\bra{+}+\bra{-})\ket{-}}^2=\abs{\frac{a}{\sqrt{2}}\qty(\braket{+}{+}+\braket{-}{+})+\frac{b}{\sqrt{2}}e^{i\theta}\qty(\braket{+}{-}+\braket{-}{-})}^2\]
+\[=\abs{\frac{a}{\sqrt{2}}\qty(1+0)+\frac{b}{\sqrt{2}}e^{i\theta}\qty(0+1)}^2=\frac{1}{2}\abs{a+be^{i\theta}}^2=\frac{1}{2}\qty(a+be^{-i\theta})\qty(a+be^{i\theta})=\frac{1}{2}\qty(a^2+b^2+abe^{-i\theta}+abe^{i\theta})\]
+\[=\frac{1}{2}\qty(a^2+b^2+2ab\cos\theta)=0.5\]
+\[\qq{Hence}a^2+b^2+2ab\cos\theta=0.36+0.64+2*0.6*0.8\cos\theta=1\]
+\[\cos\theta=1\implies\theta=\ang{90}=\frac{\pi}{2}\,rad\]
+\[e^{i\theta}=e^{i\pi/2}=i\]
+\[\ket{\psi}=a\ket{+}+be^{i\theta}\ket{-}=a\ket{+}+bi\ket{-}=0.6\ket{+}+0.8i\ket{-}\]
+\[\boxed{\ket{\psi}=0.6\ket{+}+0.8i\ket{-}}\]
+\end{document}
