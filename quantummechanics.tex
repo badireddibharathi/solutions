@@ -191,5 +191,15 @@ to derive classical equation of motion \[m\vb{a}=q\vb{E}+q(\vb{v}\cp\vb{B})\]
 %\[\dot{\vb{p}}=-\grad{\qty[\frac{1}{2m}(\hat{p}-q\mathbf{A})\cdot(\hat{p}-q\mathbf{A})]}+ q\grad{\phi}}\]
 \section*{appendix}
 \subsection*{Fourier}
-\[F(k)=\frac{1}{\sqrt{2\pi}}\int_{-\infty}^{+\infty}f(x)e^{ikx}\dd{x}\]
+\[F(k)=\frac{1}{\sqrt{2\pi}}\int_{-\infty}^{+\infty}f(x)e^{-ikx}\dd{x}\]
+\[f(x)=\frac{1}{\sqrt{2\pi}}\int_{-\infty}^{+\infty}F(k)e^{ikx}\dd{x}\]
+\[\Psi(k)=\frac{1}{\sqrt{2\pi\hbar}}\int_{-\infty}^{+\infty}\psi(x)e^{-ipx/\hbar}\dd{x}\]
+\[\psi(x)=\frac{1}{\sqrt{2\pi\hbar}}\int_{-\infty}^{+\infty}\Psi(k)e^{ipx/\hbar}\dd{k}\]
+\[\qq{Identity of norms} \int_{-\infty}^{+\infty}|f(x)|^2\dd{x}=\int_{-\infty}^{+\infty}|F(k)|^2\dd{k}\]
+\[\qq{Parseval's theorem} \int_{-\infty}^{+\infty}f(x)g^*(x)\dd{x}=\int_{-\infty}^{+\infty}F(k)G^*(k)\dd{k}\]
+\subsection*{delta function}
+\[\int f(\vb{r})\delta^3(\vb{r}-\vb{r}_0)\dd{\vb{r}}=f(\vb{r}_0)\]
+\[\laplacian{\qty(\frac{1}{r})}=-4\pi\delta^3(\vb{r})\]
+\subsection*{Hermite}
+
 \end{document}
