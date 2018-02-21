@@ -17,10 +17,21 @@
 \date{} 
 
 \begin{document}
+\[\qq{Poisson's equation}\laplacian{V}=-\frac{1}{\epsilon_0}\rho\]
+\[\qq{Laplace equation}\laplacian{V}=0\]
+Uniqueness theorems,
+Method of images,
 \section*{Cartesian coordinates}
+\[\pdv[2]{V}{x}+\pdv[2]{V}{y}+\pdv[2]{V}{z}=0\]
 \section*{Spherical coordinates}
-
-
-
-
+\[\frac{1}{r^2}\pdv{r}\qty(r^2\pdv{V}{r})+\frac{1}{r^2\sin\theta}\pdv{\theta}\qty(\sin\theta\pdv{V}{\theta})+\frac{1}{r^2}\pdv[2]{V}{\phi}=0\]
+If azimuthal symmetry is present $V$ is independent of $\phi$.
+\[\frac{1}{r^2}\pdv{r}\qty(r^2\pdv{V}{r})+\frac{1}{r^2\sin\theta}\pdv{\theta}\qty(\sin\theta\pdv{V}{\theta})=0\]
+Look for separable solutions, $V(r,\theta)=R(r)\Theta(\theta)$.
+Substitute this in to Laplace equation and divide with $V(r,\theta)=R(r)\Theta(\theta)$.
+\[\frac{1}{R}\dv{r}\qty(r^2\dv{V}{r})+\frac{1}{\Theta}\dv{\theta}\qty(\sin\theta\dv{V}{\theta})=0\]
+\[\frac{1}{R}\dv{r}\qty(r^2\dv{V}{r})=l(l+1)\]
+\[\frac{1}{\Theta\sin\theta}\dv{\theta}\qty(\sin\theta\dv{V}{\theta})=-l(l+1)\]
+\[\dv{r}\qty(r^2\dv{V}{r})=l(l+1)R\]
+\[R(r)=Ar^l+\frac{B}{r^{l+1}}\]
 \end{document}
