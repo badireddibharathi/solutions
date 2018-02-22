@@ -28,3 +28,19 @@ Maxwell's equations in vacuum, with no charges and currents are
 \subsubsection*{b.1}
 \[\div{\vb{E}}=\pdv{E_x}{x}+\pdv{E_y}{y}+\pdv{E_z}{z}\]
 \[\div{\vb{E}}=(ik_x)(E_{0x})\exp\qty(i\qty(\vb{k}\vdot\vb{r}-\omega{t}))+(ik_y)(E_{0y})\exp\qty(i\qty(\vb{k}\vdot\vb{r}-\omega{t}))+(ik_z)(E_{0z})\exp\qty(i\qty(\vb{k}\vdot\vb{r}-\omega{t}))\]
+\[\div{\vb{E}}=i(\vb{k}\vdot{\vb{E}_0})\exp\qty(i\qty(\vb{k}\vdot\vb{r}-\omega{t}))\]
+Hence $\div{\vb{E}}=0$ iff $\vb{k}\vdot\vb{E}_0=0$.\\
+Similarly $\div{\vb{B}}=0$ iff $\vb{k}\vdot\vb{B}_0=0$.
+\[
+\curl{\vb{E}}=
+\begin{vmatrix}
+\vu{x}& \vu{y}& \vu{z} \\
+\pdv{x}& \pdv{y}& \pdv{z} \\
+E_{0x}& E_{0y}& E_{0z}
+\end{vmatrix}
+\]
+\[=\vu{i}\qty[\pdv{E_{0z}}{y}-\pdv{E_{0y}}{z}]-\vu{j}\qty[\pdv{E_{0z}}{x}-\pdv{E_{0x}}{z}]+\vu{k}\qty[\pdv{E_{0y}}{x}-\pdv{E_{0x}}{y}]\]
+\[=\qty[\vu{i}\qty[k_yE_{0z}-k_zE_{0y}]-\vu{j}\qty[k_xE_{0z}-k_zE_{0x}]+\vu{k}\qty[k_xE_{0y}-k_yE_{0x}]]\qty[\exp\qty(i\qty(\vb{k}\vdot\vb{r}-\omega{t}))](i)\]
+\[=\qty(\vb{k}\cp\vb{E}_0)\exp\qty(i\qty(\vb{k}\vdot\vb{r}-\omega{t}))(i)\]
+\[\pdv{\vb{B}}{t}=\qty(-i\omega)\]
+
