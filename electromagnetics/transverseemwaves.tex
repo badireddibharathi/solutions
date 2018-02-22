@@ -42,5 +42,13 @@ E_{0x}& E_{0y}& E_{0z}
 \[=\vu{i}\qty[\pdv{E_{0z}}{y}-\pdv{E_{0y}}{z}]-\vu{j}\qty[\pdv{E_{0z}}{x}-\pdv{E_{0x}}{z}]+\vu{k}\qty[\pdv{E_{0y}}{x}-\pdv{E_{0x}}{y}]\]
 \[=\qty[\vu{i}\qty[k_yE_{0z}-k_zE_{0y}]-\vu{j}\qty[k_xE_{0z}-k_zE_{0x}]+\vu{k}\qty[k_xE_{0y}-k_yE_{0x}]]\qty[\exp\qty(i\qty(\vb{k}\vdot\vb{r}-\omega{t}))](i)\]
 \[=\qty(\vb{k}\cp\vb{E}_0)\exp\qty(i\qty(\vb{k}\vdot\vb{r}-\omega{t}))(i)\]
-\[\pdv{\vb{B}}{t}=\qty(-i\omega)\]
-
+\[\pdv{\vb{B}}{t}=\qty(-i\omega)\vb{B}_0\exp\qty(i\qty(\vb{k}\vdot\vb{r}-\omega{t}))\]
+\[\qq{Hence} \curl{\vb{E}}=-\frac{1}{c}\pdv{\vb{B}}{t}\qq{iff} \vb{k}\cp\vb{E}_0=\frac{\omega}{c}\vb{B}_0\]
+\[\qq{Similarly} \curl{\vb{B}}=\frac{1}{c}\pdv{\vb{E}}{t}\qq{iff} \vb{k}\cp\vb{B}_0=-\frac{\omega}{c}\vb{E}_0\]
+Since $\vb{k}\vdot\vb{E}_0=0$ and $\vb{k}\vdot\vb{E}_0=0$, $\vb{E}$ and $\vb{B}$ are perpendicular to $\vb{k}$.
+\subsubsection*{b.2}
+Define \[\vb{B}_0=\frac{c}{\omega}\qty(\vb{k}\cp\vb{E}_0)\]
+Since $\vb{k}$ and $\vb{E}_0$ are perpendicular to each other, $\vb{k}\vdot\vb{E}_0=0$.
+\[\vb{k}\vdot\vb{B}_0=\frac{c}{\omega}\vb{k}\vdot\qty(\vb{k}\cp\vb{E}_0)=\frac{c}{\omega}\vb{E}_0\vdot\qty(\vb{k}\cp\vb{k})=0\]
+\[\vb{k}\cp\vb{B}_0=\frac{c}{\omega}\vb{k}\cp\qty(\vb{k}\cp\vb{E}_0)=\frac{c}{\omega}\qty[\vb{k}\qty(\vb{k}\vdot\vb{E}_0)-\vb{E}_0\qty(\vb{k}\vdot\vb{k})]=-k^2\frac{c}{\omega}\vb{E}_0=-\frac{\omega}{c}\vb{E}_0\]
+\[\qq{Hence} \omega^2=c^2k^2\implies\omega=\pm ck\]
