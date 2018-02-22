@@ -1,0 +1,30 @@
+\section*{Solution}
+
+Given electromagnetic waves are \[\vb{E}(\vb{r},t)=\vb{E}_0\exp\qty(i\qty(\vb{k}\vdot\vb{r}-\omega{t}))\]
+\[\vb{B}(\vb{r},t)=\vb{B}_0\exp\qty(i\qty(\vb{k}\vdot\vb{r}-\omega{t}))\]
+\subsection*{(a)}
+Wave equation \[\frac{1}{c^2}\pdv[2]{u}{t}=\laplacian{u}\qq{where}\laplacian{u}=\pdv[2]{u}{x}+\pdv[2]{u}{y}+\pdv[2]{u}{z}\]
+
+\[\pdv{u}{x}=(ik_x)\vb{E}_0\exp\qty(i\qty(\vb{k}\vdot\vb{r}-\omega{t}))\]
+
+\[\pdv[2]{u}{x}=(ik_x)^2\vb{E}_0\exp\qty(i\qty(\vb{k}\vdot\vb{r}-\omega{t}))\]
+Similarly,
+\[\pdv[2]{u}{x}=(ik_x)^2\vb{E}_0\exp\qty(i\qty(\vb{k}\vdot\vb{r}-\omega{t}))\]
+\[\pdv[2]{u}{x}=(ik_x)^2\vb{E}_0\exp\qty(i\qty(\vb{k}\vdot\vb{r}-\omega{t}))\]
+Hence,
+\[\laplacian{u}=-(k^2_x+k^2_y+k^2_z)\vb{E}_0\exp\qty(i\qty(\vb{k}\vdot\vb{r}-\omega{t}))=-k^2\vb{E}_0\exp\qty(i\qty(\vb{k}\vdot\vb{r}-\omega{t}))\]
+\[\pdv{u}{t}=(i\omega)\vb{E}_0\exp\qty(i\qty(\vb{k}\vdot\vb{r}-\omega{t}))\]
+\[\pdv[2]{u}{t}=(i\omega)^2\vb{E}_0\exp\qty(i\qty(\vb{k}\vdot\vb{r}-\omega{t}))\]
+Since $c^2=\frac{\omega^2}{k^2}$,
+\[\pdv[2]{u}{t}=-\omega^2\vb{E}_0\exp\qty(i\qty(\vb{k}\vdot\vb{r}-\omega{t}))=-k^2c^2\vb{E}_0\exp\qty(i\qty(\vb{k}\vdot\vb{r}-\omega{t}))\]
+
+\[\pdv[2]{u}{t}=-k^2c^2\vb{E}_0\exp\qty(i\qty(\vb{k}\vdot\vb{r}-\omega{t}))=c^2\qty(-k^2\vb{E}_0\exp\qty(i\qty(\vb{k}\vdot\vb{r}-\omega{t})))=c^2\laplacian{\vb{E}}\]
+\[\frac{1}{c^2}\pdv[2]{\vb{E}}{t}=\laplacian{\vb{E}}\]
+Hence $\vb{E}(\vb{r},t)=\vb{E}_0\exp\qty(i\qty(\vb{k}\vdot\vb{r}-\omega{t}))$ satisfies the wave equation.\\
+Similarly $\vb{B}(\vb{r},t)=\vb{B}_0\exp\qty(i\qty(\vb{k}\vdot\vb{r}-\omega{t}))$ satisfies the wave equation.
+\subsection*{(b)}
+Maxwell's equations in vacuum, with no charges and currents are
+\[\curl{\vb{E}}=-\frac{1}{c}\pdv{\vb{B}}{t}\quad\curl{\vb{B}}=\frac{1}{c}\pdv{\vb{E}}{t}\quad\div{\vb{E}}=0\quad\div{\vb{B}}=0\]
+\subsubsection*{b.1}
+\[\div{\vb{E}}=\pdv{E_x}{x}+\pdv{E_y}{y}+\pdv{E_z}{z}\]
+\[\div{\vb{E}}=(ik_x)(E_{0x})\exp\qty(i\qty(\vb{k}\vdot\vb{r}-\omega{t}))+(ik_y)(E_{0y})\exp\qty(i\qty(\vb{k}\vdot\vb{r}-\omega{t}))+(ik_z)(E_{0z})\exp\qty(i\qty(\vb{k}\vdot\vb{r}-\omega{t}))\]
