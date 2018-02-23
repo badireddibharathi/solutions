@@ -15,7 +15,6 @@
 \usepackage{tikz} 
 \usepackage{bm}
 
-
 \title{gksmechanics}
 \author{vijayabhaskar badireddi}
 %\date{} 
@@ -26,18 +25,17 @@
 \section*{Introduction}
 
 \section*{Lagrangian mechanics}
-\subsection*{calculus of variations}
+\paragraph{calculus of variations}
 \[I=\int f(y,\dot{y},x)\dd{x}\]
 The path for which $I$ is an extremum,$\delta{I}=0$ is given by \[\pdv{f}{y}-\dv{t}\qty(\pdv{f}{\dot{y}})=0\]
-\subsection*{Hamilton's variational principle}
+\paragraph{Hamilton's variational principle}
 The motion of a dynamical system from time $t_1$ to $t_2$ is such that the intergral $\int_{t_1}^{t_2}(T(q_i,\dot{q}_i)-V(q_i))\dd{t}$ is an extremum.\\
 Denoting $L=T-V$, \[\dv{t}\qty(\pdv{L}{\dot{q}_i})-\pdv{L}{q_i}=0\]
-\subsection*{D'alembert's principle}
+\paragraph{D'alembert's principle}
 \[\dv{t}\qty(\pdv{T}{\dot{q}_i})-\pdv{T}{q_i}=Q_i\]
-\subsection*{Non-Holonomic systems}
+\paragraph{Non-Holonomic systems}
 If Non-Holonomic constraints are expressed as $\sum_ka_{lk}\dd{q_k}+a_{lt}\dd{t}=0\qq{where}l=1,2,\ldots,m$ use Lagrange's method of undetermined multipliers.
 \[\pdv{L}{q_k}-\dv{t}\qty(\pdv{L}{\dot{q}_k})+\sum_l\lambda_la_{lk}=0\]
-
 \section*{Hamiltonian mechanics}
 Generalized momentum $p_i=\pdv{L}{q_i}$, Phase space\\
 Hamiltonian $H=\sum_ip_i\dot{q}_i-L$\\
@@ -69,7 +67,7 @@ Principle of least action.
 \[\qq{action} A=\int_{t_1}^{t_2}\sum_{i}p_i\dot{q}_i\dd{t}\]
 \[\Delta\int_{t_1}^{t_2}\sum_{i}p_i\dot{q}_i\dd{t}=0\]
 \[\Delta{f}=\delta{f}+\pdv{f}{t}\Delta{t}\]
-\subsection*{Poisson brackets}
+\paragraph{Poisson brackets}
 \[\dv{F}{t}=\pdv{F}{t}+\sum_{i}\qty(\pdv{F}{q_i}\pdv{H}{p_i}-\pdv{F}{p_i}\pdv{H}{q_i})=\pdv{F}{t}+\pb{F}{H}\]
 \[\pb{X}{Y}=-\pb{Y}{X}\]
 \[\pb{X}{X}=0\]
@@ -94,11 +92,16 @@ Equation of motion for $\vb{r}$ is \[\dv{t}\qty(\pdv{L}{\dot{r}})-\pdv{L}{r}=\mu
 Since the gravitational force \[\vb{F}=-\frac{Gm_1m_2\vb{r}}{|\vb{r}|^3}\]
 satisfies \[\curl{\vb{F}}=0\]
 it is conservative and energy is conserved.
-Since \[\vb{N}=\dv{\vb{L}}{t}=\vb{r}\cp\vb{F}=\vb{r}\cp-\frac{Gm_1m_2\vb{r}}{|\vb{r}|^3}=0\]
-angular momentum of the system $\vb{l}$ is conserved.\\
+Since \[\vb{N}=\dv{\bm{l}}{t}=\vb{r}\cp\vb{F}=\vb{r}\cp-\frac{Gm_1m_2\vb{r}}{|\vb{r}|^3}=0\]
+angular momentum of the system $\bm{l}$ is conserved.\\
 Lagrangian is \[L=\frac{1}{2}m(\dot{r}^2+r^2\dot{\theta}^2)-V(r)\]
 Lagrangian equation for $\theta$ is \[\dv{t}\qty(\pdv{L}{\dot{\theta}})-\pdv{L}{\theta}=0\]
 \[\dv{t}\qty(mr^2\dot{\theta})=0\]
+Angular momentum of system $\bm{l}=mr^2\dot{\theta}\vu{n}$ is constant.
+Lagrangian equation for $r$ is \[\dv{t}\qty(\pdv{L}{\dot{r}})-\pdv{L}{r}=0\]
+\[\dv{t}\qty(m\dot{r})-mr\dot{\theta}^2-\pdv{V}{r}=0\]
+\[m\ddot{r}-mr\dot{\theta}^2=\dv{V}{r}\]
+
 \section*{Relative coordinates}
 
 \[\qty(\dv{\vb{r}}{t})_{un primed}=\qty(\dv{\vb{r}}{t})_{primed}+\bm{\omega}\cp\vb{r}\]
