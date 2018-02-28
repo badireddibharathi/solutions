@@ -27,28 +27,28 @@ Therefore, F is a differential 2-form, that is, an antisymmetric rank-2 tensor f
 \[E_{i}=cF_{0i}\]
 \[B_{i}=-\frac{1}{2}\epsilon_{ijk}F^{jk}\]
 
-\[ F^{\mu \nu }={\begin{bmatrix}0&-E_{x}/c&-E_{y}/c&-E_{z}/c\\E_{x}/c&0&-B_{z}&B_{y}\\E_{y}/c&B_{z}&0&-B_{x}\\E_{z}/c&-B_{y}&B_{x}&0\end{bmatrix}}\]
+\[ F^{\mu\nu}={\begin{bmatrix}0&-E_{x}/c&-E_{y}/c&-E_{z}/c\\E_{x}/c&0&-B_{z}&B_{y}\\E_{y}/c&B_{z}&0&-B_{x}\\E_{z}/c&-B_{y}&B_{x}&0\end{bmatrix}}\]
 
 \[ F_{\mu \nu }=\eta _{\mu \alpha }F^{\alpha \beta }\eta _{\beta \nu }={\begin{bmatrix}0&E_{x}/c&E_{y}/c&E_{z}/c\\-E_{x}/c&0&-B_{z}&B_{y}\\-E_{y}/c&B_{z}&0&-B_{x}\\-E_{z}/c&-B_{y}&B_{x}&0\end{bmatrix}}\]
 
 The Faraday tensor's Hodge dual is
 
-\[ {G^{\alpha \beta }={\frac {1}{2}}\epsilon ^{\alpha \beta \gamma \delta }F_{\gamma \delta }={\begin{bmatrix}0&-B_{x}&-B_{y}&-B_{z}\\B_{x}&0&E_{z}/c&-E_{y}/c\\B_{y}&-E_{z}/c&0&E_{x}/c\\B_{z}&E_{y}/c&-E_{x}/c&0\end{bmatrix}}}\]
+\[ {G^{\alpha \beta }=\frac {1}{2}\epsilon ^{\alpha \beta \gamma \delta }F_{\gamma \delta }={\begin{bmatrix}0&-B_{x}&-B_{y}&-B_{z}\\B_{x}&0&E_{z}/c&-E_{y}/c\\B_{y}&-E_{z}/c&0&E_{x}/c\\B_{z}&E_{y}/c&-E_{x}/c&0\end{bmatrix}}}\]
 
 \[\tag{anti symmetry} F^{\mu \nu }=-F^{\nu \mu }\]
 
-\[ F_{\mu \nu }F^{\mu \nu }=2\left(B^{2}-{\frac {E^{2}}{c^{2}}}\right)\]
+\[ F_{\mu \nu }F^{\mu \nu }=2\qty(B^{2}-{\frac {E^{2}}{c^{2}}})\]
 
 \[G_{\gamma \delta }F^{\gamma \delta }=\frac {1}{2}\epsilon _{\alpha \beta \gamma \delta }F^{\alpha \beta }F^{\gamma \delta }=-\frac {4}{c}\vb{B}\cdot \vb{E}\]
 
 \[\det \left(F\right)={\frac {1}{c^{2}}}\left({\mathbf {B}}\cdot {\mathbf {E}}\right)^{2}\]
 
-\[ \nabla \cdot \mathbf{E} = \frac{\rho}{\epsilon_0},\quad \nabla \times \mathbf{B} - \frac{1}{c^2} \frac{ \partial \mathbf{E}}{\partial t} = \mu_0 \vb{J}
+\[\div{\vb{E}} = \frac{\rho}{\epsilon_0},\quad \curl{\vb{B}} - \frac{1}{c^2} \pdv{\vb{E}}{t} = \mu_0 \vb{J}
 \]
 
 \[\partial_{\alpha} F^{\alpha\beta} = \mu_0 J^{\beta}\]
 
-\[ \nabla \cdot \mathbf{B} = 0,\quad \frac{ \partial \mathbf{B}}{ \partial t } + \nabla \times \mathbf{E} = 0 \]
+\[ \div{\vb{B}} = 0,\quad \pdv{\vb{B}}{t} + \curl{\vb{E}} = 0 \]
 which reduce to Bianchi identity:
 
 \[\partial_\gamma F_{ \alpha \beta } + \partial_\alpha F_{ \beta \gamma } + \partial_\beta F_{ \gamma \alpha } = 0 \]
