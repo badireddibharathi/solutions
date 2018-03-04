@@ -22,7 +22,17 @@
 \section*{Tikz figures}
 
 \subsection*{figure 1}
+\begin{center}
 
+\begin{tikzpicture}[scale=2]
+	\draw (0,0) node [anchor=north west] {$\sin\alpha$};
+	\draw (-4,0) -- (4,0);
+	\draw (0,-4) -- (0,4);
+	\draw (0,0) circle [radius=3];
+	\draw (1,2) rectangle (-2,-2);
+	\draw (1,0) arc [start angle=0, end angle=45, radius=1];
+\end{tikzpicture}
 
+\end{center}
 
 \end{document}
