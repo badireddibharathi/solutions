@@ -1,0 +1,57 @@
+% !TEX TS-program = pdflatex
+% !TEX encoding = UTF-8 Unicode
+
+\documentclass[12pt]{article}
+
+\usepackage[utf8]{inputenc} 
+
+\usepackage{geometry}
+\geometry{a4paper}
+\geometry{margin=0.25in} 
+\geometry{portrait}
+
+\usepackage{amsmath}
+\usepackage{physics}
+\usepackage{siunitx}
+\usepackage{circuitikz}
+
+\title{circuitikz figures}
+\author{vijayabhaskar badireddi}
+
+\begin{document}
+
+\section*{circuitikz figures}
+\subsection*{figure 1}
+\begin{center}
+\begin{circuitikz}[scale=1]
+ \draw (0,0) to[R,l=$R_1$,f=$i_1$] (4,0) to [nos,l=$S$] (4,-2) to [battery1,l=$\mathcal{E}$] (4,-4) to[C,l=$C_1$] (0,-4) to [L,l=$L_1$,i=$i_1$] (0,0);
+ \end{circuitikz}
+\end{center}
+
+\subsection*{figure 2}
+\begin{center}
+\begin{circuitikz}[scale=1]
+ \draw (0,0) 
+ node [anchor=east] {a}
+ to[battery1,l_=$\mathcal{E}$,*-] (2,0) to [nos,l_=$S$,-*] (4,0)
+  node [anchor=west] {b} ;
+ \draw (0,0) to [R,l=$R_1$,f=$i_1$] (0,3);
+ \draw (4,0) to
+ node [anchor=south,pos=2.5] {$+q$} (4,0) 
+ to [C,l_=$C_1$] (4,3);
+ \draw (0,3) to [L,l=$L_1$,i=$i_1$] (4,3);
+ \end{circuitikz}
+\end{center}
+
+\begin{center}
+\begin{circuitikz}
+  \draw (0,0) 
+  	node [anchor=east]{A}
+        to node[above,pos=2]{$+q$} (0.5,0) 
+        to [C, l_=$C$] (2.5,0) 
+        to node[above,pos=-1]{$-q$} (3,0)
+        node [anchor=west] {B} ;
+\end{circuitikz}
+
+\end{center}
+\end{document}
