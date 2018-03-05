@@ -114,12 +114,12 @@
  \draw (0,0) node [anchor=east] {a} ;
  \draw (4,0) node [anchor=west] {b} ;
  \draw (0,0) to [battery1,l_=$\mathcal{E}$] (4,0);
- \draw (0,2) to [R,l=$R$,i=$i$] (2,2);
- \draw (0,0) to (0,2);
+ \draw (0,2) to [R,l=$R$] (2,2);
+ \draw (0,0) to [short,i=$i$] (0,2);
  \draw (2,2) to [C,l=$C$] (4,2);
  \draw (3,2) node [anchor=north east] {$+q$};
  \draw (3,2) node [anchor=north west] {$-q$};
- \draw (4,2) to (4,0);
+ \draw (4,2) to [short] (4,0);
  \draw (2,-1) node [anchor=north] {charging $RC$ circuit};
  \end{circuitikz}
 \end{center}
@@ -130,14 +130,83 @@
 \begin{circuitikz}[scale=1]
  \draw (0,0) node [anchor=east] {a} ;
  \draw (4,0) node [anchor=west] {b} ;
- \draw (0,0) to (4,0);
- \draw (0,2) to [R,l=$R$,i<=$i$] (2,2);
+ \draw (0,0) to [short,i=$i$] (4,0);
+ \draw (0,2) to [R,l=$R$] (2,2);
  \draw (0,0) to (0,2);
  \draw (2,2) to [C,l=$C$] (4,2);
  \draw (3,2) node [anchor=north east] {$+q$};
  \draw (3,2) node [anchor=north west] {$-q$};
  \draw (4,2) to (4,0);
  \draw (2,-1) node [anchor=north] {discharging $RC$ circuit};
+ \end{circuitikz}
+\end{center}
+
+\subsection*{AC circuit 1}
+
+\begin{center}
+\begin{circuitikz}[scale=1]
+ \draw (0,0) node [anchor=east] {a} ;
+ \draw (4,0) node [anchor=west] {b} ;
+ \draw (0,0) to [vco,l_=$\mathcal{E}_0\sin\omega{t}$] (4,0);
+ \draw (0,2) to [R,l=$R$] (2,2);
+ \draw (0,0) to (0,2);
+ \draw (2,2) to [C,l=$C$] (4,2);
+% \draw (3,2) node [anchor=north east] {$+q$};
+% \draw (3,2) node [anchor=north west] {$-q$};
+ \draw (4,2) to (4,0);
+ \draw (2,-2) node [anchor=north] {$RC$ circuit};
+ \end{circuitikz}
+\end{center}
+
+\subsection*{AC circuit 2}
+
+\begin{center}
+\begin{circuitikz}[scale=1]
+ \draw (0,0) node [anchor=east] {a} ;
+ \draw (4,0) node [anchor=west] {b} ;
+ \draw (0,0) to [vco,l_=$\mathcal{E}_0\sin\omega{t}$] (4,0);
+ \draw (0,2) to [R,l=$R$] (2,2);
+ \draw (0,0) to (0,2);
+ \draw (2,2) to [L,l=$L$] (4,2);
+% \draw (3,2) node [anchor=north east] {$+q$};
+% \draw (3,2) node [anchor=north west] {$-q$};
+ \draw (4,2) to (4,0);
+ \draw (2,-2) node [anchor=north] {$RL$ circuit};
+ \end{circuitikz}
+\end{center}
+
+\subsection*{AC circuit 3}
+
+\begin{center}
+\begin{circuitikz}[scale=1]
+ \draw (0,0) node [anchor=east] {a} ;
+ \draw (4,0) node [anchor=west] {b} ;
+ \draw (0,0) to [vco,l_=$\mathcal{E}_0\sin\omega{t}$] (4,0);
+ \draw (0,2) to [L,l=$L$] (2,2);
+ \draw (0,0) to (0,2);
+ \draw (2,2) to [C,l=$C$] (4,2);
+% \draw (3,2) node [anchor=north east] {$+q$};
+% \draw (3,2) node [anchor=north west] {$-q$};
+ \draw (4,2) to (4,0);
+ \draw (2,-2) node [anchor=north] {$LC$ circuit};
+ \end{circuitikz}
+\end{center}
+
+\subsection*{AC circuit 4}
+
+\begin{center}
+\begin{circuitikz}[scale=1]
+ \draw (0,0) node [anchor=east] {a} ;
+ \draw (6,0) node [anchor=west] {b} ;
+ \draw (0,0) to [vco,l_=$\mathcal{E}_0\sin\omega{t}$] (6,0);
+ \draw (0,2) to [L,l=$L$] (2,2);
+ \draw (2,2) to [R,l=$R$] (4,2);
+ \draw (0,0) to (0,2);
+ \draw (4,2) to [C,l=$C$] (6,2);
+% \draw (3,2) node [anchor=north east] {$+q$};
+% \draw (3,2) node [anchor=north west] {$-q$};
+ \draw (6,2) to (6,0);
+ \draw (3,-2) node [anchor=north] {$RLC$ circuit};
  \end{circuitikz}
 \end{center}
 
