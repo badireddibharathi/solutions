@@ -1,0 +1,213 @@
+% !TEX TS-program = pdflatex
+% !TEX encoding = UTF-8 Unicode
+
+\documentclass[12pt]{article}
+
+\usepackage[utf8]{inputenc} 
+
+\usepackage{geometry}
+\geometry{a4paper} 
+\geometry{margin=0.25in} 
+\geometry{portrait}
+
+\usepackage{amsmath}
+\usepackage{physics}
+\usepackage{circuitikz} 
+
+\title{circuits}
+\author{vijayabhaskar badireddi}
+
+\begin{document}
+\section*{circuits}
+\subsection*{resistances in series}
+
+\begin{center}
+\begin{circuitikz}[scale=1]
+ \draw (0,0) node [anchor=east] {a} ;
+ \draw (0,0) to [R,l=$R_1$,i=$i$] (2,0);
+ \draw (2,0) to [R,l=$R_2$] (4,0);
+ \draw (4,0) node [anchor=west] {b} ;
+ \draw (6,0) node [anchor=east] {a} ;
+ \draw (6,0) to [R,l=$R_1+R_2$,i_=$i$] (8,0);
+ \draw (8,0) node [anchor=west] {b} ;
+ \draw (2,-1) node [anchor=north] {resistances in series};
+ \draw (5,0) node [] {$\equiv$};
+ \end{circuitikz}
+\end{center}
+
+\subsection*{resistances in parallel}
+
+\begin{center}
+\begin{circuitikz}[scale=1]
+ \draw (0,0) node [anchor=east] {a} ;
+ \draw (0,0) to (1,0);
+ \draw (1,0) to (1,1);
+ \draw (1,0) to (1,-1);
+ \draw (3,1) to (3,0);
+ \draw (3,-1) to (3,0);
+ \draw (3,0) to (4,0);
+ \draw (1,1) to [R,l=$R_1$,i_=$i_1$] (3,1);
+ \draw (1,-1) to [R,l=$R_2$,i_=$i_2$] (3,-1);
+ \draw (4,0) node [anchor=west] {b} ;
+ \draw (6,0) node [anchor=east] {a} ;
+ \draw (6,0) to [R,l=$\frac{R_1R_2}{R_1+R_2}$,i_=$i_1+i_2$] (8,0);
+ \draw (8,0) to (9,0);
+ \draw (9,0) node [anchor=west] {b} ;
+ \draw (2,-2) node [anchor=north] {resistances in parallel};
+ \end{circuitikz}
+\end{center}
+
+\subsection*{capacitances in series}
+
+\begin{center}
+\begin{circuitikz}[scale=1]
+ \draw (0,0) node [anchor=east] {a} ;
+ \draw (0,0) to [C,l=$C_1$] (2,0);
+ \draw (1,0) node [anchor=north east] {$+q$};
+ \draw (1,0) node [anchor=north west] {$-q$};
+ \draw (2,0) to [C,l=$C_2$] (4,0);
+ \draw (3,0) node [anchor=north east] {$+q$};
+ \draw (3,0) node [anchor=north west] {$-q$};
+ \draw (4,0) node [anchor=west] {b} ;
+ \draw (6,0) node [anchor=east] {a} ;
+ \draw (6,0) to [C,l=$\frac{C_1C_2}{C_1+C_2}$] (8,0);
+ \draw (7,0) node [anchor=north east] {$+q$};
+ \draw (7,0) node [anchor=north west] {$-q$};
+ \draw (8,0) node [anchor=west] {b} ;
+ \draw (2,-1) node [anchor=north] {resistances in series};
+ \draw (5,0) node [] {$\equiv$};
+ \end{circuitikz}
+\end{center}
+
+\subsection*{capacitances in parallel}
+
+\begin{center}
+\begin{circuitikz}[scale=1]
+ \draw (0,0) node [anchor=east] {a} ;
+ \draw (0,0) to (1,0);
+ \draw (1,0) to (1,1);
+ \draw (1,0) to (1,-1);
+ \draw (3,1) to (3,0);
+ \draw (3,-1) to (3,0);
+ \draw (3,0) to (4,0);
+ \draw (1,1) to [C,l=$C_1$] (3,1);
+ \draw (2,1) node [anchor=north east] {$+q_1$};
+ \draw (2,1) node [anchor=north west] {$-q_1$};
+ \draw (1,-1) to [C,l=$C_2$] (3,-1);
+ \draw (2,-1) node [anchor=north east] {$+q_2$};
+ \draw (2,-1) node [anchor=north west] {$-q_2$};
+ \draw (4,0) node [anchor=west] {b} ;
+ \draw (5,0) node [] {$\equiv$};
+ \draw (6,0) node [anchor=east] {a} ;
+ \draw (6,0) to [C,l=$C_1+C_2$] (8,0);
+ \draw (7,0) node [anchor=north east] {$+q$};
+ \draw (7,0) node [anchor=north west] {$-q$};
+ \draw (8,0) node [anchor=west] {b} ;
+ \draw (2,-2) node [anchor=north] {resistances in parallel};
+ \end{circuitikz}
+\end{center}
+
+\subsection*{charging RC circuit}
+
+\begin{center}
+\begin{circuitikz}[scale=1]
+ \draw (0,0) node [anchor=east] {a} ;
+ \draw (4,0) node [anchor=west] {b} ;
+ \draw (0,0) to [battery1,l_=$\mathcal{E}$] (4,0);
+ \draw (0,2) to [R,l=$R$] (2,2);
+ \draw (0,0) to [short,i=$i$] (0,2);
+ \draw (2,2) to [C,l=$C$] (4,2);
+ \draw (3,2) node [anchor=north east] {$+q$};
+ \draw (3,2) node [anchor=north west] {$-q$};
+ \draw (4,2) to [short] (4,0);
+ \draw (2,-1) node [anchor=north] {charging $RC$ circuit};
+ \end{circuitikz}
+\end{center}
+
+\subsection*{discharging RC circuit}
+
+\begin{center}
+\begin{circuitikz}[scale=1]
+ \draw (0,0) node [anchor=east] {a} ;
+ \draw (4,0) node [anchor=west] {b} ;
+ \draw (0,0) to [short,i=$i$] (4,0);
+ \draw (0,2) to [R,l=$R$] (2,2);
+ \draw (0,0) to (0,2);
+ \draw (2,2) to [C,l=$C$] (4,2);
+ \draw (3,2) node [anchor=north east] {$+q$};
+ \draw (3,2) node [anchor=north west] {$-q$};
+ \draw (4,2) to (4,0);
+ \draw (2,-1) node [anchor=north] {discharging $RC$ circuit};
+ \end{circuitikz}
+\end{center}
+
+\subsection*{AC circuit 1}
+
+\begin{center}
+\begin{circuitikz}[scale=1]
+ \draw (0,0) node [anchor=east] {a} ;
+ \draw (4,0) node [anchor=west] {b} ;
+ \draw (0,0) to [vco,l_=$\mathcal{E}_0\sin\omega{t}$] (4,0);
+ \draw (0,2) to [R,l=$R$] (2,2);
+ \draw (0,0) to (0,2);
+ \draw (2,2) to [C,l=$C$] (4,2);
+% \draw (3,2) node [anchor=north east] {$+q$};
+% \draw (3,2) node [anchor=north west] {$-q$};
+ \draw (4,2) to (4,0);
+ \draw (2,-2) node [anchor=north] {$RC$ circuit};
+ \end{circuitikz}
+\end{center}
+
+\subsection*{AC circuit 2}
+
+\begin{center}
+\begin{circuitikz}[scale=1]
+ \draw (0,0) node [anchor=east] {a} ;
+ \draw (4,0) node [anchor=west] {b} ;
+ \draw (0,0) to [vco,l_=$\mathcal{E}_0\sin\omega{t}$] (4,0);
+ \draw (0,2) to [R,l=$R$] (2,2);
+ \draw (0,0) to (0,2);
+ \draw (2,2) to [L,l=$L$] (4,2);
+% \draw (3,2) node [anchor=north east] {$+q$};
+% \draw (3,2) node [anchor=north west] {$-q$};
+ \draw (4,2) to (4,0);
+ \draw (2,-2) node [anchor=north] {$RL$ circuit};
+ \end{circuitikz}
+\end{center}
+
+\subsection*{AC circuit 3}
+
+\begin{center}
+\begin{circuitikz}[scale=1]
+ \draw (0,0) node [anchor=east] {a} ;
+ \draw (4,0) node [anchor=west] {b} ;
+ \draw (0,0) to [vco,l_=$\mathcal{E}_0\sin\omega{t}$] (4,0);
+ \draw (0,2) to [L,l=$L$] (2,2);
+ \draw (0,0) to (0,2);
+ \draw (2,2) to [C,l=$C$] (4,2);
+% \draw (3,2) node [anchor=north east] {$+q$};
+% \draw (3,2) node [anchor=north west] {$-q$};
+ \draw (4,2) to (4,0);
+ \draw (2,-2) node [anchor=north] {$LC$ circuit};
+ \end{circuitikz}
+\end{center}
+
+\subsection*{AC circuit 4}
+
+\begin{center}
+\begin{circuitikz}[scale=1]
+ \draw (0,0) node [anchor=east] {a} ;
+ \draw (6,0) node [anchor=west] {b} ;
+ \draw (0,0) to [vco,l_=$\mathcal{E}_0\sin\omega{t}$] (6,0);
+ \draw (0,2) to [L,l=$L$] (2,2);
+ \draw (2,2) to [R,l=$R$] (4,2);
+ \draw (0,0) to (0,2);
+ \draw (4,2) to [C,l=$C$] (6,2);
+% \draw (3,2) node [anchor=north east] {$+q$};
+% \draw (3,2) node [anchor=north west] {$-q$};
+ \draw (6,2) to (6,0);
+ \draw (3,-2) node [anchor=north] {$RLC$ circuit};
+ \end{circuitikz}
+\end{center}
+
+\end{document}
