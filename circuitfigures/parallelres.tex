@@ -1,0 +1,15 @@
+\subsection*{resistances in series}
+
+\begin{center}
+\begin{circuitikz}[scale=1]
+ \draw (0,0) node [anchor=east] {a} ;
+ \draw (0,0) to [R,l=$R_1$,i=$i$] (2,0);
+ \draw (2,0) to [R,l=$R_2$] (4,0);
+ \draw (4,0) node [anchor=west] {b} ;
+ \draw (6,0) node [anchor=east] {a} ;
+ \draw (6,0) to [R,l=$R_1+R_2$,i_=$i$] (8,0);
+ \draw (8,0) node [anchor=west] {b} ;
+ \draw (2,-1) node [anchor=north] {resistances in series};
+ \draw (5,0) node [] {$\equiv$};
+ \end{circuitikz}
+\end{center}

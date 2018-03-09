@@ -24,6 +24,44 @@
 \subsection*{figure 1}
 
 \begin{center}
+<<<<<<< HEAD
+\begin{tikzpicture}
+
+\tikzset{
+outoff/.pic={
+	\draw circle [radius=#1] ;
+	\fill circle [radius=0.1] ;
+}
+}
+
+\tikzset{
+into/.pic={
+	\draw circle [radius=#1] ;
+	\draw (-45:#1) -- (135:#1) ;
+	\draw (45:#1) -- (-135:#1) ;
+}
+}
+
+%\usetikzlibrary{shapes.geometric}
+
+%\draw (0,0) circle [radius=3] ;
+%\draw (0,0) node [above,fill=red,shape=circle] {center} ;
+%\draw (0,0) -- (4,5) node [pos=0.5] {midway} ;
+
+%\node at (0,3) (A) {$A$} ;
+%\node at (2,-1) (B) {$B$} ;
+%\node at (1,4) (C) {$C$} ;
+%\node at (-1,3) (D) {$D$} ;
+%\draw [-{latex}] (A) -- (B) ;
+%\draw [-{latex}] (D) -- (C) ;
+%\draw [-{latex}] (B) -- (D) ;
+
+%\node at (3,6) [name=s,shape=circle,draw] {Q} ;
+%\draw (s.north west) -- (s.south east) ;
+%\draw (s.south west) -- (s.north east) ;
+%\draw [double=gray!50!white,double distance=5] (2,5) circle [radius=3] ;
+%
+=======
 \begin{tikzpicture}[scale=1]
 	\draw (0,0) node [anchor=north west] {$O$};
 	\draw [<->] (-5,0) -- (5,0);
@@ -38,6 +76,7 @@
 	\draw (0,2.5) node [anchor=north west] {$\theta$} ;
 	\draw [very thick, red] (3,0) -- (3.1,0) ;
 	\draw (0,-2) node [anchor=north] {Uniform sheet of current};
+>>>>>>> 9eab38ddcd7c93d0f44d9058f61d96a7edc76cb2
 \end{tikzpicture}
 \end{center}
 
