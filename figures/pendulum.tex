@@ -1,0 +1,17 @@
+\subsection*{pendulum}
+
+\begin{center}
+\begin{tikzpicture}
+
+\draw (-1,0) -- (1,0) ;
+\draw [very thick] (-0.1,0) arc  [start angle=-180,end angle=0,radius=0.1] ;
+\draw [dotted] (0,0) -- (0,-2) ; 
+\draw [ultra thick] (0,0) -- (-60:4) ;
+\draw (0,-0.5) arc  [start angle=-90,end angle=-60,radius=0.5] ;
+\draw (0,-0.5) node [anchor=north west] {$\theta$} ;
+\draw [very thick,-{latex}] (-60:2) -- ++(0,-1) ;
+\draw [very thick,-{latex}] (0,0) -- ++(0,1) ;
+\draw [very thick,-{latex}] (0,0) -- ++(1,0) ; 
+
+\end{tikzpicture}
+\end{center}

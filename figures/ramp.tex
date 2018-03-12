@@ -1,0 +1,15 @@
+\subsection*{ramp}
+
+\begin{center}
+\begin{tikzpicture}
+\draw (0,0) -- (30:6) ;
+\draw (30:6) -- ++(0,-3) -- (0,0) ;
+\draw (1,0) arc [start angle = 0, end angle =30, radius =1] ;
+\draw node at (1,0) [anchor=south west] {$\theta$} ;
+\draw [very thick,rotate=30] (0:2) rectangle ++(2,2) ; 
+\draw [very thick,rotate=30,-{latex}] (0:3) ++(0,1) -- ++(-1,0) ; 
+\draw [very thick,rotate=30,-{latex}] (0:3) ++(0,1) -- ++(0,-1.7) ; 
+\draw [very thick,rotate=30,-{latex}] (0:3) ++(0,1) -- ++(-120:2) ;
+\draw [very thick,rotate=30,-{latex}] (0:3) ++(0,1) -- ++(0,1.7) ;
+\end{tikzpicture}
+\end{center}
