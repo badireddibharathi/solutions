@@ -66,3 +66,22 @@
  \draw (3,-2) node [anchor=north] {$RLC$ circuit};
  \end{circuitikz}
 \end{center}
+
+\subsection*{transformers}
+
+\begin{center}
+\begin{circuitikz}[scale=1]
+
+%\ctikzset{double bipoles/transformer/height=2} ;
+\draw
+ (0,0) node[transformer] (T) {}
+ (T.A1) node[anchor=south] {A1}
+ (T.A2) node[anchor=north] {A2}
+ (T.B1) node[anchor=south] {B1}
+ (T.B2) node[anchor=north] {B2}
+ (T.base) node{K} ;
+ \draw (-2,0) to [short] (T.A1) ;
+  \draw (-2,-2) to [short] (T.A2) ;
+ \draw (-2,0) to [vco,l_=$\mathcal{E}_0\sin\omega{t}$] (-2,-2) ;
+\end{circuitikz}
+\end{center}

@@ -1,0 +1,22 @@
+\subsection*{Force on dielectric}
+\begin{center}
+\begin{circuitikz}[scale=1]
+
+\draw (0,2) to [battery1,l_=$\mathcal{E}$] (0,0) ;
+
+\draw (0,0) to [short] (0.5,0) ;
+\draw (0,2) to [short] (0.5,2) ;
+\draw [fill,color=gray] (0.5,-0.1) rectangle ++(4,0.2) ; 
+\draw [fill,color=gray] (0.5,1.9) rectangle ++(4,0.2) ; 
+\draw (2.5,0.1) rectangle ++(4,1.8) ; 
+\draw [-{latex}] (3,2.5) -- ++(1.5,0) ;
+\draw [-{latex}] (2,2.5) -- ++(-1.5,0) ;
+\draw [-{latex}] (5,-0.5) -- ++(1.5,0) ;
+\draw [-{latex}] (4,-0.5) -- ++(-1.5,0) ;
+\draw (2.5,2.5) node {$a$};
+\draw (4.5,-0.5) node {$a$};
+\draw [-{latex}] (4,1) -- ++(0.5,0) ;
+\draw [-{latex}] (3,1) -- ++(-0.5,0) ;
+\draw (3.5,1) node {$x$};
+\end{circuitikz}
+\end{center}

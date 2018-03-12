@@ -12,28 +12,26 @@
 
 \usepackage{amsmath}
 \usepackage{physics}
-\usepackage{tikz}
-\usetikzlibrary{calc,intersections,through,backgrounds}
+\usepackage{tikz} 
 
-\title{geometry}
+\title{thermodynamics figures}
 \author{vijayabhaskar badireddi}
 
 \begin{document}
 
-\section*{geometry}
+\section*{thermodynamic figures}
 
-\subsection*{euclid1}
 \begin{center}
 \begin{tikzpicture}
 
-\coordinate [label=left:{$A$}] (A) at (0,0) ;
-\coordinate [label=right:{$B$}] (B) at (3,2) ;
-\draw (A) -- (B) ;
-\draw let \p1 = ($(B) - (A)$),
-		\n2 = {veclen(\x1,\y1)}
-	in 
-	(A)	circle (\n2) 
-	(B)	circle (\n2) ;
+\def\into{\draw (0,0) circle [radius=0.3];\filldraw (0,0) circle [radius=0.1];} 
+
+\draw [-{latex}] (0,0) -- (4,0);
+\draw [-{latex}] (0,0) -- (0,4);
+\draw (4,0) node [anchor=north] {$V$(Cum)} ;
+\draw (0,4) node [anchor=east] {$p$(kPa)} ;
+\draw [domain=0.7:3,smooth,variable=\x] plot ({2/\x},{\x}) ;
+\into ;
 \end{tikzpicture}
 \end{center}
 

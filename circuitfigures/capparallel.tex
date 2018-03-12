@@ -3,12 +3,12 @@
 \begin{center}
 \begin{circuitikz}[scale=1]
  \draw (0,0) node [anchor=east] {a} ;
- \draw (0,0) to (1,0);
- \draw (1,0) to (1,1);
- \draw (1,0) to (1,-1);
- \draw (3,1) to (3,0);
- \draw (3,-1) to (3,0);
- \draw (3,0) to (4,0);
+ \draw (0,0) to [short] (1,0);
+ \draw (1,0) to [short] (1,1);
+ \draw (1,0) to [short] (1,-1);
+ \draw (3,1) to [short] (3,0);
+ \draw (3,-1) to [short] (3,0);
+ \draw (3,0) to [short] (4,0);
  \draw (1,1) to [C,l=$C_1$] (3,1);
  \draw (2,1) node [anchor=north east] {$+q_1$};
  \draw (2,1) node [anchor=north west] {$-q_1$};

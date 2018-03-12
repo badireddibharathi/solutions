@@ -1,0 +1,51 @@
+\subsection*{growth RL circuit}
+
+\begin{center}
+\begin{circuitikz}[scale=1]
+ \draw (0,0) node [anchor=east] {a} ;
+ \draw (4,0) node [anchor=west] {b} ;
+ \draw (0,0) to [battery1,l_=$\mathcal{E}$] (4,0);
+ \draw (0,2) to [R,l=$R$] (2,2);
+ \draw (0,0) to [short,i=$i$] (0,2);
+ \draw (2,2) to [L,l=$L$] (4,2);
+% \draw (3,2) node [anchor=north east] {$+q$};
+% \draw (3,2) node [anchor=north west] {$-q$};
+ \draw (4,2) to [short] (4,0);
+ \draw (2,-1) node [anchor=north] {growth $RL$ circuit};
+ \end{circuitikz}
+\end{center}
+
+\subsection*{decay RL circuit}
+
+\begin{center}
+\begin{circuitikz}[scale=1]
+ \draw (0,0) node [anchor=east] {a} ;
+ \draw (4,0) node [anchor=west] {b} ;
+ \draw (0,0) to [short,i=$i$] (4,0);
+ \draw (0,2) to [R,l=$R$] (2,2);
+ \draw (0,0) to [short] (0,2);
+ \draw (2,2) to [L,l=$L$] (4,2);
+% \draw (3,2) node [anchor=north east] {$+q$};
+% \draw (3,2) node [anchor=north west] {$-q$};
+ \draw (4,2) to [short] (4,0);
+ \draw (2,-1) node [anchor=north] {decay $RL$ circuit};
+\end{circuitikz}
+\end{center}
+ 
+\subsection*{RL circuit 1}
+
+\begin{center}
+\begin{circuitikz}[scale=1]
+ \draw (0,0) node [anchor=east] {a} ;
+ \draw (4,0) node [anchor=west] {b} ;
+ \draw (0,0) to [battery1,l_=$\mathcal{E}$] (2,0) to [nos,l_=$S$] (4,0);
+ \draw (0,2) to [R,l=$R_1$] (2,2) ;
+ \draw (0,1) to [R,l=$R_2$] (4,1) ;
+ \draw (0,0) to [short] (0,2);
+ \draw (2,2) to [L,l=$L$] (4,2);
+% \draw (3,2) node [anchor=north east] {$+q$};
+% \draw (3,2) node [anchor=north west] {$-q$};
+ \draw (4,2) to [short] (4,0);
+ \draw (2,-1) node [anchor=north] {$RL$ circuit 1};
+\end{circuitikz}
+\end{center}
