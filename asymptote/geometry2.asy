@@ -19,8 +19,9 @@ draw ("$C$",C,E);
 draw (B -- C);
 
 pair X = (A+B)/2 ;
-pair D = rotate(90,X)*(B-X);
-dot (D);
+draw (A -- unit(B-A),arrow=Arrow);
+//pair D = rotate(90,X)*unit(B-X);
+//dot (D);
 
 //path ca = circle (A,length(A-B));
 //draw (ca);
