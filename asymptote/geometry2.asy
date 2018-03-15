@@ -9,6 +9,7 @@ draw ((-8,0) ^^ (8,0)) ;
 pair A = (0,1);
 pair B = (2,0);
 pair C = (2,2);
+
 dot (A);
 dot (B);
 dot (C);
@@ -19,7 +20,7 @@ draw ("$C$",C,E);
 draw (B -- C);
 
 pair X = (A+B)/2 ;
-draw (A -- unit(B-A),arrow=Arrow);
+draw (X -- rotate(90,X)*shift(X)*unit(B-A),arrow=Arrow);
 //pair D = rotate(90,X)*unit(B-X);
 //dot (D);
 

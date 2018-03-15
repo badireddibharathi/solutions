@@ -21,9 +21,9 @@ draw (ca);
 path cb = circle (B,length(A-B));
 draw (cb);
 
-real[] pi = intersect(ca,cb);
-pair C = point (ca,pi[0]);
-dot (C);
-draw ("$C$",C,N);
-draw (A -- C);
-draw (B -- C);
+pair[] pi = intersectionpoints(ca,cb);
+//pair C = point (cb,pi[0]);
+dot (pi[1]);
+draw ("$C$",pi[1],S);
+draw (A -- pi[1]);
+draw (B -- pi[1]);
