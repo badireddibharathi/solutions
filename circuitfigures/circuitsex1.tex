@@ -1,0 +1,38 @@
+% !TEX TS-program = pdflatex
+% !TEX encoding = UTF-8 Unicode
+
+\documentclass[12pt]{article}
+
+\usepackage[utf8]{inputenc} 
+
+\usepackage{geometry}
+\geometry{a4paper} 
+\geometry{margin=0.25in} 
+\geometry{portrait}
+
+\usepackage{amsmath}
+\usepackage{physics}
+\usepackage{tikz} 
+\usepackage{circuitikz}
+\title{circuit problem}
+\author{vijayabhaskar badireddi}
+
+\begin{document}
+
+\subsection*{cicuitsex1}
+
+\begin{center}
+\begin{circuitikz}[scale=2]
+
+\draw (0,2) to [battery1,l_=$\mathcal{E}$,*-*] (0,0) ;
+\draw (4,2) to [battery1,l=$2\mathcal{E}$,*-*] (4,0) ;
+\draw (4,0) to [short,f=$I_1$] (0,0) ;
+\draw (0,2) to [R,l=$R$,*-*,f=$I_1$] (2,2) ;
+\draw (2,2) to [R,l=$2R$,*-*,f=$I_1$] (4,2) ;
+\draw (0,0) to [R,l=$4R$,*-*,f=$I_1$] (2,2) ;
+\draw (2,2) to [R,l=$3R$,*-*,f=$I_1$] (4,0) ;
+
+\end{circuitikz}
+\end{center}
+
+\end{document}
