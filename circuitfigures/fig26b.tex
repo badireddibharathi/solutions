@@ -1,0 +1,18 @@
+\subsection*{fig26b}
+
+\begin{center}
+\begin{circuitikz}
+
+\draw (0,0) to [short] (0,2) ;
+\draw (4,0) to [short] (4,2) ;
+\draw (0,0) to [short] (0,-2) ;
+\draw (4,0) to [short] (4,-2) ;
+\draw (-1,0) to [short,*-] (0,0) ;
+\draw (4,0) to [short,-*] (5,0) ;
+\draw (0,2) to [C,l=$C_1$] (2,2) to [C,l=$C_2$] (4,2) ;
+\draw (0,0) to [C,l=$C_3$] (2,0) to [C,l_=$C_4$] (4,0) ;
+\draw (0,-2) to [C,l_=$C_5$] (2,-2) to [C,l_=$C_6$] (4,-2) ;
+\draw (2,2) to [C,l=$C_7$] (2,0) ;
+\draw (2,0) to [C,l_=$C_8$] (2,-2) ;
+\end{circuitikz}
+\end{center}

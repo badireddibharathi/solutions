@@ -1,0 +1,31 @@
+% !TEX TS-program = pdflatex
+% !TEX encoding = UTF-8 Unicode
+
+\documentclass[12pt]{article}
+
+\usepackage[utf8]{inputenc} 
+
+\usepackage{geometry}
+\geometry{a4paper} 
+\geometry{margin=0.25in} 
+\geometry{portrait}
+
+\usepackage{amsmath}
+\usepackage{physics}
+\usepackage{tikz} 
+
+\title{plot1}
+\author{vijayabhaskar badireddi}
+
+\begin{document}
+
+\section*{plot1}
+
+\begin{center}
+\begin{tikzpicture}
+
+\draw [domain=-3:3,smooth,variable=\x] plot ({\x},{\sin(\x)}) ;
+
+\end{tikzpicture}
+\end{center}
+\end{document}

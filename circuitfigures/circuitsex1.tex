@@ -14,6 +14,7 @@
 \usepackage{physics}
 \usepackage{tikz} 
 \usepackage{circuitikz}
+\usetikzlibrary{calc}
 \title{circuit problem}
 \author{vijayabhaskar badireddi}
 
@@ -75,7 +76,6 @@
 
 \subsection*{and}
 
-
 \begin{center}
 \begin{circuitikz} 
 
@@ -83,6 +83,45 @@
 \draw (rand.in 1) node[anchor=east] {1} ;
 \draw (rand.in 2) node[anchor=east] {2} ;
 \draw (rand.out) node[anchor=west] {3} ;
+
+\end{circuitikz}
+\end{center}
+
+\subsection*{cubed1}
+
+\begin{center}
+\begin{circuitikz}[scale=1.25]
+
+\coordinate [label=below left:$A$] (A) at (0,0) ;
+\coordinate [label=below:$E$] (E) at ($(A) + (45:2)$) ;
+\coordinate [label=above:$H$] (H) at ($(E) + (0,2)$) ;
+\coordinate [label=below left:$F$] (F) at ($(E) + (2,0)$) ;
+\coordinate [label=below right:$B$] (B) at ($(F) + (-45:2)$) ;
+\coordinate [label=above left:$D$] (D) at ($(H) + (135:2)$) ;
+\coordinate [label=above:$G$] (G) at ($(F) + (0,2)$) ;
+\coordinate [label=above right:$C$] (C) at ($(G) + (45:2)$) ;
+
+\draw (-1,0) to [short,*-*] (A);
+\draw (A) to [R,l_=$R$,*-*] (B) ;
+\draw (B) to [R,l_=$R$,*-*] (C) ;
+\draw (D) to [R,l=$R$,*-*] (C) ;
+\draw (A) to [R,l_=$R$,*-*] (E) ;
+\draw (E) to [R,l_=$R$,*-*] (F) ;
+\draw (F) to [R,l_=$R$,*-*] (G) ;
+\draw (A) to [R,l=$R$,*-*] (D) ;
+\draw (E) to [R,l=$R$,*-*] (H) ;
+\draw (H) to [R,l=$R$,*-*] (G) ;
+\draw (D) to [R,l_=$R$,*-*] (H) ;
+\draw (G) to [R,l_=$R$,*-*] (C) ;
+\draw (F) to [R,l_=$R$,*-*] (B) ;
+\draw (C) to [short,*-*] ++(1,0);
+
+\end{circuitikz}
+\end{center}
+
+\begin{center}
+\begin{circuitikz}[scale=1]
+
 
 \end{circuitikz}
 \end{center}
