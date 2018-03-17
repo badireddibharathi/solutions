@@ -19,18 +19,70 @@
 
 \begin{document}
 
-\subsection*{cicuitsex1}
+\subsection*{cicuitex1}
 
 \begin{center}
 \begin{circuitikz}[scale=2]
 
-\draw (0,2) to [battery1,l_=$\mathcal{E}$,*-*] (0,0) ;
-\draw (4,2) to [battery1,l=$2\mathcal{E}$,*-*] (4,0) ;
-\draw (4,0) to [short,f=$I_1$] (0,0) ;
-\draw (0,2) to [R,l=$R$,*-*,f=$I_1$] (2,2) ;
-\draw (2,2) to [R,l=$2R$,*-*,f=$I_1$] (4,2) ;
-\draw (0,0) to [R,l=$4R$,*-*,f=$I_1$] (2,2) ;
-\draw (2,2) to [R,l=$3R$,*-*,f=$I_1$] (4,0) ;
+\coordinate [label=left:$A$] (A) at (0,0) ;
+\coordinate [label=left:$B$] (B) at (0,2) ;
+\coordinate [label=above:$C$] (C) at (2,2) ;
+\coordinate [label=above:$D$] (D) at (4,2) ;
+\coordinate [label=right:$E$] (E) at (4,0) ;
+
+\draw (B) to [battery1,l_=$\mathcal{E}$,*-*] (A) ;
+\draw (D) to [battery1,l=$2\mathcal{E}$,*-*] (E) ;
+\draw (E) to [short,f=$I$] (A) ;
+\draw (B) to [R,l=$R$,*-*,f=$I_1$] (C) ;
+\draw (C) to [R,l=$2R$,*-*,f<^=$I_2$] (D) ;
+\draw (A) to [R,l=$4R$,*-*,f_<=$I_4$] (C) ;
+\draw (E) to [R,l=$3R$,*-*,f<=$I_3$] (C) ;
+
+\end{circuitikz}
+\end{center}
+
+\subsection*{cicuitex2}
+
+\begin{center}
+\begin{circuitikz}[scale=1.5]
+
+\coordinate [label=above left:$O$] (O) at (0,0) ;
+\coordinate [label=above left:$A$] (A) at (-2,0) ;
+\coordinate [label=above:$B$] (B) at (120:2) ;
+\coordinate [label=above:$C$] (C) at (60:2) ;
+\coordinate [label=above right:$D$] (D) at (2,0) ;
+\coordinate [label=below:$E$] (E) at (-60:2) ;
+\coordinate [label=below:$F$] (F) at (-120:2) ;
+
+
+\draw (-3,0) to [short,*-*] (A);
+\draw (O) to [R,l=$R$,*-*] (A) ;
+\draw (O) to [R,l=$R$,*-*] (B) ;
+\draw (O) to [R,l=$R$,*-*] (C) ;
+\draw (O) to [R,l=$R$,*-*] (D) ;
+\draw (O) to [R,l=$R$,*-*] (E) ;
+\draw (O) to [R,l=$R$,*-*] (F) ;
+\draw (A) to [R,l=$R$,*-*] (B) ;
+\draw (B) to [R,l=$R$,*-*] (C) ;
+\draw (C) to [R,l=$R$,*-*] (D) ;
+\draw (D) to [R,l=$R$,*-*] (E) ;
+\draw (E) to [R,l=$R$,*-*] (F) ;
+\draw (F) to [R,l=$R$,*-*] (A) ;
+\draw (D) to [short,*-*] (3,0);
+
+\end{circuitikz}
+\end{center}
+
+\subsection*{and}
+
+
+\begin{center}
+\begin{circuitikz} 
+
+\draw (0,0) node[and port] (rand) {} ;
+\draw (rand.in 1) node[anchor=east] {1} ;
+\draw (rand.in 2) node[anchor=east] {2} ;
+\draw (rand.out) node[anchor=west] {3} ;
 
 \end{circuitikz}
 \end{center}
