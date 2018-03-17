@@ -4,9 +4,9 @@ settings.outformat = "pdf";
 unitsize(1cm);
 
 path xaxis = ((0,6) -- (0,-6)) ;
-draw (xaxis,gray(0.7),arrow=Arrows);
+draw (xaxis,gray(0.7),arrow=Arrows(TeXHead));
 path yaxis = ((6,0) -- (-6,0)) ;
-draw (yaxis,gray(0.7),arrow=Arrows);
+draw (yaxis,gray(0.7),arrow=Arrows(TeXHead));
 pair O = (0,0);
 path c = circle(O,4);
 draw (c);
