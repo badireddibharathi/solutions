@@ -13,19 +13,21 @@
 \usepackage{amsmath}
 \usepackage{physics}
 \usepackage{tikz} 
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.15}
 
-\title{plot1}
+\title{pgfplots1}
 \author{vijayabhaskar badireddi}
 
 \begin{document}
-
-\section*{plot1}
+\section*{plot 1}
 
 \begin{center}
 \begin{tikzpicture}
-
-\draw [domain=-3:3,smooth,variable=\x] plot ({\x},{\x*\x}) ;
-
+\begin{axis}[title = plot 1, xlabel={$x$}, ylabel={$y$}]
+\addplot[red,samples=200,domain=-pi:pi]{sin(deg(x))} ;
+\end{axis}
 \end{tikzpicture}
 \end{center}
+
 \end{document}
