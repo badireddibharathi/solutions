@@ -16,12 +16,14 @@ Label LR = ("$R$") ;
 label (LR,Rad) ;
 
 pair C1 = rotate(-90,O)*(R-r,0) ;
+draw (O -- rotate(-90,O)*(R,0),gray(0.6)) ;
 path ball1 = circle (C1,r) ;
 draw (ball1,gray(0.6));
-draw (C1+I -- C1-I,red) ;
+draw (C1 -- C1-I,red) ;
 pair C2 = rotate(-60,O)*(R-r,0) ;
-draw (C2+I -- C2-I,gray(0.6)) ;
-draw (rotate(-120,C2)*(C2+I) -- rotate(-120,C2)*(C2-I),red) ;
+draw (O -- rotate(-60,O)*(R,0), gray(0.6)) ;
+draw (C2 -- C2-I,gray(0.6)) ;
+draw (C2 -- rotate(-120,C2)*(C2-I),red) ;
 path ball2 = circle (C2,r) ;
 draw (ball2,gray(0.6));
 
