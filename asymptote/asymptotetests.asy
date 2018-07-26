@@ -5,8 +5,8 @@ settings.outformat = "pdf";
 
 unitsize(1cm);
 
-draw ((-8,0) -- (8,0),gray(0.9),arrow=Arrow);
-draw ((0,-8) -- (0,8),gray(0.9),arrow=Arrow);
+draw ((-5,0) -- (5,0),gray(0.9),arrow=Arrow);
+draw ((0,-3) -- (0,4),gray(0.9),arrow=Arrow);
 
 pair A = (3,4);
 pair B = (-4,2);

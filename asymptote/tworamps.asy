@@ -3,8 +3,8 @@
 settings.outformat="pdf";
 unitsize(1cm);
 
-draw ((0,8) ^^ (0,-8)) ;
-draw ((-8,0) ^^ (8,0)) ;
+draw ((0,5) ^^ (0,-1)) ;
+draw ((-4,0) ^^ (6,0)) ;
 
 pair A = (0,4);
 pair B = (-3,0);
@@ -21,7 +21,7 @@ Label lta = Label("$\theta$",MidPoint,NE);
 draw (lta,ata) ;
 
 path aphi = arc(C,shift(0.5*unit(B-C))*C,A,CW);
-Label lphi = Label("$\phi$",MidPoint,W);
+Label lphi = Label("$\phi$",MidPoint,WNW);
 draw (lphi,aphi) ;
 
 pair D = (A+2B)/3;

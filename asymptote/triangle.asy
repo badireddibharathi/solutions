@@ -1,36 +1,35 @@
 settings.outformat = "pdf";
 unitsize(1cm);
 
-pair A = (2,4);
+draw ((3,7) ^^ (0,1)) ;
+draw ((1,0) ^^ (5,0)) ;
+
+pair A = (0,4);
 pair B = (3,6);
 pair C = (4,2);
 
-path AB = A -- B;
-path BC = B -- C;
-path CA = C -- A;
+path ABC = (A -- B -- C -- cycle);
+draw (ABC);
 
-path angA = arc (A,shift(A)*unit(B-A),shift(A)*unit(C-A));
+path angA = arc (A,shift(0.5*unit(B-A))*A,C,CW);
 draw (angA);
-Label aA = Label ("$\alpha$",position=MidPoint);
+Label aA = Label ("$\alpha$",MidPoint,E);
 label(aA,angA);
 
-path angB = arc (B,shift(B)*unit(C-B),shift(B)*unit(A-B));
+path angB = arc (B,shift(0.5*unit(C-B))*B,A,CW);
 draw (angB);
-Label aB = Label ("$\beta$",position=MidPoint);
+Label aB = Label ("$\beta$",MidPoint,SW);
 label(aB,angB);
 
-path angC = arc (C,shift(C)*unit(A-C),shift(C)*unit(B-C));
+path angC = arc (C,shift(0.5*unit(A-C))*C,B,CW);
 draw (angC);
-Label aC = Label ("$\gamma$",position=MidPoint);
+Label aC = Label ("$\gamma$",MidPoint,NW);
 label(aC,angC);
 
-Label vA = Label ("$A$",position=Relative(0.0));
-label(vA,AB);
-Label vB = Label ("$B$",position=Relative(0.0));
-label(vB,BC);
-Label vC = Label ("$C$",position=Relative(0.0));
-label(vC,CA);
+Label vA = Label ("$A$",MidPoint,W);
+label(vA,A);
+Label vB = Label ("$B$",MidPoint,N);
+label(vB,B);
+Label vC = Label ("$C$",MidPoint,SE);
+label(vC,C);
 
-draw (AB);
-draw (BC);
-draw (CA);
