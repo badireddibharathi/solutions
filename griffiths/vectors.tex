@@ -1,0 +1,52 @@
+\section*{vectors}
+
+\[\dd{T}=\pdv{T}{x}\dd{x}+\pdv{T}{y}\dd{y}+\pdv{T}{z}\dd{z}=\grad{T}\vdot\dd{\vb{l}}\]
+The gradient $\grad{T}$ points in the direction of  maximum increase in the function $T$. The magnitude $|\grad{T}|$ gives the slope along the maximal direction.
+
+\subsection*{cartesian}
+\[\dd{\vb{l}}=\dd{x}\vu{\vb{x}}+\dd{y}\vu{\vb{y}}+\dd{z}\vu{\vb{z}}\quad\dd{\tau}=\dd{x}\dd{y}\dd{z}\]
+\[\qq{Gradient}\quad\grad{f}=\pdv{f}{x}\vu{\vb{x}}+\pdv{f}{y}\vu{\vb{y}}+\pdv{f}{z}\vu{\vb{z}}\]
+\[\qq{Divergence}\quad\div{\vb{V}}=\pdv{V_x}{x}+\pdv{V_y}{y}+\pdv{V_z}{z}\]
+\[\qq{Curl}\quad\curl{\vb{V}}=\qty(\pdv{V_z}{y}-\pdv{V_y}{z})\vu{\vb{x}}+\qty(\pdv{V_x}{z}-\pdv{V_z}{x})\vu{\vb{y}}+\qty(\pdv{V_y}{x}-\pdv{V_x}{y})\vu{\vb{z}}\]
+\[\qq{Laplacian}\quad\laplacian{f}=\pdv[2]{f}{x}+\pdv[2]{f}{y}+\pdv[2]{f}{z}\]
+
+\subsection*{Spherical coordinates}
+\begin{align*}
+\vu{r}&=\sin\theta\cos\phi\vu{x}+\sin\theta\cos\phi\vu{y}+\cos\theta\vu{z}\\
+\vu{\theta}&=\cos\theta\cos\phi\vu{x}+\cos\theta\sin\phi\vu{y}-\sin\theta\vu{z}\\
+\vu{\phi}&=-\sin\phi\vu{x}+\cos\phi\vu{y}
+\end{align*}
+\[\dd{\vb{l}}=\dd{r}\vu{\vb{r}}+r\dd{\theta}\vu{\vb{\theta}}+r\sin\phi\dd{\phi}\vu{\vb{\phi}}\quad\dd{\tau}=r^2\sin\theta\dd{r}\dd{\theta}\dd{\phi}\]
+\[\qq{Gradient}\quad\grad{f}=\pdv{f}{r}\vu{\vb{r}}+\frac{1}{r}\pdv{f}{\theta}\vu{\vb{\theta}}+\frac{1}{r\sin\theta}\pdv{f}{\phi}\vu{\vb{\phi}}\]
+\[\qq{Divergence}\quad\div{\vb{V}}=\frac{1}{r^2}\pdv{r}\qty(r^2V_r)+\frac{1}{r\sin\theta}\pdv{\theta}\qty(\sin{\theta}V_{\theta})+\frac{1}{r\sin\theta}\pdv{V_{\phi}}{\phi}\]
+\[\qq{Curl}\quad\curl{\vb{V}}=\frac{1}{r\sin\theta}\bqty{\pdv{\theta}\qty(\sin{\theta}V_{\phi})-\pdv{V_{\theta}}{\phi}}\vu{\vb{r}}+\frac{1}{r}\bqty{\frac{1}{\sin\theta}\pdv{V_r}{\phi}-\pdv{r}\qty(rV_{\phi})}\vu{\vb{\theta}}+\frac{1}{r}\bqty{\pdv{r}\qty(rV_{\theta})-\pdv{V_r}{\theta}}\vu{\vb{\phi}}\]
+\[\qq{Laplacian}\quad\laplacian{f}=\frac{1}{r^2}\pdv{r}\qty(r^2\pdv{f}{r})+\frac{1}{r^2\sin\theta}\pdv{\theta}\qty(\sin{\theta}\pdv{f}{\theta})+\frac{1}{r^2\sin^2{\theta}}\pdv[2]{f}{\phi}\]
+
+\subsection*{Cylindrical coordinates}
+\begin{align*}
+\vu{s}&=\cos\phi\vu{x}+\sin\phi\vu{y}\\
+\vu{\phi}&=-\sin\phi\vu{x}+\cos\phi\vu{y}\\
+\vu{z}&=\vu{z}
+\end{align*}
+\[\dd{\vb{l}}=\dd{s}\vu{\vb{s}}+s\dd{\phi}\vu{\vb{\phi}}+\dd{z}\vu{\vb{z}}\quad\dd{\tau}=s\dd{s}\dd{\phi}\dd{z}\]
+\[\qq{Gradient}\quad\grad{f}=\pdv{f}{s}\vu{\vb{s}}+\frac{1}{s}\pdv{f}{\phi}\vu{\vb{\phi}}+\pdv{f}{z}\vu{\vb{z}}\]
+\[\qq{Divergence}\quad\div{\vb{V}}=\frac{1}{s}\pdv{s}\qty(sV_s)+\frac{1}{s}\pdv{V_{\phi}}{\phi}+\pdv{V_z}{z}\]
+\[\qq{Curl}\quad\curl{\vb{V}}=\bqty{\frac{1}{s}\pdv{V_z}{\phi}-\pdv{V_{\phi}}{z}}\vu{\vb{s}}+\bqty{\pdv{V_s}{z}-\pdv{V_z}{s}}\vu{\vb{\phi}}+\frac{1}{s}\bqty{\pdv{s}\qty(sV_{\phi})-\pdv{V_s}{\phi}}\vu{\vb{z}}\]
+\[\qq{Laplacian}\quad\laplacian{f}=\frac{1}{s}\pdv{s}\qty(s\pdv{f}{s})+\frac{1}{s^2}\pdv[2]{f}{\phi}+\pdv[2]{f}{z}\]
+\subsection*{vector identities}
+\[\vb{A}\vdot\qty(\vb{B}\cp\vb{C})=\vb{B}\vdot\qty(\vb{C}\cp\vb{A})=\vb{C}\vdot\qty(\vb{A}\cp\vb{B})\]
+\[\vb{A}\cp\qty(\vb{B}\cp\vb{C})=\vb{B}\qty(\vb{A}\vdot\vb{C})-\vb{C}\qty(\vb{A}\vdot\vb{B})\]
+\[\grad{(fg)}=f(\grad{g})+g(\grad{f})\]
+\[\grad{(\vb{A}\vdot\vb{B})}=\vb{A}\cp\qty(\curl{\vb{B}})+\vb{B}\cp\qty(\curl{\vb{A}})+\qty(\vb{A}\vdot\nabla)\vb{B}+\qty(\vb{B}\vdot\nabla)\vb{A}\]
+\[\div{\qty(f\vb{A})}=f(\div{\vb{A}})+\vb{A}\vdot\qty(\grad{f})\]
+\[\div{\qty(\vb{A}\cp\vb{B})}=\vb{B}\vdot\qty(\curl{\vb{A}})-\vb{A}\vdot\qty(\curl{\vb{B}})\]
+\[\curl{\qty(f\vb{A})}=f(\curl{\vb{A}})-\vb{A}\cp\qty(\grad{f})\]
+\[\curl{(\vb{A}\cp\vb{B})}=\qty(\vb{B}\vdot\nabla)\vb{A}-\qty(\vb{A}\vdot\nabla)\vb{B}+\vb{A}\qty(\div{\vb{B}})-\vb{B}\qty(\div{\vb{A}})\]
+\[\div{\curl{\vb{A}}}=0\quad\curl{\grad{f}}=0\quad\curl{\curl{\vb{A}}}=\grad\qty{\curl{\vb{A}}}-\laplacian{\vb{A}}\]
+\[\qq{gradient theorem}\quad \int_{\vb{a}}^{\vb{b}}\qty(\grad{f})\vdot\dd{\vb{l}}=f(\vb{b})-f(\vb{a})\]
+\[\qq{divergence theorem} \int\qty(\div{\vb{A}})\dd{\tau}=\oint\vb{A}\vdot\dd{\vb{a}}\]
+\[\qq{curl theorem} \int\qty(\curl{\vb{A}})\vdot\dd{\vb{a}}=\oint\vb{A}\vdot\dd{\vb{l}}\]
+
+\subsection*{Dirac delta function}
+\[\div{\qty(\frac{\vb{r}}{r^2})}=4\pi\delta^3(\vb{r})\]
+\[\laplacian{\qty(\frac{1}{r})}=-4\pi\delta^3(\vb{r})\]

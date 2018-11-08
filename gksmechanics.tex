@@ -6,7 +6,7 @@
 \usepackage[utf8]{inputenc} 
 
 \usepackage{geometry}
-\geometry{a4paper} 
+\geometry{a4paper}
 \geometry{margin=0.25in} 
 \geometry{portrait}
 
@@ -27,14 +27,15 @@
 \section*{Lagrangian mechanics}
 \paragraph{calculus of variations}
 \[I=\int f(y,\dot{y},x)\dd{x}\]
-The path for which $I$ is an extremum,$\delta{I}=0$ is given by \[\pdv{f}{y}-\dv{t}\qty(\pdv{f}{\dot{y}})=0\]
+The path for which $I$ is an extremum, $\delta{I}=0$ is given by \[\pdv{f}{y}-\dv{t}\qty(\pdv{f}{\dot{y}})=0\]
 \paragraph{Hamilton's variational principle}
 The motion of a dynamical system from time $t_1$ to $t_2$ is such that the intergral $\int_{t_1}^{t_2}(T(q_i,\dot{q}_i)-V(q_i))\dd{t}$ is an extremum.\\
 Denoting $L=T-V$, \[\dv{t}\qty(\pdv{L}{\dot{q}_i})-\pdv{L}{q_i}=0\]
 \paragraph{D'alembert's principle}
 \[\dv{t}\qty(\pdv{T}{\dot{q}_i})-\pdv{T}{q_i}=Q_i\]
 \paragraph{Non-Holonomic systems}
-If Non-Holonomic constraints are expressed as $\sum_ka_{lk}\dd{q_k}+a_{lt}\dd{t}=0\qq{where}l=1,2,\ldots,m$ use Lagrange's method of undetermined multipliers.
+If Non-Holonomic constraints are expressed as
+\[ \sum_ka_{lk}\dd{q_k}+a_{lt}\dd{t}=0 \qq{where}l=1,2\ldots,m\] use Lagrange's method of undetermined multipliers.
 \[\pdv{L}{q_k}-\dv{t}\qty(\pdv{L}{\dot{q}_k})+\sum_l\lambda_la_{lk}=0\]
 \section*{Hamiltonian mechanics}
 Generalized momentum $p_i=\pdv{L}{q_i}$, Phase space\\
@@ -42,7 +43,7 @@ Hamiltonian $H=\sum_ip_i\dot{q}_i-L$\\
 Hamilton's canonical equations of motion
 \begin{align*}
 \dot{q}_i&=\pdv{H}{p_i}\\
-\dot{p}_i&=-\pdv{H}{q_i}\\
+-\dot{p}_i&=\pdv{H}{q_i}\\
 -\pdv{L}{t}&=\pdv{H}{t}
 \end{align*}
 When is Hamiltonian a constant of motion ? When is Hamiltonian equal to energy ?\\
@@ -300,6 +301,23 @@ x_1\\ x_2\\ x_3\\ x_4
 \]
 
 \section*{Small oscilltions}
-stable and unstable equilibrium
-
+Consider a system in stable equilibrium. Generalized coordinates are represented by $q_j$. Consider small deviation of coordinates from their values in stable equilibrium.
+\[q_j=q_{0j}+u_j\qquad(j=1,2\ldots,n)\]
+\[V(q_1,q_2\ldots,q_n)=V(u_1,u_2\ldots,u_n)=V(q_{01},q_{02}\ldots,q_{0n})+\sum_{j}\left(\pdv{V}{q_j}\right)_0u_j+\frac{1}{2}\sum_{j,k}\left(\pdv[2]{V}{q_j}{q_k}\right)_0u_ju_k+\ldots\]
+Using the condition that the system is in equilibrium and changing the reference of potential energy,
+\[V(u_1,u_2\ldots,u_n)=\frac{1}{2}\sum_{j,k}\left(\pdv[2]{V}{q_j}{q_k}\right)_0u_ju_k+\ldots\]
+\[V(u_1,u_2\ldots,u_n)=\frac{1}{2}\sum_{j,k}V_{jk}u_ju_k\]
+\[V_{jk}=V_{kj}\]
+Kinetic energy is 
+\[T=\frac{1}{2}\sum_{j,k}m_{jk}\dot{q}_j\dot{q}_k=\frac{1}{2}\sum_{j,k}m_{jk}\dot{u}_j\dot{u}_k=\frac{1}{2}\sum_{j,k}T_{jk}\dot{u}_j\dot{u}_k\]
+Lagrangian of the system is \[L=\frac{1}{2}\sum_{j,k}(T_{jk}\dot{u}_j\dot{u}_k-V_{jk}u_ju_k)\]
+Lagrangian equations of motion are 
+\[\sum_k(T_{jk}\ddot{u}_k+V_{jk}u_k)=0\qquad (j=1,2\ldots,n)\]
+\[\vb{T}\,\vb{u}+\vb{V}\,\vb{u}=0\]
+Solutions are
+\[u_k=Ca_ke^{-i\omega t}\]
+\[\sum_k(V_{jk}-\omega^2T_{jk})a_k=0\qquad (j=1,2\ldots,n)\]
+\[\vb{V}\,\vb{a}-\omega^2\vb{T}\,\vb{a}=0\]
+$\vb{T}$ and $\vb{V}$ are symmetric matrices.
+\[\sum_{k}V_{jk}a_{kl}\]
 \end{document}

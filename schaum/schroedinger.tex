@@ -1,0 +1,73 @@
+\section*{schroedinger}
+
+Probability that a particle is in a volume $\dd[3]{r}=\dd{x}\dd{y}\dd{z}$ is $\dd{P}=\Psi^*(r,t)\Psi(r,t)\dd[3]{r}$.
+\[\int\dd{P}=\int\Psi^*(r,t)\Psi(r,t)\dd[3]{r}=1\] 
+The wave function msut be square-integrable, that is \[\int\Psi^*(r,t)\Psi(r,t)\dd[3]{r}<0\]
+The time-dependent Schroedinger equation \[i\hbar\pdv{\Psi(\vb{r},t)}{t}=-\frac{\hbar^2}{2m}\laplacian{\Psi(\vb{r},t)}+V(\vb{r},t)\Psi(\vb{r},t)\]
+Linearity of Schroedinger equation.
+The time-independent Schroedinger equation \[i\hbar\pdv{\psi(\vb{r})}{t}=-\frac{\hbar^2}{2m}\laplacian{\psi(\vb{r})}+V(\vb{r})\psi(\vb{r})\]
+\[\Psi(\vb{r},t)=\psi(r)e^{-iEt/\hbar}\]
+wave packet or a superposition of plane waves.
+Inner product or scalar product\[(\phi,\psi)=\int\phi^*(\vb{r})\psi(\vb{r})\dd[3]{r}\]
+\[\expval{\hat{A}}=\int\phi^*(\vb{r})\hat{A}\psi(\vb{r})\dd[3]{r}\]
+\[\Delta{\hat{A}}=\sqrt{\expval{\hat{A}^2}-\expval{\hat{A}}^2}\]
+\[\qq{Hamiltonian operator}i\hbar\pdv{\Psi(\vb{r},t)}{t}=\hat{H}\Psi(\vb{r},t)=-\frac{\hbar^2}{2m}\laplacian{\Psi(\vb{r},t)}+V(\vb{r},t)\Psi(\vb{r},t)\]
+\[\qq{equation of continuity}\pdv{\rho(\vb{r},t)}{t}+\div{\vb{J}(\vb{r},t)}=0\]
+\[\qq{probability current density}\vb{J}(\vb{r},t)=\frac{\hbar}{2mi}\qty[\Psi^*(\grad\Psi)-\Psi(\grad\Psi^*)]\]
+\subsection*{Particle in a one-dimensional infinite well}
+Potential is defined as \[V(x)=0\qq{if} 0<x<a V(x)=\infty \qq{if}x>a \qq{or if }x<0\]
+Where $V(x)=\infty$ the wave function $\psi(x) =0$. \\Applying Schroedinger's equation in the region of well \[-\frac{\hbar^2}{2m}\dv[2]{\psi}{x}+V(x)\psi=E\psi\]
+
+\[-\frac{\hbar^2}{2m}\dv[2]{\psi}{x}=E\psi\qq{since} V(x)=0\]
+\[\qq{Rewrite as}\dv[2]{\psi}{x}+\frac{2mE}{\hbar^2}\psi=0\]
+\[\dv[2]{\psi}{x}+k^2\psi=0\qq{where} k^2=\frac{2mE}{\hbar^2}\]
+\[\qq{General solution is}\psi(x)=A\sin{kx}+B\cos{kx}\]
+Using the boundary condition $\psi(x)=0$ if $x=0$, we obtain $B=0$
+ or $\psi(x)=A\sin{kx}$ \\
+Using the boundary condition $\psi(x)=0$ if $x=a$, we obtain $\sin{ka}=0$ or $ka=n\pi$ where $n=1,2,3\ldots$\\
+Hence the General solution can be written as \[\psi(x)=A\sin\qty(\frac{n\pi x}{a})\]
+Using the normalization condition \[\int_{-\infty}^{+\infty}\psi^*(x)\psi(x)\dd{x}=1\]
+\[\int_{0}^{a}A^2\sin^2{\left(\frac{n\pi x}{a}\right)}\dd{x}=1\]
+\[ A^2\int_{0}^{a}\frac{1-\cos{\left(\frac{2n\pi x}{a}\right)}}{2}\dd{x}=1\]
+\[ \frac{A^2}{2}\qty[\int_{0}^{a}1\dd{x}-\int_{0}^{a}\cos{\left(\frac{2n\pi x}{a}\right)}\dd{x}]=1\]
+\[ \frac{A^2}{2}\qty[a-\frac{a}{2n\pi}\sin{\left(\frac{2n\pi x}{a}\right)}\eval_{0}^{a}]=1\]
+Hence \[ A^2=\frac{2}{a}\qq{or}A=\sqrt{\frac{2}{a}}\]
+\[\qq{Hence general solution is}\psi(x)=\sqrt{\frac{2}{a}}\sin{\left(	\frac{n\pi x}{a}\right)}\]
+\[k^2=\frac{n^2\pi^2}{a^2}=\frac{2mE_n}{\hbar^2}\]
+Energy levels are given by \[E_n=\frac{n^2\hbar^2\pi^2}{2ma^2}\]
+
+\subsection*{symmetric well}
+Given potential is \(V(x)=0\) if    \(-a<x<+a\)
+and\(V(x)=\infty\) if \(+a<x\) or \(x<-a\)\\
+Applying the Schroedinger equation, $\hat{H}\psi=E\psi$ where
+$\hat{H}=\frac{\hat{p}^2}{2m}+V(x)$.\\ substituting $\hat{p}=-i\hbar\frac{d}{dx}$
+\[-\frac{\hbar^2}{2m}\frac{d^2\psi}{dx^2}=E\psi\]
+\[\frac{d^2\psi}{dx^2}=-\frac{2mE}{\hbar^2}\psi=-k^2\psi where k=\sqrt{\frac{2mE}{\hbar^2}}\]
+\text{Using the boundary conditions,} $\psi(x)=0$ \text{if} $x=-a$ \text{or if} $x=+a$,\\
+Solution of the above equation is \[\psi(x)=A\sin{\left(k(x+a)\right)}=A\sin{\left(\frac{n\pi(x+a)}{2a}\right)}\text{ where } n=1,2,3\ldots\]\\
+Normalizing the wave equation, $$A=\sqrt{\frac{1}{a}}.$$
+\[\text{ Hence solutions are }  \psi_{n}(x)=\frac{1}{\sqrt{a}}\sin{\left(\frac{n\pi(x+a)}{2a}\right)}\] where$$ n=1,2,3\ldots$$
+$$k=\frac{n\pi}{2a}=\sqrt{\frac{2mE_{n}}{\hbar^2}}$$
+\[\frac{n^2\pi^2}{4a^2}=\frac{2mE_{n}}{\hbar^2}\qq{hence} E_{n}=\frac{n^2\hbar^2\pi^2}{8ma^2}\]
+
+Each of the above wave functions are energy eigen functions with energy eigen values $$E_{n}=\frac{n^2\hbar^2\pi^2}{8ma^2}.$$
+Minimum possible energy occurs for n=1,   $$E_{1}=\frac{\hbar^2\pi^2}{8ma^2} $$
+The corresponding eigenfunction is $$\psi_{1}(x)=\frac{1}{\sqrt{a}}\sin{\left(\frac{\pi(x+a)}{2a}\right)}$$
+Probability of finding the particle in the region \( x\) to \(x+dx\), is \[P=\int_{x}^{x+dx}\psi_{1}^{*}(x)\psi_{1}(x)dx\]
+\[P=\psi_{1}^{*}(x)\psi_{1}(x)dx=\frac{1}{a}\sin^{2}{\left(\frac{\pi(x+a)}{2a}\right)}dx\]
+The state of system is \[\psi(x)=\frac{1}{\sqrt{2}}\left(\psi_{1}(x)+\psi_{2}(x) \right )\]
+The average of position \(\hat{x}\) over many measurements is 
+\[\expval{\hat{x}}=\int_{-a}^{+a}\psi^{*}(x)\hat{x}\psi(x)dx
+\langle\hat{x}\rangle=\frac{1}{2}\int_{-a}^{+a}\left(\psi_{1}(x)+\psi_{2}(x) \right )\hat{x}\left(\psi_{1}(x)+\psi_{2}(x) \right )dx\]
+\[\expval{\hat{x}}=\frac{1}{2}\left[\int_{-a}^{+a}\psi_{1}^{*}(x)\hat{x}\psi_{1}(x)dx+\int_{-a}^{+a}\psi_{2}^{*}(x)\hat{x}\psi_{1}(x) dx+\int_{-a}^{+a}\psi_{1}^{*}(x)\hat{x}\psi_{2}(x)dx+\int_{-a}^{+a}\psi_{2}^{*}(x) \hat{x}\psi_{2}(x) dx \right ]\]
+\subsection{Ehrenfest's theorem}
+\[\qq{relation 1}\dv{\expval{\hat{x}}}{t}=\frac{\expval{\hat{p}}}{m}\]
+\[\qq{relation 2}\dv{\expval{p}}{t}=\expval{-\dv{V}{x}}\]
+\[\qq{Time-independent Schrodinger equation}i\hbar\pdv{\Psi(x,t)}{t}=-\frac{\hbar^2}{2m}\dv[2]{\Psi(x,t)}{x}+V(x)\Psi(x,t)\]
+\[\qq{Time-independent Schrodinger equation}-i\hbar\pdv{\Psi^*(x,t)}{t}=-\frac{\hbar^2}{2m}\dv[2]{\Psi^*(x,t)}{x}+V(x)\Psi^*(x,t)\]
+What is the meaning of square integrable ?
+\[\int_{-\infty}^{+\infty}\Psi^*(x,t)\Psi(x,t)\dd{x}=\text{finite}\]
+Hence \[\lim_{x\to\infty}|\Psi(x,t)|^2=\lim_{x\to -\infty}|\Psi(x,t)|^2=0\]
+The expectation value of $\hat{x}$ is \[\expval{\hat{x}}=\int_{-\infty}^{+\infty}\Psi^*(x,t)\hat{x}\Psi(x,t)\dd{x}=\int_{-\infty}^{+\infty}\Psi^*(x,t)x\Psi(x,t)\dd{x}\]
+Differentiate the above expression with respect to time.
+\[\dv{\expval{\hat{x}}}{t}=\int_{-\infty}^{+\infty}\pdv{\Psi^*(x,t)}{t}x\Psi(x,t)\dd{x}+\int_{-\infty}^{+\infty}\Psi^*(x,t)x\pdv{\Psi(x,t)}{t}\dd{x}\]

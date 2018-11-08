@@ -21,7 +21,8 @@
 %\date{} 
 
 \begin{document}
-Most general spn state can be expressed as $\ket{\psi}=a\ket{+}+be^{i\theta}\ket{-}$ where $\ket{+}$ and $\ket{-}$ are eigen states of $\hat{S}_z$ operator.
+\section*{spin state solution}
+Most general spin state can be expressed as $\ket{\psi}=a\ket{+}+be^{i\theta}\ket{-}$ where $\ket{+}$ and $\ket{-}$ are eigen states of $\hat{S}_z$ operator.
 \[\hat{S}_z\ket{+}=\frac{\hbar}{2}\ket{+}\qq{and}\hat{S}_z\ket{-}=-\frac{\hbar}{2}\ket{-}\]
 \[\braket{+}{+}=\braket{-}{-}=1\qq{and}\braket{+}{-}=\braket{-}{+}=0\]
 Probability of obtaining $\frac{\hbar}{2}$ when $\hat{S}_z$ is measured, \[p_z\qty(+\frac{\hbar}{2})=\abs{\braket{+}{\psi}}^2=\abs{\bra{+}(a\ket{+}+be^{i\theta}\ket{-})}^2=\abs{a\braket{+}{+}+be^{i\theta}\braket{+}{-}}^2=a^2=0.36\]
@@ -38,4 +39,67 @@ Probability of obtaining $+\frac{\hbar}{2}$ when $\hat{S}_x$ is measured, \[p_x\
 \[e^{i\theta}=e^{i\pi/2}=i\]
 \[\ket{\psi}=a\ket{+}+be^{i\theta}\ket{-}=a\ket{+}+bi\ket{-}=0.6\ket{+}+0.8i\ket{-}\]
 \[\boxed{\ket{\psi}=0.6\ket{+}+0.8i\ket{-}}\]
+\section*{one more spin state solution}
+$\ket{+}$ and $\ket{-}$ are eigen vectors of $\hat{S}_z$ operator with eigen values $\frac{\hbar}{2}$ and $-\frac{\hbar}{2}$.
+\[\hat{S}_z\ket{+}=\frac{\hbar}{2}\ket{+}\qq{and}\hat{S}_z\ket{-}=-\frac{\hbar}{2}\ket{-}\]
+The state of the system at time $t=0$ is given by $\ket{\psi(t=0)}=\ket{+}$.
+\subsection*{a.}
+$\hat{S}_x$ is measured at time $t=0$. Results are eigen values of $\hat{S}_x$.
+\[\hat{S}_x=\frac{\hbar}{2}\mqty(\pmat{1})\]
+\[\mqty|\qty(\hat{S}_x-\frac{\hbar}{2}\vb{I})|=\frac{\hbar}{2}\mqty|\begin{matrix}-\lambda & 1 \\ 1& -\lambda\end{matrix}|=0\implies\lambda^2-1=0\implies\lambda=\pm 1\]
+For $\lambda=1$, eigen value is $\frac{\hbar}{2}$ and for $\lambda=-1$ eigen value is $-\frac{\hbar}{2}$.
+\[\frac{\hbar}{2}\mqty(\pmat{1})\mqty(\begin{matrix}a\\b\end{matrix})=\frac{\hbar}{2}\mqty(\begin{matrix}a\\b\end{matrix})\implies b=a\]
+Eigen vector for eigen value $\frac{\hbar}{2}$ is $\frac{1}{\sqrt{2}}\mqty(\begin{matrix}1\\1\end{matrix})$.
+\[\ket{+}_x=\frac{1}{\sqrt{2}}\qty(\ket{+}+\ket{-})\]
+
+\[\frac{\hbar}{2}\mqty(\pmat{1})\mqty(\begin{matrix}a\\b\end{matrix})=-\frac{\hbar}{2}\mqty(\begin{matrix}a\\b\end{matrix})\implies b=-a\]
+Eigen vector for eigen value $-\frac{\hbar}{2}$ is $\frac{1}{\sqrt{2}}\mqty(\begin{matrix}1\\-1\end{matrix})$.
+\[\ket{-}_x=\frac{1}{\sqrt{2}}\qty(\ket{+}-\ket{-})\]
+Possible results of measurement of $\hat{S}_x$ in the state $\ket{\psi(t=0)}=\ket{+}$ are $\frac{\hbar}{2}$ and $-\frac{\hbar}{2}$.
+Probability of measuring $\frac{\hbar}{2}$ for $\hat{S}_x$ is 
+\[P\qty(\frac{\hbar}{2})=\abs{\tensor*[_x]{\braket{+}{\psi(t=0)}}{}}^2=\abs{\tensor*[_x]{\braket{+}{+}}{}}^2=\frac{1}{2}\abs{\qty(\bra{+}+\bra{-})\ket{+}}^2=\frac{1}{2}\]
+Probability of measuring $-\frac{\hbar}{2}$ for $\hat{S}_x$ is 
+\[P\qty(-\frac{\hbar}{2})=\abs{\tensor*[_x]{\braket{-}{\psi(t=0)}}{}}^2=\abs{\tensor*[_x]{\braket{-}{+}}{}}^2=\frac{1}{2}\abs{\qty(\bra{+}-\bra{-})\ket{+}}^2=\frac{1}{2}\]
+\subsection*{b.}
+The state $\ket{\psi(t=0)}$ is allowed evolve in the presence of magnetic field $\vb{B}=B_0\vu{y}$. Hamiltonian is \[\hat{H}=-\gamma B_0\vu{y}=\omega_0\hat{S}_y\]
+Eigen states of $\hat{H}$ are those of $\hat{S}_y$, since \[\hat{H}=\frac{\hbar\omega_0}{2}\hat{\sigma}_y\]
+\[\hat{S}_y=\frac{\hbar}{2}\hat{\sigma}_y=\frac{\hbar}{2}\mqty(\pmat{2})\]
+
+\[\mqty|\qty(\hat{S}_y-\frac{\hbar}{2}\vb{I})|=\frac{\hbar}{2}\mqty|\begin{matrix}-\lambda & -i \\ i& -\lambda\end{matrix}|=0\implies\lambda^2-1=0\implies\lambda=\pm 1\]
+Hence eigen values of $\hat{S}_y$ are $\pm\frac{\hbar}{2}$. Eigen values of $\hat{H}$ are $\pm\frac{\hbar\omega_0}{2}$.
+For $\lambda=1$, eigen value is $\frac{\hbar}{2}$ and for $\lambda=-1$ eigen value is $-\frac{\hbar}{2}$.
+\[\frac{\hbar}{2}\mqty(\pmat{2})\mqty(\begin{matrix}a\\b\end{matrix})=\frac{\hbar}{2}\mqty(\begin{matrix}a\\b\end{matrix})\implies ai=b\]
+Eigen vector for eigen value $\frac{\hbar}{2}$ is $\frac{1}{\sqrt{2}}\mqty(\begin{matrix}1\\i\end{matrix})$.
+\[\ket{+}_y=\frac{1}{\sqrt{2}}\qty(\ket{+}+i\ket{-})\]
+
+\[\frac{\hbar}{2}\mqty(\pmat{2})\mqty(\begin{matrix}a\\b\end{matrix})=-\frac{\hbar}{2}\mqty(\begin{matrix}a\\b\end{matrix})\implies a=bi\]
+Eigen vector for eigen value $\frac{\hbar}{2}$ is $\frac{1}{\sqrt{2}}\mqty(\begin{matrix}1\\-i\end{matrix})$.
+\[\ket{-}_y=\frac{1}{\sqrt{2}}\qty(\ket{+}-i\ket{-})\]
+To find the time evolution of $\ket{\psi(t=0)}=\ket{+}$, it must be expressed as a linear combination of eigen vectors of $\hat{H}$, that is, interms of $\ket{+}_y$ and $\ket{-}_y$.
+\[\ket{+}=\frac{1}{\sqrt{2}}(\ket{+}_y+\ket{-}_y)\qq{and}\ket{-}=-\frac{i}{\sqrt{2}}(\ket{+}_y-\ket{-}_y)\]
+\[\ket{\psi(t)}=\frac{1}{\sqrt{2}}\qty(e^{-\frac{i\hbar\omega_0 t}{2}}\ket{+}_y+e^{\frac{i\hbar\omega_0 t}{2}}\ket{-}_y)\]
+In the $\{\ket{+},\ket{-}\}$ basis, 
+
+\[\ket{\psi(t)}=\frac{1}{\sqrt{2}}\qty(e^{-\frac{i\hbar\omega_0 t}{2}}\frac{1}{\sqrt{2}}\qty(\ket{+}+i\ket{-})+e^{\frac{i\hbar\omega_0 t}{2}}\frac{1}{\sqrt{2}}\qty(\ket{+}-i\ket{-}))\]
+
+\[\ket{\psi(t)}=\frac{1}{2}\qty[\qty(e^{\frac{i\hbar\omega_0 t}{2}}+e^{-\frac{i\hbar\omega_0 t}{2}})\ket{+}+i\qty(e^{\frac{i\hbar\omega_0 t}{2}}-e^{-\frac{i\hbar\omega_0 t}{2}})\ket{-}]\]
+
+\[\ket{\psi(t)}=\cos\qty({\frac{\hbar\omega_0 t}{2}})\ket{+}+\sin\qty({\frac{\hbar\omega_0 t}{2}})\ket{-}\]
+
+\subsection*{c.}
+
+If $\hat{S}_z$ is measured at time $t$, possible values are $\pm\frac{\hbar}{2}$. \\Probability of measuring $\hat{S}_z$ and obtaining $+\frac{\hbar}{2}$ is 
+\[P_z\qty(\frac{\hbar}{2})=\qty|\braket{+}{\psi(t)}|^2=\qty|\bra{+}\qty(\cos\qty({\frac{\hbar\omega_0 t}{2}})\ket{+}+\sin\qty({\frac{\hbar\omega_0 t}{2}})\ket{-})|^2=\cos^2\qty({\frac{\hbar\omega_0 t}{2}})\]
+Probability of measuring $\hat{S}_z$ and obtaining $-\frac{hbar}{2}$ is 
+\[P_z\qty(-\frac{\hbar}{2})=\qty|\braket{-}{\psi(t)}|^2=\qty|\bra{-}\qty(\cos\qty({\frac{\hbar\omega_0 t}{2}})\ket{+}+\sin\qty({\frac{\hbar\omega_0 t}{2}})\ket{-})|^2=\sin^2\qty({\frac{\hbar\omega_0 t}{2}})\]
+If $\hat{S}_x$ is measured at time $t$, possible values are $\pm\frac{\hbar}{2}$. \\Probability of measuring $\hat{S}_x$ and obtaining $+\frac{\hbar}{2}$ is 
+\[P_x\qty(+\frac{\hbar}{2})=\qty|_x\braket{+}{\psi(t)}|^2=\qty|\frac{1}{\sqrt{2}}\qty(\bra{+}+\bra{-})\qty(\cos\qty({\frac{\hbar\omega_0 t}{2}})\ket{+}+\sin\qty({\frac{\hbar\omega_0 t}{2}})\ket{-})|^2=\frac{1}{2}\qty(1+\sin\qty({\hbar\omega_0 t}))\]
+Probability of measuring $\hat{S}_z$ and obtaining $-\frac{\hbar}{2}$ is 
+\[P_x\qty(-\frac{\hbar}{2})=\qty|_x\braket{-}{\psi(t)}|^2=\qty|\frac{1}{\sqrt{2}}\qty(\bra{+}-\bra{-})\qty(\cos\qty({\frac{\hbar\omega_0 t}{2}})\ket{+}+\sin\qty({\frac{\hbar\omega_0 t}{2}})\ket{-})|^2=\frac{1}{2}\qty(1-\sin\qty({\hbar\omega_0 t}))\]
+
+If $\hat{S}_y$ is measured at time $t$, possible values are $\pm\frac{\hbar}{2}$. \\Probability of measuring $\hat{S}_y$ and obtaining $+\frac{\hbar}{2}$ is 
+\[P_y\qty(+\frac{\hbar}{2})=\qty|_y\braket{+}{\psi(t)}|^2=\qty|\frac{1}{\sqrt{2}}\qty(\bra{+}-i\bra{-})\qty(\cos\qty({\frac{\hbar\omega_0 t}{2}})\ket{+}+\sin\qty({\frac{\hbar\omega_0 t}{2}})\ket{-})|^2=\frac{1}{2}\]
+Probability of measuring $\hat{S}_y$ and obtaining $-\frac{\hbar}{2}$ is 
+\[P_y\qty(-\frac{\hbar}{2})=\qty|_y\braket{-}{\psi(t)}|^2=\qty|\frac{1}{\sqrt{2}}\qty(\bra{+}+i\bra{-})\qty(\cos\qty({\frac{\hbar\omega_0 t}{2}})\ket{+}+\sin\qty({\frac{\hbar\omega_0 t}{2}})\ket{-})|^2=\frac{1}{2}\]
+
 \end{document}

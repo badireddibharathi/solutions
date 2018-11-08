@@ -1,0 +1,27 @@
+\section*{appendix}
+
+\subsection*{Fourier}
+\[F(k)=\frac{1}{\sqrt{2\pi}}\int_{-\infty}^{+\infty}f(x)e^{-ikx}\dd{x}\]
+\[f(x)=\frac{1}{\sqrt{2\pi}}\int_{-\infty}^{+\infty}F(k)e^{ikx}\dd{x}\]
+\[\Psi(k)=\frac{1}{\sqrt{2\pi\hbar}}\int_{-\infty}^{+\infty}\psi(x)e^{-ipx/\hbar}\dd{x}\]
+\[\psi(x)=\frac{1}{\sqrt{2\pi\hbar}}\int_{-\infty}^{+\infty}\Psi(k)e^{ipx/\hbar}\dd{k}\]
+\[\qq{Identity of norms} \int_{-\infty}^{+\infty}|f(x)|^2\dd{x}=\int_{-\infty}^{+\infty}|F(k)|^2\dd{k}\]
+\[\qq{Parseval's theorem} \int_{-\infty}^{+\infty}f(x)g^*(x)\dd{x}=\int_{-\infty}^{+\infty}F(k)G^*(k)\dd{k}\]
+\subsection*{delta function}
+\[\int f(\vb{r})\delta^3(\vb{r}-\vb{r}_0)\dd{\vb{r}}=f(\vb{r}_0)\]
+\[\laplacian{\qty(\frac{1}{r})}=-4\pi\delta^3(\vb{r})\]
+\subsection*{Hermite}
+
+\[\int_{-\infty}^{+\infty}f(x)\delta(x-x_0)\dd{x}=f(x_0)\]
+\[\delta(x)=\delta(-x)\]
+\[\delta(cx)=\frac{1}{|c|}\delta(x)\]
+\[x\delta(x-x_0)=x_0\delta(x-x_0)\]
+\[f(x)\delta(x-x_0)=f(x_0)\delta(x-x_0)\]
+\[\delta(f(x))=\sum_{i}\frac{1}{f'(x_i)}\delta(x-x_i)\quad f(x_i)=0\quad\forall{x_i}\]
+\[\int f(\vb{r})\delta(\vb{r}-\vb{r}_0)\dd^3{r}=f(\vb{r}_0)\]
+\[\delta(\vb{r}-\vb{r}_0)=\delta(x-x_0)\delta(y-y_0)\delta(z-z_0)\]
+\[\laplacian(\frac{1}{r})=-4\pi\delta^3(\vb{r})\]
+\[H_n(x)=(-1)^ne^{x^2}\dv[n]{x}\qty(e^{-x^2})\quad n=0,1,2,3\ldots\]
+\[\dv[2]{H_n(x)}{x}-2x\dv{H_n(x)}{x}+2nH_n(x)=0\]
+\[\int_{-\infty}^{+\infty}e^{-x^2}H_m(x)H_n(x)\dd{x}=\sqrt{\pi}2^nn!\delta_{mn}\]
+\[\dv{H_n(x)}{x}=2nH_{n-1}(x)\quad H_{n+1}(x)=2xH_n(x)-2nH_{n-1}(x)\]

@@ -19,7 +19,9 @@
 \begin{document}
 
 \section*{delta function}
-A charge $Q$ is distributed over a spherical surface of radius $R$. In spherical coordinates find the volume charge density. 
+\subsection*{spherical coordinates}
+\[\qq{line element}\dd{\vb{l}}=\dd{r}\vu{r}+r\dd{\theta}\vu{\theta}+r\sin\theta\dd{\phi}\vu{\phi}\]
+
 \[\delta(\vb{r}-\vb{r}_0)=\frac{1}{r^2\sin\theta}\delta(r-r_0)\delta(\theta-\theta_0)\delta(\phi-\phi_0)\]
 \[\int f(\vb{r})\delta(\vb{r}-\vb{r}_0)\dd^3{r}=Q\]
 \[\int f(\vb{r})\frac{1}{r^2\sin\theta}\delta(r-r_0)\delta(\theta-\theta_0)\delta(\phi-\phi_0)\dd^3{r}=Q\]
@@ -28,4 +30,13 @@ A charge $Q$ is distributed over a spherical surface of radius $R$. In spherical
 \[\qq{spherical symmetry} \delta(\vb{r}-\vb{r}_0)=\frac{1}{4\pi r^2}\delta(r-r_0)\]
 \[\qq{cylindrical coordinates}\delta(\vb{r}-\vb{r}_0)=\frac{1}{s}\dd{s}\dd{\phi}\dd{z}\]
 \[\delta(\vb{r}-\vb{r}_0)=\frac{1}{s}\delta{(s-s_0)}\delta{(\phi-\phi_0)}\delta{(z-z_0)}\]
+\subsection*{point }
+\[\laplacian\qty(\frac{1}{|\vb{r}-\vb{r}'|})=-4\pi\delta(\vb{r}-\vb{r}')\]
+\[\int_V\laplacian\qty(\frac{1}{|\vb{r}-\vb{r}'|})\dd[3]{r}=\int_V\div\grad\qty(\frac{1}{|\vb{r}-\vb{r}'|})\dd[3]{r}=\int_S\grad\qty(\frac{1}{|\vb{r}-\vb{r}'|})\cdot\dd{S}=-4\pi\]
+\subsection*{charge densities}
+A charge $Q$ is distributed over a spherical surface of radius $R$. In spherical coordinates find the volume charge density.
+\[\rho(\vb{r})=\frac{Q}{4\pi R^2}\delta(r-R)\] 
+Charge with Linear charge density $\lambda$ is distributed on a hollow cylindrical surface of radius $b$. Find volume charge density \[\rho(\vb{r})=\frac{\lambda}{2\pi b}\delta(r-b)\]
+Charge $Q$ is distributed uniformly on a disk of radius $R$. Find volume charge density.\[\frac{Q}{\pi R^2}\delta(z)\Theta(R-r)\]
+Charge $Q$ is distributed uniformly on a disk of radius $R$. Find volume charge density.\[\frac{Q}{\pi R^2r}\delta\qty(\theta-\frac{\pi}{2})\Theta(R-r)\]
 \end{document}

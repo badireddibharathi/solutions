@@ -1,0 +1,19 @@
+\section*{emfield}
+Electric field $\vb{E}$ and magnetic field $\vb{B}$
+are given by \[\vb{E}=-\grad{\phi}-\pdv{\vb{A}}{t}\qq{and}\vb{B}=\curl{\vb{A}}\]
+When $\vb{E}$ and $\vb{B}$ are given, $\phi$ and $\vb{A}$ are not unique.
+\[\phi'=\phi-\pdv{f(\vb{r},t)}{t}\qq{and}\vb{A'}=\vb{A}+\grad{f(\vb{r},t)}\]
+\[\qq{Symmetric gauge} \vb{A}=-\frac{1}{2}\vb{r}\cp\vb{B}\]
+\[\hat{H}=\frac{1}{2m}(\hat{p}-q\mathbf{A})\cdot(\hat{p}-q\mathbf{A})+ q\phi\]
+\[\qq{probability density}\rho=\Psi^*(\vb{r},t)\Psi(\vb{r},t)\]
+\[\qq{probability current density}\vb{s}=\frac{1}{2m}\qty[\frac{\hbar}{i}(\Psi^*(\vb{r},t)\grad{\Psi(\vb{r},t)}-\Psi(\vb{r},t)\grad{\Psi^*(\vb{r},t)})-2q\vb{A}\Psi^*(\vb{r},t)\Psi(\vb{r},t)]\]
+\[\vb{s}=\frac{1}{2m}\qty[\frac{\hbar}{i}(\Psi^*(\vb{r},t)\grad{\Psi(\vb{r},t)}-\Psi(\vb{r},t)\grad{\Psi^*(\vb{r},t)})-2q\vb{A}\Psi^*(\vb{r},t)\Psi(\vb{r},t)]+\frac{\mu}{S}\curl{(\Psi^*(\vb{r},t)\hat{S}\Psi(\vb{r},t))}\]
+\subsection*{equation of motion}
+Use \[\vb{E}=-\grad{\phi}-\pdv{\vb{A}}{t}\qq{and}\vb{B}=\curl{\vb{A}}\]
+and Hamiltonian \[\hat{H}=\frac{1}{2m}(\hat{p}-q\mathbf{A})\cdot(\hat{p}-q\mathbf{A})+ q\phi\]
+and the Hamilton's equations of motion \[\dot{\vb{r}}=\pdv{H}{\vb{p}}\quad\dot{\vb{p}}=-\pdv{H}{\vb{r}}\]
+to derive classical equation of motion \[m\vb{a}=q\vb{E}+q(\vb{v}\cp\vb{B})\]
+\[\dot{\vb{r}}=\pdv{H}{\vb{p}}=\frac{1}{m}(\vb{p}-q\vb{A})=\vb{v}\]
+\[\ddot{\vb{r}}=\dv{t}\qty(\frac{1}{m}(\vb{p}-q\vb{A}))=\frac{1}{m}(\dot{\vb{p}}-q\dot{\vb{A}})\]
+\[\dot{\vb{p}}=-\pdv{H}{\vb{r}}=-\grad{H}=-\grad{\qty[\frac{1}{2m}(\hat{p}-q\mathbf{A})\cdot(\hat{p}-q\mathbf{A})+ q\phi]}\]
+%\[\dot{\vb{p}}=-\grad{\qty[\frac{1}{2m}(\hat{p}-q\mathbf{A})\cdot(\hat{p}-q\mathbf{A})]}+ q\grad{\phi}}\]

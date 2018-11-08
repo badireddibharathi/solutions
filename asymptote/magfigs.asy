@@ -4,8 +4,8 @@ settings.outformat = "pdf";
 
 unitsize(1cm);
 
-draw ((0,-8) ^^ (0,8));
-draw ((-8,0) ^^ (8,0));
+draw ((0,-4) ^^ (0,4));
+draw ((-4,0) ^^ (4,0));
 
 void into (pair P) {
     path c = circle (P,0.2);
@@ -23,4 +23,4 @@ void outof (pair P) {
 into ((0,0));
 into ((1,2));
 outof ((2,0));
-outof ((1,4));
+outof ((1,3));
