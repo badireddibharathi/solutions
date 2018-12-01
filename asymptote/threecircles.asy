@@ -5,7 +5,8 @@ import graph;
 
 //xaxis("$x$-axis",Arrow);
 //yaxis("$y$-axis",Arrow);
-
+draw ((0,-3) ^^ (0,3));
+draw ((-4,0) ^^ (4,0));
 real v = 1.0;
 real r = 1.0;
 real om = 1.0;

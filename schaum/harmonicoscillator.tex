@@ -1,0 +1,28 @@
+\section*{harmonicoscillator}
+
+\[\hat{H}\psi=E\psi\]
+\[-\frac{\hbar^2}{2m}\dv[2]{\psi}{x}+V(x)\psi=E\psi\]
+Since the potential is $V(s)=\frac{1}{2}kx^2=\frac{1}{2}m\omega^2x^2$
+\[-\frac{\hbar^2}{2m}\dv[2]{\psi}{x}+\frac{1}{2}m\omega^2x^2\psi=E\psi\]
+\[\dv[2]{\psi}{x}-\frac{m^2\omega^2}{\hbar^2}x^2\psi=-\frac{2Em}{\hbar^2}\psi\]
+Redefine $z=\sqrt{\frac{m\omega}{\hbar}}x$.
+\[\dv[2]{\psi}{x}=\frac{m\omega}{\hbar}\dv[2]{\psi}{z}\]
+\[\frac{m\omega}{\hbar}\dv[2]{\psi}{z}-\frac{m\omega}{\hbar}z^2\psi=-\frac{2Em}{\hbar^2}\psi\]
+\[\dv[2]{\psi}{z}-z^2\psi=-\frac{\hbar}{m\omega}\frac{2Em}{\hbar^2}\psi=-\frac{2E}{\hbar\omega}\psi\]
+\[\dv[2]{\psi}{z}+\qty(\frac{2E}{\hbar\omega}-z^2)\psi=0\]
+Substitute $\psi=H(\zeta)e^{-z^2/2}$	
+\subsection*{5.8}
+harmonic oscillator hamiltonian is \[\hat{H}=\frac{1}{2m}\hat{p}^2+\frac{1}{2}m\omega^2\hat{x}^2\]
+Define new operators \[\hat{P}=\frac{\hat{p}}{\sqrt{m\omega\hbar}}\qq{and} 
+\hat{Q}=\hat{x}\sqrt{\frac{m\omega}{\hbar}}\]
+\[\hat{H}=\frac{1}{2m}\hat{p}^2+\frac{1}{2}m\omega^2\hat{x}^2=\frac{1}{2m}(m\omega\hbar)\hat{P}^2+
+\frac{1}{2}m\omega^2\qty(\frac{\hbar}{m\omega})\hat{Q}^2=
+\frac{\hbar\omega}{2}\qty(\hat{P}^2+\hat{Q}^2)\]
+Define new operators \[\hat{a}=\frac{1}{\sqrt{2}}\qty(\hat{Q}+i\hat{P})\qq{and}
+\hat{a}^{\dagger}=\frac{1}{\sqrt{2}}\qty(\hat{Q}-i\hat{P})\]
+\[\comm{\hat{P}}{\hat{Q}}=\frac{1}{\hbar}\comm{\hat{p}}{\hat{x}}=-i\]
+\[\hat{a}^{\dagger}\hat{a}=\frac{1}{2}\qty(\hat{Q}-i\hat{P})\qty(\hat{Q}+i\hat{P})=\frac{1}{2}\qty[\hat{Q}^2+\hat{P}^2-i\qty(\hat{P}\hat{Q}-\hat{Q}\hat{P})]\]
+\[\hat{a}^{\dagger}\hat{a}=\frac{1}{2}\qty(\hat{Q}^2+\hat{P}^2-1)\]
+\[\hat{H}=\hbar\omega\qty(\hat{a}^{\dagger}\hat{a}+\frac{1}{2})\]
+Commutator of $\hat{a}$ and $\hat{a}^{\dagger}$ is \[\comm{\hat{a}^{\dagger}}{\hat{a}}=-1\]
+

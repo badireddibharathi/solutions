@@ -43,5 +43,25 @@ Equation of motion of $m_1$ is \[m_1\dv[2]{\vb{r}_1}{t}=m_1\dv[2]{\vb{r}_{1c}}{t
 Similarly equation of motion of $m_2$ is \[m_2\dv[2]{\vb{r}_2}{t}=m_2\dv[2]{\vb{r}_{2c}}{t}=\vb{F}_{21}=-\frac{Gm_2m_1^3(\vb{r}_{2c})}{(m_1+m_2)^2\vqty{\vb{r}_{2c}}^3}\]
 \[\boxed{m_1\dv[2]{\vb{r}_{1c}}{t}=-\frac{Gm_1m_2^3(\vb{r}_{1c})}{(m_1+m_2)^2\vqty{\vb{r}_{1c}}^3}}\]
 \[\boxed{m_2\dv[2]{\vb{r}_{2c}}{t}=-\frac{Gm_2m_1^3(\vb{r}_{2c})}{(m_1+m_2)^2\vqty{\vb{r}_{2c}}^3}}\]
-
+\section*{reaching the sun}
+\subsection*{Orbital Period}
+\[\frac{mV^2}{R}=\frac{GMm}{R^2}\]
+Orbital velocity is \[V=\sqrt{\frac{GM}{R}}\]
+Time period is 
+\[T=2\pi\sqrt{\frac{R^3}{GM}}\]
+Now an object is released with zero velocity at a distance $R$ from sun. Force on the object is \[\vec{F}=-\frac{GMm}{r^2}\hat{r}\]
+\[m\dv{V}{t}=-\frac{GMm}{r^2}\]
+\[V\pdv{V}{r}=-\frac{GM}{r^2}\]
+\[\int_0^VV\dd{V}=GM\int_R^r-\frac{\dd{r}}{r^2}\]
+\[\frac{V^2}{2}=GM\left(\frac{1}{r}-\frac{1}{R}\right)\]
+\[V=-\sqrt{2GM}\left(\frac{R-r}{Rr}\right)^{1/2}\]
+\[\dv{r}{t}=-\sqrt{2GM}\left(\frac{R-r}{Rr}\right)^{1/2}\]
+\[\left(\frac{Rr}{R-r}\right)^{1/2}\dd{r}=-\sqrt{2GM}\dd{t}\]
+\[-\int^0_R\left(\frac{Rr}{R-r}\right)^{1/2}\dd{r}=\sqrt{2GM}\int_0^{T'}\dd{t}\]
+Substitute $r=R\sin^2\theta$ and $\dd{r}=2R\sin\theta\cos\theta\dd{\theta}$
+\[\sqrt{2GM}\,T'=-\int_R^0\left(\frac{Rr}{R-r}\right)^{1/2}\dd{r}\]
+\[\sqrt{2GM}\,T'=-\int_{\pi/2}^0\left[\frac{R^2\sin^2\theta}{R(1-\sin^2\theta)}\right]^{1/2}2R\sin\theta\cos\theta\dd{\theta}\]
+\[\sqrt{2GM}\,T'=-\int_{\pi/2}^02R^{3/2}\sin^2\theta\dd{\theta}=2R^{3/2}\int_0^{\pi/2}\left[\frac{1-\sin2\theta}{2}\right]\dd{\theta}\]
+\[\sqrt{2GM}\,T'=\frac{\pi R^{3/2}}{2}\]
+\[T'=\frac{1}{4\sqrt{2}}\left[2\pi\sqrt{\frac{R^3}{GM}}\right]=\frac{T}{4\sqrt{2}}\]
 \end{document}

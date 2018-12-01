@@ -1,0 +1,20 @@
+\section*{hydrogen}
+
+When a particle of mass $m$ is placed in a central potential $V(r)$ the Hamiltonian of the particle is \[\hat{H}=\frac{\hat{p}^2}{2m}+V(r)=-\frac{\hbar^2}{2m}\nabla^2+V(r)\] 
+In spherical coordinates the Laplacian $\nabla^2$ is \[\nabla^2f=\frac{1}{r^2}\pdv{r}\qty(r^2\pdv{f}{r})+\frac{1}{r^2\sin\theta}\pdv{\theta}\qty(\sin\theta\pdv{f}{\theta})+\frac{1}{r^2\sin^2\theta}\pdv[2]{f}{\phi}\] 
+Angular momentum operator \[\hat{L}=\hat{r}\cp\hat{p}=i\hbar(\hat{r}\cp\nabla)\]
+Hence Hamiltonian is \[\hat{H}=-\frac{\hbar^2}{2m}\frac{1}{r^2}\pdv{r}\qty(r^2\pdv{r})+\frac{\hat{L}^2}{2mr^2}+V(r)\]
+The three components of angular momentum $\hat{L}\quad$$\hat{L}_x$,$\hat{L}_y$,$\hat{L}_z$ commute with Hamiltonian $\hat{H}$.
+The three eigen value equations are 
+\[\hat{H}\psi(r,\theta,\phi)=E\psi(r,\theta,\phi)\]
+\[\hat{L}^2\psi(r,\theta,\phi)=l(l+1)\hbar^2\psi(r,\theta,\phi)\]
+\[\hat{L}_z\psi(r,\theta,\phi)=m\hbar\psi(r,\theta,\phi)\]
+
+Using separation of variables $\psi(r,\theta,\phi)=R_{nl}\psi(r)Y^m_l\psi(\theta,\phi)$.
+The spherical harmonics are normalized according to the relation \[\int_{0}^{2\pi}\int_{0}^{\pi}Y^{m'}_{l}Y^{m'}_{l}\sin\theta\dd\theta\dd\phi=\delta_{ll'}\delta_{mm'}\]
+For radial functions, $\int_{0}^{\infty}r^2|R_{nl}^2(r)|\dd{r}=1$
+\[\qty[-\frac{\hbar^2}{2m}\frac{1}{r^2}\pdv{r}\qty(r^2\pdv{r})+\frac{l(l+1)\hbar^2}{2mr^2}+V(r)]R_{nl}(r)=ER_{nl}(r)\]
+Making the substitution $R_{nl}(r)=\frac{1}{r}U_{nl}(r)$, effective potential is $V_{eff}(r)=V(r)+\frac{l(l+1)\hbar^2}{2mr^2}$
+\\
+For the angular part, \[-i\hbar\pdv{\phi}Y^m_l(\theta,\phi)=m\hbar Y^m_l(\theta,\phi)\]
+\[\qty[\frac{1}{sin\theta}\pdv{\theta}\qty(\sin\theta\pdv{\theta})+\frac{1}{sin^2\theta}\pdv[2]{\phi}]Y^m_l(\theta,\phi)=l(l+1)\hbar^2 Y^m_l(\theta,\phi)\]

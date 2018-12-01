@@ -3,8 +3,8 @@
 settings.outformat="pdf";
 unitsize(1cm);
 
-draw ((0,8) ^^ (0,-8)) ;
-draw ((-8,0) ^^ (8,0)) ;
+draw ((0,5) ^^ (0,-3)) ;
+draw ((-3,0) ^^ (4,0)) ;
 
 pair A = (0,3);
 pair B = (3,0);
