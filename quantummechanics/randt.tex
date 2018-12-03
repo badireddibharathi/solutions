@@ -1,0 +1,75 @@
+% !TEX TS-program = pdflatex
+% !TEX encoding = UTF-8 Unicode
+
+\documentclass[12pt]{article} 
+\usepackage[utf8]{inputenc} 
+\usepackage{geometry} 
+\geometry{a4paper} 
+\geometry{margin=0.25in}
+\geometry{landscape} 
+\usepackage{amsmath}
+\usepackage{physics}
+\usepackage{tikz}
+\usepackage{bm}
+
+\title{tunneling}
+\author{vijayabhaskar badireddi}
+
+\begin{document}
+\section*{randt}
+Wave is coming in from $-\infty$ towards right. Particles have energy $\frac{V_0}{2}<E<V_0$.\\
+Potential is 
+$$
+V(x)=
+\begin{cases}
+0 \qq{for} -\infty < x \le -a \\
+V_0 \qq{for} |x|<a\\
+\frac{V_0}{2} \qq{for} x\ge a
+\end{cases}
+$$
+Schrodinger equation is
+\[-\frac{\hbar^2}{2m}\dv[2]{\psi}{x}+V(x)\psi=E\psi\]
+For region $1$, $V(x)=0$\\
+\[\psi_1''=\frac{2mE}{\hbar^2}\psi_1=0\Rightarrow\psi_1''+k_1^2\psi_1=0\qq{where}k_1=\sqrt{\frac{2mE}{\hbar^2}}\]
+Solution is 
+\[\psi_1=A_1e^{ik_1x}+B_1e^{-ik_1x}\]
+The term $e^{ik_1x}$ represents a wave coming from $-\infty$ to right.\\
+The term $e^{-ik_1x}$ represents a wave coming from $\infty$ to left.\\
+For region $2$, $V(x)=V_0$\\
+\[\psi_2''+\frac{2m(E-v_0)}{\hbar^2}\psi_2=0\Rightarrow\psi_2''-k_2^2\psi_2=0\qq{where}k_2=\sqrt{\frac{2m(V_0-E)}{\hbar^2}}\]
+Solution is 
+\[\psi_2=A_2e^{k_2x}+B_2e^{-k_2x}\]
+For region $3$, $V(x)=\frac{V_0}{2}$\\
+\[\psi_3''+\frac{2m(E-v_0/2)}{\hbar^2}\psi_3=0\Rightarrow\psi_3''+k_3^2\psi_3=0\qq{where}k_3=\sqrt{\frac{2m(E-V_0/2)}{\hbar^2}}\]
+Solution is 
+\[\psi_3=A_3e^{ik_3x}+B_3e^{-ik_3x}\]
+In region $3$, there will be no wave coming from $+\infty$ to the left. Hence $B_3=0$.\\
+Since wave function is continuous at $x=-a$ and $x=a$,
+\[\psi_1(x=-a)=\psi_2(x=-a)\qq{and}\psi_2(x=+a)=\psi_3(x=+a)\]
+\[A_1e^{-ik_1a}+B_1e^{ik_1a}=A_2e^{-k_2a}+B_2e^{k_2a}\tag{1}\]
+\[A_2e^{k_2a}+B_2e^{-k_2a}=A_3e^{ik_3a}\tag{2}\]
+Since the derivative of the wave function is continuous at $x=-a$ and $x=a$,
+\[\psi_1'(x=-a)=\psi_2'(x=-a)\qq{and}\psi_2'(x=+a)=\psi_3'(x=+a)\]
+\[ik_1A_1e^{-ik_1a}-ik_1B_1e^{ik_1a}=k_2A_2e^{-k_2a}-k_2B_2e^{k_2a}\tag{3}\]
+\[k_2A_2e^{k_2a}-k_2B_2e^{-k_2a}=ik_3A_3e^{ik_3a}\tag{4}\]
+Using equations $(2)$ and $(4)$,
+\[A_2e^{k_2a}=\frac{1}{2}\qty[1+\frac{ik_3}{k_2}]B_3e^{ik_3a}\]
+\[A_2=\qty[\frac{k_2+ik_3}{2k_2}]B_3e^{(ik_3-k_2)a}\]
+\[B_2e^{-k_2a}=\frac{1}{2}\qty[1-\frac{ik_3}{k_2}]B_3e^{ik_3a}\]
+\[B_2=\qty[\frac{k_2-ik_3}{2k_2}]B_3e^{(ik_3+k_2)a}\]
+\newpage
+Using equations $(1)$ and $(3)$,
+\[A_1e^{-ik_1a}=\frac{1}{2}\qty[\qty(1+\frac{k_2}{ik_1})A_2e^{-k_2a}+\qty(1-\frac{k_2}{ik_1})B_2e^{k_2a}]\]
+\[A_1=\qty(\frac{k_2+ik_1}{2ik_1})A_2e^{-(k_2-ik_1)a}-\qty(\frac{k_2-ik_1}{2ik_1})B_2e^{(k_2+ik_1)a}\]
+\[B_1e^{ik_1a}=\frac{1}{2}\qty[\qty(1-\frac{k_2}{ik_1})A_2e^{-k_2a}+\qty(1+\frac{k_2}{ik_1})B_2e^{k_2a}]\]
+\[B_1=-\qty(\frac{k_2-ik_1}{2ik_1})A_2e^{-(k_2+ik_1)a}+\qty(\frac{k_2+ik_1}{2ik_1})B_2e^{(k_2-ik_1)a}\]
+Substituting the expressions for $A_2$ and $B_2$,
+
+\[A_1=\qty(\frac{k_2+ik_1}{2ik_1})\qty(\frac{k_2+ik_3}{2k_2})B_3e^{(ik_3-k_2)a}e^{-(k_2-ik_1)a}-\qty(\frac{k_2-ik_1}{2ik_1})\qty(\frac{k_2-ik_3}{2k_2})B_3e^{(ik_3+k_2)a}e^{(k_2+ik_1)a}\]
+\[A_1=B_3e^{i(k_1+k_3)a}\qty[\qty(\frac{k_2+ik_1}{2ik_1})\qty(\frac{k_2+ik_3}{2k_2})e^{-2k_2a}-\qty(\frac{k_2-ik_1}{2ik_1})\qty(\frac{k_2-ik_3}{2k_2})e^{2k_2a}]\]
+\[A_1^*=B_3^*e^{-i(k_1+k_3)a}\qty[\qty(\frac{k_2+ik_1}{2ik_1})\qty(\frac{k_2+ik_3}{2k_2})e^{2k_2a}-\qty(\frac{k_2-ik_1}{2ik_1})\qty(\frac{k_2-ik_3}{2k_2})e^{-2k_2a}]\]
+\[|A_1|^2=|B_3|^2\qty[\qty(\frac{k_2+ik_1}{2ik_1})^2\qty(\frac{k_2+ik_3}{2k_2})^2+\qty(\frac{k_2-ik_1}{2ik_1})^2\qty(\frac{k_2-ik_3}{2k_2})^2+\qty(\frac{k_2^2+k_1^2}{4k_1^2})\qty(\frac{k_2^2+k_3^2}{4k_2^2})2\cosh{4k_2a}]\]
+\[|A_1|^2=|B_3|^2\qty[\qty(\frac{(k_2^2+k_1^2)(k_2^2+k_3^2)}{16k_1^2k_2^2})2\cosh{4k_2a}-\qty[\frac{(k_2+ik_1)^2(k_2+ik_3)^2+(k_2-ik_1)^2(k_2-ik_3)^2}{16k_1^2k_2^2}]]\]
+\[|A_1|^2=2|B_3|^2\qty[\qty(\frac{(k_2^2+k_1^2)(k_2^2+k_3^2)}{16k_1^2k_2^2})\cosh{4k_2a}-\qty(\frac{(k_2^2+k_1^2)(k_2^2+k_3^2)-4k_1k_2^2k_3}{16k_1^2k_2^2})]\]
+
+\end{document}

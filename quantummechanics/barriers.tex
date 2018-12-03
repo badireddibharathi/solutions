@@ -1,0 +1,86 @@
+% !TEX TS-program = pdflatex
+% !TEX encoding = UTF-8 Unicode
+
+\documentclass[12pt]{article} 
+\usepackage[utf8]{inputenc} 
+\usepackage{geometry} 
+\geometry{a4paper} 
+\geometry{margin=0.25in}
+\geometry{landscape} 
+\usepackage{amsmath}
+\usepackage{physics}
+\usepackage{tikz}
+\usepackage{bm}
+
+\title{barriers}
+\author{vijayabhaskar badireddi}
+
+\begin{document}
+
+\section*{statement}
+A wave is coming from $-\infty$ to the right. A potential barrier is located as given. 
+Energy of particle $E>V_0$. Find transmission and reflection coeffients.
+$$
+V(x)=
+\begin{cases}
+    0 \qq{for} x < 0 \\
+    V_0 \qq{for} 0 < x < a \\
+    0 \qq{for} x > a
+\end{cases}
+$$
+\subsection*{solution}
+Schrodinger equation 
+\[-\frac{\hbar^2}{2m}\dv[2]{\psi}{x}+V(x)\psi=E\psi\]
+For region $1$ Potential $V=0$. 
+\[-\frac{\hbar^2}{2m}\dv[2]{\psi_1}{x}=E\psi_1\Rightarrow \dv[2]{\psi_1}{x}+\frac{2mE}{\hbar^2}\psi_1=0\]
+\[\dv[2]{\psi_1}{x}+k_1^2\psi_1=0\qq{where} k_1=\sqrt{\frac{2mE}{\hbar^2}}\]
+Solution is 
+\[\psi_1=A_1e^{ik_1x}+B_1e^{-ik_1x}\]
+For region $2$ Potential $V=V_0$. 
+\[-\frac{\hbar^2}{2m}\dv[2]{\psi_2}{x}+V_0\psi_2=E\psi_2\Rightarrow \dv[2]{\psi_2}{x}+\frac{2m(E-V_0)}{\hbar^2}\psi_2=0\]
+\[\dv[2]{\psi_2}{x}+k_2^2\psi_2=0\qq{where} k_2=\sqrt{\frac{2m(E-V_0)}{\hbar^2}}\]
+Solution is 
+\[\psi_2=A_2e^{ik_2x}+B_2e^{-ik_2x}\]
+For region $3$ Potential $V=0$. 
+\[-\frac{\hbar^2}{2m}\dv[2]{\psi_3}{x}=E\psi_3\Rightarrow \dv[2]{\psi_3}{x}+\frac{2mE}{\hbar^2}\psi_3=0\]
+\[\dv[2]{\psi_3}{x}+k_1^2\psi_1=0\qq{where} k_1=\sqrt{\frac{2mE}{\hbar^2}}\]
+Solution is 
+\[\psi_3=A_3e^{ik_1x}+B_3e^{-ik_1x}\]
+\newpage
+The term $e^{ikx}$ represents wave coming from $-\infty$ to the right.\\
+The term $e^{-ikx}$ represents wave coming from $\infty$ to the left.\\
+In region $3$ there will be no wave coming from $\infty$ to the left. Hence $B_3=0$.
+The wave function is continuous at $x=0$ and at $x=a$.\\
+Hence 
+\[\psi_1(x=0)=\psi_2(x=0) \qq{and} \psi_2(x=a)=\psi_3(x=a)\]
+\[A_1+B_1=A_2+B_2\tag{1}\]
+\[A_2e^{ik_2a}+B_2e^{-ik_2a}=A_3e^{ik_1a}\tag{2}\]
+The derivative of wave function is continuous at $x=0$ and at $x=a$.\\
+Hence 
+\[\psi'_1(x=0)=\psi'_2(x=0) \qq{and} \psi'_2(x=a)=\psi'_3(x=a)\]
+\[ik_1A_1-ik_1B_1=ik_2A_2-ik_2B_2\tag{3}\]
+\[ik_2A_2e^{ik_2a}-ik_2B_2e^{-ik_2a}=ik_1A_3e^{ik_1a}\tag{4}\]
+Using equations $(1)$ and $(3)$,
+\[A_1=\frac{k_1+k_2}{2k_1}A_2+\frac{k_1-k_2}{2k_1}B_2\]
+\[B_1=\frac{k_1-k_2}{2k_1}A_2+\frac{k_1+k_2}{2k_1}B_2\]
+\[A_2=\frac{k_2+k_1}{2k_2}A_3e^{i(k_1-k_2)a}\]
+\[B_2=\frac{k_2-k_1}{2k_2}A_3e^{i(k_1+k_2)a}\]
+Substitute $A_2$ and $B_2$ in to expression for $A_1$.\\
+\[A_1=\frac{(k_1+k_2)^2}{4k_1k_2}A_3e^{i(k_1-k_2)a}-\frac{(k_1-k_2)^2}{4k_1k_2}A_3e^{i(k_1+k_2)a}\]
+\[A_1=A_3e^{ik_1a}\qty[\frac{(k_1+k_2)^2-(k_1-k_2)^2}{4k_1k_2}\cos k_2a-i\frac{(k_1+k_2)^2+(k_1-k_2)^2}{4k_1k_2}\sin k_2a]\]
+\[A_1=A_3e^{ik_1a}\qty[\cos k_2a-i\frac{k^2_1+k^2_2}{2k_1k_2}\sin k_2a]\]
+\[A_1^*=A_3^*e^{-ik_1a}\qty[\cos k_2a+i\frac{k^2_1+k^2_2}{2k_1k_2}\sin k_2a]\]
+\newpage
+Transmission coeffient is
+\[T=\frac{|A_3|^2}{|A_1|^2}=\frac{1}{\cos^2 k_2a+\qty(\frac{k^2_1+k^2_2}{2k_1k_2})^2\sin^2 k_2a}\]
+\[T=\frac{|A_3|^2}{|A_1|^2}=\frac{4k^2_1k^2_2}{4k^2_1k^2_2\cos^2 k_2a+\qty(k^2_1+k^2_2)^2\sin^2 k_2a}\]
+Substitute $A_2$ and $B_2$ in to expression for $B_1$.\\
+\[B_1=\frac{k^2_1-k^2_2}{4k_1k_2}A_3e^{i(k_1-k_2)a}-\frac{k^2_1-k^2_2}{4k_1k_2}A_3e^{i(k_1+k_2)a}\]
+\[B_1=A_3e^{ik_1a}\qty[\frac{k^2_1-k^2_2}{4k_1k_2}e^{-ik_2a}-\frac{k^2_1-k^2_2}{4k_1k_2}e^{ik_2a}]\]
+\[B_1=A_3e^{ik_1a}\qty[-i\frac{k^2_1-k^2_2}{2k_1k_2}\sin k_2a]\]
+\[B_1^*=A_3e^{-ik_1a}\qty[i\frac{k^2_1-k^2_2}{2k_1k_2}\sin k_2a]\]
+Reflection coeffient is
+\[R=\frac{|B_1|^2}{|A_1|^2}=\frac{\qty(\frac{k^2_1-k^2_2}{2k_1k_2})^2\sin^2 k_2a}{\cos^2 k_2a+\qty(\frac{k^2_1+k^2_2}{2k_1k_2})^2\sin^2 k_2a}\]
+\[R=\frac{\qty(k^2_1-k^2_2)^2\sin^2 k_2a}{4k_1^2k_2^2\cos^2 k_2a+\qty(k^2_1+k^2_2)^2\sin^2 k_2a}\]
+\[R=\frac{\qty(k^2_1-k^2_2)^2\sin^2 k_2a}{4k_1^2k_2^2+\qty(k^2_1-k^2_2)^2\sin^2 k_2a}\]
+\end{document}

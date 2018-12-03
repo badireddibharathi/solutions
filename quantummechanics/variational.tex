@@ -1,0 +1,56 @@
+% !TEX TS-program = pdflatex
+% !TEX encoding = UTF-8 Unicode
+
+\documentclass[12pt]{article}
+
+\usepackage[utf8]{inputenc}
+
+\usepackage{geometry}
+\geometry{a4paper}
+\geometry{margin=0.25in}
+\geometry{portrait}
+
+\usepackage{amsmath}
+\usepackage{bm}
+\usepackage{physics}
+\usepackage{tikz}
+
+\title{variational}
+\author{vijayabhaskar badireddi}
+\begin{document}
+\section*{statement}
+The given trial wave function is $\psi(r)=e^{-\alpha r^2}$. Find the ground state energy of Hydrogen atom.
+\section*{solution}
+Hamiltonian of Hydrogen atom is \[\hat{H}=\frac{\hat{p}^2}{2m}+V(r)=-\frac{\hbar^2}{2m}\laplacian+V(r)\]
+In spherical polar coordinates, 
+\[\laplacian=\frac{1}{r^2}\qty[\pdv{r}\qty(r^2\pdv{r})+\frac{1}{\sin\theta}\pdv{\theta}\qty(\sin\theta\pdv{\theta})+\frac{1}{\sin^2\theta}\pdv[2]{\phi}]=\frac{1}{r^2}\qty[\pdv{r}\qty(r^2\pdv{r})-\frac{\hat{L}^2}{\hbar^2}]\]
+\[\hat{H}=\frac{1}{r^2}\qty[\pdv{r}\qty(r^2\pdv{r})]+\frac{\hat{L}^2}{2mr^2}-\frac{e^2}{4\pi\epsilon_0 r}\]
+For variational method we need to minimize \[\ev{\hat{H}}=\frac{\mel{\psi}{\hat{H}}{\psi}}{\braket{\psi}{\psi}}\]
+Normalizing the given wave function,
+\[\psi=e^{-\alpha r^2}\]
+\[\braket{\psi}{\psi}=\int_0^{2\pi}\int_0^{\pi}\int_0^{\infty}\qty(e^{-\alpha r^2})^2r^2\sin\theta\dd{r}\dd{\theta}\dd{\phi}\]
+\[4\pi \int_0^{\infty}r^2e^{-2\alpha r^2}\dd{r}=4\pi \qty(\frac{\sqrt{\pi}}{4(2\alpha)^{3/2}})=\qty(\frac{\pi}{2\alpha})^{3/2}\]
+Since $\hat{L}^2$ does not involve derivatives of $r$,
+\[\mel**{\psi}{\frac{\hat{L}^2}{2mr^2}}{\psi}=0\]
+\[\mel**{\psi}{V}{\psi}=\mel**{\psi}{-\frac{e^2}{4\pi\epsilon_0 r}}{\psi}=-\frac{e^2}{4\pi\epsilon_0 }\mel**{\psi}{\frac{1}{ r}}{\psi}\]
+\[=-\frac{e^2}{4\pi\epsilon_0 }\int_0^{2\pi}\int_0^{\pi}\int_0^{\infty}\frac{1}{r}e^{-2\alpha r^2}r^2\sin\theta\dd{r}\dd{\theta}\dd{\phi}=-\frac{4\pi e^2}{4\pi\epsilon_0 }\int_0^{\infty}re^{-2\alpha r^2}\dd{r}\]
+Substitute \[u=-2\alpha r^2\quad \dd{u}=-4\alpha r \dd{r}\]
+\[\mel**{\psi}{V}{\psi}=-\frac{e^2}{\epsilon_0 }\int_0^{\infty}re^{-2\alpha r^2}\dd{r}=\frac{e^2}{4\alpha\epsilon_0 }\int_0^{-\infty}e^{u}\dd{u}=-\frac{e^2}{4\alpha\epsilon_0}\]
+\newpage
+\[-\frac{\hbar^2}{2mr^2}\mel**{\psi}{\frac{1}{r^2}\pdv{r}\qty(r^2\pdv{r})}{\psi}\]
+\[=-\frac{\hbar^2}{2m}\int_0^{2\pi}\int_0^{\pi}\int_0^{\infty}e^{-\alpha r^2}\frac{1}{r^2}\pdv{r}\qty(r^2\pdv{r}\qty(e^{-\alpha r^2}))r^2\sin\theta\dd{r}\dd{\theta}\dd{\phi}\]
+\[=-\frac{\hbar^2}{2m}4\pi\int_0^{\infty}e^{-\alpha r^2}\pdv{r}\qty(-2\alpha r^3e^{-\alpha r^2})\dd{r}\]
+\[=\frac{4\pi\alpha\hbar^2}{m}\int_0^{\infty}e^{-\alpha r^2}\qty(3r^2e^{-\alpha r^2} -2\alpha r^4e^{-\alpha r^2})\dd{r}\]
+\[=\frac{4\pi\alpha\hbar^2}{m}\qty[\int_0^{\infty}3r^2e^{-2\alpha r^2}\dd{r}-\int_0^{\infty}2\alpha r^4e^{-2\alpha r^2}\dd{r}]\]
+\[=\frac{4\pi\alpha\hbar^2}{m}\qty[\frac{3\pi^{1/2}}{4(2\alpha)^{3/2}}-\frac{3\pi^{1/2}}{8(2\alpha)^{3/2}}]=\frac{4\pi\alpha\hbar^2}{m}\qty[\frac{3\pi^{1/2}}{8(2\alpha)^{3/2}}]=\frac{3\pi^{3/2}\hbar^2}{4m(2\alpha)^{1/2}}\]
+\[\mel{\psi}{\hat{H}}{\psi}=\frac{3\pi^{3/2}\hbar^2}{4m(2\alpha)^{1/2}}-\frac{e^2}{4\alpha\epsilon_0}\]
+\[\ev{\hat{H}}=\frac{3\alpha\hbar^2}{2m}-\frac{e^2\alpha^{1/2}}{\sqrt{2}\epsilon_0\pi^{3/2}}\]
+To find the minimum value of $\ev{\hat{H}}$, differentiate with respect to $\alpha$ and equate to $0$.
+\[\dv{\alpha}\ev{\hat{H}}=\frac{3\hbar^2}{2m}-\frac{e^2}{\sqrt{8}\epsilon_0\pi^{3/2}\alpha^{1/2}}=0\]
+\[\alpha^{1/2}=\frac{me^2}{3\sqrt{2}\hbar^2\epsilon_0\pi^{3/2}}\]
+\[\alpha=\frac{m^2e^4}{18\hbar^4\epsilon_0^2\pi^{3}}\]
+Substitute in $\ev{\hat{H}}$
+\[\ev{\hat{H}}=\frac{me^4}{12\hbar^2\epsilon_0^2\pi^{3}}-\frac{me^4}{6\epsilon_0^2\hbar^2\pi^{3}}=-\frac{me^4}{12\hbar^2\epsilon_0^2\pi^{3}}=-\frac{me^4}{3\pi h^2\epsilon_0^2}\]
+\[\ev{\hat{H}}=\frac{8}{3\pi}\qty[-\frac{me^4}{8h^2\epsilon_0^2}]=-11.54\,eV\]
+
+\end{document}
