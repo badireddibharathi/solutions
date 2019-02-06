@@ -1,0 +1,67 @@
+% !TeX root = main.tex
+\section*{qmproblem}
+\begin{align*}
+ (x,y)&=x^{\dag}y \\
+ x^{\dag}&=(x^*)^T=(x^T)^* \\
+  \left(A^T\right)^T&=A \\
+ \left(A^*\right)^*&=A \\
+ \left(A^\dag\right)^\dag&=A \\ 
+ \left(AB\right)^T=B^TA^T \\
+ \left(AB\right)^*=A^*B^* \\
+ \left(AB\right)^\dag=B^\dag A^\dag
+\end{align*}
+\subsection*{a)}
+\begin{align*}
+(x,Ay)=x^\dag Ay=x^\dag \left(A^\dag \right )^\dag y=\left(A^{\dag}x \right )^\dag y=(A^\dag x,y)
+\end{align*}
+\subsection*{b)}
+\[ Av=\lambda v \]\[ A^\dag=A\]
+\[ \left(Av\right)^\dag=\left(\lambda v\right)^\dag=v^\dag A^\dag=\lambda^*v^\dag \]
+\[
+\left(v,Av \right )=v^\dag Av=\lambda v^\dag v
+\]
+\[
+\left(v,Av \right )=v^\dag Av=v^\dag A^\dag v=\lambda^* v^\dag v
+\]
+
+Hence \[ \left(v,Av \right )=\lambda^* v^\dag v=\lambda v^\dag v
+\]
+\[
+\lambda^*=\lambda \]\[ \lambda is real.
+\]
+\subsection*{c)}
+\[
+A^\dag=A
+\]
+\[
+Av_1=\lambda_1v_1, Av_2=\lambda_2v_2 and \lambda_1\ne\lambda_2
+\]
+\[
+\left(v_1,Av_2 \right )=\left(v_1,\lambda_2v_2 \right )=v_1^\dag\lambda_2v_2=\lambda_2 v_1^\dag v_2
+\]
+\[
+\left(A^\dag v_1,v_2 \right )=\left(A v_1,v_2 \right )=\left(\lambda_1v_1,v_2 \right )=(\lambda_1v_1)^\dag v_2=\lambda_1^*v_1^\dag v_2=\lambda_1v_1^\dag v_2
+\]
+\[
+Since \left(v_1,Av_2 \right )=\left(A^\dag v_1,v_2 \right )\Rightarrow \lambda_2 v_1^\dag v_2=\lambda_1v_1^\dag v_2
+\]
+\[
+(\lambda_2-\lambda_1) v_1^\dag v_2=(\lambda_2-\lambda_1) (v_1, v_2)=0
+\]
+\[
+Since \lambda_2\ne\lambda_1 ,  (v_1, v_2)=0
+\]
+\subsection*{d)}
+\subsubsection*{1.A matrix with two non degenerate eigenvalues}
+
+Pauli spin matrix \( \begin{pmatrix} 1 & 0\\ 0& -1 \end{pmatrix}\) . Eigenvalues are given by \( (1-\lambda)(-1-\lambda)=0 \) . Eigenvalues are  \( \lambda=\pm 1 \).
+
+\subsubsection*{2.A matrix with complex conjugate eigenvalues}
+\[
+\mqty ( 0 & 1\\ -1& 0 )\]. Eigenvalues are given by \( \lambda^2+1=0 \) . Eigenvalues are\( \lambda=\pm i\).
+\subsubsection*{3.A matrix which cannot be diagonalized}
+\[\mqty( 0&0 \\ 0&1 )\]
+\subsubsection*{4.A unitary matrix}
+Pauli spin matrices are unitary
+\[\mqty ( 0 & -i\\ i& 0 ), \mqty( 0 & 1\\ 1& 0), \mqty( 1 & 0\\ 0& -1)\]
+

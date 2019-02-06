@@ -1,0 +1,57 @@
+\section*{evalues}
+Operators $\hat{A}$ and $\hat{B}$ do not involve time exlipcitly. $\omega$ is real.
+\[\comm{\hat{H}}{\hat{A}}=i\hbar\omega\hat{B}\qq{and}\comm{\hat{H}}{\hat{B}}=-i\hbar\omega\hat{A}\]
+\subsection*{(a)}
+At time $t=0$, $\hat{\ev{A}}=a_0$ and $\hat{\ev{B}}=b_0$.
+\[\ev{\hat{A}}{\psi(0)}=a_0\qq{and}\ev{\hat{B}}{\psi(0)}=b_0\]
+\[i\hbar\dv{t}\qty(\ket{\psi(t)})=\hat{H}(t)\ket{\psi(t)}\tag{1}\]
+\[-i\hbar\dv{t}\qty(\bra{\psi(t)})=\bra{\psi(t)}\hat{H}(t)\tag{2}\]
+Expectation value of $\hat{A}$ at time $t$ is
+\[\hat{\ev{A}}_t=\ev{\hat{A}}{\psi(t)}\]
+Differentiate with respect to time,
+\[\dv{t}\hat{\ev{A}}_t=\dv{t}\qty(\bra{\psi(t)})\hat{A}\ket{\psi(t)}+\bra{\psi(t)}\hat{A}\dv{t}\qty(\ket{\psi(t)})\]
+Using the equations $(1)$ and $(2)$,
+\[\dv{t}\ev{\hat{A}}_t=-\frac{1}{i\hbar}\bra{\psi(t)}\hat{H}\hat{A}\ket{\psi(t)}+\frac{1}{i\hbar}\bra{\psi(t)}\hat{A}\hat{H}\ket{\psi(t)}\]
+\[\dv{t}\hat{\ev{A}}_t=-\frac{1}{i\hbar}\bra{\psi(t)}\qty(\hat{H}\hat{A}-\hat{A}\hat{H})\ket{\psi(t)}\]
+\[\dv{t}\ev{\hat{A}}_t=-\frac{1}{i\hbar}\ev**{\comm{\hat{H}}{\hat{A}}}{\psi(t)}\]
+From the given information,
+\[\comm{\hat{H}}{\hat{A}}=i\hbar\omega\hat{B}\]
+Hence the derivative of expectation value of $\hat{A}$ at time $t$ is
+\[\dv{t}\ev{\hat{A}}_t=-\frac{1}{i\hbar}\ev**{\comm{\hat{H}}{\hat{A}}}{\psi(t)}=-\omega\ev{\hat{B}}_t\]
+Expectation value of $\hat{B}$ at time $t$ is
+\[\ev{\hat{B}}_t=\ev{\hat{B}}{\psi(t)}\]
+Differentiate with respect to time,
+\[\dv{t}\ev{\hat{B}}_t=\dv{t}\qty(\bra{\psi(t)})\hat{B}\ket{\psi(t)}+\bra{\psi(t)}\hat{B}\dv{t}\qty(\ket{\psi(t)})\]
+Using the equations $(1)$ and $(2)$,
+\[\dv{t}\ev{\hat{B}}_t=-\frac{1}{i\hbar}\bra{\psi(t)}\hat{H}\hat{B}\ket{\psi(t)}+\frac{1}{i\hbar}\bra{\psi(t)}\hat{B}\hat{H}\ket{\psi(t)}\]
+\[\dv{t}\ev{\hat{B}}_t=-\frac{1}{i\hbar}\bra{\psi(t)}\qty(\hat{H}\hat{B}-\hat{B}\hat{H})\ket{\psi(t)}\]
+\[\dv{t}\ev{\hat{B}}_t=-\frac{1}{i\hbar}\ev**{\comm{\hat{H}}{\hat{B}}}{\psi(t)}\]
+From the given information,
+\[\comm{\hat{H}}{\hat{B}}=-i\hbar\omega\hat{A}\]
+Hence the derivative of expectation value of $\hat{B}$ at time $t$ is
+\[\dv{t}\ev{\hat{B}}_t=-\frac{1}{i\hbar}\ev**{\comm{\hat{H}}{\hat{B}}}{\psi(t)}=\omega\ev{\hat{A}}_t\]
+Hence,
+\[\dv{t}\ev{\hat{B}}_t=-\frac{1}{\omega}\dv[2]{t}\ev{\hat{A}}_t=\omega\ev{\hat{A}}_t\]
+\[\dv[2]{t}\ev{\hat{A}}_t=-\omega^2\ev{\hat{A}}_t\]
+Comparing with the equation for simple harmonic motion $\vb{a}=-\omega^2\vb{x}$,
+\[\ev{\hat{A}}_t=C_1\cos\omega t+C_2\sin\omega t\]
+Using the condition that
+\[\ev{\hat{A}}_t = a_0 \qq{at} t=0\]
+\[C_1=a_0\]
+\[\ev{\hat{B}}_t=-\frac{1}{\omega}\dv{t}\ev{\hat{A}}_t=-\frac{1}{\omega}\qty(-\omega C_1\sin\omega t+\omega C_2\cos\omega t)\]
+\[\ev{\hat{B}}_t= C_1\sin\omega t- C_2\cos\omega t\]
+Using the condition that
+\[\ev{\hat{B}}_t = b_0 \qq{at} t=0\]
+\[C_2=-b_0\]
+Hence,
+\[\ev{\hat{A}}_t= a_0\cos\omega t- b_0\sin\omega t\]
+\[\ev{\hat{B}}_t= a_0\sin\omega t+ b_0\cos\omega t\]
+\subsection*{(b)}
+If $\hat{A}$ is a hermitian operator, $\hat{A}^{\dag}=\hat{A}$.
+Since $\comm{\hat{H}}{\hat{A}}=i\hbar\omega\hat{B}$.
+\[\comm{\hat{H}}{\hat{A}}^{\dag}=\qty(\hat{H}\hat{A}-\hat{A}\hat{H})^{\dag}=\qty(\hat{H}\hat{A})^{\dag}-\qty(\hat{A}\hat{H})^{\dag}=\hat{A}^{\dag}\hat{H}^{\dag}-\hat{H}^{\dag}\hat{A}^{\dag}=\hat{A}\hat{H}-\hat{H}\hat{A}=\comm{\hat{A}}{\hat{H}}=-\comm{\hat{H}}{\hat{A}}\]
+\[\comm{\hat{H}}{\hat{A}}^{\dag}=-\comm{\hat{H}}{\hat{A}}=-i\hbar\omega\hat{B}\]
+\[\qty(i\hbar\omega\hat{B})^{\dag}=-i\hbar\omega\hat{B}^{\dag}\]
+\[-i\hbar\omega\hat{B}^{\dag}=-i\hbar\omega\hat{B}\]
+\[\hat{B}^{\dag}=\hat{B}\]
+Hence $\hat{B}$ is hermitian.

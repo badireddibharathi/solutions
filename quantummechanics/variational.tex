@@ -1,24 +1,4 @@
-% !TEX TS-program = pdflatex
-% !TEX encoding = UTF-8 Unicode
-
-\documentclass[12pt]{article}
-
-\usepackage[utf8]{inputenc}
-
-\usepackage{geometry}
-\geometry{a4paper}
-\geometry{margin=0.25in}
-\geometry{portrait}
-
-\usepackage{amsmath}
-\usepackage{bm}
-\usepackage{physics}
-\usepackage{tikz}
-
-\title{variational}
-\author{vijayabhaskar badireddi}
-\begin{document}
-\section*{statement}
+\section*{variational}
 The given trial wave function is $\psi(r)=e^{-\alpha r^2}$. Find the ground state energy of Hydrogen atom.
 \section*{solution}
 Hamiltonian of Hydrogen atom is \[\hat{H}=\frac{\hat{p}^2}{2m}+V(r)=-\frac{\hbar^2}{2m}\laplacian+V(r)\]
@@ -52,5 +32,3 @@ To find the minimum value of $\ev{\hat{H}}$, differentiate with respect to $\alp
 Substitute in $\ev{\hat{H}}$
 \[\ev{\hat{H}}=\frac{me^4}{12\hbar^2\epsilon_0^2\pi^{3}}-\frac{me^4}{6\epsilon_0^2\hbar^2\pi^{3}}=-\frac{me^4}{12\hbar^2\epsilon_0^2\pi^{3}}=-\frac{me^4}{3\pi h^2\epsilon_0^2}\]
 \[\ev{\hat{H}}=\frac{8}{3\pi}\qty[-\frac{me^4}{8h^2\epsilon_0^2}]=-11.54\,eV\]
-
-\end{document}

@@ -1,20 +1,28 @@
+% !TeX root = main.tex
 \section*{spin}
-\[\hat{S}^{2}\ket{\alpha}=S(S+1)\hbar^2\ket{\alpha}\]
-\[\comm{\hat{S}_{x}}{\hat{S}_{y}}=i\hbar\hat{S}_{z}\quad
-\comm{\hat{S}_{y}}{\hat{S}_{z}}=i\hbar\hat{S}_{x}\quad
-\comm{\hat{S}_{z}}{\hat{S}_{x}}=i\hbar\hat{S}_{y}\]
-\[\comm{\hat{S}_{i}}{\hat{S}_{j}}=i\hbar\epsilon_{ijk}\hat{S}_{k}\]
-\[\vb{S}=\frac{\hbar}{2}\bm{\sigma}\]
-\[\hat{S}_{z}\ket{\alpha}=\hbar m_{s}\ket{\alpha}\]
+
+\begin{align*}
+\hat{S}^{2}\ket{\alpha}&=S(S+1)\hbar^2\ket{\alpha}\\
+\comm{\hat{S}_{x}}{\hat{S}_{y}}&=i\hbar\hat{S}_{z}\\
+\comm{\hat{S}_{y}}{\hat{S}_{z}}&=i\hbar\hat{S}_{x}\\
+\comm{\hat{S}_{z}}{\hat{S}_{x}}&=i\hbar\hat{S}_{y}\\
+\comm{\hat{S}_{i}}{\hat{S}_{j}}&=i\hbar\epsilon_{ijk}\hat{S}_{k}\\
+\vb{S}&=\frac{\hbar}{2}\bm{\sigma}\\
+\hat{S}_{z}\ket{\alpha}&=\hbar m_{s}\ket{\alpha}
+\end{align*}
 $\ket{+}$ and $\ket{-}$ are the eigen vectors of $\hat{{S}}_z$ operator.
 \[\hat{{S}}_z\ket{+}=\frac{\hbar}{2}\ket{+}\quad\hat{{S}}_z\ket{-}=-\frac{\hbar}{2}\ket{-}\]
 The Pauli matrices are 
-\[\sigma_x=\mqty(0 & 1 \\ 1 & 0)\quad
+\begin{align*}
+\sigma_x=\mqty(0 & 1 \\ 1 & 0)\quad
 \sigma_y=\mqty(0 & -i \\ i & 0)\quad
-\sigma_z=\mqty(1 & 0 \\ 0 & -1)\]
-\[(\bm{\sigma}\cdot\vb{A})(\bm{\sigma}\cdot\vb{B})=(\vb{A}\cdot\vb{B})+i\bm{\sigma}\cdot(\vb{A}\times\vb{B})\]
-\[\hat{S}_+=\hat{S}_x+i\hat{S}_y\qq{and}\hat{S}_-=\hat{S}_x-i\hat{S}_y\]
-\[\hat{S}_+\ket{+}=0\quad \hat{S}_+\ket{-}=\ket{+}\quad \hat{S}_-\ket{+}=\ket{-}\quad
-\hat{S}_-\ket{-}=0\]
-\[\ket{\alpha}'=\exp\qty(-\frac{i}{\hbar}\theta\vb{u}\cdot\vb{S})\ket{\alpha}\]
-\[U_R=\exp\qty(-\frac{i}{\hbar}\theta\vb{u}\cdot\vb{S})=\mqty(\cos(\theta/2) & -\sin(\theta/2)e^{-i\phi} \\ \sin(\theta/2)e^{i\phi} & \cos(\theta/2))\]
+\sigma_z=\mqty(1 & 0 \\ 0 & -1)\\
+(\bm{\sigma}\cdot\vb{A})(\bm{\sigma}\cdot\vb{B})=(\vb{A}\cdot\vb{B})+i\bm{\sigma}\cdot(\vb{A}\times\vb{B})
+\end{align*}
+\begin{align*}
+\hat{S}_+=\hat{S}_x+i\hat{S}_y\quad\hat{S}_-=\hat{S}_x-i\hat{S}_y\\
+\hat{S}_+\ket{+}=0\quad \hat{S}_+\ket{-}=\ket{+}\quad \hat{S}_-\ket{+}=\ket{-}\quad
+\hat{S}_-\ket{-}=0
+\ket{\alpha}'=\exp\qty(-\frac{i}{\hbar}\theta\vb{u}\cdot\vb{S})\ket{\alpha}
+U_R=\exp\qty(-\frac{i}{\hbar}\theta\vb{u}\cdot\vb{S})=\mqty(\cos(\theta/2) & -\sin(\theta/2)e^{-i\phi} \\ \sin(\theta/2)e^{i\phi} & \cos(\theta/2))
+\end{align*}

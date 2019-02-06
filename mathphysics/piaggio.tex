@@ -1,0 +1,40 @@
+% !TEX TS-program = pdflatex
+% !TEX encoding = UTF-8 Unicode
+\documentclass[12pt]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage{geometry}
+\geometry{a4paper}
+\geometry{margin=0.25in}
+\geometry{portrait}
+
+\usepackage{tikz}
+
+\usepackage{amsmath}
+\usepackage{bm}
+\usepackage{physics}
+\title{piaggio}
+\author{vijayabhaskar badireddi}
+
+\begin{document}
+\section*{Series solutions}
+
+\subsection*{Method of Frobenius}
+\[y=x^c\sum a_ix^i\]
+\subsubsection*{case 1}
+Roots are different and differ by a quantity not an integer
+Bessel's equation of order $n$ where $2n$ is not an integer.
+\[x^2y''+xy'+(x^2-n^2)y=0\]
+\subsubsection*{case 2}
+Roots of the indicial equation are equal.
+Bessel's equation of order zero.
+\[xy''+y'+xy=0\]
+\subsubsection*{case 3}
+Bessel's equatio of order $1$.
+\[x^2y''+xy'+(x^2-1)y=0\]
+
+
+
+
+
+\end{document}
