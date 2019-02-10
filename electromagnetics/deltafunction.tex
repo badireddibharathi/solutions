@@ -12,9 +12,10 @@
 
 \usepackage{amsmath} 
 \usepackage{physics} 
+\usepackage{bm}
+
 \title{deltafunction}
 \author{vijayabhaskar badireddi} 
-\date{} 
 
 \begin{document}
 
@@ -22,21 +23,25 @@
 \subsection*{spherical coordinates}
 \[\qq{line element}\dd{\vb{l}}=\dd{r}\vu{r}+r\dd{\theta}\vu{\theta}+r\sin\theta\dd{\phi}\vu{\phi}\]
 
-\[\delta(\vb{r}-\vb{r}_0)=\frac{1}{r^2\sin\theta}\delta(r-r_0)\delta(\theta-\theta_0)\delta(\phi-\phi_0)\]
-\[\int f(\vb{r})\delta(\vb{r}-\vb{r}_0)\dd^3{r}=Q\]
-\[\int f(\vb{r})\frac{1}{r^2\sin\theta}\delta(r-r_0)\delta(\theta-\theta_0)\delta(\phi-\phi_0)\dd^3{r}=Q\]
+\[\delta(\vb{r}-\vb{r}')=\frac{1}{r^2\sin\theta}\delta(r-r')\delta(\theta-\theta')\delta(\phi-\phi')=\frac{1}{r^2}\delta(r-r')\delta(\cos\theta-\cos\theta')\delta(\phi-\phi')\]
+\[\delta(\vb{r}-\vb{r}')=\frac{1}{r^2}\delta(r-r')\sum_{l=0}^{l=\infty}\sum_{m=-l}^{m=l}Y^*_{lm}(\theta',\phi')Y_{lm}(\theta,\phi)\]
+\[\int f(\vb{r})\delta(\vb{r}-\vb{r}')\dd^3{r}=Q\]
+\[\int f(\vb{r})\frac{1}{r^2\sin\theta}\delta(r-r')\delta(\theta-\theta')\delta(\phi-\phi')\dd^3{r}=Q\]
 \[\dd^3{r}=r^2\sin\theta\dd{r}\dd{\theta}\dd{\phi}\]
-\[\qq{azimuthal symmetry} \delta(\vb{r}-\vb{r}_0)=\frac{1}{2\pi r^2\sin\theta}\delta(r-r_0)\delta(\theta-\theta_0)\]
-\[\qq{spherical symmetry} \delta(\vb{r}-\vb{r}_0)=\frac{1}{4\pi r^2}\delta(r-r_0)\]
-\[\qq{cylindrical coordinates}\delta(\vb{r}-\vb{r}_0)=\frac{1}{s}\dd{s}\dd{\phi}\dd{z}\]
-\[\delta(\vb{r}-\vb{r}_0)=\frac{1}{s}\delta{(s-s_0)}\delta{(\phi-\phi_0)}\delta{(z-z_0)}\]
+\[\qq{azimuthal symmetry} \delta(\vb{r}-\vb{r}')=\frac{1}{2\pi r^2\sin\theta}\delta(r-r')\delta(\theta-\theta')\]
+\[\qq{spherical symmetry} \delta(\vb{r}-\vb{r}')=\frac{1}{4\pi r^2}\delta(r-r')\]
+\[\qq{cylindrical coordinates}\delta(\vb{r}-\vb{r}')=\frac{1}{s}\dd{s}\dd{\phi}\dd{z}\]
+\[\delta(\vb{r}-\vb{r}')=\frac{1}{s}\delta{(s-s')}\delta{(\phi-\phi')}\delta{(z-z')}\]
 \subsection*{point }
 \[\laplacian\qty(\frac{1}{|\vb{r}-\vb{r}'|})=-4\pi\delta(\vb{r}-\vb{r}')\]
-\[\int_V\laplacian\qty(\frac{1}{|\vb{r}-\vb{r}'|})\dd[3]{r}=\int_V\div\grad\qty(\frac{1}{|\vb{r}-\vb{r}'|})\dd[3]{r}=\int_S\grad\qty(\frac{1}{|\vb{r}-\vb{r}'|})\cdot\dd{S}=-4\pi\]
+\[\int_V\laplacian\qty(\frac{1}{|\vb{r}-\vb{r}'|})\dd[3]{r}=\int_V\div\grad\qty(\frac{1}{|\vb{r}-\vb{r}'|})\dd[3]{r}=\int_S\grad\qty(\frac{1}{|\vb{r}-\vb{r}'|})\cdot\dd{\vb{a}}=-4\pi\]
 \subsection*{charge densities}
 A charge $Q$ is distributed over a spherical surface of radius $R$. In spherical coordinates find the volume charge density.
 \[\rho(\vb{r})=\frac{Q}{4\pi R^2}\delta(r-R)\] 
 Charge with Linear charge density $\lambda$ is distributed on a hollow cylindrical surface of radius $b$. Find volume charge density \[\rho(\vb{r})=\frac{\lambda}{2\pi b}\delta(r-b)\]
 Charge $Q$ is distributed uniformly on a disk of radius $R$. Find volume charge density.\[\frac{Q}{\pi R^2}\delta(z)\Theta(R-r)\]
 Charge $Q$ is distributed uniformly on a disk of radius $R$. Find volume charge density.\[\frac{Q}{\pi R^2r}\delta\qty(\theta-\frac{\pi}{2})\Theta(R-r)\]
+A ring of radius $a$ has charge $Q$ uniformly distributed on it. Find volume charge density.
+\[\rho(\vb{r})=\frac{Q}{2\pi a^2}\delta(r-a)\delta(\cos\theta)\]
+
 \end{document}
