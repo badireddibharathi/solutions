@@ -33,3 +33,18 @@ Mulitply by $P_m(\cos\theta)\sin\theta$ and integrating from $0$ to $\pi$,
 Only $l=0$ term will survive. Remaining $B_l$ are zero.
 \[\frac{B_0}{R_2}=V_2\]
 Potential in the region $r>R_2$ is \[V(r,\theta)=\frac{V_2R_2}{r}\]
+In the region $R_1<r<R_2$, both set of coefficients are nonzero.
+Using the boundary conditions,
+\[V(r,\theta)=\sum_{l=0}^{\infty}\qty(A_{l}R_2^l+\frac{B_{l}}{R_2^{l+1}})P_l(\cos\theta)=V_2\]
+\[V(r,\theta)=\sum_{l=0}^{\infty}\qty(A_{l}R_1^l+\frac{B_{l}}{R_1^{l+1}})P_l(\cos\theta)=V_1\]
+Multiply by $P_m(\cos\theta)\sin\theta$ and integrate from $0$ to $\pi$,
+\[\qty(A_{l}R_2^l+\frac{B_{l}}{R_2^{l+1}})\frac{2}{2l+1}=\int_0^{\pi}V_2P_l(\cos\theta)\sin\theta\dd\theta\]
+only the $l=0$ term will survive.
+\[A_{0}+\frac{B_{0}}{R_2}=V_2\]
+\[A_{0}+\frac{B_{0}}{R_1}=V_1\]
+\[B_0=\frac{V_2-V_1}{\frac{1}{R_2}-\frac{1}{R_1}}\]
+\[A_0=\frac{V_2R_2-V_1R_1}{R_2-R_1}\]
+\[V(r,\theta)=A_0+\frac{B_0}{r}=\frac{V_2R_2-V_1R_1}{R_2-R_1}-\frac{(V_2-V_1)R_1R_2}{r(R_2-R_1)}\]
+\subsection*{(1)}
+Two concentric spheres have radii $a$ and $b$. If the potential of inner sphere is $V_aP_3(\cos\theta)$ and the potential of the outer sphere is $V_bP_5(\cos\theta)$, find the potential for all the points between $a<r<b$.
+
