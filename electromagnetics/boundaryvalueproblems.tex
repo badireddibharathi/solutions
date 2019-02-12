@@ -1,0 +1,35 @@
+% !TeX root = main.tex
+\section*{boundaryvalueproblems}
+Laplace's equation in spherical polar coordinates is 
+\[\frac{1}{r^2}\pdv{r}\qty(r^2\pdv{V}{r})+\frac{1}{r^2\sin\theta}\pdv{\theta}\qty(\sin\theta\pdv{V}{\theta})+\frac{1}{r^2\sin^2\theta}\pdv[2]{V}{\phi}=0\]
+Since the problem is symmetric about the azimuthal angle $\phi$, \[\pdv{V}{\phi}=0\qq{and}\pdv[2]{V}{\phi}=0\]
+Hence the Laplace's equation is 
+\[\frac{1}{r^2}\pdv{r}\qty(r^2\pdv{V}{r})+\frac{1}{r^2\sin\theta}\pdv{\theta}\qty(\sin\theta\pdv{V}{\theta})=0\]
+Substitute in the above equation and divide with \[V(r,\theta)=R(r)\Theta(\theta)\]  
+\[\frac{1}{R}\pdv{r}\qty(r^2\pdv{R}{r})+\frac{1}{\Theta\sin\theta}\pdv{\theta}\qty(\sin\theta\pdv{\Theta}{\theta})=0\]
+In the above expression, first term is independent of $\theta$ and second expression is independent of $r$. Hence each term is constant.
+\[\dv{r}\qty(r^2\dv{R}{r})=l(l+1)R\]
+\[\dv{\theta}\qty(\sin\theta\dv{\Theta}{\theta})=-l(l+1)\sin\theta\Theta\]
+General solution of $r$-equation is 
+\[R(r)=A_lr^l+\frac{B_l}{r^{l+1}}\]
+Solutions of $\theta$-equation are Legendre polynomials $P_l(\cos\theta)$. 
+General solution is \[V(r,\theta)=\sum_{l=0}^{\infty}\qty(A_lr^l+\frac{B_l}{r^{l+1}})P_l(\cos\theta)\]
+\subsection*{spherical capacitor}
+Potential at $r=R_1$ is $V_1$ and potential at $r=R_2$ is $V_2$.\\
+In the region $r<R_1$, coefficients $B_{l}$ are zero as the solution may blow up at $r=0$.
+Applying the boundary condition $V(r=R_1)=V_1$,
+\[V(r,\theta)=\sum_{l=0}^{\infty}A_{l}R_1^lP_l(\cos\theta)=V_1\]
+Mulitply by $P_m(\cos\theta)\sin\theta$ and integrating from $0$ to $\pi$,
+\[A_lR_1^l\frac{2}{2l+1}=\int_0^{\pi}V_1P_l(\cos\theta)\sin\theta\dd\theta\]
+Only $l=0$ term will survive. Remaining $A_l$ are zero.
+\[A_0=V_1\]
+Potential in the region $r<R_1$ is \[V(r,\theta)=V_1\]
+\newpage
+In the region $r>R_2$, coefficients $A_{l}$ are zero as the solution may blow up at $r=\infty$.
+Applying the boundary condition $V(r=R_2)=V_2$,
+\[V(r,\theta)=\sum_{l=0}^{\infty}\frac{B_{l}}{R_2^{l+1}}P_l(\cos\theta)=V_2\]
+Mulitply by $P_m(\cos\theta)\sin\theta$ and integrating from $0$ to $\pi$,
+\[\frac{B_l}{R_2^{l+1}}\frac{2}{2l+1}=\int_0^{\pi}V_2P_l(\cos\theta)\sin\theta\dd\theta\]
+Only $l=0$ term will survive. Remaining $B_l$ are zero.
+\[\frac{B_0}{R_2}=V_2\]
+Potential in the region $r>R_2$ is \[V(r,\theta)=\frac{V_2R_2}{r}\]
