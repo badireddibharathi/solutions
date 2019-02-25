@@ -1,10 +1,12 @@
+% !TeX root = main.tex
+
 \section*{vectorssolution}
 The given vector function is \(
-\vb{v}=s\sin{\varphi}\vu{s}+s\cos{\varphi}\vu{\varphi}+z\vu{z}
+\vb{v}=s\sin{\varphi}\vu{s}+s\cos{\varphi}\vu{\bm{\varphi}}+z\vu{z}
 \).
 \subsection*{(a)}
 Divergence of a vector function 
-\(\vb{v}=v_s\vu{s}+v_{\varphi}\vu{\varphi}+v_z\vu{z} \) in cylindrical coordinates is \[\div{\vb{v}}=\frac{1}{s}\pdv{s}(sv_s)+\frac{1}{s}\pdv{\varphi}(v_{\varphi})+\pdv{z}(v_z)\]
+\(\vb{v}=v_s\vu{s}+v_{\varphi}\vu{\bm{\varphi}}+v_z\vu{z} \) in cylindrical coordinates is \[\div{\vb{v}}=\frac{1}{s}\pdv{s}(sv_s)+\frac{1}{s}\pdv{\varphi}(v_{\varphi})+\pdv{z}(v_z)\]
 \[\div{\vb{v}}=\frac{1}{s}\pdv{s}(s^2\sin{\varphi})+\frac{1}{s}\pdv{\varphi}(s\cos{\varphi})+\pdv{z}(z)\]
 \[\div{\vb{v}}=2\sin{\varphi}-\sin{\varphi}+1=\sin{\varphi}+1\]
 \subsection*{(b)}
@@ -12,7 +14,7 @@ Height of cylinder H=10.\\
 Radius of cylinder R=2.\\
 Axis of cylinder is along Z axis with base of cylinder on XY plane.
 Divergence theorem \[\int_{V}(\div{\vb{v}})\dd\tau=\oint_{S}{\vb{v}\cdot\dd{\vb{a}}}\]
-Divergence of given vector function \[\vb{v}=s\sin{\varphi}\vu{s}+s\cos{\varphi}\vu{\varphi}+z\vu{z}\] is  \(\div{\vb{v}}=\sin{\varphi}+1\).
+Divergence of given vector function \[\vb{v}=s\sin{\varphi}\vu{s}+s\cos{\varphi}\vu{\bm{\varphi}}+z\vu{z}\] is  \(\div{\vb{v}}=\sin{\varphi}+1\).
 \[\int_{V}(\div{\vb{v}})\dd\tau=\int_{0}^{R}\int_{0}^{2\pi}\int_{0}^{H}(1+\cos{\varphi})s\dd s\dd{\varphi}\dd z
 \]
 $z$ integral gives H
@@ -38,7 +40,7 @@ Hence \[\int_{V}(\div{\vb{v}})\dd\tau=\pi{R^2H} and \oint_{S}\vb{v}\cdot\dd\vb{a
 Hence divergence theorem is verified.
 \subsection*{(c)}
 Curl of a vector function 
-\[\vb{v}=v_s\vu{s}+v_{\varphi}\vu{\varphi}+v_z\vu{z}\]  in cylindrical coordinates is \[\div{\vb{v}}=\left(\frac{1}{s}\pdv{v_z}{\varphi}-\pdv{v_{\varphi}}{z} \right )\vu{s}+\left(\pdv{v_s}{z}-\pdv{v_{z}}{s} \right )\vu{\varphi}+\frac{1}{s}\left[ \pdv{s}(s{v_{\varphi}})-\frac{\partial{v_s}}{\partial{\varphi}}\right ]\hat{z}\]
+\[\vb{v}=v_s\vu{s}+v_{\varphi}\vu{\bm{\varphi}}+v_z\vu{z}\]  in cylindrical coordinates is \[\div{\vb{v}}=\left(\frac{1}{s}\pdv{v_z}{\varphi}-\pdv{v_{\varphi}}{z} \right )\vu{s}+\left(\pdv{v_s}{z}-\pdv{v_{z}}{s} \right )\vu{\varphi}+\frac{1}{s}\left[ \pdv{s}(s{v_{\varphi}})-\frac{\partial{v_s}}{\partial{\varphi}}\right ]\hat{z}\]
 \[\div{\vb{v}}=\left(\frac{1}{s}\frac{\partial{z}}{\partial{\varphi}}-\frac{\partial{(s\cos{\varphi})}}{\partial{z}} \right )\vu{s}+\left(\frac{\partial{(s\sin{\varphi})}}{\partial{z}}-\frac{\partial{z}}{\partial{s}} \right )\vu{\varphi}+\frac{1}{s}\left[ \frac{\partial}{\partial{s}}(s^2\cos{\varphi})-\frac{\partial{(s\sin{\varphi})}}{\partial{\varphi}}\right ]\vu{z}\]
 \[\div{\vb{v}}=(0-0)\vu{s}+(0-0)\vu{\varphi}+\frac{1}{s}[ 2s\cos{\varphi}-s\cos{\varphi} ]\vu{z}\]
 \[\div{\vb{v}}=\cos{\varphi}\vu{z}\]
