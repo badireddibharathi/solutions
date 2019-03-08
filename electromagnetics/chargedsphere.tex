@@ -1,34 +1,16 @@
-% !TEX TS-program = pdflatex
-% !TEX encoding = UTF-8 Unicode
+% !TEX root = main.tex
 
-\documentclass[12pt]{article}
-
-\usepackage[utf8]{inputenc} 
-
-\usepackage{geometry}
-\geometry{a4paper} 
-\geometry{margin=0.25in} 
-\geometry{portrait}
-
-\usepackage{amsmath}
-\usepackage{physics}
-\usepackage{tikz} 
-
-\title{Charged sphere}
-\author{vijayabhaskar badireddi}
-%\date{} 
-
-\begin{document}
-Radius of spherical shell is $R$.\\
-Charge density is uniform  and $\sigma(\vec{r})=\sigma\,\delta\left(R-\sqrt{x^2+y^2+z^2}\right)$.\\
+\section*{chargedsphere}
+Radius of sphere is $R$.\\
+Charge density is uniform  and $\rho(r)=kr$\\
 Electric field is to be calculated at location $\vec{r}=z\hat{z}$.
 \subsection*{Case $(z>R)$} 
 The location of point is outside the sphere.
-To parametrize the shell, consider a radius vector making an angle $\theta$ with $z$ axis. All the points that satisfy this condition are on a circle of radius $R\sin{\theta}$. Consider another radius vector making an angle $\theta+d\theta$ with $z$ axis. All the points that satisfy this condition are on a circle of radius $R\sin{(\theta+d\theta)}$. The element is the area of sphere between these circles.The width of the element is $Rd\theta$. Area of the element is $2\pi(R\sin{\theta})(Rd\theta)=2\pi\,R^2\sin{\theta}\,d\theta$
-Charge on the element is $dQ=2\pi\sigma\,R^2\sin{\theta}\,d\theta$.
-Electric field due to a charge $Q$ spread uniformly on a ring of radius $R$ at a distance $z$ along the axis of the ring is $\vec{E}(z)=\frac{1}{4\pi\epsilon_0}\frac{Qz}{(R^2+z^2)^{3/2}}\hat{z}$
+Consider the sphere to be made of concentric shells of radius $r$ and thickness $\dd r$. Consider a radius vector making an angle $\theta$ with $z$ axis. All the points that satisfy this condition are on a circle of radius $r\sin{\theta}$. Consider another radius vector making an angle $\theta+\dd\theta$ with $z$ axis. All the points that satisfy this condition are on a circle of radius $r\sin{(\theta+\dd\theta)}$. The element is the area of sphere between these circles.The width of the element is $Rd\theta$. Area of the element is $2\pi(r\sin{\theta})(r\dd\theta)=2\pi\,r^2\sin{\theta}\,d\theta$\\
+Charge on the element is $\dd Q=2\pi k\,r^3\sin{\theta}\dd r\dd\theta$.\\
+Electric field due to a charge $Q$ spread uniformly on a ring of radius $R$ at a distance $z$ along the axis of the ring is $$\vec{E}(z)=\frac{1}{4\pi\epsilon_0}\frac{Qz}{(R^2+z^2)^{3/2}}\hat{z}$$
 Using the above result,
-Electric field due to the above element is $$d\vec{E}(z)=\frac{1}{4\pi\epsilon_0}\frac{(2\pi\sigma\,R^2\sin{\theta}\,d\theta)(z-R\cos{\theta})}{((R\sin{\theta})^2+(z-R\cos{\theta})^2)^{3/2}}\hat{z}$$
+Electric field due to the above element is $$d\vec{E}=\frac{1}{4\pi\epsilon_0}\frac{(2\pi k\,r^3\sin{\theta}\dd r\dd\theta)(z-R\cos{\theta})}{((R\sin{\theta})^2+(z-R\cos{\theta})^2)^{3/2}}\hat{z}$$
 Integrating over the above result from $\theta=0$ to $\theta=\pi$
 $$\vec{E}(z)=\int\,d\vec{E}(z)=\int_{0}^{\pi}\frac{1}{4\pi\epsilon_0}\frac{(2\pi\sigma\,R^2\sin{\theta}\,d\theta)(z-R\cos{\theta})}{((R\sin{\theta})^2+(z-R\cos{\theta})^2)^{3/2}}\hat{z}$$
 $$\vec{E}(z)=\frac{1}{4\pi\epsilon_0}\int_{0}^{\pi}\frac{(2\pi\sigma\,R^2\sin{\theta}\,d\theta)(z-R\cos{\theta})}{((R\sin{\theta})^2+(z-R\cos{\theta})^2)^{3/2}}\hat{z}$$
@@ -63,5 +45,3 @@ $$\vec{E}(z)=-\frac{2\pi\sigma\,R}{4\pi\epsilon_0\,z}\left[\int_{\frac{1}{R-z}}^
 $$\vec{E}(z)=-\frac{2\pi\sigma\,R}{4\pi\epsilon_0\,z}\left[\left(\frac{z^2-R^2}{2z} \right )\left(\frac{1}{R+z}-\frac{1}{R-z} \right )+\frac{1}{2z}\left.\left(-\frac{1}{u} \right )\right|_{\frac{1}{R-z}}^{\frac{1}{R+z}}\right ]\,\hat{z}$$
 $$\vec{E}(z)=0$$
 
-
-\end{document}
