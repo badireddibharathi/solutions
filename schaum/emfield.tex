@@ -18,8 +18,36 @@ When $\vb{E}$ and $\vb{B}$ are given, $\phi$ and $\vb{A}$ are not unique.
 Use \[\vb{E}=-\grad{\phi}-\pdv{\vb{A}}{t}\qq{and}\vb{B}=\curl{\vb{A}}\]
 and Hamiltonian \[\hat{H}=\frac{1}{2m}(\hat{p}-q\mathbf{A})\cdot(\hat{p}-q\mathbf{A})+ q\phi\]
 and the Hamilton's equations of motion \[\dot{\vb{r}}=\pdv{H}{\vb{p}}\quad\dot{\vb{p}}=-\pdv{H}{\vb{r}}\]
-to derive classical equation of motion \[m\vb{a}=q\vb{E}+q(\vb{v}\cp\vb{B})\]
+\subsection*{9.1}
+The classical equation of motion is \[m\vb{a}=q\vb{E}+q(\vb{v}\cp\vb{B})\]
+Given scalar potential $\phi(\vb{r},t)$ and vector potential $\vb{A}(\vb{r},t)$, 
 \[\dot{\vb{r}}=\pdv{H}{\vb{p}}=\frac{1}{m}(\vb{p}-q\vb{A})=\vb{v}\]
 \[\ddot{\vb{r}}=\dv{t}\qty(\frac{1}{m}(\vb{p}-q\vb{A}))=\frac{1}{m}(\dot{\vb{p}}-q\dot{\vb{A}})\]
 \[\dot{\vb{p}}=-\pdv{H}{\vb{r}}=-\grad{H}=-\grad{\qty[\frac{1}{2m}(\hat{p}-q\mathbf{A})\cdot(\hat{p}-q\mathbf{A})+ q\phi]}\]
 %\[\dot{\vb{p}}=-\grad{\qty[\frac{1}{2m}(\hat{p}-q\mathbf{A})\cdot(\hat{p}-q\mathbf{A})]}+ q\grad{\phi}}\]
+\subsection*{9.2}
+\newpage
+\subsection*{9.3}
+\newpage
+\subsection*{9.16 Aharonov-Bohm effect}
+An electron is confined to move on a ring of radius $R$. At the center of ring there is a circular region with uniform and constant magnetic field perpendicular to the plane of ring. Total magnetic flux through the region is $\Phi$. 
+\begin{align*}
+\Phi=\int\vb{B}\cdot\dd\vb{S}=\int\curl\vb{A}\cdot\dd\vb{S}
+\\
+\qq{using Stoke's law}
+\Phi=\int\curl\vb{A}\cdot\dd\vb{S}=\oint\vb{A}\cdot\dd\vb{l}
+\\
+\qq{By symmetry,}A_{\phi}\ne 0\qq{and}A_{\rho}=0\quad A_z=0
+\\
+\Phi=\oint\vb{A}\cdot\dd\vb{l}=\int_0^{2\pi}A_{\phi}R\dd\phi=A_{\phi}2\pi R
+\qq{Hence} A_{\phi}=\frac{\Phi}{2\pi R}
+\\
+\qq{In cylindrical coordinates}
+\nabla=\vu{\bm\rho}\pdv{\rho}+\vu{\bm\phi}\frac{1}{\rho}\pdv{\phi}+\vu{z}\pdv{z}\\
+\qq{In this problem electron is confined to move on a ring.}z=\text{constant}\qq{and}\rho=R
+\end{align*}
+\begin{align*}
+\hat{H}=\frac{1}{2m}\qty[(\hat{p}-e\vb{A})^2]=\frac{1}{2m}\qty[(-i\hbar\nabla-e\vb{A})^2]=\frac{1}{2m}\qty(-i\hbar\frac{1}{\rho}\pdv{\phi}-e\vb{A})^2
+\end{align*}
+
+

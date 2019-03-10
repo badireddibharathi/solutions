@@ -1,7 +1,11 @@
 //fbd1.asy
 
 settings.outformat="pdf";
+import graph;
 unitsize(1cm);
+
+xaxis("$x$-axis",arrow=Arrow);
+yaxis("$y$-axis",arrow=Arrow);
 
 draw ((-3,-1) ^^ (5,0));
 draw ((-1,4) ^^ (-1,-1));
