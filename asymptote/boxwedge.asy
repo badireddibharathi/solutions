@@ -17,12 +17,14 @@ path pu = circle (A,0.5);
 draw (pu);
 
 path ata = arc(B,shift(0.5*unit(C-B))*B,A,CW);
-Label lta = Label("$\theta$",MidPoint,NW);
-draw (lta,ata) ;
+Label lta = Label("$\theta$");
+draw (ata);
+label (lta,ata,WNW);
 
 path aphi = arc(C,shift(0.5*unit(B-C))*C,A,CCW);
-Label lphi = Label("$\phi$",MidPoint,NE);
-draw (lphi,aphi) ;
+Label lphi = Label("$\phi$");
+draw (aphi) ;
+label (lphi,aphi,NE);
 
 pair D = (2*A+B)/3;
 path m1 = (rotate(degrees(B-A),D)*box (D,shift(1,1)*D));
@@ -32,8 +34,8 @@ draw (m1,gray(0)+1.0);
 draw (shift(rotate(90)*0.5*unit(B-A))*A -- rotate(-90,D)*shift(0.5*unit(A-B))*D);
 //draw (box (D,shift(1,1)*D));
 
-path s2 = (shift(-0.5,0)*A -- shift(2*unit(C-A))*(shift(-0.5,0)*A)); 
+path s2 = (shift(-0.5,0)*A -- shift(1.5*unit(C-A))*(shift(-0.5,0)*A)); 
 draw (s2);
-pair P = shift(2*unit(C-A))*(shift(-0.5,0)*A);
+pair P = shift(1.5*unit(C-A))*(shift(-0.5,0)*A);
 path m2 = box(shift(-0.25,0)*P,shift(0.25,-0.5)*P);
 draw (m2,gray(0)+1.0);
