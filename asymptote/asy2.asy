@@ -4,6 +4,7 @@ settings.outformat="pdf";
 import graph;
 unitsize(1cm);
 
+//size (20,20);
 xaxis("$x$-axis",arrow=Arrow);
 yaxis("$y$-axis",arrow=Arrow);
 path p = (-4,3) -- (3,6);

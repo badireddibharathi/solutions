@@ -4,6 +4,7 @@ settings.outformat="pdf";
 
 unitsize(1cm);
 
+size (20,20);
 draw ((0,0) ^^ (0,6));
 draw ((0,0) ^^ (5,0));
 path q = ((2,2) -- (5,6));
