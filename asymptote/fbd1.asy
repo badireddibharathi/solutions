@@ -25,3 +25,4 @@ draw (box);
 draw (O -- shift(0,-2)*O,red,arrow=Arrow);
 draw (O -- shift(0,2)*O,red,arrow=Arrow);
 draw ((A+B)/2 -- shift(-2,0)*((A+B)/2),red,arrow=Arrow);
+

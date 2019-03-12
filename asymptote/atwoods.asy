@@ -2,6 +2,7 @@
 settings.outformat = "pdf";
 
 unitsize (1cm);
+
 draw ((0,-8) ^^ (0,8));
 draw ((-8,0) ^^ (8,0));
 

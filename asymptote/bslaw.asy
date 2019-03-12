@@ -6,7 +6,7 @@ import graph;
 
 axes (xlabel="$x$-axis",ylabel="$y$-axis",min=(-5,-1), max=(5,5),arrow=Arrows(TeXHead)) ;
 path wire = ((-3,0) -- (3,0)) ;
-draw ( wire,linewidth(2.0),Bars,Arrows) ;
+//draw ( wire,linewidth(2.0),Bars,Arrows) ;
 pair A = (2,0);
 pair P = (0,3);
 path dr = (shift(0.05,0)*A -- A) ;

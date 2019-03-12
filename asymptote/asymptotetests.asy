@@ -2,11 +2,12 @@
 //chap6
 
 settings.outformat = "pdf";
-
+import graph;
 unitsize(1cm);
 
-draw ((-5,0) -- (5,0),gray(0.9),arrow=Arrow);
-draw ((0,-3) -- (0,4),gray(0.9),arrow=Arrow);
+axes (xlabel = "$x$-axis", ylabel = "$y$-axis", arrow=Arrow);
+//draw ((-5,0) -- (5,0),gray(0.9),arrow=Arrow);
+//draw ((0,-3) -- (0,4),gray(0.9),arrow=Arrow);
 
 pair A = (3,4);
 pair B = (-4,2);
