@@ -35,7 +35,6 @@ Label lgd = Label ("$mg\sin\theta$",position=EndPoint);
 draw (rotate(a)*fgd, arrow=Arrow);
 label (lgd, rotate(a)*fgd);
 
-
 path fn = (G -- shift(0,1*cosa)*G);
 Label ln = Label ("$F_n$",position=EndPoint);
 draw (rotate(a)*fn, arrow=Arrow);
