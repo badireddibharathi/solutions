@@ -6,11 +6,11 @@ unitsize(1cm);
 
 picture pic1, pic2;
 
-size (pic1, 20);
+size (pic1, 10cm);
 
 draw (pic1, ((-2,3) -- (4,6)));
 
-size (pic2, 20);
+size (pic2, 10cm);
 
 draw (pic2, ((2,3) -- (4,-6)));
 
