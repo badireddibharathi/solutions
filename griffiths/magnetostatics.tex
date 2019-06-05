@@ -1,0 +1,21 @@
+% ! TeX root = main.tex
+\section*{magnetostatics}
+\[\qq{Lorenz force law}\vb{F}=q(\vb{E}+\vb{v}\cp\vb{B})\]
+\[\qq{Lorenz force law}\vb{F}=\int I(\dd\vb{l}\cp\vb{B})\]
+\[\vb{F}=\int (\vb{K}\cp\vb{B})\dd{a}=\int (\sigma\vb{v}\cp\vb{B})\dd{a}\]
+\[\vb{F}=\int (\vb{J}\cp\vb{B})\dd{v}=\int (\rho\vb{v}\cp\vb{B})\dd{v}\]
+\[\vb{B}(\vb{r})=\frac{\mu_0}{4\pi}\int\frac{\vb{I}\cp(\vb{r}-\vb{r}')}{|\vb{r}-\vb{r}'|^2}\dd{l'}=\frac{\mu_0I}{4\pi}\int\frac{\dd\vb{l'}\cp(\vb{r}-\vb{r}')}{|\vb{r}-\vb{r}'|^2}\]
+\[\curl{\vb{B}}=\mu_0\vb{J}\]
+\[\oint\vb{B}\vdot\dd{\vb{l}}=\mu_0I_{enc}\]
+\[\div{\vb{B}}=0\]
+\[\vb{B}=\curl{\vb{A}}\]
+\[\curl{\vb{A}}=0\]
+\[\laplacian{\vb{A}}=-\mu_0\vb{J}\]
+\[\vb{A(\vb{r})}=\frac{\mu_0}{4\pi}\int\frac{\vb{J(\vb{r'})}}{|\vb{r}-\vb{r'}|}\dd{\tau'}=\frac{\mu_0I}{4\pi}\int\frac{\dd{\vb{l}'}}{|\vb{r}-\vb{r'}|}=\frac{\mu_0}{4\pi}\int\frac{\vb{K}}{|\vb{r}-\vb{r'}|}\dd{a'}\]
+\subsection*{boundary conditions}
+\[B^{\perp}_{above}-B^{\perp}_{below}=0\]
+\[B^{\parallel}_{above}-B^{\parallel}_{below}=\mu_oK\]
+\[\vb{B}_{above}-\vb{B}_{below}=\mu_0(\vb{K}\cp\vu{n})\]
+\[\vb{A}_{above}-\vb{A}_{below}=0\]
+\[\pdv{\vb{A}_{above}}{n}-\pdv{\vb{A}_{below}}{n}=-\mu_0\vb{K}\]
+multipole expansion of vector potential\[\vb{A(\vb{r})}=\frac{\mu_0I}{4\pi}\int\frac{\dd{\vb{l}'}}{|\vb{r}-\vb{r'}|}=\frac{\mu_0I}{4\pi}\sum_{n=0}^{\infty}\frac{1}{r^{n+1}}\oint(r')^nP_n(\cos\theta')\dd{\vb{l'}}\]

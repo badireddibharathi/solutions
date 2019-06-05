@@ -1,0 +1,24 @@
+% !TeX root = main.tex
+\section*{magnetostaticsinmatter}
+Torque on a magnetic dipole $\vb{N}=\vb{m}\cp\vb{B}$.\\
+Force on a magnetic dipole $\vb{F}=\grad(\vb{m}\vdot\vb{B})$.\\
+Magnetic dipole moment per unit volume $\vb{M}$.\\
+Vector potential $\vb{A}$ due to a magnetic dipole of dipole moment $\vb{m}$ \[\vb{A}(\vb{r})=\frac{\mu_0}{4\pi}\frac{\vb{m}\cp(\vb{r}-\vb{r}')}{|\vb{r}-\vb{r}'|^2}\]
+\[\vb{A}(\vb{r})=\frac{\mu_0}{4\pi}\int\frac{\vb{M}(\vb{r'})\cp(\vb{r}-\vb{r}')}{|\vb{r}-\vb{r}'|^2}\dd{\tau'}\]
+\[\vb{A}(\vb{r})=\frac{\mu_0}{4\pi}\left[\int\frac{\mathbf{\nabla'}\cp{\vb{M}(\vb{r'})}}{|\vb{r}-\vb{r}'|}\dd{\tau'}-\int\mathbf{\nabla'}\cp\left[{\frac{\vb{M}(\vb{r'})}{|\vb{r}-\vb{r}'|}}\right]\dd{\tau'}\right]\]
+
+\[\vb{A}(\vb{r})=\frac{\mu_0}{4\pi}\left[\int\frac{\mathbf{\nabla'}\cp{\vb{M}(\vb{r'})}}{|\vb{r}-\vb{r}'|}\dd{\tau'}+\int\frac{[{\vb{M}(\vb{r'})}\cp\dd{\vb{a}'}]}{|\vb{r}-\vb{r}'|}\right]\]
+Current density of bound current $\vb{J}_b=\curl{\vb{M}}$.Surface density of bound current $\vb{K}_b=\vb{M}\cp\vu{n}$.
+
+\[\vb{A}(\vb{r})=\frac{\mu_0}{4\pi}\int_{\mathcal{V}}\frac{\vb{J}_b(\vb{r}')}{|\vb{r}-\vb{r}'|}\dd{\tau'}+\frac{\mu_0}{4\pi}\oint_{\mathcal{S}}\frac{\vb{K}_b(\vb{r}')}{|\vb{r}-\vb{r}'|}\dd{a}'\]
+\[\vb{J}=\vb{J}_b+\vb{J}_f\]
+\[\curl{\qty(\frac{1}{\mu_0}\vb{B}-\vb{M})}=\vb{J}_f\]
+\[\vb{H}=\frac{1}{\mu_0}\vb{B}-\vb{M}\]
+\[\curl{\vb{H}}=\vb{J}_f\]
+\[\oint\vb{H}\vdot\dd{\vb{l}}=I_{f,enc}\]
+\subsection*{Magneto static boundary conditions}
+\[H_{above}^{\perp}-H_{below}^{\perp}=-(M_{above}^{\perp}-M_{above}^{\perp})\]
+\[\vb{H}_{above}^{\parallel}-\vb{H}_{below}^{\parallel}=\vb{K}_f\cp\vb{n}\]
+\subsection*{linear and nonlinear media}
+\[\vb{M}=\chi_m\vb{H}\]
+\[\vb{B}=\mu_0(\vb{H}+\vb{M})=\mu_0(1+\chi_m)\vb{H}=\mu\vb{H}\]
