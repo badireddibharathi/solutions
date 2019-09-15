@@ -14,7 +14,7 @@ draw (pulley1,black+linewidth(2.0));
 dot (cp1);
 
 path ceil = (2,7) -- (8,7);
-draw (ceil);
+draw (ceil, linewidth(2));
 
 path s1 = cp1 -- shift(0,1)*b1;
 draw (s1);
@@ -34,7 +34,7 @@ draw (pulley2,black+linewidth(2.0));
 dot (cp2);
 
 path s4 = cp2 -- (4,7);
-draw (s4);
+draw (s4, linewidth(2));
 
 path s5 = shift(-1,0)*cp2 -- (3,3);
 draw (s5);

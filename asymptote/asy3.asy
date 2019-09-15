@@ -4,8 +4,8 @@ settings.outformat="pdf";
 import graph;
 unitsize(1cm);
 
-xaxis("$x$-axis",arrow=Arrow);
-yaxis("$y$-axis",arrow=Arrow);
+xaxis("$x$-axis",arrow=Arrow(TeXHead));
+yaxis("$y$-axis",arrow=Arrow(TeXHead));
 pair O = (0,0);
 pair A = (4,7);
 pair B = (0,4);

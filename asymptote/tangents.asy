@@ -15,9 +15,9 @@ void drawunits (path p) {
 	for (int i = 0; i < 10; ++i) {
     	pair O = (0,0);
 		pair A = relpoint (p,i*0.1);
-		path uv = rotate(90,A)*(A -- shift(A)*unit(O-A));
+		path uv = rotate(90,A)*(A -- shift(A)*unit(A-O));
 		draw (uv,arrow=Arrow);
     }
 }
 
-//drawunits (c);
+drawunits (c);

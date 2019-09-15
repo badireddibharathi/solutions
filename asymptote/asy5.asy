@@ -7,6 +7,9 @@ unitsize(1cm);
 xaxis("$x$-axis",arrow=Arrow);
 yaxis("$y$-axis",arrow=Arrow);
 
+draw ((1,0) ^^ (9,0));
+draw ((0,1) ^^ (0,9));
+
 path p = circle((4,4),3);
 draw (p);
 for (int i = 0; i < 10; ++i) {

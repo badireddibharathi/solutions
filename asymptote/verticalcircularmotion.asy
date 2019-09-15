@@ -14,16 +14,16 @@ real a = 30;
 pair O = (0,0);
 
 path trac = circle (O, r);
-draw (trac);
+draw (trac, gray (0.5));
 
 void dof (real a) {
     pair P = rotate(a)*shift(r,0)*O;
     dot (P);
     draw (O -- P, gray(0.5));
     path fg = (P -- shift(0,-1)*P);
-    Label lg = Label ("$mg$", position=EndPoint);
+    //Label lg = Label ("$mg$", position=EndPoint);
     draw (fg, arrow=Arrow);
-    label (lg, fg);
+    //label (lg, fg);
     path fgn = (P -- rotate(a)*shift(-1*sin(a*pi/180),0)*(r,0));
     Label lgn = Label ("$mg\sin\theta$", position=EndPoint);
     draw (fgn, arrow=Arrow);
@@ -35,4 +35,4 @@ void dof (real a) {
 }
 
 dof (a);
-dof (-90);
+dof (-120);

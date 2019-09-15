@@ -20,3 +20,8 @@ A = point (q,0.5);
 dot(A,red);
 A = point (q,1.0);
 dot(A,red);
+
+/*
+extension
+polargraph
+*/
