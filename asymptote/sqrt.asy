@@ -13,9 +13,9 @@ real f(real x) {
 draw ((-1,0) ^^ (4,0));
 draw ((0,-1) ^^ (0,9));
 path xaxis = ((-1,0) -- (4,0));
-draw (xaxis,gray(0.7),arrow=Arrow);
+draw (xaxis,gray(0.7),arrow=ArcArrow);
 path yaxis = ((0,-1) -- (0,9));
-draw (yaxis,gray(0.7),arrow=Arrow);
+draw (yaxis,gray(0.7),arrow=ArcArrow);
 
 path g = graph(f,0,3);
 draw(g);

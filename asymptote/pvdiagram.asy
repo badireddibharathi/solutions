@@ -4,11 +4,11 @@ settings.outformat="pdf";
 import graph;
 unitsize(1cm);
 
-draw ((-2,0) ^^ (6,0));
-draw ((0,-2) ^^ (0,6));
+draw ((-1,0) ^^ (6,0));
+draw ((0,-1) ^^ (0,6));
 
-xaxis("pressure $P\,(pa)$",arrow=Arrow);
-yaxis("volume $V\,(m^3)$",arrow=Arrow);
+xaxis("pressure $P\,(pa)$",arrow=ArcArrow, gray(0.7));
+yaxis("volume $V\,(m^3)$",arrow=ArcArrow, gray (0.7));
 
 pair A = (2,2);
 dot (A);
@@ -36,3 +36,10 @@ draw ((A+B)/2 -- shift(0.2,0)*((A+B)/2),black,arrow=Arrow);
 draw ((B+C)/2 -- shift(0,0.2)*((B+C)/2),black,arrow=Arrow);
 draw ((C+D)/2 -- shift(-0.2,0)*((C+D)/2),black,arrow=Arrow);
 draw ((D+A)/2 -- shift(0,-0.2)*((D+A)/2),black,arrow=Arrow);
+
+real f (real x) {
+	return 4/x;
+}
+
+path g = graph (f, 1, 4);
+draw (g);
