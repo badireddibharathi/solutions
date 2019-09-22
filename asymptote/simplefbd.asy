@@ -5,7 +5,6 @@ unitsize(1cm);
 
 import graph;
 
-
 draw ((0,-3) ^^ (0,5));
 draw ((-3,0) ^^ (5,0));
 
@@ -41,6 +40,3 @@ path ff = (A -- shift(-1,0)*A);
 Label lf = Label ("$F_f$", position=EndPoint);
 draw (ff, arrow=Arrow);
 label (lf,ff);
-
-
-
