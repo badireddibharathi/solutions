@@ -11,7 +11,7 @@ pair z = (3,4);
 dot(z,red);
 dot(conj(z),blue);
 path p = (0,0) -- z;
-draw (p,arrow=Arrow);
+draw (p,arrow=ArcArrow);
 path q = (0,0) -- unit(conj(z));
 draw (q,arrow=Arrow);
 label("$z$",z);

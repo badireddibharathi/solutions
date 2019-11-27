@@ -1,0 +1,37 @@
+% !TEX TS-program = pdflatex
+% !TEX encoding = UTF-8 Unicode
+
+\documentclass[12pt] {article}
+\usepackage{physics}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{bm}
+\usepackage{geometry}
+\usepackage{siunitx}
+\geometry{a4paper}
+\geometry{margin=0.25in}
+\geometry{portrait}
+
+\title{templatesolution}
+\author{vijayabhaskar badireddi}
+
+\begin{document}
+        
+\section*{solution}
+Velocities are expressed interms of beta factor.
+\[\beta=\frac{v}{c}\quad\beta_1=\frac{v_1}{c}\quad\beta_2=\frac{v_2}{c}\]
+\[\gamma=\frac{1}{\sqrt{1-\frac{v^2}{c^2}}}=\frac{1}{\sqrt{1-\beta^2}}\]
+The Lorentz transformation from $(x,ct)$ to $(x_1,ct_1)$ is
+\[x_1=\gamma_1(x-\beta_1 ct)\qq{and}ct_1=\gamma_1(ct-\beta_1 x)\]
+The second Lorentz transformation is
+\[x_2=\gamma_2(x_1-\beta_2 ct_1)\qq{and}ct_2=\gamma_2(ct_1-\beta_2 x_1)\]
+\[x_2=\gamma_2(x_1-\beta_2 ct_1)=\gamma_2(\gamma_1(x-\beta_1 ct)-\beta_2\gamma_1(ct-\beta_! x))\]
+\[x_2=\gamma_2\gamma_1x-\gamma_2\gamma_1\beta_1 ct-\beta_2\gamma_2\gamma_1ct+\beta_2\gamma_2\gamma_1\beta_1 x\]
+\[x_2=(\gamma_2\gamma_1+\beta_2\gamma_2\gamma_1\beta_1) x-(\gamma_2\gamma_1\beta_1 +\beta_2\gamma_2\gamma_1)ct\]
+Consider \[\beta=\frac{\beta_1+\beta_2}{1+\beta_1\beta_2}\]
+\[\gamma=\frac{1}{\sqrt{1-\beta^2}}=\frac{1}{\sqrt{1-\qty(\frac{\beta_1+\beta_2}{1+\beta_1\beta_2})^2}}=\frac{1+\beta_1\beta_2}{\sqrt{(1+\beta_1\beta_2)^2-(\beta_1+\beta_2)^2}}\]
+\[\gamma=\frac{1+\beta_1\beta_2}{\sqrt{1-\beta_1^2}\sqrt{1-\beta_2^2}}=\gamma_1\gamma_2(1+\beta_1\beta_2)\]
+\[\gamma\beta=\gamma_1\gamma_2(\beta_1+\beta_2)\]
+\[x_2=(\gamma_2\gamma_1+\beta_2\gamma_2\gamma_1\beta_1) x-(\gamma_2\gamma_1\beta_1 +\beta_2\gamma_2\gamma_1)ct=\gamma_1\gamma_2(1+\beta_1\beta_2) x-\gamma_1\gamma_2(\beta_1 +\beta_2)ct\]
+\[x_2=\gamma (x-\beta ct)\]
+\end{document}

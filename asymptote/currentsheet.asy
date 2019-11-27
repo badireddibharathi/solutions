@@ -11,7 +11,7 @@ void outof (pair Z) {
 }
 
 
-draw ((0,-1) -- (0,5),gray(0.9),arrow=Arrow);
+draw ((0,-1) -- (0,5),gray(0.9),arrow=ArcArrow);
 draw ((-8,0) -- (8,0),linewidth(2.0));
 
 pair O = (0,0);
@@ -35,9 +35,9 @@ Label lvb = Label ("$d\vec{B}$");
 Label lvb1 = Label ("$d\vec{B}_1$");
 Label lvb2 = Label ("$d\vec{B}_2$");
 
-draw (vb1,arrow=Arrow);
-draw (vb2,arrow=Arrow);
-draw (vb,arrow=Arrow);
+draw (vb1,arrow=ArcArrow);
+draw (vb2,arrow=ArcArrow);
+draw (vb,arrow=ArcArrow);
 
 label (lvb1,relpoint(vb1,1),S);
 label (lvb2,relpoint(vb2,1),N);

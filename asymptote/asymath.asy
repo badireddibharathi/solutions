@@ -6,5 +6,5 @@ import graph;
 unitsize(1cm);
 
 draw ((-1,-1) ^^ (4,4));
-axes (xlabel= "$x$-axis",ylabel= "$y$-axis",arrow=Arrow);
+axes (xlabel= "$x$-axis",ylabel= "$y$-axis",arrow=ArcArrow);
 drawline ((0,1),(2,3));
