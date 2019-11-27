@@ -7,7 +7,7 @@ unitsize(1cm);
 //size (20,20);
 draw ((0,0) ^^ (0,6));
 draw ((0,0) ^^ (5,0));
-axes (xlabel = "$x$-axis", ylabel = "$y$-axis", arrow=Arrow);
+axes (xlabel = "$x$-axis", ylabel = "$y$-axis", arrow=ArcArrow);
 path q = ((2,2) -- (5,6));
 draw (q);
 path pulley = circle((5,6),1);

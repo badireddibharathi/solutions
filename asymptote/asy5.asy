@@ -18,6 +18,6 @@ for (int i = 0; i < 10; ++i) {
 	pair d = dir(p,i);
 	dot(a,blue);
 	//draw(a -- d,arrow=Arrow,red);
-	draw(shift(a)*scale(2)*((0,0) -- d),arrow=Arrow,red);
+	draw(shift(a)*scale(2)*((0,0) -- d),arrow=ArcArrow,red);
 }
 
