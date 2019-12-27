@@ -1,0 +1,62 @@
+% !TEX TS-program = pdflatex
+% !TEX encoding = UTF-8 Unicode
+
+\documentclass[12pt]{article}
+
+\usepackage[utf8]{inputenc} 
+
+\usepackage{geometry}
+\geometry{a4paper} 
+\geometry{margin=0.25in} 
+\geometry{portrait}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{bm}
+\usepackage{physics}
+\usepackage{tikz}
+\usepackage{siunitx}
+
+\title{Brief Article}
+\author{vijayabhaskar badireddi}
+%\date{} 
+
+\begin{document}
+%\maketitle
+
+\section*{chapter 1}
+Stern-Gerlach experiment
+sequential SG apparatus
+Bras and Kets
+\begin{equation*}
+\hat{A}\ket{\psi}=a \ket{\psi}
+\end{equation*}
+\begin{align*}
+\hat{S}_z \ket{+}&=+\frac{\hbar}{2}\ket{+}\\
+\hat{S}_z \ket{-}&=-\frac{\hbar}{2}\ket{-}
+\end{align*}
+\begin{align*}
+\ip{\alpha}{\beta}&=\ip{\beta}{\alpha}^*\\
+\ip{\alpha}{\alpha}&\ge 0 \\
+\ip{\alpha}{\beta}&=0\\
+\hat{X}=\dyad{\alpha}{\beta}\implies \hat{X}^{\dagger}=\dyad{\beta}{\alpha}
+\end{align*}
+\begin{align*}
+\mel{\alpha}{\hat{A}}{\beta}&=\mel{\beta}{\hat{A}^{\dagger}}{\alpha}^*\\
+(\hat{X}\hat{Y})^{\dagger}&=\hat{Y}^{\dagger}\hat{X}^{\dagger}
+\end{align*}
+\begin{align*}
+\sum_i \dyad{a_i}{a_i}=\mathbb{I}
+\end{align*}
+\begin{align*}
+\mathbb{I}&=\dyad{+}{+}+\dyad{-}{-}\\
+\hat{S}_z&=\frac{\hbar}{2}(\dyad{+}{+}-\dyad{-}{-})\\
+\hat{S}_+&=\hbar \dyad{+}{-}\\
+\hat{S}_-&=\hbar \dyad{-}{+}\\
+\ket{+}&=\mqty(1 \\ 0)\\
+\ket{-}&=\mqty(0 \\ 1)\\
+\hat{S}_x&=\hbar \mqty(0 & 1 \\1 & 0)\\
+\hat{S}_y&=\hbar \mqty(0 & i \\-i & 0)\\
+\hat{S}_z&=\hbar \mqty(1 & 0 \\0 & -1)\\
+\end{align*}
+\end{document}
