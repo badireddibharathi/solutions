@@ -1,0 +1,37 @@
+% !TeX root = main.tex
+\section*{gaussian}
+The given wave function is 
+\[\psi(x,t)=\left(\frac{2a}{\pi}\right)^{1/4}\frac{1}{\sqrt{\gamma}}\exp\qty(-\frac{ax^2}{\gamma})\]
+where
+\[\gamma=1+\frac{it}{\tau}\qq{and}\tau=\frac{m}{2a\hbar}\]
+\subsection*{(a)}
+Probability density
+\[|\psi(x,t)|^2=\left(\frac{2a}{\pi}\right)^{1/2}\frac{1}{\sqrt{\gamma\bar{\gamma}}}\exp\qty(-\frac{ax^2}{\gamma})\exp\qty(-\frac{ax^2}{\bar{\gamma}})\]
+\[\sqrt{\gamma\bar{\gamma}}=\qty[1+\qty(\frac{t}{\tau})^2]^{1/2}=\qty[\frac{t^2+\tau^2}{\tau^2}]^{1/2}\]
+\[\exp\qty(-\frac{ax^2}{\gamma})\exp\qty(-\frac{ax^2}{\bar{\gamma}})=\exp\qty(-\frac{ax^2\bar{\gamma}}{\gamma\bar{\gamma}})\exp\qty(-\frac{ax^2\gamma}{\bar{\gamma}\gamma})=\exp\qty(-\frac{ax^2}{\gamma\bar{\gamma}}(\gamma+\bar{\gamma}))=\exp\qty(-\frac{2ax^2}{\gamma\bar{\gamma}})\]
+\subsection*{(b)}
+\[\expval{\hat{x}}=\int_{-\infty}^{+\infty}\psi^*(x,t)x\psi(x,t)\dd x=\qty(\frac{2a}{\pi})^{1/2}\frac{1}{\sqrt{\gamma\bar{\gamma}}}\int_{-\infty}^{+\infty}x\exp\qty(-\frac{2ax^2}{\gamma\bar{\gamma}})\dd x\]
+substitute \[u=\sqrt{\frac{2a}{\gamma\bar{\gamma}}}x\qq{and}\dd u=\sqrt{\frac{2a}{\gamma\bar{\gamma}}}\dd x\]
+\[\ev{\hat{x}}=\qty(\frac{2a}{\pi})^{1/2}\frac{1}{\sqrt{\gamma\bar{\gamma}}}\frac{\gamma\bar{\gamma}}{2a}\int_{-\infty}^{+\infty}u\exp\qty(-u^2)\dd u\]
+\[\tag{1}\int_{-\infty}^{+\infty}x^n\exp(-x^2)\dd x=0\qq{for odd}n\]
+Using the above result \[\ev{\hat{x}}=0\]
+\[\hat{p}=-i\hbar\dv{x}\]
+\[\hat{p}\psi(x,t)=-i\hbar\qty(\frac{2a}{\pi})^{1/4}\frac{1}{\sqrt{\gamma}}\dv{x}\exp\qty(-\frac{ax^2}{\gamma})=i\hbar\qty(\frac{2a}{\pi})^{1/4}\frac{1}{\sqrt{\gamma}}\frac{2a}{\gamma}	 x\exp\qty(-\frac{ax^2}{\gamma})\]
+\[\ev{\hat{p}}=\int_{-\infty}^{+\infty}\psi^*(x,t)\hat{p}\psi(x,t)\dd x=i\hbar\qty(\frac{2a}{\pi})^{1/2}\frac{1}{\sqrt{\gamma\bar{\gamma}}}\frac{2a}{\gamma}	 \int_{-\infty}^{+\infty}x\exp\qty(-\frac{ax^2}{\gamma\bar{\gamma}})\dd x\]
+Using the result $(1)$
+\[\ev{\hat{p}}=0\]
+\subsection*{(c)}
+\[\expval{\hat{x}^2}=\int_{-\infty}^{+\infty}\psi^*(x,t)x^2\psi(x,t)\dd x=\qty(\frac{2a}{\pi})^{1/2}\frac{1}{\sqrt{\gamma\bar{\gamma}}}\int_{-\infty}^{+\infty}x^2\exp\qty(-\frac{2ax^2}{\gamma\bar{\gamma}})\dd x\]
+substitute \[u=\sqrt{\frac{2a}{\gamma\bar{\gamma}}}x\qq{and}\dd u=\sqrt{\frac{2a}{\gamma\bar{\gamma}}}\dd x\]
+\[\ev{\hat{x}^2}=\qty(\frac{2a}{\pi})^{1/2}\frac{1}{\sqrt{\gamma\bar{\gamma}}}\qty(\frac{\gamma\bar{\gamma}}{2a})^{3/2}\int_{-\infty}^{+\infty}u^2\exp\qty(-u^2)\dd u\]
+\[\tag{1}\int_{-\infty}^{+\infty}x^2\exp(-x^2)\dd x=\sqrt{\frac{\pi}{4}}\]
+Using the above result \[\ev{\hat{x}^2}=\qty(\frac{2a}{\pi})^{1/2}\frac{1}{\sqrt{\gamma\bar{\gamma}}}\qty(\frac{\gamma\bar{\gamma}}{2a})^{3/2}\sqrt{\frac{\pi}{4}}=\frac{\gamma\bar{\gamma}}{4a}\]
+\[\hat{p}^2=(-i\hbar)^2\dv[2]{x}=-\hbar^2\dv[2]{x}\]
+\[\hat{p}\psi(x,t)=-i\hbar\qty(\frac{2a}{\pi})^{1/4}\frac{1}{\sqrt{\gamma}}\dv{x}\exp\qty(-\frac{ax^2}{\gamma})=i\hbar\qty(\frac{2a}{\pi})^{1/4}\frac{1}{\sqrt{\gamma}}\frac{2a}{\gamma}	 x\exp\qty(-\frac{ax^2}{\gamma})\]
+\[\hat{p}^2\psi(x,t)=(-i\hbar)i\hbar\qty(\frac{2a}{\pi})^{1/4}\frac{1}{\sqrt{\gamma}}\frac{2a}{\gamma}\dv{x} \qty[x\exp\qty(-\frac{ax^2}{\gamma})]\]
+\[\hat{p}^2\psi(x,t)=\hbar^2\qty(\frac{2a}{\pi})^{1/4}\frac{1}{\sqrt{\gamma}}\frac{2a}{\gamma} \qty[\exp\qty(-\frac{ax^2}{\gamma})-\frac{2ax^2}{\gamma}\exp\qty(-\frac{ax^2}{\gamma})]\]
+\[\ev{\hat{p}^2}=\int_{-\infty}^{+\infty}\psi^*(x,t)\hat{p}^2\psi(x,t)\dd x=\hbar^2\qty(\frac{2a}{\pi})^{1/2}\frac{1}{\sqrt{\gamma\bar{\gamma}}}\frac{2a}{\gamma}\int_{-\infty}^{+\infty}\exp\qty(-\frac{ax^2}{\bar{\gamma}}) \qty[\exp\qty(-\frac{ax^2}{\gamma})-\frac{2ax^2}{\gamma}\exp\qty(-\frac{ax^2}{\gamma})]\dd x\]
+\[\ev{\hat{p}^2}=\hbar^2\qty(\frac{2a}{\pi})^{1/2}\frac{1}{\sqrt{\gamma\bar{\gamma}}}\frac{2a}{\gamma}\int_{-\infty}^{+\infty} \qty[\exp\qty(-\frac{2ax^2}{\gamma\bar{\gamma}})-\frac{2ax^2}{\gamma}\exp\qty(-\frac{2ax^2}{\gamma\bar{\gamma}})]\dd x\]
+substitute \[u=\sqrt{\frac{2a}{\gamma\bar{\gamma}}}x\qq{and}\dd u=\sqrt{\frac{2a}{\gamma\bar{\gamma}}}\dd x\]
+\[\int_{-\infty}^{+\infty}\exp\qty(-\frac{2ax^2}{\gamma\bar{\gamma}})\dd x=\sqrt{\frac{\gamma\bar{\gamma}}{2a}}\int_{-\infty}^{+\infty}\exp\qty(-u^2)\dd u=\sqrt{\frac{\gamma\bar{\gamma}}{2a}}\sqrt{\pi}\]
+
